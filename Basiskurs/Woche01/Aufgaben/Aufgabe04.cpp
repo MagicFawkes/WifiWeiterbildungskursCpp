@@ -40,7 +40,7 @@ int main()
             werteListe[zaehler -1] = eingabewert;
         }
 
-        if ((zaehler) >= maxEingabe)
+        if (zaehler >= maxEingabe)
         {
             printf("Info, maximale Anzahl an Eingaben erreicht\n");
             break;
