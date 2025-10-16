@@ -27,7 +27,7 @@ int main()
 	snprintf(prompt, sizeof(prompt), "Bitte %s eingeben: ", (auswahl == 1) ? "Fahrenheit" : "Celsius");
     int wert = eingabe(prompt);
 
-	printf("Der Wert betraegt: %.2f", umrechner(wert, auswahl));
+	printf("Der Wert betraegt: %.2f %s", umrechner(wert, auswahl), auswahl == 1 ? "Grad" : "Fahrenheit");
 
     return 0;
 }
