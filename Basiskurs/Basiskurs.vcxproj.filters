@@ -87,5 +87,8 @@
     <ClCompile Include="Woche01\Aufgaben\Aufgabe06.cpp">
       <Filter>Source Files\Woche01\Aufgaben</Filter>
     </ClCompile>
+    <ClCompile Include="Woche01\Aufgaben\Aufgabe07.cpp">
+      <Filter>Source Files\Woche01\Aufgaben</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
