@@ -37,7 +37,7 @@ int zaehleWoerter(const char* text)
 
     for (int i = 0; text[i] != '\0'; i++) 
     {
-        if (text[i] == ' ') 
+        if (text[i] == ' ' || text[i] == '\n' || text[i] == '!')
         {
             imWort = 0;
         }
