@@ -35,6 +35,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Woche01\Aufgaben\Aufgabe04.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Woche01\BeispieleMain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">false</ExcludedFromBuild>
