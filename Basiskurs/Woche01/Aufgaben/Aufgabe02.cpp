@@ -23,7 +23,7 @@ int main()
     gehalt = eingabe("Bitte Gehalt eingeben: ");
 
 
-    printf("Der Gehalt mit Zulagen betraegt: %.2f", berechnungGehaltmitZulage(gehalt, anzahlKinder));
+    printf("Der Gehalt mit Zulagen betraegt: EUR %.2f", berechnungGehaltmitZulage(gehalt, anzahlKinder));
 
     return 0;
 }
