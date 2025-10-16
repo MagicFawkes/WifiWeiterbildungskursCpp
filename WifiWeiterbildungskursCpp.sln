@@ -7,20 +7,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Basiskurs", "Basiskurs\Basi
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Woche01 Aufgaben|x64 = Woche01 Aufgaben|x64
-		Woche01 Aufgaben|x86 = Woche01 Aufgaben|x86
-		Woche01 Beispiele|x64 = Woche01 Beispiele|x64
-		Woche01 Beispiele|x86 = Woche01 Beispiele|x86
+		Woche01|x64 = Woche01|x64
+		Woche01|x86 = Woche01|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Aufgaben|x64.ActiveCfg = Woche01 Aufgaben|x64
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Aufgaben|x64.Build.0 = Woche01 Aufgaben|x64
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Aufgaben|x86.ActiveCfg = Woche01 Aufgaben|Win32
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Aufgaben|x86.Build.0 = Woche01 Aufgaben|Win32
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Beispiele|x64.ActiveCfg = Woche01 Beispiele|x64
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Beispiele|x64.Build.0 = Woche01 Beispiele|x64
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Beispiele|x86.ActiveCfg = Woche01 Beispiele|Win32
-		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01 Beispiele|x86.Build.0 = Woche01 Beispiele|Win32
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01|x64.ActiveCfg = Woche01|x64
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01|x64.Build.0 = Woche01|x64
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01|x86.ActiveCfg = Woche01|Win32
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01|x86.Build.0 = Woche01|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

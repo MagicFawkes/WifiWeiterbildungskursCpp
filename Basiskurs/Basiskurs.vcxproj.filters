@@ -66,10 +66,7 @@
     <ClCompile Include="Woche01\Beispiele\ZiffernVertauscher.cpp">
       <Filter>Source Files\Woche01\Beispiele</Filter>
     </ClCompile>
-    <ClCompile Include="Woche01\AufgabenMain.cpp">
-      <Filter>Source Files\Woche01</Filter>
-    </ClCompile>
-    <ClCompile Include="Woche01\BeispieleMain.cpp">
+    <ClCompile Include="Woche01\Main.cpp">
       <Filter>Source Files\Woche01</Filter>
     </ClCompile>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe02.cpp">
