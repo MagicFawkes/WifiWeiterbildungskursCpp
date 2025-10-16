@@ -1,4 +1,4 @@
-#define AKTIVE_AUFGABE 5
+#define AKTIVE_AUFGABE 6
 
 #if AKTIVE_AUFGABE == 1
 #include "Aufgaben/Aufgabe01.cpp"
