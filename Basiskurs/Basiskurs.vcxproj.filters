@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Woche01">
+      <UniqueIdentifier>{80086095-9a67-452e-96dc-f565af4e5485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche01\Aufgaben">
+      <UniqueIdentifier>{57fbd1d6-b9ee-4a93-ab86-a37d56a8d03d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche01\Beispiele">
+      <UniqueIdentifier>{5ceca111-0faa-42c2-b879-eba7a850659b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
+      <Filter>Source Files\Woche01\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\AverageBerechnung.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\Fakultät.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\FakultätFunktion.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\FigurFlächeUmfangCalc.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\HalbwertszeitFunktionen.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\KleinsterTeiler.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\KostenStromverbrauch.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\ListArraySortieren.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\PotenzwertZahl.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\PrimzahlenBestimmen.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\Quersumme.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\QuersummeFunktion.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\ZiffernVertauscher.cpp">
+      <Filter>Source Files\Woche01\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\AufgabenMain.cpp">
+      <Filter>Source Files\Woche01</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche01\BeispieleMain.cpp">
+      <Filter>Source Files\Woche01</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

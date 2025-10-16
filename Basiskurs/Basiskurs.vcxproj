@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Woche01 Aufgaben|Win32">
+      <Configuration>Woche01 Aufgaben</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Woche01 Aufgaben|x64">
+      <Configuration>Woche01 Aufgaben</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Woche01 Beispiele|Win32">
+      <Configuration>Woche01 Beispiele</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Woche01 Beispiele|x64">
+      <Configuration>Woche01 Beispiele</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Woche01\AufgabenMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\BeispieleMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\AverageBerechnung.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\Fakultät.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\FakultätFunktion.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\FigurFlächeUmfangCalc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\HalbwertszeitFunktionen.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\KleinsterTeiler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\KostenStromverbrauch.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\ListArraySortieren.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\PotenzwertZahl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\PrimzahlenBestimmen.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\Quersumme.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\QuersummeFunktion.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche01\Beispiele\ZiffernVertauscher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c9608370-20b6-4821-a315-ffe1482e2983}</ProjectGuid>
+    <RootNamespace>Basiskurs</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Beispiele|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche01 Aufgaben|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
