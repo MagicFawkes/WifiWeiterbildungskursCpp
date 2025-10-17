@@ -12,9 +12,57 @@ Wert wird returniert, alle Variablen sollen in der main definiert werden)
 
 #include <stdio.h>
 
+int eingabe(const char* message);
+void ermittleNettoGehalt(int bruttoGehalt, float* lohnsteuer, float* SVBeitraege);
 
 int main()
 {
+	float nettoGehalt = 0, lohnsteuer = 0, SVBeitraege = 0;
+	int bruttoGehalt = eingabe("Bitte geben Sie Ihr jaehrliches Brutto-Gehalt ein: ");
+
+	ermittleNettoGehalt(bruttoGehalt, &lohnsteuer, &SVBeitraege);
+
+    printf("Bruttogehalt: %d \nLohnsteuer: %.2f\nSV-Beitraegen: %.2f\nNettogehalt: %.2f\n", 
+		bruttoGehalt, lohnsteuer, SVBeitraege, (float)bruttoGehalt - lohnsteuer - SVBeitraege);
+
     return 0;
 }
 
+
+void ermittleNettoGehalt(int bruttoGehalt, float *lohnsteuer, float *SVBeitraege)
+{
+	*SVBeitraege = bruttoGehalt * 0.1812;
+
+	float steuerpfEinkommen = (float)bruttoGehalt - *SVBeitraege;
+
+	if (steuerpfEinkommen > 69166)
+	{
+		*lohnsteuer += (steuerpfEinkommen - 69166) * 0.48;
+		steuerpfEinkommen = 69166;
+	}
+	if (steuerpfEinkommen > 35836)
+	{
+		*lohnsteuer += (steuerpfEinkommen - 35836) * 0.40;
+		steuerpfEinkommen = 35836;
+	}
+	if (steuerpfEinkommen > 21617)
+	{
+		*lohnsteuer += (steuerpfEinkommen - 21617) * 0.30;
+		steuerpfEinkommen = 21617;
+	}
+	if (steuerpfEinkommen > 13308)
+	{
+		*lohnsteuer += (steuerpfEinkommen - 13308) * 0.20;
+		steuerpfEinkommen = 13308;
+	}
+}
+
+int eingabe(const char* message)
+{
+    int wert;
+
+    printf("%s", message);
+    scanf("%d", &wert);
+
+    return wert;
+}
