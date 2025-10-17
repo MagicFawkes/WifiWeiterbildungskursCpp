@@ -13,14 +13,14 @@ Wert wird returniert, alle Variablen sollen in der main definiert werden)
 #include <stdio.h>
 
 int eingabe(const char* message);
-void ermittleNettoGehalt(int bruttoGehalt, float* lohnsteuer, float* SVBeitraege);
+void ermittleLohnsteuer(int bruttoGehalt, float* lohnsteuer, float* SVBeitraege);
 
 int main()
 {
 	float nettoGehalt = 0, lohnsteuer = 0, SVBeitraege = 0;
 	int bruttoGehalt = eingabe("Bitte geben Sie Ihr jaehrliches Brutto-Gehalt ein: ");
 
-	ermittleNettoGehalt(bruttoGehalt, &lohnsteuer, &SVBeitraege);
+	ermittleLohnsteuer(bruttoGehalt, &lohnsteuer, &SVBeitraege);
 
     printf("Bruttogehalt: EUR %d \nLohnsteuer: EUR %.2f\nSV-Beitraegen: EUR %.2f\nNettogehalt: EUR %.2f\n", 
 		bruttoGehalt, lohnsteuer, SVBeitraege, (float)bruttoGehalt - lohnsteuer - SVBeitraege);
@@ -29,7 +29,7 @@ int main()
 }
 
 
-void ermittleNettoGehalt(int bruttoGehalt, float *lohnsteuer, float *SVBeitraege)
+void ermittleLohnsteuer(int bruttoGehalt, float *lohnsteuer, float *SVBeitraege)
 {
 	*SVBeitraege = bruttoGehalt * 0.1812f;
 
