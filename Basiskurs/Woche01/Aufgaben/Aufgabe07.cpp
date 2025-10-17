@@ -28,7 +28,6 @@ int main()
     return 0;
 }
 
-
 void ermittleLohnsteuer(int bruttoGehalt, float *lohnsteuer, float *SVBeitraege)
 {
 	*SVBeitraege = bruttoGehalt * 0.1812f;
