@@ -79,7 +79,7 @@ void selection(int* array, int elemente);
 
 int main()
 {
-    int eingabewerte[11] = { 0 };
+    int eingabewerte[15] = { 0 };
 
     int maxAnzahl = sizeof(eingabewerte) / sizeof(int);
 
@@ -88,8 +88,8 @@ int main()
         eingabewerte[i] = eingabe("Bitte gib einen Wert ein: ");
     }
 
-    printf("Maxwert ist %d\n", maxWertErmitteln(eingabewerte, maxAnzahl));
     printf("Minwert ist %d\n", minWertErmitteln(eingabewerte, maxAnzahl));
+    printf("Maxwert ist %d\n", maxWertErmitteln(eingabewerte, maxAnzahl));
 
     selection(eingabewerte, maxAnzahl - 1);
 
@@ -98,7 +98,7 @@ int main()
         printf("%d ", eingabewerte[i]);
     }
     
-    printf("Medianwert ist %f\n", (maxAnzahl %2) == 0 ? ((eingabewerte[maxAnzahl / 2 - 1] + eingabewerte[maxAnzahl / 2]) / 2.0) : (eingabewerte[maxAnzahl/2]));
+    printf("Medianwert ist %.1f\n", (maxAnzahl %2) == 0 ? ((eingabewerte[maxAnzahl / 2 - 1] + eingabewerte[maxAnzahl / 2]) / 2.0) : (eingabewerte[(maxAnzahl-1) /2]));
 
     return 0;
 }
