@@ -35,6 +35,11 @@ void ermittleNettoGehalt(int bruttoGehalt, float *lohnsteuer, float *SVBeitraege
 
 	float steuerpfEinkommen = (float)bruttoGehalt - *SVBeitraege;
 
+	if (steuerpfEinkommen > 103072)
+	{
+		*lohnsteuer += (steuerpfEinkommen - 103072) * 0.50;
+		steuerpfEinkommen = 103072;
+	}
 	if (steuerpfEinkommen > 69166)
 	{
 		*lohnsteuer += (steuerpfEinkommen - 69166) * 0.48;
