@@ -22,7 +22,7 @@ int main()
 
 	ermittleNettoGehalt(bruttoGehalt, &lohnsteuer, &SVBeitraege);
 
-    printf("Bruttogehalt: %d \nLohnsteuer: %.2f\nSV-Beitraegen: %.2f\nNettogehalt: %.2f\n", 
+    printf("Bruttogehalt: EUR %d \nLohnsteuer: EUR %.2f\nSV-Beitraegen: EUR %.2f\nNettogehalt: EUR %.2f\n", 
 		bruttoGehalt, lohnsteuer, SVBeitraege, (float)bruttoGehalt - lohnsteuer - SVBeitraege);
 
     return 0;
@@ -31,33 +31,33 @@ int main()
 
 void ermittleNettoGehalt(int bruttoGehalt, float *lohnsteuer, float *SVBeitraege)
 {
-	*SVBeitraege = bruttoGehalt * 0.1812;
+	*SVBeitraege = bruttoGehalt * 0.1812f;
 
-	float steuerpfEinkommen = (float)bruttoGehalt - *SVBeitraege;
+	float steuerpfEinkommen = bruttoGehalt - *SVBeitraege;
 
 	if (steuerpfEinkommen > 103072)
 	{
-		*lohnsteuer += (steuerpfEinkommen - 103072) * 0.50;
+		*lohnsteuer += (steuerpfEinkommen - 103072) * 0.50f;
 		steuerpfEinkommen = 103072;
 	}
 	if (steuerpfEinkommen > 69166)
 	{
-		*lohnsteuer += (steuerpfEinkommen - 69166) * 0.48;
+		*lohnsteuer += (steuerpfEinkommen - 69166) * 0.48f;
 		steuerpfEinkommen = 69166;
 	}
 	if (steuerpfEinkommen > 35836)
 	{
-		*lohnsteuer += (steuerpfEinkommen - 35836) * 0.40;
+		*lohnsteuer += (steuerpfEinkommen - 35836) * 0.40f;
 		steuerpfEinkommen = 35836;
 	}
 	if (steuerpfEinkommen > 21617)
 	{
-		*lohnsteuer += (steuerpfEinkommen - 21617) * 0.30;
+		*lohnsteuer += (steuerpfEinkommen - 21617) * 0.30f;
 		steuerpfEinkommen = 21617;
 	}
 	if (steuerpfEinkommen > 13308)
 	{
-		*lohnsteuer += (steuerpfEinkommen - 13308) * 0.20;
+		*lohnsteuer += (steuerpfEinkommen - 13308) * 0.20f;
 		steuerpfEinkommen = 13308;
 	}
 }
