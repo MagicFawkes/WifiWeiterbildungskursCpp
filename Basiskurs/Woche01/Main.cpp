@@ -1,6 +1,6 @@
 
 #define AKTIVE_BEISPIEL 0
-#define AKTIVE_AUFGABE 1
+#define AKTIVE_AUFGABE 3
 
 #if AKTIVE_BEISPIEL == 1
 #include "Beispiele/AverageBerechnung.cpp"

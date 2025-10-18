@@ -15,7 +15,7 @@ das Programm soll folgendes besitzen:
 
 int eingabe(const char* message);
 void programmbeschreibung(const char* message);
-float umrechner(int wert, int auswahl);
+float umrechner(const int wert, const int auswahl);
 
 int main()
 {
@@ -32,8 +32,9 @@ int main()
     return 0;
 }
 
-float umrechner(int wert, int auswahl)
+float umrechner(const int wert, const int auswahl)
 {
+    /* auswahl==1: F -> C ; auswahl==2: C -> F */
     return auswahl == 1 ? (wert - 32) / 1.8 : wert * 1.8 + 32;
 }
 
