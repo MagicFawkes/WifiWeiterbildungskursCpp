@@ -12,7 +12,7 @@ Das Programm soll folgendes besitzen:
 #include <stdio.h>
 
 int eingabe(const char* message);
-float berechnungGehaltmitZulage(float gehalt, int anzahlKinder);
+float berechnungGehaltmitZulage(const float gehalt, const int anzahlKinder);
 
 int main()
 {
@@ -20,15 +20,15 @@ int main()
     float gehalt;
 
     anzahlKinder = eingabe("Bitte Anzahl der Kinder eingeben: ");
-    gehalt = eingabe("Bitte Gehalt eingeben: ");
+    gehalt = (float)eingabe("Bitte Gehalt eingeben: ");
 
 
-    printf("Der Gehalt mit Zulagen betraegt: EUR %.2f", berechnungGehaltmitZulage(gehalt, anzahlKinder));
+    printf("Der Gehalt mit Zulagen betraegt: EUR %.2f\n", berechnungGehaltmitZulage(gehalt, anzahlKinder));
 
     return 0;
 }
 
-float berechnungGehaltmitZulage(float gehalt, int anzahlKinder)
+float berechnungGehaltmitZulage(const float gehalt, const int anzahlKinder)
 {
     float zulage = 0;
 
