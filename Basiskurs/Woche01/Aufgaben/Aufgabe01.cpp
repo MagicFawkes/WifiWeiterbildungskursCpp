@@ -21,7 +21,7 @@ main geändert werden (Spoiler: Pointer)
 
 void programmbeschreibung(const char* message);
 int eingabe(const char* message);
-void distanzBerechnung(int x1, int x2, int y1, int y2, double* distanz);
+void distanzBerechnung(const int x1, const int x2, const int y1, const int y2, double* distanz);
 
 int main()
 {
@@ -41,18 +41,43 @@ int main()
     return 0;
 }
 
-void distanzBerechnung(int x1, int x2, int y1, int y2, double *distanz)
+void distanzBerechnung(const int x1, const int x2, const int y1, const int y2, double *distanz)
 {
-    *distanz = sqrt(((x1 - x2) * (x1 - x2)) + (y1 - y2) * (y1 - y2));
+    //*distanz = sqrt(((x1 - x2) * (x1 - x2)) + (y1 - y2) * (y1 - y2));
+
+    /* Unterschied einmal bilden; in double casten, um Overflow/Präzisionsverluste zu vermeiden */
+    const double dx = (double)x1 - (double)x2;
+    const double dy = (double)y1 - (double)y2;
+
+    /* numerisch stabiler als sqrt(dx*dx + dy*dy) */
+    *distanz = hypot(dx, dy);
 }
 
 int eingabe(const char* message)
 {
-    int wert;
+    /*int wert;
     printf("%s", message);
     scanf("%d", &wert);
 
-    return wert;
+    return wert;*/
+
+    int wert;
+    int rc;
+
+    for (;;)
+    {
+        printf("%s", message);
+        rc = scanf("%d", &wert);
+        if (rc == 1)
+        {
+            return wert;
+        }
+
+        /* Fehleingabe: Eingabepuffer leeren */
+        int c;
+        while ((c = getchar()) != '\n' && c != EOF) {}
+        puts("Ungueltige Eingabe, bitte eine ganze Zahl eingeben.");
+    }
 }
 
 void programmbeschreibung(const char* message)
