@@ -16,9 +16,9 @@ Für die Berechnung des Durchschnittes denken sie an die Typumwanldung
 #include <stdio.h>
 
 int eingabe(const char* message);
-int ermittleMinWert(int liste[], int anzahl);;
-int ermittleMaxWert(int liste[], int anzahl);
-float ermittleDurchschnitt(int liste[], int anzahl);
+int ermittleMinWert(const int liste[], const int anzahl);
+int ermittleMaxWert(const int liste[], const int anzahl);
+float ermittleDurchschnitt(const int liste[], const int anzahl);
 
 int main()
 {
@@ -48,6 +48,12 @@ int main()
 
     } while (eingabewert != -1);
 
+    if (zaehler == 0)
+    {
+        printf("Keine gueltigen Werte eingegeben. Programm beendet.\n");
+        return 0;
+    }
+
     printf("Der min Wert ist %d ", ermittleMinWert(werteListe, zaehler));
     printf("\nDer max Wert ist %d ", ermittleMaxWert(werteListe, zaehler));
     printf("\nDer Durchschnitt ist %.2f ", ermittleDurchschnitt(werteListe, zaehler));
@@ -64,7 +70,7 @@ int eingabe(const char* message)
     return wert;
 }
 
-float ermittleDurchschnitt(int liste[], int anzahl)
+float ermittleDurchschnitt(const int liste[], const int anzahl)
 {
     int summe = 0;
 
@@ -76,11 +82,11 @@ float ermittleDurchschnitt(int liste[], int anzahl)
 	return summe / (float)anzahl;
 }
 
-int ermittleMinWert(int liste[], int anzahl)
+int ermittleMinWert(const int liste[], const int anzahl)
 {
     int minWert = liste[0];
 
-	for (int i = 0; i < anzahl; i++)
+	for (int i = 1; i < anzahl; i++)
 	{
 		if (liste[i] < minWert)
 			minWert = liste[i];
@@ -89,11 +95,11 @@ int ermittleMinWert(int liste[], int anzahl)
     return minWert;
 }
 
-int ermittleMaxWert(int liste[], int anzahl)
+int ermittleMaxWert(const int liste[], const int anzahl)
 {
     int maxWert = liste[0];
 
-    for (int i = 0; i < anzahl; i++)
+    for (int i = 1; i < anzahl; i++)
     {
         if (liste[i] > maxWert)
             maxWert = liste[i];
