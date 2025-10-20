@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Woche02\Beispiele">
       <UniqueIdentifier>{4b456e49-d6b1-4cc2-8100-bdcd7312cb5d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche02\Beispiele\src">
+      <UniqueIdentifier>{39f81a62-ac76-4c5a-a1a9-b0e328d8e2bb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -96,7 +99,7 @@
     <ClCompile Include="Woche01\Aufgaben\Aufgabe07.cpp">
       <Filter>Source Files\Woche01\Aufgaben</Filter>
     </ClCompile>
-    <ClCompile Include="Woche02\Beispiele\Beispiel01.cpp">
+    <ClCompile Include="Woche02\Beispiele\LedUmschaltung.cpp">
       <Filter>Source Files\Woche02\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe01.cpp">
@@ -105,5 +108,13 @@
     <ClCompile Include="Woche02\Main.cpp">
       <Filter>Source Files\Woche02</Filter>
     </ClCompile>
+    <ClCompile Include="Woche02\Beispiele\src\BinaryFunktionen .c">
+      <Filter>Source Files\Woche02\Beispiele\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">
+      <Filter>Source Files\Woche02\Beispiele\src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
