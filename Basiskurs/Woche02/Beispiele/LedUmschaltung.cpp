@@ -13,8 +13,11 @@ int main()
 {
 	int ledStatus = eingabe("Geben Sie einen Wert fuer die LEDs ein: ");
     printf_binary(ledStatus);
-    led_inverter(ledStatus);
+    led_an_aus_ausgabe(ledStatus, 10);
 
+    ledStatus = led_inverter(ledStatus);
+    led_an_aus_ausgabe(ledStatus, 10);
+   
     return 0;
 }
 
