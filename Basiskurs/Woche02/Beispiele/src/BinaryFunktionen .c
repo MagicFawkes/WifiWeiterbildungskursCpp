@@ -7,7 +7,7 @@ void printf_binary(int value, int anzahl)
     printf("\n0b");
     for (int i = anzahl; i >= 0; i--) {
         putchar((value & (1 << i)) ? '1' : '0');
-        //if (i == 4) putchar(' '); // nach 4 Bit trennen
+        if (i % 4 == 0) putchar(' '); // nach 4 Bit trennen
     }
 }
 
