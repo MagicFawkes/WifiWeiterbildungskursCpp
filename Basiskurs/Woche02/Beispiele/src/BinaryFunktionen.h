@@ -8,6 +8,7 @@ extern "C" {
 void printf_binary(int value, int anzahl);
 int led_inverter(int value);
 void led_an_aus_ausgabe(int value, int anzahl);
+int led_inverter_v2(int value, int* counter);
 
 #ifdef __cplusplus
 }
