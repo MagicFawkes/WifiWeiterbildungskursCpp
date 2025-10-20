@@ -46,10 +46,11 @@ void distanzBerechnung(const int x1, const int x2, const int y1, const int y2, d
     //*distanz = sqrt(((x1 - x2) * (x1 - x2)) + (y1 - y2) * (y1 - y2));
 
     /* Unterschied einmal bilden; in double casten, um Overflow/Präzisionsverluste zu vermeiden */
-    const double dx = (double)x1 - (double)x2;
-    const double dy = (double)y1 - (double)y2;
+    const double dx = x1 - x2;
+    const double dy = y1 - y2;
 
     /* numerisch stabiler als sqrt(dx*dx + dy*dy) */
+    // oder mit pow --> *distanz = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
     *distanz = hypot(dx, dy);
 }
 
