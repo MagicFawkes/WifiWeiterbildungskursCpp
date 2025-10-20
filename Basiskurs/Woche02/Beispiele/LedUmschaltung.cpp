@@ -29,9 +29,17 @@ int main()
 int eingabe(const char* message)
 {
     int wert;
+    int result;
 
     printf("%s", message);
-    scanf("%d", &wert);
+    result = scanf("%d", &wert);
+
+	if (result != 1) 
+    {
+        // Handle input error, e.g., set default value or print error
+        printf("Ungueltige Eingabe. Standardwert 0 wird verwendet.\n");
+        wert = 0;
+    }
 
     return wert;
 }
