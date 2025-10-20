@@ -13,32 +13,32 @@ eine entsprechende Meldung ausgegeben und umgekehrt
 #include <math.h>
 #include <stdbool.h> // Für bool, true, false
 
-int eingabe(const char* message);
-bool istQuadratzahl(const int zahl);
+float eingabe(const char* message);
+bool istQuadratzahl(const float zahl);
 
 int main()
 {
-    int eingabewert = eingabe("Bitte einen Wert eingeben: ");
+    float eingabewert = eingabe("Bitte einen Wert eingeben: ");
 
     if (istQuadratzahl(eingabewert))
-        printf("Die Zahl %d ist eine Quadratzahl.\n", eingabewert);
+        printf("Die Zahl %f ist eine Quadratzahl.\n", eingabewert);
     else
-        printf("Die Zahl %d ist keine Quadratzahl.\n", eingabewert);
+        printf("Die Zahl %f ist keine Quadratzahl.\n", eingabewert);
 
     return 0;
 }
 
-int eingabe(const char* message)
+float eingabe(const char* message)
 {
-    int wert;
+    float wert;
 
     printf("%s", message);
-    scanf("%d", &wert);
+    scanf("%f", &wert);
 
     return wert;
 }
 
-bool istQuadratzahl(const int zahl)
+bool istQuadratzahl(const float zahl)
 {
     if (zahl < 0) 
         return false;  // negative Zahlen haben keine reellen Quadratwurzeln
