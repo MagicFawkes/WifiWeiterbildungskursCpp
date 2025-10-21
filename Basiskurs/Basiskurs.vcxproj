@@ -116,6 +116,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Beispiele\src\BinaryFunktionen .c" />
+    <ClCompile Include="Woche02\Beispiele\src\TurnierFunktionen.c" />
     <ClCompile Include="Woche02\Main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">false</ExcludedFromBuild>
@@ -123,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h" />
+    <ClInclude Include="Woche02\Beispiele\src\TurnierFunktionen.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

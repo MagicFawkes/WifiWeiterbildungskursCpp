@@ -6,15 +6,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "src/BinaryFunktionen.h"
+#include "src/TurnierFunktionen.h"
 
 int eingabe(const char* message);
-
-struct Teilnehmer
-{
-    char name[30];
-    int punkte;
-};
 
 int main()
 {
@@ -40,7 +34,12 @@ int main()
                 anzahlTeilnehmer++;
 
                 printf("\nBitte Name eingeben: ");
-                scanf("%s", (teilnehmer + anzahlTeilnehmer - 1)->name);
+                // klassische Variante – liest nur bis zum ersten Leerzeichen
+                //scanf("%s", (teilnehmer + anzahlTeilnehmer - 1)->name);
+
+                // erweiterte Variante – liest die ganze Zeile bis zum Zeilenende (inkl. Leerzeichen),
+                // maximal 49 Zeichen, sicherer und platzsparend
+                scanf(" %40[^\n]", (teilnehmer + anzahlTeilnehmer - 1)->name);
 
                 printf("Bitte Punkte eingeben: ");
                 scanf("%d", &(teilnehmer + anzahlTeilnehmer - 1)->punkte);
@@ -75,22 +74,4 @@ int main()
 	
 
     return 0;
-}
-
-int eingabe(const char* message)
-{
-    int wert;
-    int result;
-
-    printf("%s", message);
-    result = scanf("%d", &wert);
-
-	if (result != 1) 
-    {
-        // Handle input error, e.g., set default value or print error
-        printf("Ungueltige Eingabe. Standardwert 0 wird verwendet.\n");
-        wert = 0;
-    }
-
-    return wert;
 }
