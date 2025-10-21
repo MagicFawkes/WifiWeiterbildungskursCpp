@@ -54,10 +54,13 @@ int main()
                     printf("\nName: %s", (teilnehmer + i)->name);
                     printf("\nPunkte: %d\n", (teilnehmer + i)->punkte);
                 }
-
                 break;
             case 3:
                 printf("Teilnehmer löschen: \n");
+
+				if (anzahlTeilnehmer != 0)
+                teilnehmer = (Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(Teilnehmer));
+                anzahlTeilnehmer--;
                 break;
             case 4:
                 printf("Programm beenden.\n");
