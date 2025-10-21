@@ -29,8 +29,12 @@ struct Teilnehmer* erzeugeTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTe
     return realloc(teilnehmer, (anzahlTeilnehmer + 1) * sizeof(struct Teilnehmer));
 }
 
-
 struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
 {
     return realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
+}
+
+struct Teilnehmer* sortiereTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
+{
+    return teilnehmer;
 }

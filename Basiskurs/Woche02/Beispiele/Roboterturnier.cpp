@@ -18,7 +18,7 @@ int main()
 
     do
     {
-        auswahl = eingabe("\n1 = Teilnehmer hinzufuegen, \n2 = Alle Teilnehmer anzeigen, \n3 = Teilnehmer loeschen, \n4 = Beenden\nEingabe: ");
+        auswahl = eingabe("\n1 = Teilnehmer hinzufuegen \n2 = Alle Teilnehmer anzeigen \n3 = Teilnehmer loeschen \n4 = Teilnehmer sortieren \n5 = Beenden\nEingabe: ");
 
         switch (auswahl)
         {
@@ -72,6 +72,10 @@ int main()
 				}
                 break;
             case 4:
+                printf("\nTeilnehmer sortieren: \n");
+                teilnehmer = sortiereTeilnehmer(teilnehmer, anzahlTeilnehmer);
+                break;
+            case 5:
                 printf("Programm beenden.\n");
                 break;
 			default:
@@ -79,7 +83,7 @@ int main()
 				break;
         }
 
-    } while (auswahl != 4);
+    } while (auswahl != 5);
 	
 
     return 0;
