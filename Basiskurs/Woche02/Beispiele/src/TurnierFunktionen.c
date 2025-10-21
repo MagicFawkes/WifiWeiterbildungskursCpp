@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include "TurnierFunktionen.h"
+#include <stdlib.h>
 
 int eingabe(const char* message)
 {
@@ -21,4 +22,15 @@ int eingabe(const char* message)
     }
 
     return wert;
+}
+
+struct Teilnehmer* erzeugeTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
+{
+    return realloc(teilnehmer, (anzahlTeilnehmer + 1) * sizeof(struct Teilnehmer));
+}
+
+
+struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
+{
+    return realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
 }
