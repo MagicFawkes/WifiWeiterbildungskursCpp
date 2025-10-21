@@ -8,8 +8,6 @@
 #include <stdio.h>
 #include "src/TurnierFunktionen.h"
 
-int eingabe(const char* message);
-
 int main()
 {
     int auswahl;
