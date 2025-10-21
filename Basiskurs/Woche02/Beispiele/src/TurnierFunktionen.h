@@ -1,5 +1,5 @@
-#ifndef BINARYFUNKTIONEN_H
-#define BINARYFUNKTIONEN_H
+#ifndef TURNIERFUNKTIONEN_H
+#define TURNIERFUNKTIONEN_H
 
 #ifdef __cplusplus
 extern "C" {

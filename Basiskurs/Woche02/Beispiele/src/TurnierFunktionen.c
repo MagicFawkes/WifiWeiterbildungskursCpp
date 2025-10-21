@@ -36,5 +36,6 @@ struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlT
 
 struct Teilnehmer* sortiereTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
 {
+
     return teilnehmer;
 }
