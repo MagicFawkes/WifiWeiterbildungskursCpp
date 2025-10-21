@@ -117,6 +117,9 @@
     <ClCompile Include="Woche02\Beispiele\src\TurnierFunktionen.c">
       <Filter>Source Files\Woche02\Beispiele\src</Filter>
     </ClCompile>
+    <ClCompile Include="Woche02\Beispiele\ZahlenTauschPointer.cpp">
+      <Filter>Source Files\Woche02\Beispiele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">
