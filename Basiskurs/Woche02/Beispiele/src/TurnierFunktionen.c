@@ -36,6 +36,20 @@ struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlT
 
 struct Teilnehmer* sortiereTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
 {
+    struct Teilnehmer temp;
+
+	for (int i = 0; i < anzahlTeilnehmer; i++)
+	{
+		for (int j = i + 1; j < anzahlTeilnehmer; j++)
+		{
+			if (teilnehmer[i].punkte < teilnehmer[j].punkte)
+			{
+                temp = teilnehmer[i];
+				teilnehmer[i] = teilnehmer[j];
+                teilnehmer[j]= temp;
+			}
+		}
+	}
 
     return teilnehmer;
 }
