@@ -21,7 +21,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void pointerTausch(int** a, int** b);
+void pointer_tausch(int** a, int** b);
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
 	*zahl2 = 5;
 
 	printf("Vor dem Tausch: zahl1 = %d, zahl2 = %d\n", *zahl1, *zahl2);
-	pointerTausch(&zahl1,&zahl2);
+	pointer_tausch(&zahl1,&zahl2);
 	printf("Nach dem Tausch: zahl1 = %d, zahl2 = %d\n", *zahl1, *zahl2);
 
 	free(zahl1);
@@ -40,7 +40,7 @@ int main()
     return 0;
 }
 
-void pointerTausch(int** a, int** b)
+void pointer_tausch(int** a, int** b)
 {
 	int* temp = *a;
 	*a = *b;
