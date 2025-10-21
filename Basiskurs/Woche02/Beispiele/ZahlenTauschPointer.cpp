@@ -30,9 +30,15 @@ int main()
 	int *zahl2 = (int*)malloc(sizeof(int));
 	*zahl2 = 5;
 
-	printf("Vor dem Tausch: zahl1 = %d, zahl2 = %d\n", *zahl1, *zahl2);
+	printf("\nVariable Adresse vor Tausch: zahl1 = 0x%p, zahl2 = 0x%p\n", (void*)&zahl1, (void*)&zahl2);
+	printf("Adresse vor dem Tausch: zahl1 = 0x%p, zahl2 = 0x%p\n", (void*)zahl1, (void*)zahl2);
+	printf("Wert vor dem Tausch: zahl1 = %d, zahl2 = %d\n", *zahl1, *zahl2);
+
 	pointer_tausch(&zahl1,&zahl2);
-	printf("Nach dem Tausch: zahl1 = %d, zahl2 = %d\n", *zahl1, *zahl2);
+
+	printf("\nVariable Adresse nach Tausch: zahl1 = 0x%p, zahl2 = 0x%p\n", (void*)&zahl1, (void*)&zahl2);
+	printf("Adresse vor Tausch: zahl1 = 0x%p, zahl2 = 0x%p\n", (void*)zahl1, (void*)zahl2);
+	printf("Wert nach dem Tausch: zahl1 = %d, zahl2 = %d\n", *zahl1, *zahl2);
 
 	free(zahl1);
 	free(zahl2);
