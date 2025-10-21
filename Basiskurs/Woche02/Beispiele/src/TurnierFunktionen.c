@@ -24,23 +24,23 @@ int eingabe(const char* message)
     return wert;
 }
 
-struct Teilnehmer* erzeugeTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
+struct Teilnehmer* erzeugeTeilnehmer(struct Teilnehmer* teilnehmer, const int* const anzahlTeilnehmer)
 {
-    return realloc(teilnehmer, (anzahlTeilnehmer + 1) * sizeof(struct Teilnehmer));
+    return realloc(teilnehmer, (*anzahlTeilnehmer + 1) * sizeof(struct Teilnehmer));
 }
 
-struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
+struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, const int* const anzahlTeilnehmer)
 {
-    return realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
+    return realloc(teilnehmer, (*anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
 }
 
-struct Teilnehmer* sortiereTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer)
+struct Teilnehmer* sortiereTeilnehmer(struct Teilnehmer* teilnehmer, const int* const anzahlTeilnehmer)
 {
     struct Teilnehmer temp;
 
-	for (int i = 0; i < anzahlTeilnehmer; i++)
+	for (int i = 0; i < *anzahlTeilnehmer; i++)
 	{
-		for (int j = i + 1; j < anzahlTeilnehmer; j++)
+		for (int j = i + 1; j < *anzahlTeilnehmer; j++)
 		{
 			if (teilnehmer[i].punkte < teilnehmer[j].punkte)
 			{

@@ -25,7 +25,7 @@ int main()
 			case 1:
                 printf("\nTeilnehmer hinzufuegen:");
                 //teilnehmer = (struct Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer + 1) * sizeof(struct Teilnehmer));
-				teilnehmer = erzeugeTeilnehmer(teilnehmer, anzahlTeilnehmer);
+				teilnehmer = erzeugeTeilnehmer(teilnehmer, &anzahlTeilnehmer);
 
                 if (teilnehmer == NULL) {
                     perror("realloc failed");
@@ -61,7 +61,7 @@ int main()
 				if (anzahlTeilnehmer > 0)
 				{
                     //teilnehmer = (struct Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
-					teilnehmer = entferneTeilnehmer(teilnehmer, anzahlTeilnehmer);
+					teilnehmer = entferneTeilnehmer(teilnehmer, &anzahlTeilnehmer);
 
                     if (teilnehmer == NULL && anzahlTeilnehmer > 1)
                     {
@@ -73,7 +73,7 @@ int main()
                 break;
             case 4:
                 printf("\nTeilnehmer sortieren: \n");
-                teilnehmer = sortiereTeilnehmer(teilnehmer, anzahlTeilnehmer);
+                teilnehmer = sortiereTeilnehmer(teilnehmer, &anzahlTeilnehmer);
                 break;
             case 5:
                 printf("Programm beenden.\n");

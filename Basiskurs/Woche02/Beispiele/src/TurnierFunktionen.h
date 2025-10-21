@@ -12,9 +12,9 @@ struct Teilnehmer
 };
 
 int eingabe(const char* message);
-struct Teilnehmer* erzeugeTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer);
-struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer);
-struct Teilnehmer* sortiereTeilnehmer(struct Teilnehmer* teilnehmer, int anzahlTeilnehmer);
+struct Teilnehmer* erzeugeTeilnehmer(struct Teilnehmer* teilnehmer, const int* const anzahlTeilnehmer);
+struct Teilnehmer* entferneTeilnehmer(struct Teilnehmer* teilnehmer, const int* const anzahlTeilnehmer);
+struct Teilnehmer* sortiereTeilnehmer(struct Teilnehmer* teilnehmer, const int* const anzahlTeilnehmer);
 
 #ifdef __cplusplus
 }
