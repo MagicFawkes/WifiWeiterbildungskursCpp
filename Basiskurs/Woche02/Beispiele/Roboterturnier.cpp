@@ -24,13 +24,13 @@ int main()
 
     do
     {
-        auswahl = eingabe("1 = Teilnehmer hinzufuegen, \n2 = Alle Teilnehmer anzeigen, \n3 = Teilnehmer loeschen, \n4 = Beenden\nEingabe: ");
+        auswahl = eingabe("\n1 = Teilnehmer hinzufuegen, \n2 = Alle Teilnehmer anzeigen, \n3 = Teilnehmer loeschen, \n4 = Beenden\nEingabe: ");
 
         switch (auswahl)
         {
 			case 1:
-                printf("Teilnehmer hinzufügen: \n");
-                teilnehmer = (Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer + 1) * sizeof(Teilnehmer));
+                printf("\nTeilnehmer hinzufuegen:");
+                teilnehmer = (struct Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer + 1) * sizeof(struct Teilnehmer));
 
                 if (teilnehmer == NULL) {
                     perror("realloc failed");
@@ -39,15 +39,15 @@ int main()
 
                 anzahlTeilnehmer++;
 
-                printf("\nBitte Name eingeben:");
+                printf("\nBitte Name eingeben: ");
                 scanf("%s", (teilnehmer + anzahlTeilnehmer - 1)->name);
 
-                printf("\nBitte Punkte eingeben:");
+                printf("Bitte Punkte eingeben: ");
                 scanf("%d", &(teilnehmer + anzahlTeilnehmer - 1)->punkte);
 
 				break;
             case 2:
-                printf("Alle Teilnehmer anzeigen: \n");
+                printf("\nAlle Teilnehmer anzeigen: \n");
 
                 for (int i=0; i< anzahlTeilnehmer; i++)
                 {
@@ -56,10 +56,11 @@ int main()
                 }
                 break;
             case 3:
-                printf("Teilnehmer löschen: \n");
+                printf("\nTeilnehmer loeschen: \n");
 
-				if (anzahlTeilnehmer != 0)
-                teilnehmer = (Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(Teilnehmer));
+				if (anzahlTeilnehmer > 0)
+					teilnehmer = (struct Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
+
                 anzahlTeilnehmer--;
                 break;
             case 4:
