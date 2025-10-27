@@ -34,7 +34,7 @@ int main()
     printf("Bitte gib eine Zahl ein: ");
     scanf("%d", &eingabe);
 
-    while (eingabe % 10 != 0)
+    while (eingabe)
     {
         zahl = eingabe % 10;
         neueSumme = zahl + (neueSumme * 10);
