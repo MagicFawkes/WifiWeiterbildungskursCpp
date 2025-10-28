@@ -141,6 +141,24 @@
     <ClCompile Include="Woche02\Aufgaben\Aufgabe01-static.cpp">
       <Filter>Source Files\Woche02\Aufgaben</Filter>
     </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe02.cpp">
+      <Filter>Source Files\Woche02\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe03.cpp">
+      <Filter>Source Files\Woche02\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe04.cpp">
+      <Filter>Source Files\Woche02\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe05.cpp">
+      <Filter>Source Files\Woche02\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe06.cpp">
+      <Filter>Source Files\Woche02\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe07.cpp">
+      <Filter>Source Files\Woche02\Aufgaben</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">
