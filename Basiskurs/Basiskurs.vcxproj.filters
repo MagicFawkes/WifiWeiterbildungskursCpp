@@ -34,6 +34,24 @@
     <Filter Include="Source Files\Woche02\Beispiele\src">
       <UniqueIdentifier>{39f81a62-ac76-4c5a-a1a9-b0e328d8e2bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche02\Aufgaben\dynlib">
+      <UniqueIdentifier>{bf090d9e-05a7-41b8-8deb-b59310b65d06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche02\Aufgaben\dynlib\lib">
+      <UniqueIdentifier>{25c346a6-cf07-4825-8252-3442b512df2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche02\Aufgaben\dynlib\include">
+      <UniqueIdentifier>{c8fd4d78-0d2b-4705-86a0-b8ac42ae6910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche02\Aufgaben\staticlib">
+      <UniqueIdentifier>{a2dc2e92-b497-406b-9863-daecc08d9dda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche02\Aufgaben\staticlib\include">
+      <UniqueIdentifier>{7b926b09-7c1b-4d33-b77e-8ca1d422f34e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche02\Aufgaben\staticlib\lib">
+      <UniqueIdentifier>{ab33eab9-1e66-47f7-92e0-154c300ea630}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -102,7 +120,7 @@
     <ClCompile Include="Woche02\Beispiele\LedUmschaltung.cpp">
       <Filter>Source Files\Woche02\Beispiele</Filter>
     </ClCompile>
-    <ClCompile Include="Woche02\Aufgaben\Aufgabe01.cpp">
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe01-dyn.cpp">
       <Filter>Source Files\Woche02\Aufgaben</Filter>
     </ClCompile>
     <ClCompile Include="Woche02\Main.cpp">
@@ -120,6 +138,9 @@
     <ClCompile Include="Woche02\Beispiele\ZahlenTauschPointer.cpp">
       <Filter>Source Files\Woche02\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe01-static.cpp">
+      <Filter>Source Files\Woche02\Aufgaben</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">
@@ -128,5 +149,24 @@
     <ClInclude Include="Woche02\Beispiele\src\TurnierFunktionen.h">
       <Filter>Source Files\Woche02\Beispiele\src</Filter>
     </ClInclude>
+    <ClInclude Include="Woche02\Aufgaben\dynlib\include\geometrie.h">
+      <Filter>Source Files\Woche02\Aufgaben\dynlib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Woche02\Aufgaben\staticlib\include\geometrieStatic.h">
+      <Filter>Source Files\Woche02\Aufgaben\staticlib\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Woche02\Aufgaben\dynlib\lib\GeometrieLib.lib">
+      <Filter>Source Files\Woche02\Aufgaben\dynlib\lib</Filter>
+    </Library>
+    <Library Include="Woche02\Aufgaben\staticlib\lib\GeometrieLibStatic.lib">
+      <Filter>Source Files\Woche02\Aufgaben\staticlib\lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Woche02\Aufgaben\dynlib\GeometrieLib.dll">
+      <Filter>Source Files\Woche02\Aufgaben\dynlib</Filter>
+    </None>
   </ItemGroup>
 </Project>

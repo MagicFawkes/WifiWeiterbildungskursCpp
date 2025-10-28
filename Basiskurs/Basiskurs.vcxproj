@@ -103,7 +103,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Woche02\Aufgaben\Aufgabe01.cpp">
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe01-dyn.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\Aufgabe01-static.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -127,8 +131,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Woche02\Aufgaben\dynlib\include\geometrie.h" />
+    <ClInclude Include="Woche02\Aufgaben\staticlib\include\geometrieStatic.h" />
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h" />
     <ClInclude Include="Woche02\Beispiele\src\TurnierFunktionen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Woche02\Aufgaben\dynlib\lib\GeometrieLib.lib" />
+    <Library Include="Woche02\Aufgaben\staticlib\lib\GeometrieLibStatic.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Woche02\Aufgaben\dynlib\GeometrieLib.dll" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -229,6 +242,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Wiesi\Desktop\GitHub\WifiWeiterbildungskursCpp\Basiskurs\Woche02\Aufgaben\staticlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GeometrieLibStatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
