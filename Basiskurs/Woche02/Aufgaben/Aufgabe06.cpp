@@ -94,6 +94,26 @@ void sortierePersonen(struct Person* person, const int* const anzahlPersonen)
 	}
 }
 
+void zeigeTeilnehmer(Person* personen, int* anzahlPersonen)
+{
+	printf("\nAlle Teilnehmer anzeigen: \n");
+	sortierePersonen(personen, anzahlPersonen);
+
+	for (int i = 0; i < *anzahlPersonen; i++)
+	{
+		printf("\nIndex: %d", i);
+		printf("\nName: %s", (personen + i)->name);
+		printf("\nGesamt Kalorien: %d", (personen + i)->gesamtKalorien);
+
+		for (int u = 0; u < personen[i].anzahlSpeisen; u++)
+		{
+			printf("\nEssen: %s", (personen + i)->essenListe[u].essen);
+			printf("\nKalorien: %d\n", (personen + i)->essenListe[u].kalorien);
+		}
+	}
+}
+
+
 int main()
 {
 	int auswahl;
@@ -131,16 +151,20 @@ int main()
 				break;
 			case 2:
 				{
+					zeigeTeilnehmer(personen, &anzahlPersonen);
+
 					int index = eingabe("\nBitte Index der Person eingeben: ");
 
 					personen[index].essenListe = erzeugeSpeise(personen[index].essenListe, &personen[index].anzahlSpeisen);
 					personen[index].anzahlSpeisen++;
 
 					printf("\nBitte Essen eingeben: ");
-					scanf(" %40[^\n]", (personen[index].essenListe->essen));
+					scanf(" %40[^\n]", (personen[index].essenListe[personen[index].anzahlSpeisen - 1].essen));
 
 					printf("\nBitte Kalorien eingeben: ");
-					scanf("%d", &(personen[index].essenListe->kalorien));
+					scanf("%d", &(personen[index].essenListe[personen[index].anzahlSpeisen - 1].kalorien));
+
+					personen[index].gesamtKalorien += personen[index].essenListe[personen[index].anzahlSpeisen - 1].kalorien;
 				}
 
 				break;
@@ -161,24 +185,13 @@ int main()
 				}
 				break;
 			case 4:
-				printf("\nAlle Teilnehmer anzeigen: \n");
-				sortierePersonen(personen, &anzahlPersonen);
+				zeigeTeilnehmer(personen, &anzahlPersonen);
 
-	    		for (int i = 0; i < anzahlPersonen; i++)
-				{
-					printf("\nIndex: %d", i);
-					printf("\nName: %s", (personen + i)->name);
-					printf("\nGesamt Kalorien: %d", (personen + i)->gesamtKalorien);
-
-					for (int u = 0; u < personen[i].anzahlSpeisen; u++)
-					{
-						printf("\nEssen: %s", (personen + i)->essenListe[u].essen);
-						printf("\nKalorien: %d\n", (personen + i)->essenListe[u].kalorien);
-					}
-				}
 				break;
 			case 5:
-				printf("Programm beenden.\n");
+				printf("*********** Programm beenden ***********");
+				zeigeTeilnehmer(personen, &anzahlPersonen);
+
 				break;
 			default:
 				printf("Ungueltige Auswahl. Bitte erneut versuchen.\n");
@@ -189,4 +202,5 @@ int main()
 
 	return 0;
 }
+
 
