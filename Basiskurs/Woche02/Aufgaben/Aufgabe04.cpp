@@ -31,5 +31,5 @@ int berechungFibonacci(int n)
         return 1;
 	}
 
-	return berechungFibonacci(n - 1) + berechungFibonacci( n - 2);
+	return berechungFibonacci(n - 1) + berechungFibonacci(n - 2);
 }
