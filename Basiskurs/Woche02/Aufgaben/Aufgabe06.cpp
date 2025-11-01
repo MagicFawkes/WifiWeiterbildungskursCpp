@@ -29,17 +29,18 @@ sortiert angezeigt (die Person mit den meisten Kalorien zuerst)
 #include <cstdlib>
 #include <stdio.h>
 
-struct Speisen
+struct Speise
 {
 	char essen[40];
-	int kalorien = 0;
+	int kalorien;
 };
 
 struct Person
 {
 	char name[40];
 	int gesamtKalorien;
-	struct Speisen* essenListe;
+	int anzahlSpeisen;
+	struct Speise* essenListe;
 };
 
 int eingabe(const char* message)
@@ -58,6 +59,11 @@ int eingabe(const char* message)
 	}
 
 	return wert;
+}
+
+struct Speise* erzeugeSpeise(struct Speise* speise, const int* const anzahlSpeisen)
+{
+	return (Speise*)realloc(speise, (*anzahlSpeisen + 1) * sizeof(struct Speise));
 }
 
 struct Person* erzeugePerson(struct Person* person, const int* const anzahlPersonen)
@@ -100,62 +106,83 @@ int main()
 
 	    switch (auswahl)
 	    {
-	    case 1:
-	        printf("\nPerson hinzufuegen:");
-			personen = erzeugePerson(personen, &anzahlPersonen);
+			case 1:
+				printf("\nPerson hinzufuegen:");
+				personen = erzeugePerson(personen, &anzahlPersonen);
 
-	        if (personen == NULL) {
-	            perror("realloc failed");
-	            return 1;
-	        }
+				if (personen == NULL) {
+					perror("realloc failed");
+					return 1;
+				}
 
-			anzahlPersonen++;
+				anzahlPersonen++;
 
-	        printf("\nBitte Name eingeben: ");
-	        // klassische Variante – liest nur bis zum ersten Leerzeichen
-	        //scanf("%s", (teilnehmer + anzahlTeilnehmer - 1)->name);
+				printf("\nBitte Name eingeben: ");
+				// klassische Variante – liest nur bis zum ersten Leerzeichen
+				//scanf("%s", (teilnehmer + anzahlTeilnehmer - 1)->name);
 
-	        // erweiterte Variante – liest die ganze Zeile bis zum Zeilenende (inkl. Leerzeichen),
-	        // maximal 49 Zeichen, sicherer und platzsparend
-	        scanf(" %40[^\n]", (personen + anzahlPersonen - 1)->name);
-			(personen + anzahlPersonen - 1)->gesamtKalorien = 0;
+				// erweiterte Variante – liest die ganze Zeile bis zum Zeilenende (inkl. Leerzeichen),
+				// maximal 49 Zeichen, sicherer und platzsparend
+				scanf(" %40[^\n]", (personen + anzahlPersonen - 1)->name);
+				(personen + anzahlPersonen - 1)->gesamtKalorien = 0;
+				(personen + anzahlPersonen - 1)->anzahlSpeisen = 0;
+				(personen + anzahlPersonen - 1)->essenListe = NULL;
 
-	        break;
-		case 2:
-			break;
-	    case 3:
-	        printf("\nTeilnehmer loeschen: \n");
+				break;
+			case 2:
+				{
+					int index = eingabe("\nBitte Index der Person eingeben: ");
 
-	        if (anzahlPersonen > 0)
-	        {
-	            //teilnehmer = (struct Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
-	            personen = entfernePerson(personen, &anzahlPersonen);
+					personen[index].essenListe = erzeugeSpeise(personen[index].essenListe, &personen[index].anzahlSpeisen);
+					personen[index].anzahlSpeisen++;
 
-	            if (personen == NULL && anzahlPersonen > 1)
-	            {
-	                perror("realloc failed");
-	                return 1;
-	            }
-				anzahlPersonen--;
-	        }
-	        break;
-		case 4:
-			printf("\nAlle Teilnehmer anzeigen: \n");
-			sortierePersonen(personen, &anzahlPersonen);
+					printf("\nBitte Essen eingeben: ");
+					scanf(" %40[^\n]", (personen[index].essenListe->essen));
 
-	    	for (int i = 0; i < anzahlPersonen; i++)
-			{
-				printf("\nIndex: %d", i);
-				printf("\nName: %s", (personen + i)->name);
-				printf("\nKalorien: %d\n", (personen + i)->gesamtKalorien);
-			}
-			break;
-	    case 5:
-	        printf("Programm beenden.\n");
-	        break;
-	    default:
-	        printf("Ungueltige Auswahl. Bitte erneut versuchen.\n");
-	        break;
+					printf("\nBitte Kalorien eingeben: ");
+					scanf("%d", &(personen[index].essenListe->kalorien));
+				}
+
+				break;
+			case 3:
+				printf("\nTeilnehmer loeschen: \n");
+
+				if (anzahlPersonen > 0)
+				{
+					//teilnehmer = (struct Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
+					personen = entfernePerson(personen, &anzahlPersonen);
+
+					if (personen == NULL && anzahlPersonen > 1)
+					{
+						perror("realloc failed");
+						return 1;
+					}
+					anzahlPersonen--;
+				}
+				break;
+			case 4:
+				printf("\nAlle Teilnehmer anzeigen: \n");
+				sortierePersonen(personen, &anzahlPersonen);
+
+	    		for (int i = 0; i < anzahlPersonen; i++)
+				{
+					printf("\nIndex: %d", i);
+					printf("\nName: %s", (personen + i)->name);
+					printf("\nGesamt Kalorien: %d", (personen + i)->gesamtKalorien);
+
+					for (int u = 0; u < personen[i].anzahlSpeisen; u++)
+					{
+						printf("\nEssen: %s", (personen + i)->essenListe[u].essen);
+						printf("\nKalorien: %d\n", (personen + i)->essenListe[u].kalorien);
+					}
+				}
+				break;
+			case 5:
+				printf("Programm beenden.\n");
+				break;
+			default:
+				printf("Ungueltige Auswahl. Bitte erneut versuchen.\n");
+				break;
 	    }
 
 	} while (auswahl != 5);
