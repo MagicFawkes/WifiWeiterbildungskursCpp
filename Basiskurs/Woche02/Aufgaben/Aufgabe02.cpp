@@ -45,6 +45,8 @@ int main()
 
     } while (dezimalZahl != 0);
 
+    printf("\nProgrmam beendet, Speicher freigeben!");
+
 	free(array);
 
     return 0;
