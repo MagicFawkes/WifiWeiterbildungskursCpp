@@ -172,6 +172,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\src\binaryIO.c" />
     <ClCompile Include="Woche02\Beispiele\LedUmschaltung.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
@@ -212,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Aufgaben\dynlib\include\geometrie.h" />
+    <ClInclude Include="Woche02\Aufgaben\src\binaryIO.h" />
     <ClInclude Include="Woche02\Aufgaben\staticlib\include\geometrieStatic.h" />
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h" />
     <ClInclude Include="Woche02\Beispiele\src\TurnierFunktionen.h" />

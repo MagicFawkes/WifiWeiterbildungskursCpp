@@ -61,6 +61,9 @@
     <Filter Include="Source Files\Woche03\Beispiele">
       <UniqueIdentifier>{422aa6e8-16f3-47bc-b6a3-61e402feed2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche02\Aufgaben\src">
+      <UniqueIdentifier>{48f8638e-6da9-49bc-9ba6-060d990a2597}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -177,6 +180,9 @@
     <ClCompile Include="Woche03\Beispiele\Beispiel01.cpp">
       <Filter>Source Files\Woche03\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche02\Aufgaben\src\binaryIO.c">
+      <Filter>Source Files\Woche02\Aufgaben\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">
@@ -190,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="Woche02\Aufgaben\staticlib\include\geometrieStatic.h">
       <Filter>Source Files\Woche02\Aufgaben\staticlib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Woche02\Aufgaben\src\binaryIO.h">
+      <Filter>Source Files\Woche02\Aufgaben\src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -12,9 +12,42 @@ also im Parameter der Wert 27 steht, dann soll 11011 ausgegeben werden.
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
+#include "src/binaryIO.h"
+
+void eingabe(char input[], const char* message);
+bool istBinary(char input[], int* dezimal);
 
 int main()
 {
-    printf("Test");
+    char input[100];  // Puffer mit Platz für 99 Zeichen + '\0'
+    int dezimal = 0;
+
+    eingabe(input, "Gib eine Binaere Zahl ein: ");
+
+	if (istBinary(input, &dezimal))
+    {
+        printf("Ist Binaer\n");
+        printf("Dezimal: %d \n", dezimal);
+		print_binary(dezimal);
+    }
+    else
+    {
+        printf("Ist nicht Binaer\n");
+    }
+
     return 0;
+}
+
+void eingabe(char input[], const char* message)
+{
+    printf("%s", message);
+
+    if (fgets(input, sizeof(input), stdin) != NULL)
+    {
+        printf("Du hast eingegeben: %s", input);
+    }
+    else
+    {
+        printf("Fehler beim Einlesen!\n");
+    }
 }
