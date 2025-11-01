@@ -15,7 +15,6 @@ also im Parameter der Wert 27 steht, dann soll 11011 ausgegeben werden.
 #include "src/binaryIO.h"
 
 void eingabe(char input[], const char* message);
-bool istBinary(char input[], int* dezimal);
 
 int main()
 {
