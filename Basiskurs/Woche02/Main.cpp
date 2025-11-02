@@ -1,6 +1,6 @@
 
 #define AKTIVE_BEISPIEL 0
-#define AKTIVE_AUFGABE 7
+#define AKTIVE_AUFGABE 6
 
 #if AKTIVE_BEISPIEL == 1
 #include "Beispiele/LedUmschaltung.cpp"

@@ -73,6 +73,7 @@ struct Person* erzeugePerson(struct Person* person, const int* const anzahlPerso
 
 struct Person* entfernePerson(struct Person* person, const int* const anzahlPersonen)
 {
+	free(person[*anzahlPersonen -1].essenListe);
 	return (Person*)realloc(person, (*anzahlPersonen - 1) * sizeof(struct Person));
 }
 
@@ -166,13 +167,20 @@ int main()
 
 					personen[index].gesamtKalorien += personen[index].essenListe[personen[index].anzahlSpeisen - 1].kalorien;
 				}
-
 				break;
 			case 3:
 				printf("\nTeilnehmer loeschen: \n");
+				zeigeTeilnehmer(personen, &anzahlPersonen);
 
 				if (anzahlPersonen > 0)
 				{
+					int index = eingabe("\nBitte Index der Person eingeben: ");
+
+					struct Person temp;
+					temp = personen[index];
+					personen[index] = personen[anzahlPersonen-1];
+					personen[anzahlPersonen - 1] = temp;
+
 					//teilnehmer = (struct Teilnehmer*)realloc(teilnehmer, (anzahlTeilnehmer - 1) * sizeof(struct Teilnehmer));
 					personen = entfernePerson(personen, &anzahlPersonen);
 
