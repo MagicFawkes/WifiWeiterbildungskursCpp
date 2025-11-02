@@ -114,7 +114,6 @@ void zeigeTeilnehmer(Person* personen, int* anzahlPersonen)
 	}
 }
 
-
 int main()
 {
 	int auswahl;
