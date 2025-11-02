@@ -37,9 +37,9 @@ int main()
 
         Auswertung auswertung = eingabe();
 
-        printf("\nDer Satz hat %d Woerter", auswertung.anzahlWoerter);
-        printf("\nDer Satz hat %d Zeilen", auswertung.anzahlZeilen);
-        printf("\nDer Satz hat %d Zeichen\n", auswertung.anzahlZeichen);
+        printf("\nDer Text hat %d Woerter", auswertung.anzahlWoerter);
+        printf("\nDer Text hat %d Zeilen", auswertung.anzahlZeilen);
+        printf("\nDer Text hat %d Zeichen\n", auswertung.anzahlZeichen);
     } while (true);
 	
     return 0;
