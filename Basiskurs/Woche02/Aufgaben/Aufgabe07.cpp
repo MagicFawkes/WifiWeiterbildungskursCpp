@@ -33,7 +33,7 @@ int main()
     do
     {
         printf("*************************************");
-        printf("\nBitte geben Sie einen Satz oder Text ein (Beenden: Strg+Z danach Enter druecken) :\n");
+        printf("\nBitte geben Sie einen Satz oder Text ein (Beenden: Strg+Z danach Enter druecken):\n");
 
         Auswertung auswertung = eingabe();
 
