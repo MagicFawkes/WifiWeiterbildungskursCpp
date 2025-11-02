@@ -15,6 +15,7 @@ While ((c = getchar()) != EOF)
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
+#include <ctype.h>
 
 struct Auswertung
 {
@@ -23,23 +24,19 @@ struct Auswertung
     int anzahlZeichen = 0;
 };
 
-#define MAX_LEN 256
-
-void eingabe(const char* message, int maxCount, char satz[]);
-struct Auswertung zaehleWoerter(const char* text);
+//#define MAX_LEN 256
+//void eingabe(const char* message, int maxCount, char satz[]);
+struct Auswertung eingabe();
 
 int main()
 {
-    char satz[MAX_LEN];
-
     do
     {
         printf("*************************************");
-        eingabe("\nBitte geben Sie einen Satz ein: ", MAX_LEN, satz);
+        printf("\nBitte geben Sie einen Satz oder Text ein (Beenden: Strg+Z danach Enter druecken) :\n");
 
-        Auswertung auswertung = zaehleWoerter(satz);
+        Auswertung auswertung = eingabe();
 
-        printf("Folgendes wurde eingegeben: %s", satz);
         printf("\nDer Satz hat %d Woerter", auswertung.anzahlWoerter);
         printf("\nDer Satz hat %d Zeilen", auswertung.anzahlZeilen);
         printf("\nDer Satz hat %d Zeichen\n", auswertung.anzahlZeichen);
@@ -48,27 +45,29 @@ int main()
     return 0;
 }
 
-void eingabe(const char* message, int maxCount, char satz[])
-{
-    printf("%s", message);
-    fgets(satz, maxCount, stdin);
-}
+//void eingabe(const char* message, int maxCount, char satz[])
+//{
+//    printf("%s", message);
+//    fgets(satz, maxCount, stdin);
+//}
 
-struct Auswertung zaehleWoerter(const char* text)
+struct Auswertung eingabe()
 {
 	struct Auswertung auswertung;
 
     int imWort = 0;  // Zustand: 0 = auﬂerhalb, 1 = innerhalb eines Wortes
+    
+    int c = 0;
 
-    for (int i = 0; text[i] != '\0'; i++)
+    while ((c = getchar()) != EOF)
     {
 		auswertung.anzahlZeichen++;
 
-        if (text[i] == ' ' || text[i] == '\n' || text[i] == '!')
+        if (isspace(c) || c == '\n' || c == '!')
         {
             imWort = 0;
 
-            if (text[i] == '\n')
+            if (c == '\n')
             {
                 auswertung.anzahlZeilen++;
 			}
