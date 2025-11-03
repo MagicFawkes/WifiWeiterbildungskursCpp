@@ -11,6 +11,7 @@
 int ermittlteGesamtzahlZeichen(int ascii[]);
 int ermittlteAnzahlBuchstaben(int ascii[]);
 void ermittlteHaeufigkeitBuchstaben(int ascii[]);
+void ermittleHaeufigstesZeichen(int ascii[]);
 
 int main()
 {
@@ -31,6 +32,7 @@ int main()
     printf("Gesamtzahl aller eingelesenen Zeichen %d \n", ermittlteGesamtzahlZeichen(ascii));
     printf("Hauefigkeit aller Gross- und Kleinbuchstaben %d \n", ermittlteAnzahlBuchstaben(ascii));
     ermittlteHaeufigkeitBuchstaben(ascii);
+    ermittleHaeufigstesZeichen(ascii);
 
     return 0;
 }
@@ -39,7 +41,7 @@ int ermittlteGesamtzahlZeichen(int ascii[])
 {
     int anzahl = 0;
 
-    for (int i = 0; i < anzahl; i++)
+    for (int i = 0; i < 128; i++)
     {
         anzahl += ascii[i];
     }
@@ -74,4 +76,21 @@ void ermittlteHaeufigkeitBuchstaben(int ascii[])
         if (ascii[i] > 0)
 			printf("Kleibuchstabe %c ist %d vorgekommen\n", i, ascii[i]);
     }
+}
+
+void ermittleHaeufigstesZeichen(int ascii[])
+{
+    int max = 0;
+    int zeichen = 0;
+
+    for (int i = 0; i < 128; i++)
+    {
+        if (max < ascii[i])
+        {
+	        max = ascii[i];
+			zeichen = i;
+        }
+    }
+
+    printf("Häufigigste Zeichen %c ist %d vorgekommen\n", zeichen, max);
 }
