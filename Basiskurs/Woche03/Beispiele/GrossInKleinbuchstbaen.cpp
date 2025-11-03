@@ -18,9 +18,11 @@ int main()
         printf("Bitte Wort eingeben: ");
         scanf("%19s", eingabe);     // \0 am Ende des Strings reservieren daher 19 statt 20
 
+        printf("Grossbuchstaben - ");
         inKGrossbuchstabenUmwandeln(eingabe);
         printf("Wort: %s\n", eingabe);
 
+        printf("Kleinbuchstaben - ");
         inKleinbuchstabenUmwandeln(eingabe);
         printf("Wort: %s\n", eingabe);
 
