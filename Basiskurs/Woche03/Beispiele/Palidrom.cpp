@@ -16,7 +16,7 @@ int main()
     do
     {
 		printf("Bitte Wort eingeben: ");
-        scanf("%20s", eingabe);
+		scanf("%19s", eingabe);     // \0 am Ende des Strings reservieren daher 19 statt 20
 
         printf("\nWort \"%s\" ist %s Palidrom!\n", eingabe, istPalidrom(eingabe) ? "ein" : "kein");
     } while (true);
@@ -28,7 +28,7 @@ bool istPalidrom (char palidrom[])
 {
     int laenge = strlen(palidrom);
 
-    for (int i = 0; i < laenge; i++)
+	for (int i = 0; i < laenge; i++) // laenge/2 wuerde auch gehen
     {
 	    if (palidrom[i] != palidrom[laenge - i - 1])
 	    {
