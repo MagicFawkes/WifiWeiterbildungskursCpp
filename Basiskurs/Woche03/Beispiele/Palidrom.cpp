@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <string.h>
+
 bool istPalidrom(char palidrom[]);
 
 int main()
