@@ -6,8 +6,8 @@
 
 #include <stdio.h>
 
-void inKGrossbuchstabenUmwandeln(char palidrom[]);
-void inKleinbuchstabenUmwandeln(char palidrom[]);
+void inKGrossbuchstabenUmwandeln(char eingabe[]);
+void inKleinbuchstabenUmwandeln(char eingabe[]);
 
 int main()
 {
@@ -31,26 +31,26 @@ int main()
     return 0;
 }
 
-void inKleinbuchstabenUmwandeln(char palidrom[])
+void inKleinbuchstabenUmwandeln(char eingabe[])
 {
     int i = 0;
 
-    while (palidrom[i] != '\0')
+    while (eingabe[i] != '\0')
     {
-        if (palidrom[i] >= 65 && palidrom[i] <= 90)
-			palidrom[i] += 32;
+        if (eingabe[i] >= 65 && eingabe[i] <= 90)
+            eingabe[i] += 32;
         i++;
     }
 }
 
-void inKGrossbuchstabenUmwandeln(char palidrom[])
+void inKGrossbuchstabenUmwandeln(char eingabe[])
 {
     int i = 0;
 
-    while (palidrom[i] != '\0')
+    while (eingabe[i] != '\0')
     {
-        if (palidrom[i] >= 97 && palidrom[i] <= 122)
-            palidrom[i] -= 32;
+        if (eingabe[i] >= 97 && eingabe[i] <= 122)
+            eingabe[i] -= 32;
         i++;
     }
 }
