@@ -26,9 +26,9 @@ int main()
 
 bool istPalidrom (char palidrom[])
 {
-    int laenge = strlen(palidrom);
+	int laenge = (int)strlen(palidrom); //strlen gibt size_t zurueck, daher casten
 
-	for (int i = 0; i < laenge; i++) // laenge/2 wuerde auch gehen
+	for (int i = 0; i < laenge; i++) // laenge/2 wuerde auch gehen, reicht bis zur Haelfte zu vergleichen
     {
 	    if (palidrom[i] != palidrom[laenge - i - 1])
 	    {
