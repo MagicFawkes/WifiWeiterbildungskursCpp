@@ -6,12 +6,15 @@
 
 #include <stdio.h>
 
+#define MAXCOUNT 128
+
 int ermittlteGesamtzahlZeichen(int ascii[]);
-int ermittlteHaufigkeitBuchstaben(int ascii[]);
+int ermittlteAnzahlBuchstaben(int ascii[]);
+void ermittlteHaeufigkeitBuchstaben(int ascii[]);
 
 int main()
 {
-    int ascii[128] = {0};
+	int ascii[MAXCOUNT] = { 0 }; //Initialisierung des Arrays für alle Werte mit 0 ist wichtig
     int c = 0;
 
     printf("*************************************");
@@ -25,8 +28,10 @@ int main()
 	printf("Es wurden %d Leerzeichen eingegeben\n", ascii[32]);         //ASCII-Wert fuer Leerzeichen ist 32
 	printf("Es wurden %d Tabulatoren eingegeben\n", ascii[9]);          //ASCII-Wert fuer Tabulator ist 9
 	printf("Es wurden %d Zeilenumbrueche eingegeben\n", ascii[10]);     //ASCII-Wert fuer Zeilenumbruch ist 10
-    printf("Gestamzahl aller eingelesenen Zeichen %d \n", ermittlteGesamtzahlZeichen(ascii));
-    printf("Hauefigkeit aller Gross- und Kleinbuchstaben %d \n", ermittlteHaufigkeitBuchstaben(ascii));
+    printf("Gesamtzahl aller eingelesenen Zeichen %d \n", ermittlteGesamtzahlZeichen(ascii));
+    printf("Hauefigkeit aller Gross- und Kleinbuchstaben %d \n", ermittlteAnzahlBuchstaben(ascii));
+    ermittlteHaeufigkeitBuchstaben(ascii);
+
     return 0;
 }
 
@@ -34,22 +39,39 @@ int ermittlteGesamtzahlZeichen(int ascii[])
 {
     int anzahl = 0;
 
-    for (int i = 0; i < 256; i++)
+    for (int i = 0; i < anzahl; i++)
     {
         anzahl += ascii[i];
     }
 	return anzahl;
 }
 
-int ermittlteHaufigkeitBuchstaben(int ascii[])
+int ermittlteAnzahlBuchstaben(int ascii[])
 {
     int anzahl = 0;
 
-    for (int i = 0; i < 256; i++)
+    for (int i = 65; i <= 122; i++)
     {
         if ((i >= 65 && i <= 90) || (i >= 97 && i <= 122))
             anzahl += ascii[i];
     }
 
     return anzahl;
+}
+
+void ermittlteHaeufigkeitBuchstaben(int ascii[])
+{
+    int anzahl = 0;
+
+    for (int i = 65; i <= 90; i++)
+    {
+        if (ascii[i] > 0)
+			printf("Grossbuchstabe %c ist %d vorgekommen\n", i, ascii[i]);
+    }
+
+    for (int i = 97; i <= 122; i++)
+    {
+        if (ascii[i] > 0)
+			printf("Kleibuchstabe %c ist %d vorgekommen\n", i, ascii[i]);
+    }
 }
