@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 3
+#define AKTIVE_BEISPIEL 4
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -8,6 +8,8 @@
 #include "Beispiele/AsciiZeichenErmittellnOld.cpp"
 #elif AKTIVE_BEISPIEL == 3
 #include "Beispiele/AsciiZeichenErmittelln.cpp"
+#elif AKTIVE_BEISPIEL == 4
+#include "Beispiele/VermutungLieblingsfrucht.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
