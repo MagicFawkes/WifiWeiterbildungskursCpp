@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 4
+#define AKTIVE_BEISPIEL 6
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -12,6 +12,8 @@
 #include "Beispiele/VermutungLieblingsfrucht.cpp"
 #elif AKTIVE_BEISPIEL == 5
 #include "Beispiele/StringLaengeErmitteln.cpp"
+#elif AKTIVE_BEISPIEL == 6
+#include "Beispiele/Palidrom.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
