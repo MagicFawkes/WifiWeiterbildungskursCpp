@@ -1,9 +1,9 @@
 
-#define AKTIVE_BEISPIEL 0
-#define AKTIVE_AUFGABE 1
+#define AKTIVE_BEISPIEL 2
+#define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
-#include "Beispiele/Beispiel01.cpp"
+#include "Beispiele/DynSpeicherallozierung.cpp"
 #elif AKTIVE_BEISPIEL == 2
 #include "Beispiele/Beispiel02.cpp"
 #endif

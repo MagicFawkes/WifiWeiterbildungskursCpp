@@ -177,11 +177,14 @@
     <ClCompile Include="Woche03\Aufgaben\Aufgabe01.cpp">
       <Filter>Source Files\Woche03\Aufgaben</Filter>
     </ClCompile>
-    <ClCompile Include="Woche03\Beispiele\Beispiel01.cpp">
+    <ClCompile Include="Woche03\Beispiele\DynSpeicherallozierung.cpp">
       <Filter>Source Files\Woche03\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\src\binaryIO.c">
       <Filter>Source Files\Woche02\Aufgaben\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche03\Beispiele\Beispiel02.cpp">
+      <Filter>Source Files\Woche03\Beispiele</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
