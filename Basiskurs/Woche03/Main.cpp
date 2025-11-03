@@ -10,6 +10,8 @@
 #include "Beispiele/AsciiZeichenErmittelln.cpp"
 #elif AKTIVE_BEISPIEL == 4
 #include "Beispiele/VermutungLieblingsfrucht.cpp"
+#elif AKTIVE_BEISPIEL == 5
+#include "Beispiele/StringLaengeErmitteln.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
