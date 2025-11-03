@@ -15,7 +15,7 @@
 #elif AKTIVE_BEISPIEL == 6
 #include "Beispiele/Palidrom.cpp"
 #elif AKTIVE_BEISPIEL == 7
-#include "Beispiele/GrossInKleinbuchstbaen.cpp"
+#include "Beispiele/GrossInKleinbuchstaben.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1

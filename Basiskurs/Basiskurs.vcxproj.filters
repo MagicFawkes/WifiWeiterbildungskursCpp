@@ -198,7 +198,7 @@
     <ClCompile Include="Woche03\Beispiele\Palidrom.cpp">
       <Filter>Source Files\Woche03\Beispiele</Filter>
     </ClCompile>
-    <ClCompile Include="Woche03\Beispiele\GrossInKleinbuchstbaen.cpp">
+    <ClCompile Include="Woche03\Beispiele\GrossInKleinbuchstaben.cpp">
       <Filter>Source Files\Woche03\Beispiele</Filter>
     </ClCompile>
   </ItemGroup>
