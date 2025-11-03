@@ -5,7 +5,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include <string.h>
 
 void inKGrossbuchstabenUmwandeln(char palidrom[]);
 void inKleinbuchstabenUmwandeln(char palidrom[]);
