@@ -5,7 +5,7 @@
 #if AKTIVE_BEISPIEL == 1
 #include "Beispiele/DynSpeicherallozierung.cpp"
 #elif AKTIVE_BEISPIEL == 2
-#include "Beispiele/Beispiel02.cpp"
+#include "Beispiele/AsciiZeichenErmittellnOld.cpp"
 #elif AKTIVE_BEISPIEL == 3
 #include "Beispiele/AsciiZeichenErmittelln.cpp"
 #endif
