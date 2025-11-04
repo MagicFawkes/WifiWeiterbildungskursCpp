@@ -56,4 +56,30 @@ int main()
 	    fclose(ptr);
 	    return 0;
 	}
+
+
+	#define MAX 100
+
+	int main(void)
+	{
+	    FILE *ptr = fopen("data.txt", "r");
+	    if (ptr == NULL) {
+	        printf("File could not be opened\n");
+	        return 0;
+	    }
+
+	    int num = 0;
+	    char name[MAX];
+
+	    // Lies jedes "Wort" (getrennt durch Leerzeichen oder Zeilenumbruch)
+	    while (fscanf(ptr, "%s", name) == 1)
+	    {
+	        num = atoi(name);  // wandelt Text in Zahl (liefert 0, wenn keine Zahl)
+	        if (num != 0)
+	            printf("%d\t", num);
+	    }
+
+	    fclose(ptr);
+	    return 0;
+	}
 */
