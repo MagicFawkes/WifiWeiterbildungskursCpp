@@ -33,16 +33,34 @@ int main()
     printf("Max Grenze: ");
     scanf("%d", &maxGrenze);
 
+    int generierteZahl = 0;
+    bool repeat = false;
+    int loopErkannt = 0;
+
     for (int i = 0; i < anzahl; i++)
     {
-        zufallszahl[i] = (rand() % (maxGrenze - minGrenze + 1)) + minGrenze;
+        do
+        {
+			repeat = false;
+            generierteZahl = (rand() % (maxGrenze - minGrenze + 1)) + minGrenze;
+
+            for (int j = i; j > 0; j--)
+            {
+                if (generierteZahl == zufallszahl[j-1])
+                {
+                    repeat = true;
+                    loopErkannt++;
+                }
+            }
+        } while (repeat && loopErkannt < 100);
+
+    	zufallszahl[i] = generierteZahl;
     }
 
     for (int i = 0; i < anzahl; i++)
     {
         printf("Die Zufallszahl ist: %d\n", zufallszahl[i]);
     }
-
 
     return 0;
 }
