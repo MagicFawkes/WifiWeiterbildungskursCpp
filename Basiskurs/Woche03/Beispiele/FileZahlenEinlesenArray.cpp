@@ -82,4 +82,27 @@ int main()
 	    fclose(ptr);
 	    return 0;
 	}
+
+	char name[MAX];
+
+	while ((fscanf(ptr, "%s", name)) != EOF)
+	{
+		sum = 0;
+		k = strlen(name);
+
+		for (int i = 0; name[i] != '\0'; i++)
+		{
+			if (name[i] >= '0' && name[i] <= '9')
+			{
+				num = name[i] - 48;
+				sum = sum + num * pow(10, k - 1);
+				k--;
+			}
+		}
+
+		if (sum != 0)
+		{
+			printf("%d\n", sum);
+		}
+}
 */
