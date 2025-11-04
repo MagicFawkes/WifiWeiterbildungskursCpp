@@ -54,6 +54,7 @@ int main()
                 {
                     repeat = true;
                     loopErkannt++;
+					printf("Wiederholung erkannt: %d\n", generierteZahl);
                 }
             }
         } while (repeat && loopErkannt < 100);
