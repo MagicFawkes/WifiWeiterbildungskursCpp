@@ -28,7 +28,10 @@ int main()
 
 	while ((c = fgetc(ptrRead)) != EOF)
 	{
-		fputc(c, ptrWrite);
+		int result = fputc(c, ptrWrite);
+
+		if (result == EOF)
+			printf("Fehler beim Schreiben!\n");
 	}
 
 	fclose(ptrRead);
