@@ -204,9 +204,6 @@
     <ClCompile Include="Woche03\Beispiele\FileZahlenEinlesenArray.cpp">
       <Filter>Source Files\Woche03\Beispiele</Filter>
     </ClCompile>
-    <ClCompile Include="Woche03\Beispiele\FileEinlesenKlonen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Woche03\Beispiele\FileEinlesenUndKlonen.cpp">
       <Filter>Source Files\Woche03\Beispiele</Filter>
     </ClCompile>
