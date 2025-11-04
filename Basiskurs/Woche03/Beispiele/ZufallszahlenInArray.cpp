@@ -12,12 +12,13 @@ free(namenListe)
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
+
+#define MAX_ZAHLEN 1000
 
 int main()
 {
-    int zufallszahl[100];
+    int zufallszahl[MAX_ZAHLEN];
 
     srand(time(NULL));
     int anzahl = 0;
@@ -26,6 +27,9 @@ int main()
 
     printf("Bitte geben Sie an, wieviel Zufallszahlen generiert werdne sollen:");
     scanf("%d", &anzahl);
+
+    if (MAX_ZAHLEN < anzahl)
+        anzahl = MAX_ZAHLEN;
 
     printf("Min Grenze: ");
     scanf("%d", &minGrenze);
