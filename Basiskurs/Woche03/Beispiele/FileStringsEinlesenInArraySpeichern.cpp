@@ -25,9 +25,7 @@ int main()
     }
 
 	int zeilen = 0;
-
 	char** namenListe = NULL;
-
 	char name[100];
 
 	while (fscanf(ptrRead, "%s", name) != EOF)
@@ -36,8 +34,8 @@ int main()
 
 		zeilen++;
 		namenListe = (char**)realloc(namenListe, zeilen * sizeof(char*));
-		namenListe[zeilen - 1] = (char*)malloc(strlen(name) + 1);
-		strcpy(namenListe[zeilen - 1], name);
+		namenListe[zeilen - 1] = (char*)malloc(strlen(name) + 1);		// +1 fuer das Nullterminierungszeichen
+		strcpy(namenListe[zeilen - 1], name);	//strcopy kopiert den namen in den allokierten Speicher mit \0 am Ende
 	}
 
 	for (int i = 1; i < zeilen; i++)
@@ -47,7 +45,6 @@ int main()
 	}
 
 	free(namenListe);
-
 	fclose(ptrRead);
 
     return 0;
