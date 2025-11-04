@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 9
+#define AKTIVE_BEISPIEL 10
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -20,6 +20,8 @@
 #include "Beispiele/FileZahlenEinlesenArray.cpp"
 #elif AKTIVE_BEISPIEL == 9
 #include "Beispiele/FileEinlesenUndKlonen.cpp"
+#elif AKTIVE_BEISPIEL == 10
+#include "Beispiele/FileStringsEinlesenInArraySpeichern.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
