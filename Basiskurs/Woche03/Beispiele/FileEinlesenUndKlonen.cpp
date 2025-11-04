@@ -12,9 +12,6 @@ Hallo 55 Welt -23
 
 int main()
 {
-    int array[100];
-    int i = 0;
-
 	FILE* ptrRead = fopen("input.txt", "r");
     FILE* ptrWrite = fopen("copy.txt", "w");
 
