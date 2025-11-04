@@ -38,7 +38,7 @@ int main()
 		strcpy(namenListe[zeilen - 1], name);	//strcopy kopiert den namen in den allokierten Speicher mit \0 am Ende
 	}
 
-	for (int i = 1; i < zeilen; i++)
+	for (int i = 0; i < zeilen; i++)
 	{
 		printf("Name %d: %s\n", i, namenListe[i]);
 		free(namenListe[i]);
