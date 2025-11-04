@@ -15,8 +15,8 @@ int main()
     int array[100];
     int i = 0;
 
-	FILE* ptrRead = fopen("Datei.txt", "r");
-    FILE* ptrWrite = fopen("Datei1.txt", "w");
+	FILE* ptrRead = fopen("input.txt", "r");
+    FILE* ptrWrite = fopen("copy.txt", "w");
 
     if (ptrRead == NULL || ptrWrite == NULL)
     {
