@@ -64,6 +64,15 @@
     <Filter Include="Source Files\Woche02\Aufgaben\src">
       <UniqueIdentifier>{48f8638e-6da9-49bc-9ba6-060d990a2597}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche04">
+      <UniqueIdentifier>{c725185c-43a5-4dad-ba73-e638fbfd4fff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche04\Aufgaben">
+      <UniqueIdentifier>{e3dbff26-d878-416b-8e16-42366ab49377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche04\Beispiele">
+      <UniqueIdentifier>{b7ddd343-eb62-40de-8e3a-78aef67d3ea7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -212,6 +221,15 @@
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\ZufallszahlenInArray.cpp">
       <Filter>Source Files\Woche03\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche04\Main.cpp">
+      <Filter>Source Files\Woche04</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche04\Beispiele\Palidrom.cpp">
+      <Filter>Source Files\Woche04\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche04\Aufgaben\Aufgabe01.cpp">
+      <Filter>Source Files\Woche04\Aufgaben</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
