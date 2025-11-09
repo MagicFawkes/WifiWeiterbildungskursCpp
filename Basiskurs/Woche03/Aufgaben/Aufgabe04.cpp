@@ -10,6 +10,7 @@ wir in der Vorlesung besprochen haben (Bufferoverflow etc.).
 #include <stdio.h>
 
 int strcmp(const char* str1, const char* str2);
+int strcopy(const char* str1, char* str2);
 
 int main()
 {
@@ -17,11 +18,54 @@ int main()
     char vergleich[] = {"Test"};
     printf("Bitte einen Begriff ein: ");
     scanf("%s", eingabe);
-    printf("Der Vergleich von Eingabewort %s zum Vergleichswort %s ergab %s\n", 
+    printf("Der Vergleich von Eingabewort \"%s\" zum Vergleichswort \"%s\" ergab %s\n", 
     eingabe, vergleich, strcmp(eingabe, vergleich) == 0 ? "ident" : "nicht ident!");
+
+    char copy[20];
+    int erfolgreich = strcopy(eingabe, copy);
+    printf("Der Vergleich von Eingabewort: \"%s\" zum kopierten Wort: \"%s\"\n", eingabe, copy);
 
     return 0;
 }
+
+int strcopy(const char* str1, char* str2)
+{
+    int i = 0;
+
+    while (str1[i] != '\0')
+    {
+        str2[i] = str1[i];
+        i++;
+    }
+    str2[i] = '\0';
+
+    return 1;
+}
+
+/*
+	int strcopy(const char* src, char* dest, int destSize)
+	{
+	    if (src == NULL || dest == NULL || destSize <= 0)
+	        return -1; // Fehler
+
+	    int i = 0;
+
+	    // kopiere nur solange noch Platz für mindestens 1 Zeichen + '\0' ist
+	    while (src[i] != '\0' && i < destSize - 1)
+	    {
+	        dest[i] = src[i];
+	        i++;
+	    }
+
+	    dest[i] = '\0'; // immer terminieren!
+
+	    // Wenn wir nicht alles kopieren konnten ? Overflow verhindert, aber abgeschnitten
+	    if (src[i] != '\0')
+	        return -2; // Hinweis: abgeschnitten
+
+	    return 0; // alles ok
+	}
+*/
 
 int strcmp(const char* str1, const char* str2)
 {
