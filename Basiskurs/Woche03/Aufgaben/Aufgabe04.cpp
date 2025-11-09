@@ -11,6 +11,7 @@ wir in der Vorlesung besprochen haben (Bufferoverflow etc.).
 
 int strcmp(const char* str1, const char* str2);
 int strcopy(const char* str1, char* str2);
+int atoi(const char* str1, int* wert);
 
 int main()
 {
@@ -24,6 +25,33 @@ int main()
     char copy[20];
     int erfolgreich = strcopy(eingabe, copy);
     printf("Der Vergleich von Eingabewort: \"%s\" zum kopierten Wort: \"%s\"\n", eingabe, copy);
+
+    int integerWert = 0;
+    atoi(eingabe, &integerWert);
+    printf("Der Vergleich von Eingabewort: \"%s\" ergibt nach atoi: %d\n", eingabe, integerWert);
+
+
+    return 0;
+}
+
+int atoi(const char* str1, int *wert)
+{
+    int i = 0;
+
+    while (str1[i] != '\0')
+    {
+        if (str1[i] >= '0' && str1[i] <= '9')
+        {
+            *wert *= 10;
+            *wert += str1[i] - 48;
+        }
+        else
+        {
+            return -1;
+        }
+
+        i++;
+    }
 
     return 0;
 }
