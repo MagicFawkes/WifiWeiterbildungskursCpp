@@ -34,10 +34,17 @@ int main()
 	}
 
 	int zeilen = 0;
+
+	// Dynamisches Array von Strings (Pointer auf Pointer auf char)
 	char** namenListe = NULL;  // WICHTIG: initialisieren!
+
 	int c = 0;
 	int imWort = 0;
 	int zaehler = 0;
+
+	//Mehrdimensionales dynamische Matrix, 2D-Matrix (rechteckig, zusammenhängender Speicher
+	const int spalten = 20;
+	char (*matrix)[spalten] = (char (*)[spalten]) malloc(zeilen * sizeof * matrix);
 
 	while ((c = fgetc(ptrRead)) != EOF)
 	{
@@ -53,8 +60,12 @@ int main()
 			}
 
 			zaehler++;
+			matrix = (char (*)[spalten]) realloc(matrix, zeilen * sizeof * matrix);
+			matrix[zeilen - 1][zaehler - 1] = (char)c;
+			matrix[zeilen - 1][zaehler] = '\0'; // Nullterminierung
+
 			namenListe[zeilen - 1] = (char*)realloc(namenListe[zeilen - 1], zaehler + 1);		// +1 fuer das Nullterminierungszeichen
-			namenListe[zeilen - 1][zaehler - 1] = c; // Zeichen speichern
+			namenListe[zeilen - 1][zaehler - 1] = (char)c; // Zeichen speichern
 			namenListe[zeilen - 1][zaehler] = '\0'; // Nullterminierung
 		}
 		else if (imWort)
@@ -63,12 +74,30 @@ int main()
 		}
 	}
 
+	printf("Array:\n");
 	for (int i = 0; i < zeilen; i++)
 	{
 		printf("Name %d: %s\n", i, namenListe[i]);
 		free(namenListe[i]);
 	}
 	free(namenListe);
+
+	printf("\nMatrix:\n");
+	for (int i = 0; i < zeilen; i++)
+	{
+		int j = 0;
+
+		printf("Name %d: ", i);
+
+		while (matrix[i][j] != '\0') // Zeichen prüfen
+		{
+			printf("%c", matrix[i][j]);
+			j++;
+		}
+		printf("\n");
+	}
+
+	free(matrix);
 
 	fclose(ptrRead);
 
