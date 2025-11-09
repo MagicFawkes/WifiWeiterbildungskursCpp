@@ -9,7 +9,7 @@ wir in der Vorlesung besprochen haben (Bufferoverflow etc.).
 #include <climits>
 #include <stdio.h>
 
-int strcmp(char* str1, char* str2);
+int strcmp(const char* str1, const char* str2);
 
 int main()
 {
@@ -67,31 +67,33 @@ int strcmp(const char* str1, const char* str2)
     return 0;
 }
 
-int strcmp_safe(const char* s1, const char* s2, size_t maxlen)
-{
-    if (s1 == NULL || s2 == NULL || maxlen == 0)
-        return INT_MIN; // Fehler 
+/*
+	int strcmp_safe(const char* s1, const char* s2, size_t maxlen)
+	{
+	    if (s1 == NULL || s2 == NULL || maxlen == 0)
+	        return INT_MIN; // Fehler 
 
-    size_t i = 0;
+	    size_t i = 0;
 
-    while (i < maxlen)
-    {
-        unsigned char c1 = (unsigned char)s1[i];
-        unsigned char c2 = (unsigned char)s2[i];
+	    while (i < maxlen)
+	    {
+	        unsigned char c1 = (unsigned char)s1[i];
+	        unsigned char c2 = (unsigned char)s2[i];
 
-        if (c1 != c2)
-            return (int)c1 - (int)c2; // negatives / positives Ergebnis wie std strcmp 
+	        if (c1 != c2)
+	            return (int)c1 - (int)c2; // negatives / positives Ergebnis wie std strcmp 
 
-        // wenn beide '\0' sind, sind die Strings gleich
-        if (c1 == '\0')
-            return 0;
+	        // wenn beide '\0' sind, sind die Strings gleich
+	        if (c1 == '\0')
+	            return 0;
 
-        i++;
-    }
+	        i++;
+	    }
 
-    // Wenn hier angekommen: wir haben maxlen erreicht, ohne Terminator zu sehen.
-	//Das deutet auf potentiell nicht-terminierten String (kein '\0' innerhalb maxlen).
-	// Das ist ein Sicherheitsereignis -> Fehler zurückgeben, statt falsches Ergebnis.
-    return INT_MIN;
-}
+	    // Wenn hier angekommen: wir haben maxlen erreicht, ohne Terminator zu sehen.
+		//Das deutet auf potentiell nicht-terminierten String (kein '\0' innerhalb maxlen).
+		// Das ist ein Sicherheitsereignis -> Fehler zurückgeben, statt falsches Ergebnis.
+	    return INT_MIN;
+	}
+*/
 
