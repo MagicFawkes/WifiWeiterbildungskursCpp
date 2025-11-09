@@ -43,28 +43,31 @@ int strcopy(const char* str1, char* str2)
 }
 
 /*
-	int strcopy(const char* src, char* dest, int destSize)
-	{
-	    if (src == NULL || dest == NULL || destSize <= 0)
-	        return -1; // Fehler
+int safe_strcpy(char *dest, size_t dest_size, const char *src) 
+{
+    if (!dest || !src) 
+        return -1;
 
-	    int i = 0;
+    if (dest_size == 0) 
+        return -2;
 
-	    // kopiere nur solange noch Platz für mindestens 1 Zeichen + '\0' ist
-	    while (src[i] != '\0' && i < destSize - 1)
-	    {
-	        dest[i] = src[i];
-	        i++;
-	    }
-
-	    dest[i] = '\0'; // immer terminieren!
-
-	    // Wenn wir nicht alles kopieren konnten ? Overflow verhindert, aber abgeschnitten
-	    if (src[i] != '\0')
-	        return -2; // Hinweis: abgeschnitten
-
-	    return 0; // alles ok
+    size_t i = 0;
+    // Kopiere maximal dest_size - 1 Zeichen, damit Platz für '\0' bleibt 
+	while (i + 1 < dest_size && src[i] != '\0') 
+    {
+	    dest[i] = src[i];
+	    i++;
 	}
+
+	// Terminieren
+	dest[i] = '\0';
+
+	// Wenn src noch nicht am Ende, dann war dest zu klein 
+	if (src[i] != '\0') 
+        return -2; // abgeschnitten 
+
+	return 0;
+}
 */
 
 int strcmp(const char* str1, const char* str2)
@@ -112,32 +115,32 @@ int strcmp(const char* str1, const char* str2)
 }
 
 /*
-	int strcmp_safe(const char* s1, const char* s2, size_t maxlen)
-	{
-	    if (s1 == NULL || s2 == NULL || maxlen == 0)
-	        return INT_MIN; // Fehler 
+int strcmp_safe(const char* s1, const char* s2, size_t maxlen)
+{
+    if (s1 == NULL || s2 == NULL || maxlen == 0)
+        return INT_MIN; // Fehler 
 
-	    size_t i = 0;
+    size_t i = 0;
 
-	    while (i < maxlen)
-	    {
-	        unsigned char c1 = (unsigned char)s1[i];
-	        unsigned char c2 = (unsigned char)s2[i];
+    while (i < maxlen)
+    {
+        unsigned char c1 = (unsigned char)s1[i];
+        unsigned char c2 = (unsigned char)s2[i];
 
-	        if (c1 != c2)
-	            return (int)c1 - (int)c2; // negatives / positives Ergebnis wie std strcmp 
+        if (c1 != c2)
+            return (int)c1 - (int)c2; // negatives / positives Ergebnis wie std strcmp 
 
-	        // wenn beide '\0' sind, sind die Strings gleich
-	        if (c1 == '\0')
-	            return 0;
+        // wenn beide '\0' sind, sind die Strings gleich
+        if (c1 == '\0')
+            return 0;
 
-	        i++;
-	    }
+        i++;
+    }
 
-	    // Wenn hier angekommen: wir haben maxlen erreicht, ohne Terminator zu sehen.
-		//Das deutet auf potentiell nicht-terminierten String (kein '\0' innerhalb maxlen).
-		// Das ist ein Sicherheitsereignis -> Fehler zurückgeben, statt falsches Ergebnis.
-	    return INT_MIN;
-	}
+    // Wenn hier angekommen: wir haben maxlen erreicht, ohne Terminator zu sehen.
+	//Das deutet auf potentiell nicht-terminierten String (kein '\0' innerhalb maxlen).
+	// Das ist ein Sicherheitsereignis -> Fehler zurückgeben, statt falsches Ergebnis.
+    return INT_MIN;
+}
 */
 
