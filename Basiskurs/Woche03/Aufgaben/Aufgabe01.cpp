@@ -14,9 +14,56 @@ Sie nicht wissen, was in der Textdatei drinnen ist.)
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-    printf("Test");
+    FILE* ptrRead = fopen("aufgabe01.txt", "r");
+
+	if (ptrRead == NULL)
+	{
+		printf("File konnte nicht geoeffnet werden.\n");
+		return 1;
+	}
+
+	int zeilen = 0;
+	char** namenListe = NULL;
+	int c = 0;
+	int imWort = 0;
+	int zaehler = 0;
+
+	while ((c = fgetc(ptrRead)) != EOF)
+	{
+		if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
+		{
+			if(!imWort)
+			{
+				zaehler = 0;
+				zeilen++;
+				namenListe = (char**)realloc(namenListe, zeilen * sizeof(char*));
+				namenListe[zeilen - 1] = NULL; // WICHTIG: initialisieren!
+				imWort = 1;
+			}
+
+			zaehler++;
+			namenListe[zeilen - 1] = (char*)realloc(namenListe[zeilen - 1], zaehler + 1);		// +1 fuer das Nullterminierungszeichen
+			namenListe[zeilen - 1][zaehler - 1] = c; // Zeichen speichern
+			namenListe[zeilen - 1][zaehler] = '\0'; // Nullterminierung
+		}
+		else if (imWort)
+		{
+			imWort = 0;
+		}
+	}
+
+	for (int i = 0; i < zeilen; i++)
+	{
+		printf("Name %d: %s\n", i, namenListe[i]);
+		free(namenListe[i]);
+	}
+	free(namenListe);
+
+	fclose(ptrRead);
+
     return 0;
 }
