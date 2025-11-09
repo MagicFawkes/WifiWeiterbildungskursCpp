@@ -16,8 +16,8 @@ int main()
 
     printf("Bitte einen Buchstaben eingeben: ");
     scanf("%c", &eingabe);
-    printf("\n Ihre Eingabe ist %c", eingabe);
-    printf("\n Der ASCII Wert ist: %d", charToInt(eingabe));
+    printf("\nIhre Eingabe ist %c", eingabe);
+    printf("\nDer ASCII Wert ist: %d", charToInt(eingabe));
 
     return 0;
 }
