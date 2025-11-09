@@ -36,10 +36,17 @@ int main()
 		int c = 0;
 		int imWort = 0;
 		int zaehler = 0;
+		int anzahlZahlen = 0;
 
 		while ((c = fgetc(ptrRead)) != EOF)
 		{
-			ascii[c]++;
+			if (c < 128)
+				ascii[c]++;
+
+			if (c >= '0' && c <= '9')
+			{
+				anzahlZahlen++;
+			}
 
 			if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
 			{
@@ -52,17 +59,18 @@ int main()
 					imWort = 1;
 				}
 
+				zaehler++;
 				namenListe[zeilen - 1] = (char*)realloc(namenListe[zeilen - 1], zaehler + 1);		// +1 fuer das Nullterminierungszeichen
 				namenListe[zeilen - 1][zaehler - 1] = (char)c; // Zeichen speichern
 				namenListe[zeilen - 1][zaehler] = '\0'; // Nullterminierung
 			}
-			else if (c == ' ')
+			else if (c == ' ' || c == '\n')
 			{
 				imWort = 0;
 			}
 		}
 
-		printf("Text:\n");
+		printf("Text: ");
 		for (int i = 0; i < zeilen; i++)
 		{
 			printf("%s ", namenListe[i]);
@@ -70,5 +78,11 @@ int main()
 		}
 
 		free(namenListe);
+
+		printf("\nEs wurden %d Woerter gezaehlt: ", zeilen);
+		printf("\nEs wurden %d Leerzeichen gezaehlt: ", ascii[32]);
+		printf("\nEs wurden %d Tabs gezaehlt: ", ascii[9]);
+		printf("\nEs wurden %d Zeilenumbrueche gezaehlt: ", ascii[10]);
+		printf("\nEs wurden %d Zahlen gezaehlt: \n", anzahlZahlen);
 	}
 }
