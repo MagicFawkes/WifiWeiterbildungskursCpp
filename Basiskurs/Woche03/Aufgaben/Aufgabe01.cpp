@@ -9,6 +9,13 @@ Se ba sti an
 Bitte das Programm soll möglichst alle Fälle behandeln können, das heißt, das Programm soll
 so geschrieben werden, dass möglichst viele Fälle abgedeckt werden (tun Sie so, als würden
 Sie nicht wissen, was in der Textdatei drinnen ist.)
+
+dynamisches Array von Strings (pointer auf Pointer) oder formal: dynamisches Array von Zeigern auf char.
+char** namenListe = NULL; bezeichnet man als ein
+
+Mehrdimensionales Matrix:
+Matrix-Teil wäre später ein rechteckiges 2D-Array, z. B.:
+
 */
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -27,7 +34,7 @@ int main()
 	}
 
 	int zeilen = 0;
-	char** namenListe = NULL;
+	char** namenListe = NULL;  // WICHTIG: initialisieren!
 	int c = 0;
 	int imWort = 0;
 	int zaehler = 0;
