@@ -10,28 +10,43 @@ Der Betrag eines Vektors sei dabei definiert durch:
 
 struct vector
 {
-	int a, b;
+	float x, y, z;
 };
 
-bool greaterA(struct vector objekte);
+bool betrag(struct vector v[], int n)
+{
+	bool condition = false;
+
+	float betrag1 = pow(v[0].x, 2) + pow(v[0].y, 2) + pow(v[0].z, 2);
+	float betrag2 = pow(v[1].x, 2) + pow(v[1].y, 2) + pow(v[1].z, 2);
+
+	return betrag1 > betrag2;
+}
+
+void move(struct vector v[], int n)
+{
+	v[0].x += v[1].x;
+	v[0].y += v[1].y;
+	v[0].z += v[1].z;
+}
 
 int main()
 {
 	using namespace std;
 
-	struct vector objekte;
+	struct vector objekte[2];
 
-	cout << "Bitte zwei Werte eingeben: ";
-	cin >> objekte.a >> objekte.b;
-	cout << "Erste Objekt ist " << (greaterA(objekte) == true ? "groesser" : "nicht groesser");
+	objekte[0].x = 1;
+	objekte[0].y = 2;
+	objekte[0].z = 3;
+
+	objekte[1].x = 1;
+	objekte[1].y = 5;
+	objekte[1].z = 1;
+
+
+	cout << "Erste Objekt ist " << (betrag(objekte, 2) == true ? "groesser" : "nicht groesser");
 
 	return 0;
 }
 
-bool greaterA(struct vector objekte)
-{
-	if (objekte.a > objekte.b)
-		return true;
-
-	return false;
-}
