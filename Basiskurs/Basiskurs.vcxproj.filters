@@ -225,7 +225,7 @@
     <ClCompile Include="Woche04\Main.cpp">
       <Filter>Source Files\Woche04</Filter>
     </ClCompile>
-    <ClCompile Include="Woche04\Beispiele\Palidrom.cpp">
+    <ClCompile Include="Woche04\Beispiele\GrossbuchstabenAuswerten.cpp">
       <Filter>Source Files\Woche04\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche04\Aufgaben\Aufgabe01.cpp">
