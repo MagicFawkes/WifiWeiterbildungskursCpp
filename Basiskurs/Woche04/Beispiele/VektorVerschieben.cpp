@@ -25,8 +25,7 @@ int main()
 
 	verschiebeObjekte(&objektA, objektB);
 
-	cout << "Werte von Objekt a ist: " << objektA.a << " und " << objektA.b;
-
+	cout << "Werte von Objekt A ist: " << objektA.a << " und " << objektA.b;
 
 	return 0;
 }
@@ -35,4 +34,8 @@ void verschiebeObjekte(struct vector *objektA, struct vector objektB)
 {
 	objektA->a = objektB.a;
 	objektA->b = objektB.b;
+
+	//geht auch so:
+	//(*objektA).a = objektB.a;
+	//(*objektA).b = objektB.b;
 }
