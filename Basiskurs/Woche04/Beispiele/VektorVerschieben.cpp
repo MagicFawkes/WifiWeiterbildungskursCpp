@@ -42,7 +42,6 @@ int main()
 	objekte[1].y = 5;
 	objekte[1].z = 1;
 
-
 	cout << "Erste Objekt ist " << (betrag(objekte, 2) == true ? "groesser" : "nicht groesser");
 	move(objekte, 2);
 	cout << "\nErste Objekt ist " << (betrag(objekte, 2) == true ? "groesser" : "nicht groesser");
