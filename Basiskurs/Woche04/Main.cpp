@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 3
+#define AKTIVE_BEISPIEL 4
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -8,6 +8,8 @@
 #include "Beispiele/RepeatStringFunktion.cpp"
 #elif AKTIVE_BEISPIEL == 3
 #include "Beispiele/GreaterVektorFunktion.cpp"
+#elif AKTIVE_BEISPIEL == 4
+#include "Beispiele/VektorVerschieben.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
