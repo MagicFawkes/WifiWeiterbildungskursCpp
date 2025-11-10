@@ -9,7 +9,6 @@ Der Betrag eines Vektors sei dabei definiert durch:
 #include <iostream>
 
 
-
 int main()
 {
 	using namespace std;
@@ -17,4 +16,10 @@ int main()
 	
 
 	return 0;
+}
+
+
+bool greater()
+{
+	return true;
 }
