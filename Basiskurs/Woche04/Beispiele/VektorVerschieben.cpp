@@ -8,34 +8,44 @@ also das erste Objekt damit verändert.“
 
 struct vector
 {
-	int a, b;
+	float x, y, z;
 };
 
-void verschiebeObjekte(struct vector *objekteA, struct vector objekteB);
+bool betrag(struct vector v[], int n)
+{
+	bool condition = false;
+
+	float betrag1 = pow(v[0].x, 2) + pow(v[0].y, 2) + pow(v[0].z, 2);
+	float betrag2 = pow(v[1].x, 2) + pow(v[1].y, 2) + pow(v[1].z, 2);
+
+	return betrag1 > betrag2;
+}
+
+void move(struct vector v[], int n)
+{
+	v[0].x += v[1].x;
+	v[0].y += v[1].y;
+	v[0].z += v[1].z;
+}
 
 int main()
 {
 	using namespace std;
 
-	struct vector objektA = {0};
-	struct vector objektB = {0};
+	struct vector objekte[2];
 
-	cout << "Bitte zwei Werte eingeben: ";
-	cin >> objektB.a >> objektB.b;
+	objekte[0].x = 1;
+	objekte[0].y = 2;
+	objekte[0].z = 3;
 
-	verschiebeObjekte(&objektA, objektB);
+	objekte[1].x = 1;
+	objekte[1].y = 5;
+	objekte[1].z = 1;
 
-	cout << "Werte von Objekt A ist: " << objektA.a << " und " << objektA.b;
+
+	cout << "Erste Objekt ist " << (betrag(objekte, 2) == true ? "groesser" : "nicht groesser");
+	move(objekte, 2);
+	cout << "\nErste Objekt ist " << (betrag(objekte, 2) == true ? "groesser" : "nicht groesser");
 
 	return 0;
-}
-
-void verschiebeObjekte(struct vector *objektA, struct vector objektB)
-{
-	objektA->a = objektB.a;
-	objektA->b = objektB.b;
-
-	//geht auch so:
-	//(*objektA).a = objektB.a;
-	//(*objektA).b = objektB.b;
 }
