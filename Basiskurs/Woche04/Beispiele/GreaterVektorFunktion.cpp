@@ -18,6 +18,7 @@ bool greaterA(struct vector objekte);
 int main()
 {
 	using namespace std;
+
 	struct vector objekte;
 
 	cout << "Bitte zwei Werte eingeben: ";
