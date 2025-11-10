@@ -3,7 +3,7 @@
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
-#include "Beispiele/Palidrom.cpp"
+#include "Beispiele/GrossbuchstabenAuswerten.cpp"
 #elif AKTIVE_BEISPIEL == 2
 #include "Beispiele/AsciiZeichenErmittellnOld.cpp"
 #endif
