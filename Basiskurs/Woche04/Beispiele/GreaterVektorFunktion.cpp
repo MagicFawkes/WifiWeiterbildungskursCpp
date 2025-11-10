@@ -8,18 +8,29 @@ Der Betrag eines Vektors sei dabei definiert durch:
 
 #include <iostream>
 
+struct vector
+{
+	int a, b;
+};
+
+bool greaterA(struct vector objekte);
 
 int main()
 {
 	using namespace std;
+	struct vector objekte;
 
-	
+	cout << "Bitte zwei Werte eingeben: ";
+	cin >> objekte.a >> objekte.b;
+	cout << "Erste Objekt ist " << (greaterA(objekte) == true ? "groesser" : "nicht groesser");
 
 	return 0;
 }
 
-
-bool greater()
+bool greaterA(struct vector objekte)
 {
-	return true;
+	if (objekte.a > objekte.b)
+		return true;
+
+	return false;
 }
