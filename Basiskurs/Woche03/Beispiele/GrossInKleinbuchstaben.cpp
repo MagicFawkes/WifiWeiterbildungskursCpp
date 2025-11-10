@@ -1,5 +1,9 @@
 ﻿/*
-
+Das Programm liest ein Wort ein und wandelt es zunächst
+in Großbuchstaben und danach in Kleinbuchstaben um.
+Die Umwandlung erfolgt durch Anpassung der ASCII-Werte
+jedes Zeichens. Nach jeder Umwandlung wird das Ergebnis ausgegeben.
+Es demonstriert einfache Stringmanipulation über Zeichenweise Verarbeitung.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

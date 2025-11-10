@@ -3,6 +3,12 @@
 Datei.txt Inhalt:
 x 8 y  45 test100
 Hallo 55 Welt -23
+
+Das Programm öffnet eine Textdatei und liest daraus
+ausschließlich die enthaltenen Zahlen aus, während alle
+anderen Zeichen übersprungen werden. Jede gefundene Zahl
+wird in ein Array gespeichert und direkt ausgegeben.
+Damit dient das Programm zur Extraktion von Zahlen aus gemischten Textdateien.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

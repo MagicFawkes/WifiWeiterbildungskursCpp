@@ -1,5 +1,9 @@
 ﻿/*
-
+Das Programm fragt wiederholt nach einer Lieblingsfrucht,
+bis das eingegebene Wort „apple“ (Groß-/Kleinschreibung
+beim ersten Buchstaben egal) erkannt wird.
+Die Funktion compare prüft dazu Länge und Zeichen des Wortes.
+Erst wenn das richtige Wort eingegeben wurde, endet die Eingabe und es erfolgt eine Bestätigung.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

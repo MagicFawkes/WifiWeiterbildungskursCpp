@@ -1,5 +1,11 @@
 ﻿/*
-
+Das Programm liest einen eingegebenen Text Zeichen für Zeichen ein
+und zählt dabei, wie oft jedes ASCII-Zeichen vorkommt.
+Anschließend gibt es die Anzahl bestimmter Zeichen wie
+Leerzeichen oder Buchstaben aus und zeigt an,
+welcheBuchstaben wie häufig vorkamen. Zum Schluss ermittelt
+es das am häufigsten verwendete Zeichen im Text.
+Dadurch dient das Programm zur einfachen Häufigkeitsanalyse von eingegebenem Text.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

@@ -1,6 +1,10 @@
 ﻿/*
-Aufgabe 4
-Erstellen Sie ein Programm zur Berechnung der Fibonacci Folge
+Das Programm liest einen Namen ein, ohne vorher zu wissen,
+wie lang er ist, und vergrößert dazu den Speicher während
+der Eingabe dynamisch mit realloc. Zeichen für Zeichen wird
+der Name aufgebaut, bis ein Zeilenumbruch eingegeben wird.
+Anschließend wird der fertige Name ausgegeben.
+Es dient also als Beispiel für dynamische Speicherverwaltung in C.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

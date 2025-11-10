@@ -6,6 +6,13 @@
 free(namenListe)
 → gibt das Array von Zeigern frei, das du mit realloc() erstellt hast.
 
+Das Programm liest eine Liste von Namen aus einer Datei
+ein und speichert jeden Namen dynamisch in einem wachsenden
+Array von Zeichenketten. Für jeden eingelesenen Namen wird
+Speicher reserviert und der Name dort abgelegt. Anschließend
+werden alle Namen ausgegeben und am Ende der belegte Speicher
+vollständig freigegeben.
+Es demonstriert damit dynamische Speicherverwaltung mit malloc, realloc und free.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

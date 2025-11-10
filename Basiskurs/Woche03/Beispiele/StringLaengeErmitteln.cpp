@@ -1,5 +1,10 @@
 ﻿/*
-
+Das Programm liest einen Namen Zeichen für Zeichen von
+der Tastatur ein und vergrößert dabei den benötigten
+Speicher dynamisch mit realloc. Sobald die Eingabe
+mit Enter beendet wird, wird der String abgeschlossen
+und seine Länge ausgegeben.
+Es zeigt damit die Nutzung dynamischer Speicherverwaltung und das Ermitteln einer eingegebenen Zeichenlänge.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

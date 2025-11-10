@@ -1,10 +1,11 @@
 ﻿/*
+Das Programm erzeugt eine bestimmte Anzahl von Zufallszahlen innerhalb eines
+vorgegebenen Zahlenbereichs. Dabei wird darauf geachtet, dass möglichst
+keine Zahl doppelt vorkommt; wiederholte Werte werden erneut ausgelost,
+bis eine neue Zahl gefunden wird oder ein Limit erreicht ist.
+Am Ende werden alle erzeugten Zufallszahlen ausgegeben.
+Es dient somit zur Erzeugung einer Liste zufälliger, möglichst einzigartiger Werte.
 
- free(namenListe[i])
-→ gibt den einzelnen String frei, den du mit malloc(strlen(name)+1) allokiert hast.
-
-free(namenListe)
-→ gibt das Array von Zeigern frei, das du mit realloc() erstellt hast.
 
 */
 

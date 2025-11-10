@@ -1,5 +1,11 @@
 ﻿/*
-
+Das Programm liest einen eingegebenen Text ein und zählt
+dabei verschiedene Elemente wie Wörter, Zeilen, Zeichen,
+Leerzeichen und Tabulatoren. Die Funktion eingabe()
+führt die Analyse durch, indem sie den Text Zeichen für
+Zeichen auswertet und anhand von Leer- und Trennzeichen
+Wortgrenzen erkennt. Die Ergebnisse werden anschließend
+im Hauptprogramm ausgegeben. Es dient zur grundlegenden Textstatistik.
 */
 
 #define _CRT_SECURE_NO_WARNINGS

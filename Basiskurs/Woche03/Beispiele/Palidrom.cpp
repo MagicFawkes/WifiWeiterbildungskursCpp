@@ -1,5 +1,9 @@
 ﻿/*
-
+Das Programm liest ein Wort ein und prüft, ob es ein Palindrom ist,
+also ob es vorwärts und rückwärts gelesen gleich ist.
+Die Funktion vergleicht dazu die Zeichen von vorne und hinten.
+Das Ergebnis wird direkt ausgegeben, und der Vorgang wiederholt sich unbegrenzt.
+It dient zur Demonstration von Stringverarbeitung und Zeichenvergleich.
 */
 
 #define _CRT_SECURE_NO_WARNINGS
