@@ -57,9 +57,9 @@ void Ersaetze(std::string* message, int* zensiert)
 
 				int laenge = (int)str2[i].length();
 
-				for (int u = 0; u < laenge - 1; u++)
+				for (int u = 0; u < laenge; u++)
 				{
-					(*message)[u + found] = '*'; //Wichtig man muss einmal dereferenzieren
+					(*message)[u + found-1] = '*'; //Wichtig man muss einmal dereferenzieren
 				}
 			}
 		}
