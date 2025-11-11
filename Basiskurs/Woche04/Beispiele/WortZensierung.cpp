@@ -21,17 +21,24 @@ int main()
 	cout << "Bitte Text eingeben:";
 	getline(cin, textnachricht);
 
-	std::string str2("scheisse");
+	std::string str2[] = { "scheisse", "doof", "dumm" };
 
-	// different member versions of find in the same order as above:
-	std::size_t found = textnachricht.find(str2);
+	int anzahl = std::size(str2);
 
-	if (found != string::npos)
+	for (int i = 0; i < anzahl; i++)
 	{
-		for (int i = 0; i < (int)str2.length() - 1; i++)
+		std::size_t found = textnachricht.find(str2[i]);
+
+		if (found != string::npos)
 		{
-			textnachricht[i + found+1] = '*';
+			int laenge = (int)str2[i].length();
+
+			for (int i = 0; i < laenge - 1; i++)
+			{
+				textnachricht[i + found + 1] = '*';
+			}
 		}
+
 	}
 
 	cout << "Text: " << textnachricht;
