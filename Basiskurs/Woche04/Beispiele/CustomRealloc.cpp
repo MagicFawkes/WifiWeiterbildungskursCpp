@@ -9,7 +9,7 @@ int* reallocNew(int* a, int old_size, int new_size);
 int Eingabe()
 {
 	int n;
-	std::cout << "Besteimme die Grosse vom Array: ";
+	std::cout << "Bestimme die Grosse vom Array: ";
 	std::cin >> n;
 	return n;
 }
