@@ -7,7 +7,10 @@ und zeigt auf das nächste Element.
 
 #include <iostream>
 
+int wert = 0;
+
 void elementAmEndeHinzufügen(struct example* struktur);
+void elementAmAnfangHinzufügen(struct example* struktur);
 
 struct example
 {
@@ -18,20 +21,49 @@ struct example
 
 int main()
 {
-	struct example* struktur = new example{ 50 };
-	struktur->weiter = new example{10};
-	struktur->weiter->vorher = struktur;
+	struct example* struktur = new example{ ++wert };
 
-	struct example* aktuelleElement = struktur->weiter;
-	std::cout << '\n' << aktuelleElement->wert;
-	aktuelleElement = aktuelleElement->vorher;
-	std::cout << '\n' << aktuelleElement->wert;
+	elementAmEndeHinzufügen(struktur);
+	elementAmEndeHinzufügen(struktur);
+	elementAmEndeHinzufügen(struktur);
+	elementAmEndeHinzufügen(struktur);
+	elementAmEndeHinzufügen(struktur);
 
+	struct example* aktuelleElement = struktur;
+
+	while (aktuelleElement->vorher != NULL)
+	{
+		std::cout << '\n' << aktuelleElement->wert;
+		aktuelleElement = aktuelleElement->vorher;
+	}
+
+	while (aktuelleElement->weiter != NULL)
+	{
+		std::cout << '\n' << aktuelleElement->wert;
+		aktuelleElement = aktuelleElement->weiter;
+	}
 
 	return 0;
 }
 
 void elementAmEndeHinzufügen(struct example* struktur)
 {
-	
+	while (struktur->weiter != NULL)
+	{
+		struktur = struktur->weiter;
+	}
+
+	struktur->weiter = new example{ ++wert };
+	struktur->weiter->vorher = struktur;
+}
+
+void elementAmAnfangHinzufügen(struct example* struktur)
+{
+	while (struktur->vorher != NULL)
+	{
+		struktur = struktur->vorher;
+	}
+
+	struktur->vorher = new example{ ++wert };
+	struktur->vorher->weiter = struktur;
 }
