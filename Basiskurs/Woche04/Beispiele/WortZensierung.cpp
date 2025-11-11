@@ -65,3 +65,69 @@ void Ersaetze(std::string* message, int* zensiert)
 		}
 	}
 }
+
+
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//
+//struct message {
+//	string name;
+//	string text;
+//};
+//
+//void Eingabe(message* m, int n);
+//
+//void Eingabe(message* m, int n) {
+//	string name;
+//	string text;
+//	cin.ignore();
+//	for (int i = 0; i < n; i++) {
+//		cout << "Absender:";
+//		getline(cin, m[i].name);
+//
+//
+//		cout << "Text:";
+//		getline(cin, m[i].text);
+//
+//	}
+//}
+//
+//void Ersetze(message* m, int n) {
+//
+//	string verboten[] = { "Fuck", "dumm", "Scheisse", "Fresse" };
+//	string wort;
+//	int pos;
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		for (int k = 0; k < 4; k++)
+//		{
+//			wort = verboten[k];
+//			string sterne(wort.length(), '*');
+//			pos = m[i].text.find(wort);
+//
+//			while (pos != string::npos)
+//			{
+//				m[i].text.replace(pos, wort.length(), sterne);
+//				pos = m[i].text.find(wort, pos + 1);
+//			}
+//		}
+//
+//		cout << m[i].text << endl;
+//	}
+//}
+//
+//
+//int main()
+//{
+//	int n;
+//	cout << "Wie viele Nachrichten sollen gesendet werden ?" << endl;
+//	cin >> n;
+//
+//	message* messages = new message[n];
+//	Eingabe(messages, n);
+//	Ersetze(messages, n);
+//
+//}
