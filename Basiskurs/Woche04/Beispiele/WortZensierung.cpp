@@ -12,7 +12,6 @@ https://cplusplus.com/reference/string/string/find/
 #include <iostream>
 #include <string>
 
-
 int main()
 {
 	using namespace std;
