@@ -12,6 +12,8 @@ https://cplusplus.com/reference/string/string/find/
 #include <iostream>
 #include <string>
 
+void Ersaetze(std::string *message, int* zensiert);
+
 int main()
 {
 	using namespace std;
@@ -22,32 +24,37 @@ int main()
 	cout << "Bitte Text eingeben:";
 	getline(cin, textnachricht);
 
+	Ersaetze(&textnachricht, &zensiert);
+
+	cout << "Text: " << textnachricht;
+	cout << "\nEs wurden " << zensiert << " Woerter zensiert!";
+
+	return 0;
+}
+
+void Ersaetze (std::string *message, int *zensiert)
+{
 	std::string str2[] = { "scheisse", "doof", "dumm", "behindert" };
 
 	int anzahl = std::size(str2);
 
-	string buffer = textnachricht;
+	std::string buffer = *message;
 	std::transform(buffer.begin(), buffer.end(), buffer.begin(), ::tolower);
 
 	for (int i = 0; i < anzahl; i++)
 	{
 		std::size_t found = buffer.find(str2[i]);
 
-		if (found != string::npos)
+		if (found != std::string::npos)
 		{
-			zensiert++;
+			(*zensiert)++;
 
 			int laenge = (int)str2[i].length();
 
 			for (int u = 0; u < laenge - 1; u++)
 			{
-				textnachricht[u + found + 1] = '*';
+				(*message)[u + found + 1] = '*';
 			}
 		}
 	}
-
-	cout << "Text: " << textnachricht;
-	cout << "\nEs wurden " << zensiert << " Woerter zensiert!";
-
-	return 0;
 }
