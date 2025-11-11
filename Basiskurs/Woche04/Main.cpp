@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 7
+#define AKTIVE_BEISPIEL 8
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -16,6 +16,8 @@
 #include "Beispiele/CustomRealloc.cpp"
 #elif AKTIVE_BEISPIEL == 7
 #include "Beispiele/StrukturRoboter.cpp"
+#elif AKTIVE_BEISPIEL == 8
+#include "Beispiele/DatenstrukturVerknüpfung.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1

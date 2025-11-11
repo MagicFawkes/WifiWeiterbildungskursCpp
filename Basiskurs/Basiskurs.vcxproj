@@ -344,6 +344,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Woche04\Beispiele\DatenstrukturVerknüpfung.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Woche04\Beispiele\GreaterVektorFunktion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
