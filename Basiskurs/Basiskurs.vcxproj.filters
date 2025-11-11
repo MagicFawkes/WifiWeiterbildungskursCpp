@@ -249,6 +249,9 @@
     <ClCompile Include="Woche04\Beispiele\VektorVerschieben.cpp">
       <Filter>Source Files\Woche04\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche04\Beispiele\NamspacesExamples.cpp">
+      <Filter>Source Files\Woche04\Beispiele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">

@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 4
+#define AKTIVE_BEISPIEL 5
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -10,6 +10,9 @@
 #include "Beispiele/GreaterVektorFunktion.cpp"
 #elif AKTIVE_BEISPIEL == 4
 #include "Beispiele/VektorVerschieben.cpp"
+#include "Beispiele/GreaterVektorFunktion.cpp"
+#elif AKTIVE_BEISPIEL == 5
+#include "Beispiele/NamspacesExamples.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
