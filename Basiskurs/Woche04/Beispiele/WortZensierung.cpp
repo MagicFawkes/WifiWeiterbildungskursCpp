@@ -34,7 +34,7 @@ int main()
 
 void Ersaetze(std::string* message, int* zensiert)
 {
-	std::string str2[] = { "scheisse", "doof", "bloed", "dumm", "behindert" };
+	std::string str2[] = { "scheisse", "doof", "bloed", "dumm", "behindert" , "fresse" };
 
 	int anzahl = std::size(str2);
 
