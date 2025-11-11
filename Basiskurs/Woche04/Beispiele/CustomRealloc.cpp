@@ -26,6 +26,8 @@ int main()
 
 int* realloc(int* pointer, int groesse)
 {
+	int size = sizeof(pointer)/sizeof(int);
+
 	delete(pointer);
 
 	return new int(groesse);
