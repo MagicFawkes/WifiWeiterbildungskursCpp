@@ -11,6 +11,7 @@ int Eingabe()
 	int n;
 	std::cout << "Bestimme die Grosse vom Array: ";
 	std::cin >> n;
+
 	return n;
 }
 int main()
