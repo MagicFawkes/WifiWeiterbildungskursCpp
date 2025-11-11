@@ -9,8 +9,7 @@ Außerdem besitzt der Roboter folgende Fähigkeiten:
 
 struct greifer
 {
-	int x = 10;
-	int y = 20;
+	int zustand = 0;
 };
 
 struct position
@@ -31,10 +30,9 @@ struct Roboter
 		position.y = y;
 	}
 
-	void GreiferSetzen(int x, int y)
+	void GreiferSetzen(int zustand)
 	{
-		greifer.x = x;
-		greifer.y = y;
+		greifer.zustand = zustand;
 	}
 };
 
@@ -42,10 +40,10 @@ int main()
 {
 	struct Roboter roboter;
 
-	std::cout << "Wert:\n"<< roboter.name << '\n' << roboter.greifer.x << '\n' << roboter.greifer.y << '\n' << roboter.position.x << '\n' << roboter.position.y;
+	std::cout << "Wert:\n"<< roboter.name << '\n' << roboter.greifer.zustand << '\n' << roboter.position.x << '\n' << roboter.position.y;
 	roboter.Bewegung(50, 60);
-	roboter.GreiferSetzen(70, 80);
-	std::cout << "\n\nWert:\n" << roboter.name << '\n' << roboter.greifer.x << '\n' << roboter.greifer.y << '\n' << roboter.position.x << '\n' << roboter.position.y;
+	roboter.GreiferSetzen(1);
+	std::cout << "\n\nWert:\n" << roboter.name << '\n' << roboter.greifer.zustand << '\n' << roboter.position.x << '\n' << roboter.position.y;
 
 	return 0;
 }

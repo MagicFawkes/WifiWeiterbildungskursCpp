@@ -7,7 +7,7 @@ und zeigt auf das nächste Element.
 
 #include <iostream>
 
-void* elementAmEndeHinzufügen(struct example* struktur);
+void elementAmEndeHinzufügen(struct example* struktur);
 
 struct example
 {
@@ -31,7 +31,7 @@ int main()
 	return 0;
 }
 
-void* elementAmEndeHinzufügen(struct example* struktur)
+void elementAmEndeHinzufügen(struct example* struktur)
 {
 	
 }
