@@ -42,11 +42,14 @@ int main()
 		aktuelleElement = aktuelleElement->vorher;
 	}
 
+	std::cout << '\n' << aktuelleElement->wert;
+
 	while (aktuelleElement->weiter != NULL)
 	{
-		std::cout << '\n' << aktuelleElement->wert;
 		aktuelleElement = aktuelleElement->weiter;
+		std::cout << '\n' << aktuelleElement->wert;
 	}
+
 
 	return 0;
 }
