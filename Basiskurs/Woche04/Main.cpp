@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 8
+#define AKTIVE_BEISPIEL 9
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -17,7 +17,9 @@
 #elif AKTIVE_BEISPIEL == 7
 #include "Beispiele/StrukturRoboter.cpp"
 #elif AKTIVE_BEISPIEL == 8
-#include "Beispiele/DatenstrukturVerknüpfung.cpp"
+#include "Beispiele/DatenstrukturVerknüpfung.cpp"+
+#elif AKTIVE_BEISPIEL == 9
+#include "Beispiele/WortZensierung.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
