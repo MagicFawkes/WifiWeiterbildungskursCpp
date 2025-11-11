@@ -12,7 +12,7 @@ https://cplusplus.com/reference/string/string/find/
 #include <iostream>
 #include <string>
 
-void Ersaetze(std::string *message, int* zensiert);
+void Ersaetze(std::string* message, int* zensiert);
 
 int main()
 {
@@ -32,7 +32,7 @@ int main()
 	return 0;
 }
 
-void Ersaetze (std::string *message, int *zensiert)
+void Ersaetze(std::string* message, int* zensiert)
 {
 	std::string str2[] = { "scheisse", "doof", "bloed", "dumm", "behindert" };
 
@@ -43,17 +43,24 @@ void Ersaetze (std::string *message, int *zensiert)
 
 	for (int i = 0; i < anzahl; i++)
 	{
-		std::size_t found = buffer.find(str2[i]);
+		std::size_t found = 0;
 
-		if (found != std::string::npos)
+		while (found != std::string::npos)
 		{
-			(*zensiert)++;
+			found = buffer.find(str2[i], found);
 
-			int laenge = (int)str2[i].length();
-
-			for (int u = 0; u < laenge - 1; u++)
+			if (found != std::string::npos)
 			{
-				(*message)[u + found + 1] = '*'; //Wichtig man muss dereferenzieren
+				(*zensiert)++;
+
+				int laenge = (int)str2[i].length();
+
+				for (int u = 0; u < laenge - 1; u++)
+				{
+					(*message)[u + found + 1] = '*'; //Wichtig man muss dereferenzieren
+				}
+
+				found++;
 			}
 		}
 	}
