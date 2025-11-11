@@ -47,9 +47,11 @@ int main()
 	while (aktuelleElement->weiter != NULL)
 	{
 		aktuelleElement = aktuelleElement->weiter;
+		delete(aktuelleElement->vorher);
 		std::cout << '\n' << aktuelleElement->wert;
 	}
 
+	delete(aktuelleElement);
 
 	return 0;
 }
