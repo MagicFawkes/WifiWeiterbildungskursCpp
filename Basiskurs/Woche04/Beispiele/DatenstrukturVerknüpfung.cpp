@@ -29,11 +29,16 @@ int main()
 	elementAmEndeHinzufügen(struktur);
 	elementAmEndeHinzufügen(struktur);
 
+	elementAmAnfangHinzufügen(struktur);
+	elementAmAnfangHinzufügen(struktur);
+	elementAmAnfangHinzufügen(struktur);
+	elementAmAnfangHinzufügen(struktur);
+
 	struct example* aktuelleElement = struktur;
 
 	while (aktuelleElement->vorher != NULL)
 	{
-		std::cout << '\n' << aktuelleElement->wert;
+		//std::cout << '\n' << aktuelleElement->wert;
 		aktuelleElement = aktuelleElement->vorher;
 	}
 
