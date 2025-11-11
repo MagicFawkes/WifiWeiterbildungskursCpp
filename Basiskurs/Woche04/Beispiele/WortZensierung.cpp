@@ -52,15 +52,14 @@ void Ersaetze(std::string* message, int* zensiert)
 			if (found != std::string::npos)
 			{
 				(*zensiert)++;
+				found++;
 
 				int laenge = (int)str2[i].length();
 
 				for (int u = 0; u < laenge - 1; u++)
 				{
-					(*message)[u + found + 1] = '*'; //Wichtig man muss dereferenzieren
+					(*message)[u + found] = '*'; //Wichtig man muss dereferenzieren
 				}
-
-				found++;
 			}
 		}
 	}
