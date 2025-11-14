@@ -21,6 +21,8 @@ public:
 	int anzahlNoten;
 };
 
+void studentenSortieren(student* studenten, int anzahl);
+
 int main()
 {
 	int anzahlStudenten;
@@ -52,6 +54,8 @@ int main()
 		studenten[i].notendurchschnitt = (float)noteSumme / studenten[i].anzahlNoten;
 	}
 
+	//studentenSortieren(studenten, anzahlStudenten);
+
 	for (int i = 0; i < anzahlStudenten; i++)
 	{
 		std::cout << "\nName: ";
@@ -68,7 +72,25 @@ int main()
 
 		std::cout << "\nNotendurchschnitt: ";
 		std::cout << studenten[i].notendurchschnitt;
+
+		delete[] studenten[i].noten;
 	}
 
+	delete[] studenten;
+
     return 0;
+}
+
+void studentenSortieren(student* studenten, int anzahl)
+{
+	student* tmp;
+
+	for (int i = 0; i < anzahl; ++i)
+	{
+		
+		for (int u = anzahl; u < anzahl; ++u)
+		{
+
+		}
+	}
 }
