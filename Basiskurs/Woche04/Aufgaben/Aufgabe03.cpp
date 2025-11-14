@@ -54,7 +54,9 @@ int main()
 		studenten[i].notendurchschnitt = (float)noteSumme / studenten[i].anzahlNoten;
 	}
 
-	//studentenSortieren(studenten, anzahlStudenten);
+	studentenSortieren(studenten, anzahlStudenten);
+
+	std::cout << "\n**********Studenten sortiert nach Notendurchschnitt aufsteigend**********\n";
 
 	for (int i = 0; i < anzahlStudenten; i++)
 	{
@@ -83,14 +85,18 @@ int main()
 
 void studentenSortieren(student* studenten, int anzahl)
 {
-	student* tmp;
+	student tmp;
 
 	for (int i = 0; i < anzahl; ++i)
 	{
-		
-		for (int u = anzahl; u < anzahl; ++u)
+		for (int u = i+1; u < anzahl; ++u)
 		{
-
+			if (studenten[i].notendurchschnitt > studenten[u].notendurchschnitt)
+			{
+				tmp = studenten[i];
+				studenten[i] = studenten[u];
+				studenten[u] = tmp;
+			}
 		}
 	}
 }
