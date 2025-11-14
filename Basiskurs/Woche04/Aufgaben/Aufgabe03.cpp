@@ -36,7 +36,9 @@ int main()
 	for (int i = 0; i < anzahlStudenten; i++)
 	{
 		std::cout << "\nBitte Namen eingeben: ";
-		std::cin >> studenten[i].namen;
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::getline(std::cin,studenten[i].namen);
+		//std::cin >> studenten[i].namen;	//liest nur bis zum ersten Leerzeichen daher für Namen ungeeignet
 
 		std::cout << "Bitte Anzahl der Noten eingeben: ";
 		std::cin >> studenten[i].anzahlNoten;
