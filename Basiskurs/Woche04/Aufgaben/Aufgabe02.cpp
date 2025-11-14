@@ -6,12 +6,34 @@ definiert. Überlegen Sie, was unter private und public gehört und ob Sie ein Kon
 brauchen.
 */
 
-#define _CRT_SECURE_NO_WARNINGS
 
-#include <stdio.h>
+class dreieck
+{
+public:
+    dreieck()
+    {
+	    
+    }
+
+private:
+    int a;
+    int b;
+
+};
+
+class rechteck
+{
+
+};
+
+
+class kreis
+{
+
+};
 
 int main()
 {
-    printf("Test");
+
     return 0;
 }

@@ -17,12 +17,8 @@ sollen. Es sollen 2 Konstruktoren verwendet werden. Einer davon ist der Standard
 der soll nicht verloren werden.
 */
 
-#define _CRT_SECURE_NO_WARNINGS
-
-#include <stdio.h>
-
 int main()
 {
-    printf("Test");
+
     return 0;
 }

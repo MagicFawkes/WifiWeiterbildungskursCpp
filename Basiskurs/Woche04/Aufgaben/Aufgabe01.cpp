@@ -6,8 +6,6 @@ Programmes setzen und in anderen Variablen in der main() speichern können. Außer
 this verwedent werden.
 */
 
-#define _CRT_SECURE_NO_WARNINGS
-
 #include <iostream>
 
 class testklasse

@@ -7,12 +7,9 @@ Programmes sollen alle Studenten mit ihren jeweiligen Namen und Noten sowie
 Notendurchschnitt sortiert ausgegeben werden
 */
 
-#define _CRT_SECURE_NO_WARNINGS
-
-#include <stdio.h>
 
 int main()
 {
-    printf("Test");
+
     return 0;
 }
