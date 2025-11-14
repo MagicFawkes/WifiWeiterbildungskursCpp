@@ -73,6 +73,15 @@
     <Filter Include="Source Files\Woche04\Beispiele">
       <UniqueIdentifier>{b7ddd343-eb62-40de-8e3a-78aef67d3ea7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche05">
+      <UniqueIdentifier>{fe38f7a7-8d72-49b5-9715-41a6ed9f2408}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche05\Aufgaben">
+      <UniqueIdentifier>{f16e425d-c055-4a5f-8a67-0a46ec8e4e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche05\Beispiele">
+      <UniqueIdentifier>{aaeedee1-da0d-4a83-86f3-57e088ab0991}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -263,6 +272,15 @@
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\WortZensierung.cpp">
       <Filter>Source Files\Woche04\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche05\Main.cpp">
+      <Filter>Source Files\Woche05</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche05\Beispiele\Beispiel01.cpp">
+      <Filter>Source Files\Woche05\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche05\Aufgaben\Aufgabe01.cpp">
+      <Filter>Source Files\Woche05\Aufgaben</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
