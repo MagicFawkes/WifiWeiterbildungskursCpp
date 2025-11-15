@@ -31,7 +31,7 @@ private:
 public:
     konto()
     {
-	    
+        this->inhaber = "Unbekannt";
     }
 
     konto(std::string inhaber, int kontonummer)
@@ -40,9 +40,20 @@ public:
         this->kontonummer = kontonummer;
     }
 
+    //auch möglich - Initialisierungsliste
+    /*konto() : inhaber("unbekannt"), kontonummer(0), kontostand(0.0)
+    {
+    }
+
+    konto(std::string inhaber, int kontonummer)
+        : inhaber(inhaber), kontonummer(kontonummer), kontostand(0.0)
+    {
+    }*/
+
     void einzahlen(double betrag)
     {
-        this->kontostand += betrag;
+        if (betrag > 0)
+            this->kontostand += betrag;
     }
 
     bool abheben(double betrag)
