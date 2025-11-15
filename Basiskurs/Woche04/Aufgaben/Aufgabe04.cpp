@@ -17,8 +17,62 @@ sollen. Es sollen 2 Konstruktoren verwendet werden. Einer davon ist der Standard
 der soll nicht verloren werden.
 */
 
+
+#include <iostream>
+#include <string>
+
+class konto
+{
+private:
+    std::string inhaber;
+    int kontonummer = 0;
+    double kontostand = 0;
+
+public:
+    konto()
+    {
+	    
+    }
+
+    konto(std::string inhaber, int kontonummer)
+    {
+        this->inhaber = inhaber;
+        this->kontonummer = kontonummer;
+    }
+
+    void einzahlen(double betrag)
+    {
+        this->kontostand += betrag;
+    }
+
+    bool abheben(double betrag)
+    {
+        if (betrag >= this->kontostand)
+        {
+            this->kontostand -= betrag;
+            return true;
+        }
+        else
+            return false;
+    }
+
+    void anzeigen()
+    {
+        std::cout << "Inhaber: " << this->inhaber << std::endl;
+        std::cout << "Kontonummer: " << this->kontonummer << std::endl;
+        std::cout << "Kontostand: " << this->kontostand << std::endl;
+    }
+};
+
 int main()
 {
+    konto konto{ "Max Mustermann", 50456 };
+    konto.einzahlen(100);
+    konto.anzeigen();
+    konto.abheben(80);
+    konto.anzeigen();
+    konto.abheben(100);
+    konto.anzeigen();
 
     return 0;
 }
