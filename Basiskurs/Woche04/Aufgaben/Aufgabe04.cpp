@@ -47,13 +47,13 @@ public:
 
     bool abheben(double betrag)
     {
-        if (betrag >= this->kontostand)
+        if (betrag <= this->kontostand)
         {
             this->kontostand -= betrag;
             return true;
         }
-        else
-            return false;
+        
+    	return false;
     }
 
     void anzeigen()
