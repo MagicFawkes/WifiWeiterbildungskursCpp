@@ -67,7 +67,7 @@ public:
     	return false;
     }
 
-    void anzeigen()
+    void anzeigen() const
     {
         std::cout << "Inhaber: " << this->inhaber << std::endl;
         std::cout << "Kontonummer: " << this->kontonummer << std::endl;
