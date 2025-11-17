@@ -8,8 +8,6 @@ using namespace std;
 
 class Reis
 {
-public:
-
 protected:
 	int kochzeit = 5;
 
@@ -35,7 +33,7 @@ public:
 
 	void cook() override
     {
-        Reis::kochzeit = 5;
+        Reis::kochzeit = 10;
         Reis::cook();
 
         int abkuehlen = 0;
@@ -63,7 +61,6 @@ public:
 
     void cook() override
     {
-        Reis::kochzeit = 5;
         Reis::cook();
         cout << "Sushireis ist fertig gekocht" << endl;
     }
@@ -98,16 +95,20 @@ public:
         {
             int auswahl = 0;
 
-            cout << "Bitte waehle den Reis (1 Sushireis, 2 Wildreis): " << endl;
+            cout << "Bitte waehle den Reis (1 Sushireis, 2 Wildreis, 3 Reis): " << endl;
             cin >> auswahl;
 
             if (auswahl == 1)
             {
                 this->reis = new Sushireis;
             }
-            else
+            else if (auswahl ==2)
             {
                 this->reis = new Wildreis;
+            }
+            else
+            {
+                this->reis = new Reis;
             }
         }
         else
