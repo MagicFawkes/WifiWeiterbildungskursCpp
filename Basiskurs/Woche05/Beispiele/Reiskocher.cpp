@@ -33,7 +33,7 @@ public:
 
 	void cook() override
     {
-        Reis::kochzeit = 10;
+        Reis::kochzeit = this->kochzeit;
         Reis::cook();
 
         int abkuehlen = 0;
@@ -62,6 +62,7 @@ public:
 
     void cook() override
     {
+        Reis::kochzeit = this->kochzeit;
         Reis::cook();
         cout << "Sushireis ist fertig gekocht" << endl;
     }
