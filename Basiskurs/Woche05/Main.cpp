@@ -3,9 +3,11 @@
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
-#include "Beispiele/Beispiel01.cpp"
+#include "Beispiele/EinfacherKonstruktor.cpp"
 #elif AKTIVE_BEISPIEL == 2
-#include "Beispiele/Beispiel02.cpp"
+#include "Beispiele/KJopierkontruktor.cpp"
+#elif AKTIVE_BEISPIEL == 2
+#include "Beispiele/Parameterkonstruktor.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1

@@ -276,7 +276,7 @@
     <ClCompile Include="Woche05\Main.cpp">
       <Filter>Source Files\Woche05</Filter>
     </ClCompile>
-    <ClCompile Include="Woche05\Beispiele\Beispiel01.cpp">
+    <ClCompile Include="Woche05\Beispiele\EinfacherKonstruktor.cpp">
       <Filter>Source Files\Woche05\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche05\Aufgaben\Aufgabe01.cpp">
@@ -290,6 +290,12 @@
     </ClCompile>
     <ClCompile Include="Woche04\Aufgaben\Aufgabe04.cpp">
       <Filter>Source Files\Woche04\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche05\Beispiele\Kopierkonstruktor.cpp">
+      <Filter>Source Files\Woche05\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche05\Beispiele\Parameterkonstruktor.cpp">
+      <Filter>Source Files\Woche05\Beispiele</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
