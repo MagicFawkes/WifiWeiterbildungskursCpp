@@ -33,14 +33,14 @@ public:
 
 	Point(const Point& copy)            // Declare copy constructor.
 	{
-		this->x = new int(*copy.x);		//Derefernezierung nciht vergessen
+		this->x = new int(*copy.x);		// Es wird zwar referenz con Point übergeben aber Derefernezierung von x,y nciht vergessen
 		this->y = new int(*copy.y);
 	}
 
 	Point& operator=(const Point& copy)		 // Declare copy assignment.
 	{
-		*this->x = *copy.x;
-		*this->y = *copy.y;
+		*this->x = *copy.x;			//auch hier dereferenzieren von x, copy ist eine Referenz, daher hier nicht dereferenzieren.
+		*this->y = *copy.y;			//this-x und y muss auch dereferenziert werdne, da ich ja den Wert zuweisen will(vorausgesetzt objekt existiert schon).
 
 		return *this;
 	}
