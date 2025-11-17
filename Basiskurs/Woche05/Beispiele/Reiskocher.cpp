@@ -9,7 +9,7 @@ using namespace std;
 class Reis
 {
 protected:
-	int kochzeit = 5;
+	int kochzeit = 7;
 
 public:
     virtual void cook()
@@ -27,7 +27,7 @@ public:
 class Wildreis : public Reis
 {
 protected:
-    int kochzeit = 10;
+    int kochzeit = 12;
 
 public:
 
@@ -56,7 +56,7 @@ public:
 class Sushireis : public Reis
 {
 protected:
-    int kochzeit = 5;
+    int kochzeit = 9;
 
 public:
 
