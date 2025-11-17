@@ -39,6 +39,9 @@ public:
 
 	Point& operator=(const Point& copy)		 // Declare copy assignment.
 	{
+		if (this == &copy)          // ✅ Self-Assignment abfangen
+			return *this;
+
 		*this->x = *copy.x;			//auch hier dereferenzieren von x, copy ist eine Referenz, daher hier nicht dereferenzieren.
 		*this->y = *copy.y;			//this-x und y muss auch dereferenziert werdne, da ich ja den Wert zuweisen will(vorausgesetzt objekt existiert schon).
 
