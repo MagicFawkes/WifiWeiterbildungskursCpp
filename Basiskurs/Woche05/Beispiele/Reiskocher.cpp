@@ -10,8 +10,10 @@ class Reis
 {
 public:
 
-    int kochzeit = 5;
+protected:
+	int kochzeit = 5;
 
+public:
     virtual void cook()
     {
 	   do
@@ -26,9 +28,10 @@ public:
 
 class Wildreis : public Reis
 {
-public:
-
+protected:
     int kochzeit = 10;
+
+public:
 
 	void cook() override
     {
