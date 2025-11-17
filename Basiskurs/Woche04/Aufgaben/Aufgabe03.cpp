@@ -102,3 +102,80 @@ void studentenSortieren(student* studenten, int anzahl)
 		}
 	}
 }
+
+//Umsetzung von Trainer:
+
+//#include <iostream>
+//using namespace std;
+//
+//
+//
+//class Student {
+//public:
+//    Student(string name, int anzahlNoten) {
+//        this->name = name;
+//        this->anzahlNoten = anzahlNoten;
+//        grades = new float[anzahlNoten];
+//    }
+//
+//    void Noten()
+//    {
+//        for (int i = 0; i < anzahlNoten; i++)
+//        {
+//            cout << "Note " << i + 1 << ": " << endl;
+//            cin >> grades[i];
+//            summ = summ + grades[i];
+//        }
+//        average = (float)summ / anzahlNoten;
+//    }
+//
+//    void free()
+//    {
+//        delete[] grades;
+//    }
+//
+//
+//private:
+//    string name;
+//    int anzahlNoten;
+//    float average = 0;
+//    float* grades;
+//    int summ = 0;
+//
+//};
+//
+//int main()
+//{
+//
+//    int anzahl_students = 0;
+//    int anzahl_Noten = 0;
+//
+//    cout << "Anzahl der Studenten: " << endl;
+//    cin >> anzahl_students;
+//
+//    Student** students = new Student * [anzahl_students];
+//
+//    string name;
+//
+//    for (int i = 0; i < anzahl_students; i++)
+//    {
+//        cout << " Name von Student " << i + 1 << endl;
+//        cin >> name;
+//
+//        cout << "Anzahl der Noten von " << name << ": " << endl;
+//        cin >> anzahl_Noten;
+//
+//        students[i] = new Student(name, anzahl_Noten);
+//        students[i]->Noten();
+//    }
+//
+//
+//    for (int i = 0; i < anzahl_students; i++)
+//    {
+//        students[i]->free();
+//        delete(students[i]);
+//    }
+//
+//    delete[] students;
+//
+//}
