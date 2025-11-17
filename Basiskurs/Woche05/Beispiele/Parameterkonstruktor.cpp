@@ -11,9 +11,29 @@ Gib im Konstruktor eine Ausgabe mit cout aus, damit sichtbar ist, welcher Konstr
 
 #include <iostream>
 
+using namespace std;
+
+class Car
+{
+	string brand;
+	int year;
+
+public:	
+	Car() 
+	{
+		cout << "Basiskonstruktor" << endl;
+	}
+
+	Car(string brand, int year) : brand(brand), year(year)
+	{
+		cout << "Parameterkonstruktor" << endl;
+	}
+};
+
 int main()
 {
-
+	Car car1;
+	Car car2("brand", 23);
 
 	return 0;
 }
