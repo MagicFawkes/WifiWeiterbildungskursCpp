@@ -55,9 +55,10 @@ public:
 
 class Sushireis : public Reis
 {
-public:
-
+protected:
     int kochzeit = 5;
+
+public:
 
     void cook() override
     {
