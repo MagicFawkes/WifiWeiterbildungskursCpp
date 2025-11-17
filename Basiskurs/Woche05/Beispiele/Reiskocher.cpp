@@ -23,7 +23,7 @@ public:
 
     //Eine Basisklasse mit virtuellen Funktionen → sollte fast immer einen virtuellen Destruktor haben
     //unbedingt virtual angeben, sonst wird er in der abgeleiteten klasse nicht aufgerufen, wenn du polymorph verhalten brauchst
-    virtual ~Reis() = default;      //keinen Body angibst, erzeugt der Compiler genau dieselbe Implementierung wie bei = default. ~Sushireis() override {}
+    virtual ~Reis() {}      //keinen Body angibst, erzeugt der Compiler genau dieselbe Implementierung wie bei = default. ~Sushireis() override {}
 };
 
 class Wildreis : public Reis
@@ -51,7 +51,7 @@ public:
 		cout << "Wildreis ist fertig gekocht" << endl;
     }
 
-    ~Wildreis() override;   //keinen Body angibst, erzeugt der Compiler genau dieselbe Implementierung wie bei = default. ~Sushireis() override {}
+    ~Wildreis() override {}   //keinen Body angibst, erzeugt der Compiler genau dieselbe Implementierung wie bei = default. ~Sushireis() override {}
 };
 
 
