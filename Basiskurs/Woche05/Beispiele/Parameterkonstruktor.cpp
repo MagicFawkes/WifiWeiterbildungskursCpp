@@ -16,7 +16,7 @@ using namespace std;
 class Car
 {
 	string brand;
-	int year;
+	int year = 0;
 
 public:	
 	Car() 
