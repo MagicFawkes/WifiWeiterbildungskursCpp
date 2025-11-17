@@ -21,7 +21,8 @@ public:
        } while(kochzeit > 0);
     }
 
-    virtual ~Reis() {}
+    //unbedingt virtual angeben, sonst wird er in der abgeleiteten klasse nicht aufgerufen, wenn du polymorph verhalten brauchst
+    virtual ~Reis() = default;      //keinen Body angibst, erzeugt der Compiler genau dieselbe Implementierung wie bei = default. ~Sushireis() override {}
 };
 
 class Wildreis : public Reis
@@ -49,7 +50,7 @@ public:
 		cout << "Wildreis ist fertig gekocht" << endl;
     }
 
-    ~Wildreis() override = default;
+    ~Wildreis() override;   //keinen Body angibst, erzeugt der Compiler genau dieselbe Implementierung wie bei = default. ~Sushireis() override {}
 };
 
 
@@ -67,7 +68,9 @@ public:
         cout << "Sushireis ist fertig gekocht" << endl;
     }
 
-	 ~Sushireis() override = default;
+	//~Sushireis() override; //keinen Body angibst, erzeugt der Compiler genau dieselbe Implementierung wie bei = default. ~Sushireis() override {}
+	//~Sushireis() override {}
+    ~Sushireis() override = default;
 };
 
 
