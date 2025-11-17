@@ -27,14 +27,14 @@ public:
 
 	Point(int x, int y) 
 	{
-		this->x = new int[x];
-		this->y = new int[y];
+		this->x = new int(x);
+		this->y = new int(y);
 	}
 
 	Point(const Point& copy)            // Declare copy constructor.
 	{
-		this->x = new int[copy.x];
-		this->y = new int[copy.y];
+		this->x = new int(copy.x);
+		this->y = new int(copy.y);
 	}
 
 	Point& operator=(const Point& copy)		 // Declare copy assignment.
