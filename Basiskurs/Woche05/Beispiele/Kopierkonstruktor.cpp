@@ -33,14 +33,14 @@ public:
 
 	Point(const Point& copy)            // Declare copy constructor.
 	{
-		this->x = new int(copy.x);
-		this->y = new int(copy.y);
+		this->x = new int(*copy.x);		//Derefernezierung nciht vergessen
+		this->y = new int(*copy.y);
 	}
 
 	Point& operator=(const Point& copy)		 // Declare copy assignment.
 	{
-		this->x = copy.x;
-		this->y = copy.y;
+		*this->x = *copy.x;
+		*this->y = *copy.y;
 
 		return *this;
 	}
