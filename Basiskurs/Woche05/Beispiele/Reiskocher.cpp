@@ -83,14 +83,60 @@ Reis* chooseRice()
 	return new Wildreis;
 }
 
+class Cooker
+{
+    Reis* reis = NULL;
+
+public:
+    void chooseRice()
+    {
+        if (reis == NULL)
+        {
+            int auswahl = 0;
+
+            cout << "Bitte waehle den Reis (1 Sushireis, 2 Wildreis): " << endl;
+            cin >> auswahl;
+
+            if (auswahl == 1)
+            {
+                this->reis = new Sushireis;
+            }
+            else
+            {
+                this->reis = new Wildreis;
+            }
+        }
+        else
+        {
+            cout << "Reis wurde bereits ausgewaehlt" << endl;
+        }
+    }
+
+    void cookRice()
+    {
+        if (reis == NULL)
+        {
+            cout << "Es wurde kein Reis ausgewaehlt" << endl;
+        }
+        else
+        {
+            reis->cook();
+        }
+    }
+
+    ~Cooker()
+    {
+        delete reis;
+    }
+}; 
+
 int main()
 {
-    while (true)
-    {
-        Reis* w = chooseRice();
-        w->cook();
-        delete(w);
-    }
+    Cooker cooker;
+    cooker.cookRice();
+    cooker.chooseRice();
+    cooker.chooseRice();
+    cooker.cookRice();
 
     return 0;
 }
