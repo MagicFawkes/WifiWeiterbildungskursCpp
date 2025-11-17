@@ -47,7 +47,7 @@ public:
 		cout << "Wildreis ist fertig gekocht" << endl;
     }
 
-    virtual ~Wildreis() {}
+    ~Wildreis() override = default;
 };
 
 
@@ -64,7 +64,7 @@ public:
         cout << "Sushireis ist fertig gekocht" << endl;
     }
 
-    virtual ~Sushireis() {}
+	 ~Sushireis() override = default;
 };
 
 
