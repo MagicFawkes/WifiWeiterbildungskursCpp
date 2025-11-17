@@ -152,3 +152,132 @@ int main()
     return 0;
 }
 
+
+
+//Umsetzung von Trainer:
+//#include <iostream>
+//#include <iostream>
+//using namespace std;
+//
+//enum WAHL {
+//	WILDREIS = 1, SUSHIREIS
+//};
+//
+//class Reis
+//{
+//protected:
+//	int kochzeit = 5;
+//public:
+//
+//	Reis(int kochzeit) {
+//		this->kochzeit = kochzeit;
+//	}
+//
+//	virtual void cook()
+//	{
+//		for (int i = kochzeit; i >= 1; i--) {
+//			cout << "Still cooking for " << i << endl;
+//		}
+//
+//	}
+//	virtual ~Reis() {
+//		cout << "Elternklasse Reis" << endl;
+//	}
+//
+//};
+//
+//class Wildreis : public Reis
+//{
+//public:
+//	Wildreis() :Reis(10)
+//	{
+//
+//	}
+//	void cook()
+//	{
+//		Reis::cook();
+//		cout << "Wildreis fertig gekocht" << endl;
+//
+//	}
+//
+//	~Wildreis()
+//	{
+//		cout << "Kindklasse Wildreis" << endl;
+//	}
+//
+//};
+//
+//class sushireis :public Reis
+//{
+//public:
+//	sushireis() :Reis(5)
+//	{
+//
+//	}
+//	void cook()
+//	{
+//		int kuehlzeit;
+//		Reis::cook();
+//		cout << "How long should it cool" << endl;
+//		cin >> kuehlzeit;
+//		for (int i = kuehlzeit; i >= 1; i--) {
+//			cout << "cooling for " << i << "Minutes" << endl;
+//		}
+//	}
+//	~sushireis()
+//	{
+//		cout << "Kindklasse Suhsireis" << endl;
+//	}
+//
+//};
+//
+//class Reiskocher
+//{
+//private:
+//	Reis* rptr = NULL;
+//public:
+//	void chooserice() {
+//		int wahl = 0;
+//		cout << "waehle eine Sorte Reis" << endl;
+//		cin >> wahl;
+//
+//		switch (wahl)
+//		{
+//		case WILDREIS:
+//			rptr = new Wildreis();
+//			cout << "Wildreis wurde ausgewaelt" << endl;
+//			break;
+//		case SUSHIREIS:
+//			rptr = new sushireis();
+//			cout << "Wildreis wurde ausgewaelt" << endl;
+//			break;
+//		default:
+//			cout << "nichts wurde ausgewaelt" << endl;
+//			break;
+//		}
+//	}
+//
+//	void coockRice() {
+//		if (rptr == NULL) {
+//			cout << "kein Reis ist vorhanden" << endl;
+//		}
+//		rptr->cook();
+//	}
+//
+//	~Reiskocher()
+//	{
+//		delete rptr;
+//	}
+//
+//
+//};
+//
+//
+//int main()
+//{
+//	Reiskocher rk;
+//	rk.chooserice();
+//	rk.coockRice();
+//
+//
+//}
