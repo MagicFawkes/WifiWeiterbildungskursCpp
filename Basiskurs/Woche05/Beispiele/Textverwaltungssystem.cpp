@@ -214,6 +214,41 @@ public:
 			cout << "Kapazutaet ist nicht merh vorhanden!!";
 		}
 	}
+
+	void textLoeschen(int index)
+	{
+		if (index > 0 && index < anzahlTexte)
+		{
+			delete (ptrtext[anzahlTexte]);
+
+			for (int i = index; i < anzahlTexte; ++i)
+			{
+				
+			}
+
+			anzahlTexte--;
+		}
+	}
+
+	Text* textFinden(const string& titel)
+	{
+		bool condition = false;
+
+		for (int i = 0; i < anzahlTexte; ++i)
+		{
+			if (ptrtext[i]->getTitel() == titel)
+			{
+				condition = true;
+				return ptrtext[i];
+			}
+		}
+
+		if (!condition)
+		{
+			cout << "Text konnte nicht gefunden werden" << endl;
+		}
+		return nullptr;
+	}
 };
 
 int main()
