@@ -223,7 +223,7 @@ public:
 
 			for (int i = index; i < anzahlTexte; ++i)
 			{
-				
+				ptrtext[i] = ptrtext[i + 1];
 			}
 
 			anzahlTexte--;
