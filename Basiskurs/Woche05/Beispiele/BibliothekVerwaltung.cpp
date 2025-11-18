@@ -209,10 +209,7 @@ public:
 
     void buchHinzufuegen(Buch neuesBuch)
     {
-        Bücher[anzahlBuecher].setKatalognummer(neuesBuch.getKatalognummer());
-        Bücher[anzahlBuecher].setErscheinungsjahr(neuesBuch.getErscheinungsjahr());
-        Bücher[anzahlBuecher].setSeitenanzahl(neuesBuch.getSeitenanzahl());
-        Bücher[anzahlBuecher].setAusgeliehen(neuesBuch.getAusgeliehen());
+        Bücher[anzahlBuecher] = neuesBuch;
         anzahlBuecher++;
     }
 
