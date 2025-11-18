@@ -116,17 +116,63 @@ using namespace std;
 class Buch
 {
 private:
-    int Katalognummer;
-    int Erscheinungsjahr;
-    int Seitenanzahl;
-    bool Ausgeliehen;
+    int Katalognummer = 0;
+    int Erscheinungsjahr = 0;
+    int Seitenanzahl = 0;
+    bool Ausgeliehen = false;
 
 public:
+
+    Buch()
+    {
+	    
+    }
+
     Buch(int katalognummer, int erscheinungsjahr, int seitenanzahl, bool ausgeliehen)
     {
         this->Katalognummer = katalognummer;
         this->Erscheinungsjahr = erscheinungsjahr;
         this->Seitenanzahl = seitenanzahl;
+        this->Ausgeliehen = ausgeliehen;
+    }
+
+    int getKatalognummer() const
+    {
+        return this->Katalognummer;
+    }
+
+    int getErscheinungsjahr() const
+    {
+        return this->Erscheinungsjahr;
+    }
+
+    int getSeitenanzahl() const
+    {
+        return this->Seitenanzahl;
+    }
+
+    bool getAusgeliehen() const
+    {
+        return this->Ausgeliehen;
+    }
+
+    void setKatalognummer(int katalognummer)
+    {
+        this->Katalognummer = katalognummer;
+    }
+
+    void setErscheinungsjahr(int erscheinungsjahr)
+    {
+        this->Erscheinungsjahr = erscheinungsjahr;
+    }
+
+    void setSeitenanzahl(int seitenanzahl)
+    {
+        this->Seitenanzahl = seitenanzahl;
+    }
+
+    void setAusgeliehen(bool ausgeliehen)
+    {
         this->Ausgeliehen = ausgeliehen;
     }
 
@@ -149,8 +195,68 @@ public:
     }
 };
 
+class Bibliothek
+{
+private:
+    Buch Bücher[10];
+    int anzahlBuecher = 0;
+
+public:
+    Bibliothek()
+    {
+	    
+    }  
+
+    void buchHinzufuegen(Buch neuesBuch)
+    {
+        Bücher[anzahlBuecher].setKatalognummer(neuesBuch.getKatalognummer());
+        Bücher[anzahlBuecher].setErscheinungsjahr(neuesBuch.getErscheinungsjahr());
+        Bücher[anzahlBuecher].setSeitenanzahl(neuesBuch.getSeitenanzahl());
+        Bücher[anzahlBuecher].setAusgeliehen(false);
+        anzahlBuecher++;
+    }
+
+    void zeigeBibliothek()
+    {
+	    for (int i = 0; i < anzahlBuecher; ++i)
+	    {
+            Bücher[i].zeigeDaten();
+	    }
+    }
+
+    void zeigdurchschnittsAlter()
+    {
+        int summe = 0;
+
+        for (int i = 0; i < anzahlBuecher; ++i)
+        {
+            summe += Bücher[i].getErscheinungsjahr();
+        }
+
+        cout << "Durchschnittsalter: " << summe / anzahlBuecher;
+    }
+
+    void sucheBuchNachNummer(int katalogNr)
+    {
+        for (int i = 0; i < anzahlBuecher; ++i)
+        {
+	        if (Bücher[i].getKatalognummer() == katalogNr)
+	        {
+                Bücher[i].zeigeDaten();
+	        }
+        }
+    }
+};
+
 int main() 
 {
+
+    Bibliothek bibliothek;
+
+    Buch buch1 (5, 6, 7, true);
+
+    bibliothek.buchHinzufuegen(buch1);
+    bibliothek.zeigeBibliothek();
 
     return 0;
 }
