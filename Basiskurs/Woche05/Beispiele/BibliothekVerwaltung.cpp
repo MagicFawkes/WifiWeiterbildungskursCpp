@@ -113,7 +113,41 @@ Diese Übung ist für eine Bearbeitungszeit von etwa 30 Minuten konzipiert und v
 
 using namespace std;
 
+class Buch
+{
+private:
+    int Katalognummer;
+    int Erscheinungsjahr;
+    int Seitenanzahl;
+    bool Ausgeliehen;
 
+public:
+    Buch(int katalognummer, int erscheinungsjahr, int seitenanzahl, bool ausgeliehen)
+    {
+        this->Katalognummer = katalognummer;
+        this->Erscheinungsjahr = erscheinungsjahr;
+        this->Seitenanzahl = seitenanzahl;
+        this->Ausgeliehen = ausgeliehen;
+    }
+
+    void ausleihen()
+    {
+        Ausgeliehen = true;
+    }
+
+    void zurückgeben()
+    {
+        Ausgeliehen = false;
+    }
+
+    void zeigeDaten()
+    {
+        cout << "Katalognummer: " << this->Katalognummer;
+        cout << "\nErscheinungsjahr: " << this->Erscheinungsjahr;
+        cout << "\nSeitenanzahl: " << this->Seitenanzahl;
+        cout << "\nAusgeliehen: " << this->Ausgeliehen;
+    }
+};
 
 int main() 
 {
