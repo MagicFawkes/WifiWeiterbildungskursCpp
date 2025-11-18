@@ -1,138 +1,77 @@
 ﻿#include <iostream>
+#include <vector>
 using namespace std;
 
-// ==========================
-// Abstrakte Basisklasse Sensor
-// ==========================
 class Sensor {
 public:
-    virtual float readValue() = 0; // analoger Rückgabewert
-    virtual bool readState() = 0;  // digitaler Zustand (ON/OFF)
+    virtual void readValue() const = 0;  // reine virtuelle Funktion
     virtual ~Sensor() {}
 };
 
-// ==========================
-// Binärsensor (Liefert nur ON/OFF)
-// ==========================
 class BinarySensor : public Sensor {
-    bool state;   // true = ON, false = OFF
+private:
+    bool on;
 public:
-    BinarySensor(bool initial = false) : state(initial) {}
-
-    // liefert keinen echten analogen Wert
-    float readValue() override {
-        return state ? 1.0f : 0.0f;
+    BinarySensor(bool on) {
+        this->on = on;
     }
 
-    bool readState() override {
-        return state;
+    void on_() {          // anderer Name, um Verwechslung zu vermeiden
+        on = true;
     }
 
-    void setState(bool s) {
-        state = s;
+    void off() {
+        on = false;
+    }
+
+    void readValue() const override {
+        cout << "BinarySensor, Wert (on): " << on << endl;
     }
 };
 
-// ==========================
-// Analogsensor (z.B. Temperatur)
-// ==========================
 class AnalogSensor : public Sensor {
-    float value;
+private:
+    int x;
 public:
-    AnalogSensor(float initial = 0.0f) : value(initial) {}
-
-    float readValue() override {
-        return value;
+    AnalogSensor(int x) {
+        this->x = x;
     }
 
-    bool readState() override {
-        return value > 0.5f; // Beispielschwelle
+    void setValue(int x) {
+        this->x = x;
     }
 
-    void setValue(float v) {
-        value = v;
+    void readValue() const override {
+        cout << "AnalogSensor, Wert: " << x << endl;
     }
 };
 
-// ==========================
-// Abstrakte Aktuator-Basisklasse
-// ==========================
-class Aktuator {
-public:
-    virtual void activate(bool on) = 0;   // ON/OFF
-    virtual bool isActive() = 0;
-    virtual ~Aktuator() {}
-};
-
-// ==========================
-// LED
-// ==========================
-class LED : public Aktuator {
-    bool active = false;
-public:
-    void activate(bool on) override {
-        active = on;
-        cout << "LED: " << (active ? "AN" : "AUS") << endl;
-    }
-
-    bool isActive() override {
-        return active;
-    }
-};
-
-// ==========================
-// Motor
-// ==========================
-class Motor : public Aktuator {
-    bool active = false;
-public:
-    void activate(bool on) override {
-        active = on;
-        cout << "Motor: " << (active ? "läuft" : "gestoppt") << endl;
-    }
-
-    bool isActive() override {
-        return active;
-    }
-};
-
-// ==========================
-// Greifer
-// ==========================
-class Gripper : public Aktuator {
-    bool active = false;
-public:
-    void activate(bool on) override {
-        active = on;
-        cout << "Greifer: " << (active ? "geschlossen" : "offen") << endl;
-    }
-
-    bool isActive() override {
-        return active;
-    }
-};
-
-// ==========================
-// main()
-// ==========================
 int main()
 {
-    // Sensor-Beispiele
-    BinarySensor bs(true);
-    AnalogSensor as(0.75f);
+    // Konkrete Objekte
+    BinarySensor bs1(true);
+    BinarySensor bs2(false);
+    AnalogSensor as1(10);
+    AnalogSensor as2(99);
 
-    cout << "BinarySensor: " << bs.readState() << endl;
-    cout << "AnalogSensor-Wert: " << as.readValue() << endl;
-    cout << "AnalogSensor-State: " << as.readState() << endl;
+    // Polymorph: über Sensor*-Zeiger
+    vector<Sensor*> sensors = { &bs1, &bs2, &as1, &as2 };
 
-    // Aktuatoren
-    LED led;
-    Motor motor;
-    Gripper grip;
+    cout << "=== Anfangszustand ===" << endl;
+    for (Sensor* s : sensors) {
+        s->readValue();
+    }
 
-    led.activate(true);
-    motor.activate(true);
-    grip.activate(false);
+    cout << "\n=== Zustände ändern ===" << endl;
+    bs1.off();        // war true -> jetzt false
+    bs2.on_();        // war false -> jetzt true
+    as1.setValue(42); // neuen Analogwert setzen
+    as2.setValue(7);
+
+    cout << "\n=== Nach Änderung ===" << endl;
+    for (Sensor* s : sensors) {
+        s->readValue();
+    }
 
     return 0;
 }
