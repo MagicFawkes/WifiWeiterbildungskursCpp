@@ -212,7 +212,7 @@ public:
         Bücher[anzahlBuecher].setKatalognummer(neuesBuch.getKatalognummer());
         Bücher[anzahlBuecher].setErscheinungsjahr(neuesBuch.getErscheinungsjahr());
         Bücher[anzahlBuecher].setSeitenanzahl(neuesBuch.getSeitenanzahl());
-        Bücher[anzahlBuecher].setAusgeliehen(false);
+        Bücher[anzahlBuecher].setAusgeliehen(neuesBuch.getAusgeliehen());
         anzahlBuecher++;
     }
 
@@ -253,7 +253,7 @@ int main()
 
     Bibliothek bibliothek;
 
-    Buch buch1 (5, 6, 7, true);
+    Buch buch1 (5, 6, 7, false);
 
     bibliothek.buchHinzufuegen(buch1);
     bibliothek.zeigeBibliothek();
