@@ -32,4 +32,10 @@
 #include "Aufgaben/Aufgabe01.cpp"
 #elif AKTIVE_AUFGABE == 2
 #include "Aufgaben/Aufgabe02.cpp"
+#elif AKTIVE_AUFGABE == 3
+#include "Aufgaben/Aufgabe03.cpp"
+#elif AKTIVE_AUFGABE == 4
+#include "Aufgaben/Fightclub.cpp"
+#elif AKTIVE_AUFGABE == 5
+#include "Aufgaben/Medienverwaltung.cpp"
 #endif
