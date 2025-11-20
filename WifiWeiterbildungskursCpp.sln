@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11205.157 d18.0
+VisualStudioVersion = 18.0.11205.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Basiskurs", "Basiskurs\Basiskurs.vcxproj", "{C9608370-20B6-4821-A315-FFE1482E2983}"
 EndProject
@@ -17,6 +17,8 @@ Global
 		Woche04|x86 = Woche04|x86
 		Woche05|x64 = Woche05|x64
 		Woche05|x86 = Woche05|x86
+		Woche06|x64 = Woche06|x64
+		Woche06|x86 = Woche06|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01|x64.ActiveCfg = Woche01|x64
@@ -39,6 +41,10 @@ Global
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche05|x64.Build.0 = Woche05|x64
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche05|x86.ActiveCfg = Woche05|Win32
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche05|x86.Build.0 = Woche05|Win32
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche06|x64.ActiveCfg = Woche06|x64
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche06|x64.Build.0 = Woche06|x64
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche06|x86.ActiveCfg = Woche06|Win32
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche06|x86.Build.0 = Woche06|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
