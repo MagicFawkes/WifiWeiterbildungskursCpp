@@ -566,6 +566,38 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Woche05\Aufgaben\Aufgabe02.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche05\Aufgaben\Aufgabe03.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche05\Aufgaben\Fightclub.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche05\Aufgaben\Medienverwaltung.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Woche05\Beispiele\AbstrakteKlassen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
