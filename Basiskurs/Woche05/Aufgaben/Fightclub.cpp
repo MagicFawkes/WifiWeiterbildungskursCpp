@@ -44,8 +44,6 @@ Stufe 2 15%
 Stufe 3 15%
 */
 
-#define _CRT_SECURE_NO_WARNINGS
-
 #include <stdio.h>
 
 int main()

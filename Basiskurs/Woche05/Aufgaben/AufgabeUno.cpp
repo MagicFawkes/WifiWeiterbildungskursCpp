@@ -28,14 +28,99 @@ Mischen der Karten besitzen und eine Print Methode, welche
 den Kartenstapel ausgibt
 */
 
+#include <iostream>
+#include <memory>
+#include <vector>
 
+enum Color
+{
+	ROT,
+    GRUEN,
+    GELB,
+    BLAU
+};
 
-#define _CRT_SECURE_NO_WARNINGS
+class Base
+{
+public:
+    int number;
+    
+    virtual void use() const = 0;
 
-#include <stdio.h>
+    virtual ~Base()       //oder  virtual ~Base() = default;
+    {
+
+    }
+};
+
+class NumberCards : public Base
+{
+public:
+    Color farbe;
+
+    NumberCards(int number, Color farbe)
+    {
+        this->number = number;
+        this->farbe = farbe;
+    }
+
+    void use() const override
+    {
+        std::cout << "NumberCard " << number
+            << " in Farbe " << farbe << " benutzt!\n";
+    }
+};
+
+class SpecialCards : public Base
+{
+public:
+    void use() const override
+    {
+        std::cout << "NumberCard ";
+    }
+};
+
+class Deck
+{
+public:
+    std::vector<std::unique_ptr<Base>> karten;
+
+    void AddCard(std::unique_ptr<Base> base)
+    {
+        karten.push_back(std::move(base));
+    }
+};
+
+class Game
+{
+    std::vector<std::unique_ptr<Base>> deck;
+
+public:
+    Game(std::unique_ptr<Base> deck)
+    {
+        this->deck.push_back(std::move(deck));
+    }
+
+    ~Game()
+    {
+        this->deck.clear();
+    }
+};
 
 int main()
 {
-    printf("Test");
+    Deck kartenDeck;
+
+	for (int i = 0; i < 10; ++i)
+	{
+        std::unique_ptr<NumberCards> numberCards = std::make_unique<NumberCards>(i, BLAU);
+        kartenDeck.AddCard(std::move(numberCards));
+	}
+
+    for (int u = 0; u < (int)kartenDeck.karten.size(); ++u)
+    {
+        std::cout << "\nKarte: " << kartenDeck.karten[u]->number;
+    }
+
     return 0;
 }

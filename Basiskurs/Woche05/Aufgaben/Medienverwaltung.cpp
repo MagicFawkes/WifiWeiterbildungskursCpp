@@ -56,8 +56,6 @@ Schreiben Sie ein main(), das:
 7. Die Speicherverwaltung vollständig durch Smart Pointer übernimmt
 */
 
-#define _CRT_SECURE_NO_WARNINGS
-
 #include <iostream>
 #include <string>
 
