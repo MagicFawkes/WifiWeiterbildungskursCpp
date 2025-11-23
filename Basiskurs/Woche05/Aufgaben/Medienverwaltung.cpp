@@ -223,6 +223,45 @@ public:
     }
 };
 
+class Mediathek
+{
+private:
+    std::unique_ptr<std::unique_ptr<Medium>[]> liste;
+    int kapazitaet;
+    int anzahl;
+
+public:
+    Mediathek()
+    {
+        liste = std::unique_ptr<Medium>[];
+    }
+
+    void mediumHinzufuegen(std::unique_ptr<Medium> m)
+    {
+	    
+    }
+
+    void mediumLoeschen(int index)
+    {
+	    
+    }
+
+    Medium* mediumFinden(const std::string& titel)
+    {
+	    
+    }
+
+    void alleAusgeben() const
+    {
+	    
+    }
+
+    void nachTypAusgeben(Medienart art) const
+    {
+	    
+    }
+};
+
 int main()
 {
     printf("Test");
