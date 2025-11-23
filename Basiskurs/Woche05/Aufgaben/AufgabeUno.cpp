@@ -66,8 +66,26 @@ public:
 
     void use() const override
     {
+        std::string kartenFarbe;
+
+	    switch (this->farbe)
+	    {
+            case ROT:
+				kartenFarbe = "rot";
+                break;
+            case GRUEN:
+                kartenFarbe = "gruen";
+                break;
+            case GELB:
+                kartenFarbe = "gelb";
+                break;
+            case BLAU:
+                kartenFarbe = "blau";
+                break;
+	    }
+
         std::cout << "\nNumberCard " << number
-            << " in Farbe " << farbe << " benutzt!\n";
+            << " in Farbe " << kartenFarbe << " benutzt!";
     }
 };
 
@@ -112,7 +130,7 @@ public:
 	    {
             for (int u = 0; u < (int)deck[i]->karten.size(); ++u)
             {
-                std::cout << "\nKarte: " << deck[i]->karten[u]->number;
+                deck[i]->karten[u]->use();
             }
 	    }
         
@@ -121,19 +139,20 @@ public:
 
 int main()
 {
-    Deck kartenDeck;
+    std::unique_ptr<Deck> kartenDeck = std::make_unique<Deck>();
 
-	for (int i = 0; i < 10; ++i)
-	{
-        std::unique_ptr<NumberCards> numberCards = std::make_unique<NumberCards>(i, GELB);
-        kartenDeck.AddCard(std::move(numberCards));
-	}
-
-    for (int u = 0; u < (int)kartenDeck.karten.size(); ++u)
+    for (int a = 0; a < 4; ++a)
     {
-        std::cout << "\nKarte: " << kartenDeck.karten[u]->number;
-       kartenDeck.karten[u]->use();
+        for (int i = 0; i < 10; ++i)
+        {
+            std::unique_ptr<NumberCards> numberCards = std::make_unique<NumberCards>(i, (Color)a);
+            kartenDeck->AddCard(std::move(numberCards));
+        }
     }
+
+    Game game = std::move(kartenDeck);
+    std::cout << "\n**********Kartendeck:************\n";
+    game.print();
 
     return 0;
 }
