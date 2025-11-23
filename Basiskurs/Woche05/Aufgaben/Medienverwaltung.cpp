@@ -59,7 +59,6 @@ Schreiben Sie ein main(), das:
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
-#include <stdio.h>
 #include <string>
 
 enum Medienart
@@ -154,10 +153,10 @@ public:
     void anzeigen() const override
     {
         std::cout <<
-            "Titel: " << this->getTitel() <<
+            "\nTitel: " << this->getTitel() <<
             "\nAutor: " << this->getAutor() <<
             "\nJahr: " << this->getJahr() <<
-            "\n Art: " << this->getArt() <<
+            "\nArt: " << this->getArt() <<
             "\nSeiten: " << this->getSeiten();
     }
 };
@@ -186,10 +185,10 @@ public:
     void anzeigen() const override
     {
         std::cout <<
-            "Titel: " << this->getTitel() <<
+            "\nTitel: " << this->getTitel() <<
             "\nAutor: " << this->getAutor() <<
             "\nJahr: " << this->getJahr() <<
-            "\n Art: " << this->getArt() <<
+            "\nArt: " << this->getArt() <<
             "\nAusgabe: " << this->getAusgabe();
     }
 };
@@ -218,10 +217,10 @@ public:
     void anzeigen() const override
     {
         std::cout << 
-            "Titel: " << this->getTitel() << 
+            "\nTitel: " << this->getTitel() << 
             "\nAutor: " << this->getAutor() << 
             "\nJahr: " << this->getJahr() << 
-            "\n Art: " << this->getArt() << 
+            "\nArt: " << this->getArt() << 
             "\nDauer Minuten: " << this->getDauerMinuten();
     }
 };
@@ -242,13 +241,19 @@ public:
 
     void mediumHinzufuegen(std::unique_ptr<Medium> m)
     {
+        if (this->kapazitaet < (anzahl + 1))
+	    {
+            return;
+	    }
+
         liste[this->anzahl] = std::move(m);
         anzahl++;
     }
 
     void mediumLoeschen(int index)
     {
-	    
+        if (this->anzahl == 0)
+            return;
     }
 
     Medium* mediumFinden(const std::string& titel)
@@ -260,17 +265,20 @@ public:
     {
 	    for (int i = 0; i < anzahl; ++i)
 	    {
-            std::cout <<
-                "Titel: " << liste[i]->getTitel() <<
-                "\nAutor: " << liste[i]->getAutor() <<
-                "\nJahr: " << liste[i]->getJahr() <<
-                "\nArt: " << liste[i]->getArt();
+            liste[i]->anzeigen();
 	    }
     }
 
     void nachTypAusgeben(Medienart art) const
     {
-	    
+        std::cout << "\n\nMedieanart ausgeben: " << art << "\n";
+        for (int i = 0; i < anzahl; ++i)
+        {
+	        if (art == liste[i]->getArt())
+	        {
+                liste[i]->anzeigen();
+	        }
+        }
     }
 };
 
@@ -285,12 +293,34 @@ int main()
 	Wenn die Klasse keinen initializer_list-Konstruktor besitzt, funktionieren beide Varianten gleich.
 	*/
 
-    Mediathek mediathek{5};
-    std::unique_ptr<Medium> buch = std::make_unique<Buch>("Buch1", "Autor1", 2000, BUCH, 200);
+    Mediathek mediathek{10};
+    std::unique_ptr<Medium> buch = std::make_unique<Buch>("Buch1", "Autor1", 2001, BUCH, 201);
+    std::unique_ptr<Medium> buch1 = std::make_unique<Buch>("Buch2", "Autor2", 2002, BUCH, 202);
+    std::unique_ptr<Medium> buch2 = std::make_unique<Buch>("Buch3", "Autor3", 2003, BUCH, 203);
+
+    std::unique_ptr<Medium> zeitschrift1 = std::make_unique<Zeitschrift>("zeitschrift1", "AutorZ1", 1001, ZEITSCHRIFT, 205);
+    std::unique_ptr<Medium> zeitschrift2 = std::make_unique<Zeitschrift>("zeitschrift2", "AutorZ2", 1002, ZEITSCHRIFT, 206);
+    std::unique_ptr<Medium> zeitschrift3 = std::make_unique<Zeitschrift>("zeitschrift3", "AutorZ3", 1003, ZEITSCHRIFT, 207);
+
+    std::unique_ptr<Medium> video1 = std::make_unique<Video>("video1", "AutorV1", 2034, ZEITSCHRIFT, 401);
+    std::unique_ptr<Medium> video2 = std::make_unique<Video>("video2", "AutorV2", 2035, ZEITSCHRIFT, 202);
+    std::unique_ptr<Medium> video3 = std::make_unique<Video>("video3", "AutorV3", 2036, ZEITSCHRIFT, 203);
 
     mediathek.mediumHinzufuegen(std::move(buch));
+    mediathek.mediumHinzufuegen(std::move(buch1));
+    mediathek.mediumHinzufuegen(std::move(buch2));
+
+    mediathek.mediumHinzufuegen(std::move(zeitschrift1));
+    mediathek.mediumHinzufuegen(std::move(zeitschrift2));
+    mediathek.mediumHinzufuegen(std::move(zeitschrift3));
+
+    mediathek.mediumHinzufuegen(std::move(video1));
+    mediathek.mediumHinzufuegen(std::move(video2));
+    mediathek.mediumHinzufuegen(std::move(video3));
+
 
     mediathek.alleAusgeben();
+    mediathek.nachTypAusgeben(ZEITSCHRIFT);
 
     return 0;
 }
