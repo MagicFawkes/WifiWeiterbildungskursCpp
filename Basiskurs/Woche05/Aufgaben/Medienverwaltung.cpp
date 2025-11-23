@@ -302,9 +302,9 @@ int main()
     std::unique_ptr<Medium> zeitschrift2 = std::make_unique<Zeitschrift>("zeitschrift2", "AutorZ2", 1002, ZEITSCHRIFT, 206);
     std::unique_ptr<Medium> zeitschrift3 = std::make_unique<Zeitschrift>("zeitschrift3", "AutorZ3", 1003, ZEITSCHRIFT, 207);
 
-    std::unique_ptr<Medium> video1 = std::make_unique<Video>("video1", "AutorV1", 2034, ZEITSCHRIFT, 401);
-    std::unique_ptr<Medium> video2 = std::make_unique<Video>("video2", "AutorV2", 2035, ZEITSCHRIFT, 202);
-    std::unique_ptr<Medium> video3 = std::make_unique<Video>("video3", "AutorV3", 2036, ZEITSCHRIFT, 203);
+    std::unique_ptr<Medium> video1 = std::make_unique<Video>("video1", "AutorV1", 2034, VIDEO, 401);
+    std::unique_ptr<Medium> video2 = std::make_unique<Video>("video2", "AutorV2", 2035, VIDEO, 202);
+    std::unique_ptr<Medium> video3 = std::make_unique<Video>("video3", "AutorV3", 2036, VIDEO, 203);
 
     mediathek.mediumHinzufuegen(std::move(buch));
     mediathek.mediumHinzufuegen(std::move(buch1));
