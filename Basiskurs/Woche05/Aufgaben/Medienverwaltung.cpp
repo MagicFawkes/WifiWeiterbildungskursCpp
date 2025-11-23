@@ -58,7 +58,170 @@ Schreiben Sie ein main(), das:
 
 #define _CRT_SECURE_NO_WARNINGS
 
+#include <iostream>
 #include <stdio.h>
+#include <string>
+
+enum Medienart
+{
+	BUCH,
+    ZEITSCHRIFT,
+    VIDEO
+};
+
+class Medium
+{
+public:
+    Medium(std::string titel, std::string  autor, int jahr, Medienart art) : titel(titel), autor(autor), jahr(jahr), art(art)
+    {
+	    
+    }
+	
+    virtual void anzeigen() const = 0;
+    virtual ~Medium();
+
+    std::string getTitel() const
+    {
+        return this->titel;
+    }
+
+    std::string getAutor() const
+    {
+        return this->autor;
+    }
+
+    int getJahr() const
+    {
+        return this->jahr;
+    }
+
+    Medienart getArt() const
+    {
+        return this->art;
+    }
+
+    void setTItel(std::string titel)
+    {
+        this->titel = titel;
+    }
+
+    void setAutor(std::string autor)
+    {
+        this->autor = autor;
+    }
+
+    void setJahr(int jahr)
+    {
+        this->jahr = jahr;
+    }
+
+    void setArt(Medienart art)
+    {
+        this->art = art;
+    }
+
+private:
+    std::string titel;
+    std::string autor;
+    int jahr;
+    Medienart art;
+};
+
+class Buch : public Medium
+{
+private:
+    int seiten;
+public:
+
+    Buch(std::string titel, std::string  autor, int jahr, Medienart art, int seiten) : Medium(titel, autor, jahr, art), seiten(seiten)
+    {
+	    
+    }
+
+    int getSeiten() const
+    {
+        return this->seiten;
+    }
+
+    void setSeiten(int seiten)
+    {
+        this->seiten = seiten;
+    }
+
+    void anzeigen() const override
+    {
+        std::cout <<
+            "Titel: " << this->getTitel() <<
+            "\nAutor: " << this->getAutor() <<
+            "\nJahr: " << this->getJahr() <<
+            "\n Art: " << this->getArt() <<
+            "\nSeiten: " << this->getSeiten();
+    }
+};
+
+class Zeitschrift : public Medium
+{
+private:
+    int ausgabe;
+public:
+
+    Zeitschrift(std::string titel, std::string  autor, int jahr, Medienart art, int ausgabe) : Medium(titel, autor, jahr, art), ausgabe(ausgabe)
+    {
+
+    }
+
+    int getAusgabe() const
+    {
+        return this->ausgabe;
+    }
+
+    void setAusgabe(int ausgabe)
+    {
+        this->ausgabe = ausgabe;
+    }
+
+    void anzeigen() const override
+    {
+        std::cout <<
+            "Titel: " << this->getTitel() <<
+            "\nAutor: " << this->getAutor() <<
+            "\nJahr: " << this->getJahr() <<
+            "\n Art: " << this->getArt() <<
+            "\nAusgabe: " << this->getAusgabe();
+    }
+};
+
+class Video : public Medium
+{
+private:
+    int dauerMinuten;
+public:
+
+    Video(std::string titel, std::string  autor, int jahr, Medienart art, int dauerMinuten) : Medium(titel, autor, jahr, art), dauerMinuten(dauerMinuten)
+    {
+
+    }
+
+    int getDauerMinuten() const
+    {
+        return this->dauerMinuten;
+    }
+
+    void setDauerMinuten(int dauerMinuten)
+    {
+        this->dauerMinuten = dauerMinuten;
+    }
+
+    void anzeigen() const override
+    {
+        std::cout << 
+            "Titel: " << this->getTitel() << 
+            "\nAutor: " << this->getAutor() << 
+            "\nJahr: " << this->getJahr() << 
+            "\n Art: " << this->getArt() << 
+            "\nDauer Minuten: " << this->getDauerMinuten();
+    }
+};
 
 int main()
 {
