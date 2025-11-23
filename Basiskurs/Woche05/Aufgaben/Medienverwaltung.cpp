@@ -259,6 +259,7 @@ public:
 
         // oder: liste[i].reset();
         // Direkt neu zuweisen (ohne nullptr) Das alte Objekt wird gelöscht. Der neue unique_ptr übernimmt den Besitz.
+        // Wennn du einem std::unique_ptr ein neues Objekt zuweist, wird das alte automatisch gelöscht, auch ohne std::move.
         liste[index] = nullptr;  
 
         anzahl--;
