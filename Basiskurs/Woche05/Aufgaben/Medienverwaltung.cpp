@@ -258,7 +258,20 @@ public:
 
     Medium* mediumFinden(const std::string& titel)
     {
-	    
+        for (int i = 0; i < anzahl; ++i)
+        {
+        	// Vergleich funktioniert direkt, weil std::string den Operator == überlädt
+        	// und dabei den Textinhalt beider Strings vergleicht.
+	        if (liste[i]->getTitel() == titel)
+	        {
+                return liste[i].get();
+                // Gibt nur den rohen Pointer zurück, ohne Besitz zu übertragen.
+				// Der unique_ptr in liste[i] bleibt weiterhin alleiniger Besitzer
+	        	// und löscht das Objekt am Ende seiner Lebenszeit.
+	        }
+        }
+
+        return NULL;
     }
 
     void alleAusgeben() const
@@ -320,6 +333,14 @@ int main()
 
     mediathek.alleAusgeben();
     mediathek.nachTypAusgeben(ZEITSCHRIFT);
+
+    Medium* buchNeu = mediathek.mediumFinden("Buch2");
+    
+	if (buchNeu != nullptr)
+    {
+        std::cout << "\n\nBuch2 gefunden:\n";
+        buchNeu->anzeigen();
+    }
 
     return 0;
 }
