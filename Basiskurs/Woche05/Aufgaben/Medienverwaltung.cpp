@@ -78,7 +78,10 @@ public:
     }
 	
     virtual void anzeigen() const = 0;
-    virtual ~Medium();
+    virtual ~Medium()       //oder  virtual ~Medium() = default;
+    {
+	    
+    }
 
     std::string getTitel() const
     {
@@ -228,17 +231,19 @@ class Mediathek
 private:
     std::unique_ptr<std::unique_ptr<Medium>[]> liste;
     int kapazitaet;
-    int anzahl;
+    int anzahl = 0;
 
 public:
-    Mediathek()
+    Mediathek(int kapazitaet)
+        : kapazitaet(kapazitaet),
+        liste(std::make_unique<std::unique_ptr<Medium>[]>(kapazitaet))
     {
-        liste = std::unique_ptr<Medium>[];
     }
 
     void mediumHinzufuegen(std::unique_ptr<Medium> m)
     {
-	    
+        liste[this->anzahl] = std::move(m);
+        anzahl++;
     }
 
     void mediumLoeschen(int index)
@@ -253,7 +258,14 @@ public:
 
     void alleAusgeben() const
     {
-	    
+	    for (int i = 0; i < anzahl; ++i)
+	    {
+            std::cout <<
+                "Titel: " << liste[i]->getTitel() <<
+                "\nAutor: " << liste[i]->getAutor() <<
+                "\nJahr: " << liste[i]->getJahr() <<
+                "\nArt: " << liste[i]->getArt();
+	    }
     }
 
     void nachTypAusgeben(Medienart art) const
@@ -264,6 +276,21 @@ public:
 
 int main()
 {
-    printf("Test");
+
+    /*
+    Mediathek mediathek(5);
+	Mediathek mediathek{5};
+    () (runde Klammern) rufen den normalen Konstruktor direkt auf.
+	{} (geschweifte Klammern) verwenden die moderne „uniform initialization“, die strenger ist (verhindert z. B. Verluste durch Typumwandlung) und – falls vorhanden – bevorzugt einen std::initializer_list-Konstruktor.
+	Wenn die Klasse keinen initializer_list-Konstruktor besitzt, funktionieren beide Varianten gleich.
+	*/
+
+    Mediathek mediathek{5};
+    std::unique_ptr<Medium> buch = std::make_unique<Buch>("Buch1", "Autor1", 2000, BUCH, 200);
+
+    mediathek.mediumHinzufuegen(std::move(buch));
+
+    mediathek.alleAusgeben();
+
     return 0;
 }

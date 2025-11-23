@@ -1,6 +1,6 @@
 
-#define AKTIVE_BEISPIEL 12
-#define AKTIVE_AUFGABE 0
+#define AKTIVE_BEISPIEL 0
+#define AKTIVE_AUFGABE 5
 
 #if AKTIVE_BEISPIEL == 1
 #include "Beispiele/EinfacherKonstruktor.cpp"
