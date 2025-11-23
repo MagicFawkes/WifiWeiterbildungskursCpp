@@ -252,7 +252,7 @@ public:
 
     void mediumLoeschen(int index)
     {
-        if (this->anzahl == 0)
+        if (this->anzahl <= 0 || index > this->anzahl || index < 0)
             return;
     }
 
