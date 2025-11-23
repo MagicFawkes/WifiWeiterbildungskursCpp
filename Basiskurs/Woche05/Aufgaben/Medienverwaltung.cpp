@@ -252,8 +252,21 @@ public:
 
     void mediumLoeschen(int index)
     {
-        if (this->anzahl <= 0 || index > this->anzahl || index < 0)
+        if (index >= this->anzahl || index < 0)
             return;
+
+        std::cout << "\n\nEintrag loeschen: index " << index;
+
+        // oder: liste[i].reset();
+        // Direkt neu zuweisen (ohne nullptr) Das alte Objekt wird gelöscht. Der neue unique_ptr übernimmt den Besitz.
+        liste[index] = nullptr;  
+
+        anzahl--;
+
+        for (int i = index; i < this->anzahl; ++i)
+        {
+            liste[i] = std::move(liste[i + 1]);
+        }
     }
 
     Medium* mediumFinden(const std::string& titel)
@@ -341,6 +354,9 @@ int main()
         std::cout << "\n\nBuch2 gefunden:\n";
         buchNeu->anzeigen();
     }
+
+    mediathek.mediumLoeschen(5);
+    mediathek.alleAusgeben();
 
     return 0;
 }
