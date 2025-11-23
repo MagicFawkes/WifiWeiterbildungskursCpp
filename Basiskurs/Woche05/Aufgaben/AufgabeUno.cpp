@@ -92,9 +92,14 @@ public:
 class SpecialCards : public Base
 {
 public:
+
+    SpecialCards(int number)
+    {
+        this->number = number;
+    }
     void use() const override
     {
-        std::cout << "NumberCard ";
+        std::cout << "\nNumberSpecialCard " << number << " benutzt!";
     }
 };
 
@@ -151,6 +156,9 @@ int main()
             kartenDeck->AddCard(std::move(numberCards));
         }
     }
+
+    std::unique_ptr<SpecialCards> numberCards = std::make_unique<SpecialCards>(5);
+    kartenDeck->AddCard(std::move(numberCards));
 
     Game game = std::move(kartenDeck);
  
