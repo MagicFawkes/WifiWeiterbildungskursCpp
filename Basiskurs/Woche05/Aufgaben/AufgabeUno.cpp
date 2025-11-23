@@ -66,7 +66,7 @@ public:
 
     void use() const override
     {
-        std::cout << "NumberCard " << number
+        std::cout << "\nNumberCard " << number
             << " in Farbe " << farbe << " benutzt!\n";
     }
 };
@@ -125,13 +125,14 @@ int main()
 
 	for (int i = 0; i < 10; ++i)
 	{
-        std::unique_ptr<NumberCards> numberCards = std::make_unique<NumberCards>(i, BLAU);
+        std::unique_ptr<NumberCards> numberCards = std::make_unique<NumberCards>(i, GELB);
         kartenDeck.AddCard(std::move(numberCards));
 	}
 
     for (int u = 0; u < (int)kartenDeck.karten.size(); ++u)
     {
         std::cout << "\nKarte: " << kartenDeck.karten[u]->number;
+       kartenDeck.karten[u]->use();
     }
 
     return 0;
