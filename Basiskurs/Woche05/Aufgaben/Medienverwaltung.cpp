@@ -318,7 +318,6 @@ int main()
     mediathek.mediumHinzufuegen(std::move(video2));
     mediathek.mediumHinzufuegen(std::move(video3));
 
-
     mediathek.alleAusgeben();
     mediathek.nachTypAusgeben(ZEITSCHRIFT);
 
