@@ -146,15 +146,22 @@ public:
 
     void mischen()
     {
+        // Liefert einen zufälligen Seed vom System (wenn möglich echter Zufallswert)
         std::random_device rd;
-        std::mt19937 gen(rd());                       
+
+        // Initialisiert den Mersenne-Twister-Zufallszahlengenerator mit dem Seed
+        std::mt19937 gen(rd());
+
         int randomNumber;
 
         for (int i = 0; i < (int)deck.size(); ++i)
         {
             for (int u = 0; u < (int)deck[i]->karten.size(); ++u)
             {
+                // Gleichverteilung für ganze Zahlen von 0 bis (Kartenzahl - 1)
                 std::uniform_int_distribution<> dist(0, (int)deck[i]->karten.size() - 1);
+
+                // Erzeugt eine zufällige Zahl im definierten Bereich
                 randomNumber = dist(gen);
 
                 std::unique_ptr<Base> karte = std::move(deck[i]->karten[u]);
