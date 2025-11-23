@@ -128,6 +128,8 @@ public:
     {
 	    for (int i = 0; i < (int)deck.size(); ++i)
 	    {
+            std::cout << "\n\n**********Kartendeck: " << i+1 << " ************";
+
             for (int u = 0; u < (int)deck[i]->karten.size(); ++u)
             {
                 deck[i]->karten[u]->use();
@@ -151,7 +153,8 @@ int main()
     }
 
     Game game = std::move(kartenDeck);
-    std::cout << "\n**********Kartendeck:************\n";
+ 
+    game.print();
     game.print();
 
     return 0;
