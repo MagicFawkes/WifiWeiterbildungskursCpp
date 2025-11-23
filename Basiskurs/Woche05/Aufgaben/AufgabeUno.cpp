@@ -93,10 +93,10 @@ public:
 
 class Game
 {
-    std::vector<std::unique_ptr<Base>> deck;
+    std::vector<std::unique_ptr<Deck>> deck;
 
 public:
-    Game(std::unique_ptr<Base> deck)
+    Game(std::unique_ptr<Deck> deck)
     {
         this->deck.push_back(std::move(deck));
     }
@@ -104,6 +104,18 @@ public:
     ~Game()
     {
         this->deck.clear();
+    }
+
+    void print()
+    {
+	    for (int i = 0; i < (int)deck.size(); ++i)
+	    {
+            for (int u = 0; u < (int)deck[i]->karten.size(); ++u)
+            {
+                std::cout << "\nKarte: " << deck[i]->karten[u]->number;
+            }
+	    }
+        
     }
 };
 
