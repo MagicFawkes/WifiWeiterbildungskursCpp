@@ -6,48 +6,42 @@
 
 using namespace std;
 
-#define N 256
+struct Stack
+{
+	int data;
+	std::shared_ptr<Stack> next;
+};
 
-int stack[N] = { 0 };
-int top = -1;
+std::shared_ptr<Stack> top = NULL;;
+
 
 void push(int x)
 {
-	if (top == N - 1)
-	{
-		cout << "Stackoverflow" << endl;
-	}
-	else
-	{
-		stack[++top] = x;
-	}
+	std::shared_ptr<Stack> newNode = std::shared_ptr<Stack>();
+	newNode->data = x;
+	newNode->next = top;
+	top = newNode;
 }
 
-int pop()
+void pop()
 {
-	if (top == -1)
-	{
-		cout << "Stack is empty, please push an element" << endl;
-		return -1;
-	}
-	return stack[top--];
+	std::shared_ptr<Stack> temp;
+	temp = top;
+
+	if (temp == nullptr)
+		return;
+
+	top = top->next;
+	temp = nullptr;
 }
 
-int peek() {
-	if (top == -1)
-	{
-		cout << "Stack is empty, please push an element" << endl;
-		return -1;
-	}
-
-	return stack[top];
-
+int peek() 
+{
+	return 0;
 }
-
 
 int main()
 {
 	push(10);
 	pop();
-
 }
