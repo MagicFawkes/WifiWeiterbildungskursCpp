@@ -211,3 +211,156 @@ int main()
 
     return 0;
 }
+
+/* Lösung von Trainer:
+
+#include <iostream>
+#include <random>
+#include <ctime>
+
+using namespace std;
+
+enum Color {
+    Red,
+    Green,
+    Yellow,
+    Blue
+};
+
+class Card
+{
+public:
+    virtual void use() = 0;
+    virtual void print() = 0;
+
+    Card(Color clr) {
+        color = colorTostring(clr);
+    }
+
+    string colorTostring(Color clr)
+    {
+        switch (clr) {
+        case Red:
+            return "Red";
+        case Yellow:
+            return "Yellow";
+        case Green:
+            return "Green";
+        case Blue:
+            return "Blue";
+        default:
+            return "Unknown";
+        }
+    }
+protected:
+    string color;
+};
+
+
+class Numbercard :public Card
+{
+private:
+    int number;
+public:
+    Numbercard(int number, Color clr) :Card(clr)
+    {
+        this->number = number;
+    }
+    void use()
+    {
+        cout << "Card Number " << number << " with color" << "is used" << color << endl;
+    }
+    void print()
+    {
+        cout << "Card Number " << number << " with color" << color << endl;
+    }
+
+
+};
+
+class Specialcard :public Card
+{
+public:
+    Specialcard(string ability, Color clr) :Card(clr)
+    {
+        this->ability = ability;
+    }
+    void use()
+    {
+        cout << "Special Card " << ability << " with color" << color << "is used" << endl;
+    }
+    void print()
+    {
+        cout << "Special Card " << ability << " with color" << color << endl;
+    }
+private:
+    string ability;
+
+};
+
+
+class Game {
+private:
+    static const int size_stapel = 43;
+    Card* stapel[size_stapel];
+
+public:
+    Game()
+    {
+        int index = 0;
+
+        for (int i = 0; i <= 9; i++)
+        {
+            stapel[index++] = new Numbercard(10, Red);
+            stapel[index++] = new Numbercard(10, Green);
+            stapel[index++] = new Numbercard(10, Blue);
+            stapel[index++] = new Numbercard(10, Yellow);
+        }
+        stapel[index++] = new Specialcard("Reverse", Red);
+        stapel[index++] = new Specialcard("+2", Red);
+        stapel[index++] = new Specialcard("Skippen", Red);
+
+    }
+    ~Game()
+    {
+        for (int i = 0; i < size_stapel; i++)
+        {
+            delete stapel[i];
+        }
+    }
+
+    void Mischen()
+    {
+        srand(time(NULL));
+
+        Card* temp = NULL;
+        int k = 0;
+
+        for (int i = 0; i < size_stapel; i++)
+        {
+            k = rand() % (i + 1);
+            temp = stapel[i];
+            stapel[i] = stapel[k];
+            stapel[k] = temp;
+        }
+
+    }
+    void print() {
+        for (int i = 0; i < size_stapel; i++)
+        {
+            stapel[i]->print();
+        }
+    }
+
+
+};
+
+int main()
+{
+    Game game;
+    game.Mischen();
+    game.print();
+
+}
+
+*/
