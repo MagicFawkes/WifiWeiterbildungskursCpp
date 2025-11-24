@@ -16,36 +16,41 @@ class Node
 {
 public:
 	int data;
-	Node* next;
+	std::shared_ptr<Node> next;
 	static int counter;
+
+	Node(int value) : data(value)
+	{
+		
+	}   
 };
 
 int Node::counter = 0;
 
-Node* getNewnode(int x) {
-	Node* newNode = new Node();
-	newNode->data = x;
+std::shared_ptr<Node> getNewnode(int x) {
+	std::shared_ptr<Node> newNode = std::make_shared<Node>(x);
+	//newNode->data = x;
 	newNode->next = NULL;
 	return newNode;
 }
 
-Node* insertFront(Node* head, int value)
+std::shared_ptr<Node> insertFront(std::shared_ptr<Node> head, int value)
 {
-	Node* newNode = getNewnode(value);
+	std::shared_ptr<Node> newNode = std::make_shared<Node>(value);
 	newNode->next = head;
 	return newNode;
 }
 
-Node* InsertBack(Node* head, int value)
+std::shared_ptr<Node> InsertBack(std::shared_ptr<Node> head, int value)
 {
-	Node* newNode = getNewnode(value);
+	std::shared_ptr<Node> newNode = getNewnode(value);
 	newNode->next = head;
 
 	if (head == NULL) {
 		return newNode;
 	}
 
-	Node* temp = head;
+	std::shared_ptr<Node> temp = head;
 
 	while (temp->next != NULL) // nicht temp != NULL ist falsch
 	{
@@ -59,15 +64,14 @@ Node* InsertBack(Node* head, int value)
 
 }
 
-Node* insert(Node* head, int value, int target)
+std::shared_ptr<Node> insert(std::shared_ptr<Node> head, int value, int target)
 {
 	if (head == NULL) {
 		cout << "Liste ist leer" << endl;
 		return head;
 	}
 
-
-	Node* temp = head;
+	std::shared_ptr<Node> temp = head;
 
 	while (temp != NULL && temp->data != target) // w und w = w
 	{
@@ -79,15 +83,15 @@ Node* insert(Node* head, int value, int target)
 		cout << "Target wurde nicht gefunden" << endl;
 	}
 
-	Node* newNode = getNewnode(value);
+	std::shared_ptr<Node> newNode = getNewnode(value);
 	newNode->next = temp->next;
 	temp->next = newNode;
 	return head;
 
 }
 
-bool search(Node* head, int value) {
-	Node* temp = head;
+bool search(std::shared_ptr<Node> head, int value) {
+	std::shared_ptr<Node> temp = head;
 
 	while (temp != NULL) {
 		if (temp->data == value) {
@@ -99,14 +103,14 @@ bool search(Node* head, int value) {
 }
 
 
-Node* remove(Node* head, int value)
+std::shared_ptr<Node> remove(std::shared_ptr<Node> head, int value)
 {
 	if (head == NULL) {
 		cout << "Liste leer" << endl;
 		return head;
 	}
 
-	Node* temp = head;
+	std::shared_ptr<Node> temp = head;
 
 	while (temp->next != NULL && temp->next->data != value) {}
 	{
@@ -116,21 +120,21 @@ Node* remove(Node* head, int value)
 		cout << "Element nicht gefunden" << endl;
 	}
 
-	Node* temp2 = temp->next;
+	std::shared_ptr<Node> temp2 = temp->next;
 	temp->next = temp2->next;
-	free(temp2);
+	temp2 = NULL;
 
 	return head;
 
 }
 
-void printlist(Node* head) {
+void printlist(std::shared_ptr<Node> head) {
 	if (head == NULL) {
 		cout << "Liste leer" << endl;
 		return;
 	}
 
-	Node* temp = head;
+	std::shared_ptr<Node> temp = head;
 
 	while (temp != NULL)
 	{
@@ -141,14 +145,14 @@ void printlist(Node* head) {
 
 }
 
-void deleteList(Node* head)
+void deleteList(std::shared_ptr<Node> head)
 {
-	Node* temp1 = head;
-	Node* temp2 = NULL;
+	std::shared_ptr<Node> temp1 = head;
+	std::shared_ptr<Node> temp2 = NULL;
 	while (temp1 != NULL)
 	{
 		temp2 = temp1->next;
-		delete temp1;
+		temp1 = nullptr;
 		temp1 = temp2;
 	}
 }
@@ -182,7 +186,7 @@ void deleteList(Node* head)
 
 int main()
 {
-	Node* head = NULL;
+	std::shared_ptr<Node> head = NULL;
 	for (int i = 0; i < 10; i++) {
 		head = insertFront(head, i + 1);
 	}
