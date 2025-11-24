@@ -9,7 +9,7 @@
 #elif AKTIVE_BEISPIEL == 3
 #include "Beispiele/StackPopPush.cpp"
 #elif AKTIVE_BEISPIEL == 4
-#include "Beispiele/StackPopPushList.cpp"
+#include "Beispiele/StackPopPushStruct.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
