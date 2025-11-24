@@ -311,10 +311,10 @@ public:
 
         for (int i = 0; i <= 9; i++)
         {
-            stapel[index++] = new Numbercard(10, Red);
-            stapel[index++] = new Numbercard(10, Green);
-            stapel[index++] = new Numbercard(10, Blue);
-            stapel[index++] = new Numbercard(10, Yellow);
+            stapel[index++] = new Numbercard(i, Red);
+            stapel[index++] = new Numbercard(i, Green);
+            stapel[index++] = new Numbercard(i, Blue);
+            stapel[index++] = new Numbercard(i, Yellow);
         }
         stapel[index++] = new Specialcard("Reverse", Red);
         stapel[index++] = new Specialcard("+2", Red);
