@@ -91,6 +91,15 @@
     <Filter Include="Source Files\Woche06\Beispiele">
       <UniqueIdentifier>{e1c115fb-84e7-4bee-a249-a9c8462073f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche07">
+      <UniqueIdentifier>{f27b6f0a-f52c-4f9a-ad87-045f7d09f6ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche07\Aufgaben">
+      <UniqueIdentifier>{ce927c4b-753f-44c8-ba96-f5319467a1e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche07\Beispiele">
+      <UniqueIdentifier>{f442c337-572e-44fa-8a23-96e180859668}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -350,6 +359,18 @@
     </ClCompile>
     <ClCompile Include="Woche06\Beispiele\VerketteteListenCPPStyle.cpp">
       <Filter>Source Files\Woche06\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche07\Aufgaben\Aufgabe01.cpp">
+      <Filter>Source Files\Woche07\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche07\Beispiele\VerketteteListenCPPStyle.cpp">
+      <Filter>Source Files\Woche07\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche07\Beispiele\VerketteteListenCStyle.cpp">
+      <Filter>Source Files\Woche07\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche07\Main.cpp">
+      <Filter>Source Files\Woche07</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
