@@ -189,7 +189,8 @@ void deleteList(std::shared_ptr<Node> head)
 int main()
 {
 	std::shared_ptr<Node> head = NULL;
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) 
+	{
 		head = insertFront(head, i + 1);
 	}
 
