@@ -12,14 +12,15 @@ using namespace std;
 //	return counter;
 //}
 
-struct Node
+class Node
 {
+public:
 	int data;
 	Node* next;
-	//static int counter;
+	static int counter;
 };
 
-//int Node::counter = 0;
+int Node::counter = 0;
 
 Node* getNewnode(int x) {
 	Node* newNode = new Node();
