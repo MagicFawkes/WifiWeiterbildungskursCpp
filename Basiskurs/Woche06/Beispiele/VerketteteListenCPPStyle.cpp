@@ -31,6 +31,7 @@ std::shared_ptr<Node> getNewnode(int x) {
 	std::shared_ptr<Node> newNode = std::make_shared<Node>(x);
 	//newNode->data = x;
 	newNode->next = NULL;
+	Node::counter++;
 	return newNode;
 }
 
@@ -38,6 +39,7 @@ std::shared_ptr<Node> insertFront(std::shared_ptr<Node> head, int value)
 {
 	std::shared_ptr<Node> newNode = std::make_shared<Node>(value);
 	newNode->next = head;
+	Node::counter++;
 	return newNode;
 }
 
@@ -194,4 +196,6 @@ int main()
 	printlist(head);
 
 	deleteList(head);
+
+	cout << "Counter: " << Node::counter;
 }
