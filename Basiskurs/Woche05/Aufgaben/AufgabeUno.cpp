@@ -117,13 +117,16 @@ public:
 
 class Game
 {
-    std::vector<std::unique_ptr<Deck>> deck;
+   
 
 public:
+    std::vector<std::unique_ptr<Deck>> deck;
+
     Game(std::unique_ptr<Deck> deck)
     {
         this->deck.push_back(std::move(deck));
     }
+
 
     ~Game()
     {
@@ -188,8 +191,20 @@ int main()
     std::unique_ptr<SpecialCards> numberCards = std::make_unique<SpecialCards>(5);
     kartenDeck->AddCard(std::move(numberCards));
 
+    std::unique_ptr<Deck> kartenDeck1 = std::make_unique<Deck>();
+
+    for (int a = 0; a < 4; ++a)
+    {
+        for (int i = 0; i < 10; ++i)
+        {
+            std::unique_ptr<NumberCards> numberCards1 = std::make_unique<NumberCards>(i, (Color)a);
+            kartenDeck1->AddCard(std::move(numberCards1));
+        }
+    }
+
     Game game = std::move(kartenDeck);
- 
+    game.deck.push_back(std::move(kartenDeck1));
+
     game.print();
     game.mischen();
     game.print();
