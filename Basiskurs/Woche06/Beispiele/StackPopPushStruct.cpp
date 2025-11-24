@@ -17,7 +17,7 @@ std::shared_ptr<Stack> top = NULL;;
 
 void push(int x)
 {
-	std::shared_ptr<Stack> newNode = std::shared_ptr<Stack>();
+	std::shared_ptr<Stack> newNode = std::make_shared<Stack>();
 	newNode->data = x;
 	newNode->next = top;
 	top = newNode;
