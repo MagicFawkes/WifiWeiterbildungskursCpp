@@ -4,6 +4,8 @@ STACK → LIFO
 */
 
 #include <iostream>
+#include <queue>
+
 using namespace std;
 
 struct Node
@@ -33,7 +35,8 @@ void enque(int x)
     }
 }
 
-void deque() {
+void deque1() //Die Funktion existiert, aber der Fehler "deque is ambiguous" kommt NICHT, weil sie fehlt – sondern weil der Name deque mit std::deque kollidiert.
+{
     Node* temp;
     temp = front;
 
@@ -66,5 +69,15 @@ void printqueue()
 
 int main()
 {
+    enque(5);
+    enque(6);
+    enque(7);
+    enque(8);
+    printqueue();
 
+    std::cout << "\nNach Dequeue: " << std::endl;
+    deque1();
+    printqueue();
+
+    return 0;
 }
