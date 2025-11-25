@@ -1,192 +1,139 @@
 ﻿/*
-
+	Doppelt verkettete Listen in C
 */
 
 #include <iostream>
-
 using namespace std;
 
-//int counter() {
-//	static int counter = 0;
-//	counter++;
-//	return counter;
-//}
-
-struct Node
-{
+struct Node {
 	int data;
-	Node* next;
-	//static int counter;
+	struct Node* next;
+	struct Node* prev;
+	static int counter;
 };
 
-//int Node::counter = 0;
+int Node::counter = 0;
 
-Node* getNewnode(int x) {
+struct Node* head = NULL;
+
+Node* GetNewNode(int x)
+{
 	Node* newNode = new Node();
 	newNode->data = x;
 	newNode->next = NULL;
+	newNode->prev = NULL;
+	Node::counter++;
 	return newNode;
 }
 
-Node* insertFront(Node* head, int value)
-{
-	Node* newNode = getNewnode(value);
+void InsertAtfront(int x) {
+	Node* newNode = GetNewNode(x);
+
+	if (head == NULL) {
+		head = newNode;
+		return;
+	}
+
+	head->prev = newNode;
 	newNode->next = head;
-	return newNode;
+	head = newNode;
+
 }
 
-Node* InsertBack(Node* head, int value)
+void InsertAtEnd(int x)
 {
-	Node* newNode = getNewnode(value);
-	newNode->next = head;
-
-	if (head == NULL) {
-		return newNode;
-	}
-
-	Node* temp = head;
-
-	while (temp->next != NULL) // nicht temp != NULL ist falsch
+	Node* newNode = GetNewNode(x);
+	if (head == NULL)
 	{
-		temp = temp->next;
-	}
-
-	temp->next = newNode;
-	newNode->next = NULL;
-
-	return head;
-
-}
-
-Node* insert(Node* head, int value, int target)
-{
-	if (head == NULL) {
-		cout << "Liste ist leer" << endl;
-		return head;
-	}
-
-
-	Node* temp = head;
-
-	while (temp != NULL && temp->data != target) // w und w = w
-	{
-		temp = temp->next;
-	}
-
-	if (temp == NULL)
-	{
-		cout << "Target wurde nicht gefunden" << endl;
-	}
-
-	Node* newNode = getNewnode(value);
-	newNode->next = temp->next;
-	temp->next = newNode;
-	return head;
-
-}
-
-bool search(Node* head, int value) {
-	Node* temp = head;
-
-	while (temp != NULL) {
-		if (temp->data == value) {
-			return 1;
-		}
-		temp = temp->next;
-	}
-	return 0;
-}
-
-
-Node* remove(Node* head, int value)
-{
-	if (head == NULL) {
-		cout << "Liste leer" << endl;
-		return head;
-	}
-
-	Node* temp = head;
-
-	while (temp->next != NULL && temp->next->data != value) {}
-	{
-		temp = temp->next;
-	}
-	if (temp->next == NULL) {
-		cout << "Element nicht gefunden" << endl;
-	}
-
-	Node* temp2 = temp->next;
-	temp->next = temp2->next;
-	free(temp2);
-
-	return head;
-
-}
-
-void printlist(Node* head) {
-	if (head == NULL) {
-		cout << "Liste leer" << endl;
+		head = newNode;
 		return;
 	}
 
 	Node* temp = head;
 
-	while (temp != NULL)
-	{
-		cout << temp->data << " -> ";
+	while (temp->next != NULL) {
 		temp = temp->next;
 	}
-	cout << "\n";
+
+	temp->next = newNode;
+	newNode->prev = temp;
 
 }
 
-void deleteList(Node* head)
+void Insert(int x, int value)
 {
-	Node* temp1 = head;
-	Node* temp2 = NULL;
-	while (temp1 != NULL)
+	Node* newNode = GetNewNode(x);
+	Node* temp = head;
+
+	while (temp != NULL && temp->data != value) {
+		temp = temp->next;
+	}
+
+	if (temp == NULL) {
+		return;
+	}
+
+	newNode->next = temp->next;
+	newNode->prev = temp;
+
+	if (temp->next != NULL) {
+		temp->next->prev = newNode;
+	}
+
+	temp->next = newNode;
+
+}
+
+void print() {
+	if (head == NULL) {
+		return;
+	}
+
+	Node* temp = head;
+
+	while (temp != NULL) {
+		cout << temp->data << endl;
+		temp = temp->next;
+	}
+
+	//while (temp->next != NULL) 
+	//{
+	//	cout << temp->data << endl;
+	//	temp = temp->next;
+
+	//}
+	//temp->next->data;
+	//temp->next->next->data;
+	//temp->next->next->next->next->data;
+	//cout << temp->data;
+
+}
+
+void printrueckwaerts()
+{
+	if (head == NULL)
 	{
-		temp2 = temp1->next;
-		delete temp1;
-		temp1 = temp2;
+		return;
+	}
+
+	Node* temp = head;
+
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+
+	while (temp != NULL)
+	{
+		cout << temp->data << endl;
+		temp = temp->prev;
 	}
 }
 
-
-//void deleteList(Node* head) 
-// {
-//	Node* temp1 = NULL;
-//
-//
-//	while (head != NULL)
-//	{
-//		temp1 = head;
-//		head = head->next;
-//		delete temp1;
-//
-//
-//	}
-//
-//}
-
-
-//void insertFront(Node** head, int value) 
-//{
-//		Node* newNode = getNewnode(value);
-//		newNode->next = *head;
-//		*head = newNode;
-//		
-//
-//}
 
 int main()
 {
-	Node* head = NULL;
-	for (int i = 0; i < 10; i++) {
-		head = insertFront(head, i + 1);
-	}
 
-	printlist(head);
 
-	deleteList(head);
+
 }
