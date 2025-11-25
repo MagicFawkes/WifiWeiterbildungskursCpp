@@ -23,7 +23,7 @@
 #elif AKTIVE_BEISPIEL == 10
 #include "Beispiele/Palidrom.cpp"
 #elif AKTIVE_BEISPIEL == 11
-#include "Beispiele/DruckerQueue.cpp"
+#include "Beispiele/QueueDrucker.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
