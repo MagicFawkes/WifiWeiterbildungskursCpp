@@ -399,6 +399,9 @@
     <ClCompile Include="Woche06\Beispiele\QueueDrucker.cpp">
       <Filter>Source Files\Woche06\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche06\Beispiele\VerketteteListenDoppeltCStyle.cpp">
+      <Filter>Source Files\Woche06\Beispiele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">

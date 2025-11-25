@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 11
+#define AKTIVE_BEISPIEL 12
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -24,6 +24,8 @@
 #include "Beispiele/QueueStackPalidrom.cpp"
 #elif AKTIVE_BEISPIEL == 11
 #include "Beispiele/QueueDrucker.cpp"
+#elif AKTIVE_BEISPIEL == 12
+#include "Beispiele/VerketteteListenDoppeltCStyle.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
