@@ -381,6 +381,12 @@
     <ClCompile Include="Woche06\Beispiele\StackPopPushStructV2.cpp">
       <Filter>Source Files\Woche06\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche06\Beispiele\QueueMitArray.cpp">
+      <Filter>Source Files\Woche06\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche06\Beispiele\QueueMitKlasse.cpp">
+      <Filter>Source Files\Woche06\Beispiele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">

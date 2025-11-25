@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 5
+#define AKTIVE_BEISPIEL 6
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -12,6 +12,10 @@
 #include "Beispiele/StackPopPushStruct.cpp"
 #elif AKTIVE_BEISPIEL == 5
 #include "Beispiele/StackPopPushStructV2.cpp"
+#elif AKTIVE_BEISPIEL == 6
+#include "Beispiele/QueueMitArray.cpp"
+#elif AKTIVE_BEISPIEL == 7
+#include "Beispiele/QueueMitKlasse.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
