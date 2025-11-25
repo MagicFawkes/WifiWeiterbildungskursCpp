@@ -10,7 +10,7 @@ using namespace std;
 
 #define N 10
 
-class Stack
+class Queue
 {
 private:
     int queue[N] = {};
@@ -80,29 +80,29 @@ public:
 
 int main()
 {
-    Stack stack;
-    stack.enque(10);
-    stack.enque(20);
-    stack.enque(30);
-    stack.enque(10);
-    stack.enque(20);
-    stack.enque(30); 
-	stack.enque(10);
-    stack.enque(20);
-    stack.enque(30);
+    Queue queue;
+    queue.enque(10);
+    queue.enque(20);
+    queue.enque(30);
+    queue.enque(10);
+    queue.enque(20);
+    queue.enque(30);
+    queue.enque(10);
+    queue.enque(20);
+    queue.enque(30);
 
     cout << "Inhalt der Queue:" << endl;
-    stack.display();
+    queue.display();
 
-    cout << "dequeue(): " << stack.dequeue() << endl;
+    cout << "dequeue(): " << queue.dequeue() << endl;
 
     cout << "Nach dequeue():" << endl;
-    stack.display();
+    queue.display();
 
-    stack.enque(30);
-    stack.enque(10);
-    stack.enque(20);
-    stack.enque(30);
+    queue.enque(30);
+    queue.enque(10);
+    queue.enque(20);
+    queue.enque(30);
 
     return 0;
 }
