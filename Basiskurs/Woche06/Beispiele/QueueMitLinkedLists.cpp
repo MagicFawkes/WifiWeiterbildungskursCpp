@@ -1,91 +1,95 @@
 ﻿/*
-
+QUEUE → FIFO
+STACK → LIFO
 */
 
 #include <iostream>
 
 using namespace std;
 
-#define N 10
-
-
 class Node
 {
 public:
     int data;
+    std::shared_ptr<Node> next;
 
-    Node(int value) : data(value)
-    {
-
-    }
+    Node(int value) : data(value), next(nullptr)
+    { }
 };
 
-class Stack
+class Queue
 {
 private:
-    std::shared_ptr<Node> queue[N];
-    std::shared_ptr<Node> front = NULL; //zeigt auf das nächst zu popende Element
-    std::shared_ptr<Node> rear = NULL; //zeigt auf das letzte Element
+    std::shared_ptr<Node> head = nullptr;   // erstes Element (front)
+    std::shared_ptr<Node> tail = nullptr;   // letztes Element (rear)
+    std::size_t count = 0;                  // optional: Anzahl der Elemente
 
 public:
-    void enque(int x)
+    void enqueue(int x)
     {
-        if (rear == N - 1) 
-        {
-            cout << "Overflow" << endl;
-        }
-        else if (front == -1 && rear == -1)
-        {
-            front++;
-            queue[++rear] = x; //als präfix
+        std::shared_ptr<Node> newNode = std::make_shared<Node>(x);
+        newNode->next = nullptr; //optional wird beim Initialiseren bereits null gesetzt
+        count++;
 
+        if (head == nullptr && tail == nullptr)
+        {
+            head = newNode;
+            tail = newNode;
         }
         else
         {
-            queue[++rear];
+            tail->next = newNode;
+            tail = newNode;
         }
     }
 
     int dequeue()
     {
-        if (front == -1 && rear == -1) 
+        std::shared_ptr<Node> tmp = head;
+
+        if (tmp == nullptr)
         {
-            cout << "Empty" << endl;
-            return -1;
-        }
-        else if (front == rear)
-        {
-            cout << queue[front] << endl;
-            front = -1;
-            rear = -1;
-        }
-        else
-        {
-            cout << queue[front] << endl;
-            front++;
+            std::cout << "Empty queue" << endl;
+            return 0;
         }
 
-        return queue[front];
+        count--;
+
+        int wert = tmp->data;
+
+        head = head->next;
+        tmp = nullptr;
+
+        return wert;
     }
 
     void display()
     {
-        if (front == -1 && rear == -1) 
-        {
-            cout << "Empty" << endl;
+	    if (head  == nullptr && tail == nullptr)
+	    {
+            std::cout << "Empty queue" << endl;
             return;
-        }
+	    }
 
-        for (int i = front; i < rear; i++)
-        {
-            cout << queue[i] << endl;
-        }
+        std::shared_ptr<Node> tmp = head;
+
+	    while (tmp != nullptr)
+	    {
+            std::cout << "Queue wert: " << tmp->data << endl;
+            tmp = tmp->next;
+	    } 
     }
 };
 
 int main()
 {
-    Stack stack;
-    stack.enque(10);
-    stack.display();
+    Queue queue;
+    queue.enqueue(5);
+    queue.enqueue(6);
+    queue.enqueue(7);
+    queue.enqueue(8);
+    queue.display();
+    std::cout << "Dequeue Wert: " << queue.dequeue() << std::endl; 
+    std::cout << "Dequeue Wert: " << queue.dequeue() << std::endl;
+    queue.display();
 }
