@@ -791,7 +791,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Woche06\Beispiele\Palidrom.cpp">
+    <ClCompile Include="Woche06\Beispiele\QueueStackPalidrom.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>

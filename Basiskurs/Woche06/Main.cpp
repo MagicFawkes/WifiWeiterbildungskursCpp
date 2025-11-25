@@ -21,7 +21,7 @@
 #elif AKTIVE_BEISPIEL == 9
 #include "Beispiele/QueueMitLinkedListsV2.cpp"
 #elif AKTIVE_BEISPIEL == 10
-#include "Beispiele/Palidrom.cpp"
+#include "Beispiele/QueueStackPalidrom.cpp"
 #elif AKTIVE_BEISPIEL == 11
 #include "Beispiele/QueueDrucker.cpp"
 #endif
