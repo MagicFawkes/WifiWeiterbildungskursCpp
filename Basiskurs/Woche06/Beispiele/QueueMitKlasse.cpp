@@ -16,7 +16,6 @@ private:
     int rear = -1; //zeigt auf das letzte Element
 
 public:
-
     void enque(int x)
     {
         if (rear == N - 1) 
