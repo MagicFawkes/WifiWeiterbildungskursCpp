@@ -87,7 +87,6 @@ public:
     }
 };
 
-
 int main()
 {
     DruckerQueue queue;
