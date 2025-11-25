@@ -42,4 +42,5 @@ int main()
 	head->links = GetNewNode(20);
 	head->rechts->links = GetNewNode(10);
 	head->links->links = GetNewNode(10);
+
 }
