@@ -1,5 +1,7 @@
 ﻿/*
-
+Die aktuelle Queue wächst nur nach rechts im Array, weil rear immer größer wird und beim Dequeue der Platz links niemals wieder benutzt wird.
+Deshalb ist das Array nach spätestens 10 Enqueues voll, auch wenn du zwischendurch Elemente entfernt hast — der frei gewordene Speicher wird nie wiederverwendet.
+Lösung wäre ein Ringbuffer
 */
 
 #include <iostream>
@@ -82,6 +84,12 @@ int main()
     stack.enque(10);
     stack.enque(20);
     stack.enque(30);
+    stack.enque(10);
+    stack.enque(20);
+    stack.enque(30); 
+	stack.enque(10);
+    stack.enque(20);
+    stack.enque(30);
 
     cout << "Inhalt der Queue:" << endl;
     stack.display();
@@ -90,6 +98,11 @@ int main()
 
     cout << "Nach dequeue():" << endl;
     stack.display();
+
+    stack.enque(30);
+    stack.enque(10);
+    stack.enque(20);
+    stack.enque(30);
 
     return 0;
 }
