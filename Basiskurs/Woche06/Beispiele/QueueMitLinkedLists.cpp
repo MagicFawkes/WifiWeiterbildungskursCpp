@@ -8,12 +8,24 @@ using namespace std;
 
 #define N 10
 
+
+class Node
+{
+public:
+    int data;
+
+    Node(int value) : data(value)
+    {
+
+    }
+};
+
 class Stack
 {
 private:
-    int queue[N];
-    int front = -1; //zeigt auf das nächst zu popende Element
-    int rear = -1; //zeigt auf das letzte Element
+    std::shared_ptr<Node> queue[N];
+    std::shared_ptr<Node> front = NULL; //zeigt auf das nächst zu popende Element
+    std::shared_ptr<Node> rear = NULL; //zeigt auf das letzte Element
 
 public:
     void enque(int x)

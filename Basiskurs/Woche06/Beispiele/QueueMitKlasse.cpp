@@ -11,60 +11,65 @@ using namespace std;
 class Stack
 {
 private:
-    int queue[N];
-    int front = -1; //zeigt auf das nächst zu popende Element
-    int rear = -1; //zeigt auf das letzte Element
+    int queue[N] = {};
+    int front = -1; // zeigt auf das nächst zu popende Element
+    int rear = -1; // zeigt auf das letzte Element
 
 public:
     void enque(int x)
     {
-        if (rear == N - 1) 
+        if (rear == N - 1)
         {
             cout << "Overflow" << endl;
         }
         else if (front == -1 && rear == -1)
         {
+            // Queue war leer, erstes Element
             front++;
-            queue[++rear] = x; //als präfix
-
+            queue[++rear] = x; // rear von -1 -> 0, front von -1 -> 0
         }
         else
         {
-            queue[++rear];
+            // normal hinten anhängen
+            queue[++rear] = x;
         }
     }
 
     int dequeue()
     {
-        if (front == -1 && rear == -1) 
+        if (front == -1 && rear == -1)
         {
             cout << "Empty" << endl;
             return -1;
         }
-        else if (front == rear)
+
+        // Wert sichern, der entfernt wird
+        int value = queue[front];
+
+        if (front == rear)
         {
-            cout << queue[front] << endl;
+            // es war das letzte Element
             front = -1;
             rear = -1;
         }
         else
         {
-            cout << queue[front] << endl;
+            // es gibt noch weitere Elemente
             front++;
         }
 
-        return queue[front];
+        return value; // das entfernte Element zurückgeben
     }
 
     void display()
     {
-        if (front == -1 && rear == -1) 
+        if (front == -1 && rear == -1)
         {
             cout << "Empty" << endl;
             return;
         }
 
-        for (int i = front; i < rear; i++)
+        for (int i = front; i <= rear; i++) // <= statt <
         {
             cout << queue[i] << endl;
         }
@@ -75,5 +80,16 @@ int main()
 {
     Stack stack;
     stack.enque(10);
+    stack.enque(20);
+    stack.enque(30);
+
+    cout << "Inhalt der Queue:" << endl;
     stack.display();
+
+    cout << "dequeue(): " << stack.dequeue() << endl;
+
+    cout << "Nach dequeue():" << endl;
+    stack.display();
+
+    return 0;
 }
