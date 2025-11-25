@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 7
+#define AKTIVE_BEISPIEL 8
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -16,6 +16,8 @@
 #include "Beispiele/QueueMitArray.cpp"
 #elif AKTIVE_BEISPIEL == 7
 #include "Beispiele/QueueMitKlasse.cpp"
+#elif AKTIVE_BEISPIEL == 8
+#include "Beispiele/QueueMitLinkedLists.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
