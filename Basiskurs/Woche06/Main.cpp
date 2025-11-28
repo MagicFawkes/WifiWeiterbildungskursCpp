@@ -1,6 +1,6 @@
 
-#define AKTIVE_BEISPIEL 14
-#define AKTIVE_AUFGABE 0
+#define AKTIVE_BEISPIEL 0
+#define AKTIVE_AUFGABE 1
 
 #if AKTIVE_BEISPIEL == 1
 #include "Beispiele/VerketteteListenCStyle.cpp"
@@ -36,4 +36,8 @@
 #include "Aufgaben/Aufgabe01.cpp"
 #elif AKTIVE_AUFGABE == 2
 #include "Aufgaben/Aufgabe02.cpp"
+#elif AKTIVE_AUFGABE == 3
+#include "Aufgaben/Aufgabe03.cpp"
+#elif AKTIVE_AUFGABE == 4
+#include "Aufgaben/Aufgabe04.cpp"
 #endif
