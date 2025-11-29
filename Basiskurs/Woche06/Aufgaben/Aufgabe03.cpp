@@ -186,7 +186,7 @@ int main()
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	rotate(list1, 1);
+	rotateLeft(list1, 1);
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
