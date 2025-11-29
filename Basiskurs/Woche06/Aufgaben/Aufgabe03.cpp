@@ -182,9 +182,14 @@ void rotateRight(Liste& list, int verschiebung)
 	Node* temp = list.head;
 	Node* temp1 = list.head;
 
-	for (int i = 0; i < verschiebung; ++i)
+	while (temp1->next != NULL)
 	{
 		temp1 = temp1->next;
+	}
+
+	for (int i = 1; i < verschiebung; ++i)
+	{
+		temp1 = temp1->prev;
 	}
 
 	list.head = temp1;
@@ -219,11 +224,11 @@ int main()
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	rotateLeft(list1, 4);
+	rotateLeft(list1, 2);
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	rotateRight(list1, 3);
+	rotateRight(list1, 2);
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
