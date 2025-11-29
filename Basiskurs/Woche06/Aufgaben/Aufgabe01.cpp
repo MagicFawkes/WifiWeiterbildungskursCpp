@@ -36,13 +36,15 @@ private:
 		return newNode;
 	}
 
-	Node* head = NULL;
-
 public:
 	int counter = 0;
 
+	Node* head = NULL;
+
 	void insert(int value)
 	{
+		counter++;
+
 		if (this->head == NULL) {
 			std::cout << "Liste ist leer, anlegen" << std::endl;
 			this->head = GetNewNode(value);
@@ -110,21 +112,55 @@ public:
 	}
 };
 
+void combineList(Liste list1, Liste list2, Liste &listGesamt)
+{
+	Node* temp = list1.head;
+
+	while (temp != NULL)
+	{
+		listGesamt.insert(temp->data);
+		temp = temp->next;
+	}
+
+	temp = list2.head;
+
+	while (temp != NULL)
+	{
+		listGesamt.insert(temp->data);
+		temp = temp->next;
+	}
+}
+
 int main()
 {
-	Liste list;
+	Liste list1;
 
-	list.insert(5);
-	list.insert(10);
-	list.insert(15);
-	list.insert(18);
-	list.insert(8);
-	list.insert(4);
-	list.insert(3);
-	list.insert(2);
-	list.insert(30);
-	list.insert(18);
-	list.printlist();
+	list1.insert(5);
+	list1.insert(10);
+	list1.insert(15);
+	list1.insert(18);
+	list1.insert(8);
+	list1.insert(4);
+	list1.insert(3);
+	list1.insert(2);
+	list1.insert(30);
+	list1.insert(18);
+	list1.printlist();
+
+	Liste list2;
+
+	list2.insert(7);
+	list2.insert(22);
+	list2.insert(13);
+	list2.insert(4);
+	list2.printlist();
+
+	Liste listGesamt;
+
+	combineList(list1, list2, listGesamt);
+
+	listGesamt.printlist();
+
 
     return 0;
 }
