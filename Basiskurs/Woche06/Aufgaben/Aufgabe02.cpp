@@ -111,11 +111,49 @@ public:
 		}
 		std::cout << "\n";
 	}
+
+	void remove(int value)
+	{
+		if (head == NULL) 
+		{
+			std::cout << "Liste leer" << std::endl;
+		}
+
+		Node* temp = head;
+
+		while (temp->next != NULL && temp->next->data != value) {}
+		{
+			temp = temp->next;
+		}
+		if (temp->next == NULL) {
+			std::cout << "Element nicht gefunden" << std::endl;
+		}
+
+		Node* temp2 = temp->next;
+		temp->next = temp2->next;
+		free(temp2);
+	}
 };
 
 void removeDuplicates(Liste &list)
 {
 	Node* temp = list.head;
+	Node* temp1 = list.head;
+
+	while (temp != nullptr)
+	{
+		temp1 = temp->next;
+
+		while (temp1 != nullptr)
+		{
+			if (temp->data == temp1->data)
+			{
+				list.remove(temp1->data);
+			}
+
+			temp1 = temp1->next;
+		}
+	}
 }
 
 int main()
