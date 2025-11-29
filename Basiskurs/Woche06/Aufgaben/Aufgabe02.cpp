@@ -138,7 +138,7 @@ public:
 void removeDuplicates(Liste &list)
 {
 	Node* temp = list.head;
-	Node* temp1 = list.head;
+	Node* temp1;
 
 	while (temp != nullptr)
 	{
