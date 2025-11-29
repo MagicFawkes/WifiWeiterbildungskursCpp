@@ -140,6 +140,12 @@ void rotate(Liste& list, int verschiebung)
 		return;
 	}
 
+	if (verschiebung <= 0)
+	{
+		std::cout << "keiner Verschibeung Eingabe ist kleiner gleich 0 \n";
+		return;
+	}
+
 	Node* temp = list.head;
 	Node* temp1 = list.head;
 
@@ -180,7 +186,7 @@ int main()
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	rotate(list1, 20);
+	rotate(list1, 1);
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
