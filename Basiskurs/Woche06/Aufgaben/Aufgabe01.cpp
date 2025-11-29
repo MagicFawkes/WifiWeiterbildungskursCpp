@@ -154,13 +154,11 @@ int main()
 	list2.insert(4);
 	std::cout << list2.counter << std::endl;
 	list2.printlist();
-	
 
 	Liste listGesamt;
 	combineList(list1, list2, listGesamt);
 	std::cout << listGesamt.counter << std::endl;
 	listGesamt.printlist();
-
 
     return 0;
 }
