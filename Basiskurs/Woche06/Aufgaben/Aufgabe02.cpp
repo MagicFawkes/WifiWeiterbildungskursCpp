@@ -148,7 +148,11 @@ void removeDuplicates(Liste &list)
 		{
 			if (temp->data == temp1->data)
 			{
-				list.remove(temp1->data);
+				Node* temp2 = temp1;
+				temp->next = temp1->next;
+				temp1->next->prev = temp;
+				temp1 = temp;
+				free(temp2);
 			}
 
 			temp1 = temp1->next;
