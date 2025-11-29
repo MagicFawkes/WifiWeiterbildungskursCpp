@@ -132,7 +132,7 @@ public:
 	}
 };
 
-void rotate(Liste& list, int verschiebung)
+void rotateLeft(Liste& list, int verschiebung)
 {
 	if (list.counter < verschiebung)
 	{
