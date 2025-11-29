@@ -67,6 +67,7 @@ public:
 				return;
 
 			Node* newNode = this->GetNewNode(value);
+			newNode->next = temp->next;
 			temp->next = newNode;
 			newNode->prev = temp;
 		}
