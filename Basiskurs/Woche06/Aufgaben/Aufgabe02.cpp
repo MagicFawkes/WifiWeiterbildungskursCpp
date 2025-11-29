@@ -61,7 +61,8 @@ public:
 		{
 			std::string eingabe;
 			std::cout << "Duplikat gefunden einfuegen: ";
-			std::cin >> eingabe;
+			eingabe = "ja";
+			std::cout << eingabe << std::endl;
 
 			if (eingabe == "nein")
 				return;
@@ -112,23 +113,9 @@ public:
 	}
 };
 
-void combineList(Liste list1, Liste list2, Liste& listGesamt)
+void removeDuplicates(Liste &list)
 {
-	Node* temp = list1.head;
-
-	while (temp != NULL)
-	{
-		listGesamt.insert(temp->data);
-		temp = temp->next;
-	}
-
-	temp = list2.head;
-
-	while (temp != NULL)
-	{
-		listGesamt.insert(temp->data);
-		temp = temp->next;
-	}
+	Node* temp = list.head;
 }
 
 int main()
@@ -148,6 +135,11 @@ int main()
 	list1.insert(18);
 	list1.insert(30);
 	list1.insert(18);
+	std::cout << "\n";
+	std::cout << list1.counter << std::endl;
+	list1.printlist();
+
+	removeDuplicates(list1);
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
