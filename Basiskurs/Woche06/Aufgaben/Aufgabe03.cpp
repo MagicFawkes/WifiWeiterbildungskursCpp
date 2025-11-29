@@ -234,9 +234,9 @@ int main()
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	//rotateRight(list1, 2);
-	//std::cout << list1.counter << std::endl;
-	//list1.printlist();
+	rotateRight(list1, 2);
+	std::cout << list1.counter << std::endl;
+	list1.printlist();
 
 	return 0;
 }
