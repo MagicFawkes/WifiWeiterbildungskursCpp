@@ -166,6 +166,7 @@ void rotateLeft(Liste& list, int verschiebung)
 		temp1 = temp1->next;
 	}
 	temp1->next = temp;
+	temp->prev = temp1;
 }
 
 void rotateRight(Liste& list, int verschiebung)
@@ -234,7 +235,7 @@ int main()
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	rotateRight(list1, 2);
+	rotateRight(list1, 4);
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
