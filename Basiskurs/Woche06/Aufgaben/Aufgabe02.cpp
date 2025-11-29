@@ -156,6 +156,8 @@ void removeDuplicates(Liste &list)
 
 			temp1 = temp1->next;
 		}
+
+		temp = temp->next;
 	}
 }
 
