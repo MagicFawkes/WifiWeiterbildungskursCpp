@@ -165,6 +165,39 @@ void rotateLeft(Liste& list, int verschiebung)
 	temp1->next = temp;
 }
 
+void rotateRight(Liste& list, int verschiebung)
+{
+	if (list.counter < verschiebung)
+	{
+		std::cout << "Verschiebung nicht moeglich - Liste zu klein\n";
+		return;
+	}
+
+	if (verschiebung <= 0)
+	{
+		std::cout << "keiner Verschibeung Eingabe ist kleiner gleich 0 \n";
+		return;
+	}
+
+	Node* temp = list.head;
+	Node* temp1 = list.head;
+
+	for (int i = 0; i < verschiebung; ++i)
+	{
+		temp1 = temp1->next;
+	}
+
+	list.head = temp1;
+
+	temp1->prev->next = nullptr;
+
+	while (temp1->next != nullptr)
+	{
+		temp1 = temp1->next;
+	}
+	temp1->next = temp;
+}
+
 int main()
 {
 	Liste list1;
@@ -186,7 +219,11 @@ int main()
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	rotateLeft(list1, 1);
+	rotateLeft(list1, 4);
+	std::cout << list1.counter << std::endl;
+	list1.printlist();
+
+	rotateRight(list1, 3);
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
