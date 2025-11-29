@@ -60,7 +60,7 @@ public:
 		if (temp->data == value)
 		{
 			std::string eingabe;
-			std::cout << "Duplikat gefunden einfuegen: ";
+			std::cout << "Duplikat gefunden: " << value <<" - einfuegen: ";
 			eingabe = "ja";
 			std::cout << eingabe << std::endl;
 
@@ -178,6 +178,7 @@ int main()
 	list1.printlist();
 
 	removeDuplicates(list1);
+
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
