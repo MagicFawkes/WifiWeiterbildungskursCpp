@@ -159,6 +159,7 @@ void rotateLeft(Liste& list, int verschiebung)
 	list.head = temp1;
 
 	temp1->prev->next = nullptr;
+	temp1->prev = nullptr;
 
 	while (temp1->next != nullptr)
 	{
@@ -196,7 +197,10 @@ void rotateRight(Liste& list, int verschiebung)
 
 	list.head = temp1;
 
-	temp1->prev->next = nullptr;
+	if (temp1->prev != nullptr)
+	{
+		temp1->prev->next = nullptr;
+	}
 
 	while (temp1->next != nullptr)
 	{
@@ -230,9 +234,9 @@ int main()
 	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
-	rotateRight(list1, 2);
-	std::cout << list1.counter << std::endl;
-	list1.printlist();
+	//rotateRight(list1, 2);
+	//std::cout << list1.counter << std::endl;
+	//list1.printlist();
 
 	return 0;
 }
