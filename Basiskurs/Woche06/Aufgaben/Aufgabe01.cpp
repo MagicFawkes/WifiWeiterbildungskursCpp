@@ -9,7 +9,6 @@ zusammenführen.
 
 #include <iostream>
 #include <ostream>
-#include <stdio.h>
 
 class Node
 {
@@ -45,14 +44,14 @@ public:
 	void insert(int value)
 	{
 		if (this->head == NULL) {
-			std::cout << "Liste ist leer" << std::endl;
+			std::cout << "Liste ist leer, anlegen" << std::endl;
 			this->head = GetNewNode(value);
 			return;
 		}
 
 		Node* temp = this->head;
 
-		while (temp->next != NULL && temp->data <= value)
+		while (temp->next != NULL && temp->data < value)
 		{
 			temp = temp->next;
 		}
@@ -60,16 +59,37 @@ public:
 		if (temp->data == value)
 		{
 			std::string eingabe;
-			std::cout << "Duplikat gefunden einfuegen?" << std::endl;
+			std::cout << "Duplikat gefunden einfuegen: ";
 			std::cin >> eingabe;
 
 			if (eingabe == "nein")
 				return;
-		}
 
-		Node* newNode = this->GetNewNode(value);
-		temp->next = newNode;
-		newNode->prev = temp;
+			Node* newNode = this->GetNewNode(value);
+			temp->next = newNode;
+			newNode->prev = temp;
+		}
+		else if (temp->data > value)
+		{
+			Node* newNode = this->GetNewNode(value);
+			newNode->next = temp;
+			newNode->prev = temp->prev;
+
+			if (temp->prev != nullptr)
+				temp->prev->next = newNode;
+
+			temp->prev = newNode;
+
+			if (temp == this->head)
+				this->head = newNode;
+		}
+		else
+		{
+			Node* newNode = this->GetNewNode(value);
+			newNode->next = temp->next;
+			temp->next = newNode;
+			newNode->prev = temp;
+		}
 	}
 
 	void printlist() 
@@ -95,9 +115,15 @@ int main()
 	Liste list;
 
 	list.insert(5);
-	list.insert(6);
-	list.insert(6);
+	list.insert(10);
+	list.insert(15);
+	list.insert(18);
+	list.insert(8);
+	list.insert(4);
+	list.insert(3);
 	list.insert(2);
+	list.insert(30);
+	list.insert(18);
 	list.printlist();
 
     return 0;
