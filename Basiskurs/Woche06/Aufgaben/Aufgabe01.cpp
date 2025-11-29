@@ -43,9 +43,8 @@ public:
 
 	void insert(int value)
 	{
-		counter++;
-
-		if (this->head == NULL) {
+		if (this->head == NULL) 
+		{
 			std::cout << "Liste ist leer, anlegen" << std::endl;
 			this->head = GetNewNode(value);
 			return;
@@ -134,7 +133,6 @@ void combineList(Liste list1, Liste list2, Liste &listGesamt)
 int main()
 {
 	Liste list1;
-
 	list1.insert(5);
 	list1.insert(10);
 	list1.insert(15);
@@ -145,20 +143,21 @@ int main()
 	list1.insert(2);
 	list1.insert(30);
 	list1.insert(18);
+	std::cout << list1.counter << std::endl;
 	list1.printlist();
 
 	Liste list2;
-
 	list2.insert(7);
 	list2.insert(22);
 	list2.insert(13);
 	list2.insert(4);
+	std::cout << list2.counter << std::endl;
 	list2.printlist();
+	
 
 	Liste listGesamt;
-
 	combineList(list1, list2, listGesamt);
-
+	std::cout << listGesamt.counter << std::endl;
 	listGesamt.printlist();
 
 
