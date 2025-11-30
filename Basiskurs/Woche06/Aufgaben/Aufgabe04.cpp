@@ -28,27 +28,48 @@ Code
 };
 */
 
+#include <iostream>
 #include <stdio.h>
+
+#define N 256
 
 class Stack
 {
-public:
-    void enqueue(int x)
-    {
-	    
-    }
-    void dequeue()
-    {
+	int stack[N] = { 0 };
+	int top = -1;
 
-    }
-    void front()
-    {
-	    
-    }
-    void empty()
-    {
-	    
-    }
+public:
+	void push(int x)
+	{
+		if (top == N - 1)
+		{
+			std::cout << "Stackoverflow" << std::endl;
+		}
+		else
+		{
+			stack[++top] = x;
+		}
+	}
+
+	int pop()
+	{
+		if (top == -1)
+		{
+			std::cout << "Stack is empty, please push an element" << std::endl;
+			return -1;
+		}
+		return stack[top--];
+	}
+
+	int peek() {
+		if (top == -1)
+		{
+			std::cout << "Stack is empty, please push an element" << std::endl;
+			return -1;
+		}
+
+		return stack[top];
+	}
 };
 
 class Queue 
@@ -57,8 +78,29 @@ private:
     Stack stack_in;
     Stack stack_out;
 public:
-
+    void enqueue(int x)
+    {
+		stack_in.push(x);
+    }
+    void dequeue()
+    {
+		stack_out.pop();
+    }
+    void front()
+    {
+		stack_out.peek();
+    }
+    void empty()
+    {
+		if (stack_out.peek() == -1)
+		{
+			std::cout << "Queue ist leer";
+		}
+		else
+			std::cout << "Queue ist nicht leer";
+    }
 };
+
 int main()
 {
     printf("Test");
