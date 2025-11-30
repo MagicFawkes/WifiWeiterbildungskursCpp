@@ -35,9 +35,11 @@ Code
 class Stack
 {
 	int stack[N] = { 0 };
-	int top = -1;
+	
 
 public:
+	int top = -1;
+
 	void push(int x)
 	{
 		if (top == N - 1)
@@ -85,14 +87,17 @@ public:
     {
 		int value;
 
-		do
+		if (stack_out.top == -1)
 		{
-			value = stack_in.pop();
+			do
+			{
+				value = stack_in.pop();
 
-			if (value != -1)
-				stack_out.push(value);
+				if (value != -1)
+					stack_out.push(value);
 
-		} while (value != -1);
+			} while (value != -1);
+		}
 
 		value = stack_out.pop();
 
@@ -125,6 +130,13 @@ int main()
 	queue.enqueue(13);
 	queue.enqueue(14);
 	queue.enqueue(15);
+	queue.dequeue();
+	queue.dequeue();
+	queue.dequeue();
+	queue.enqueue(16);
+	queue.enqueue(17);
+	queue.enqueue(18);
+	queue.enqueue(19);
 	queue.dequeue();
 	queue.dequeue();
 	queue.dequeue();
