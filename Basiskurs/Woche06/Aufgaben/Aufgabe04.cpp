@@ -29,7 +29,6 @@ Code
 */
 
 #include <iostream>
-#include <stdio.h>
 
 #define N 256
 
