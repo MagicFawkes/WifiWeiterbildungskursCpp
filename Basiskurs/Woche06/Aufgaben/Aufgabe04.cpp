@@ -54,7 +54,7 @@ public:
 	{
 		if (top == -1)
 		{
-			std::cout << "Stack is empty, please push an element" << std::endl;
+			//std::cout << "Stack is empty, please push an element" << std::endl;
 			return -1;
 		}
 		return stack[top--];
@@ -83,12 +83,28 @@ public:
     }
     void dequeue()
     {
-		stack_out.pop();
+		int value;
+
+		do
+		{
+			value = stack_in.pop();
+
+			if (value != -1)
+				stack_out.push(value);
+
+		} while (value != -1);
+
+		value = stack_out.pop();
+
+		if (value != -1)
+			std::cout << "Wert vom Stack entfernt: " << value << std::endl;
+		
     }
     void front()
     {
-		stack_out.peek();
-    }
+		std::cout << "Erste Element ist: " << stack_out.peek() << std::endl;
+	}
+
     void empty()
     {
 		if (stack_out.peek() == -1)
@@ -104,8 +120,13 @@ int main()
 {
 	Queue queue;
 	queue.enqueue(10);
-	queue.front();
-	queue.empty();
+	queue.enqueue(11);
+	queue.enqueue(12);
+	queue.enqueue(13);
+	queue.enqueue(14);
+	queue.enqueue(15);
+	queue.dequeue();
+	queue.dequeue();
 	queue.dequeue();
 	queue.front();
 	queue.empty();
