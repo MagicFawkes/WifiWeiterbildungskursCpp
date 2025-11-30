@@ -1,5 +1,34 @@
 ﻿/*
+	Dieses Programm demonstriert eine einfach verkettete Liste (Singly Linked List)
+	und die grundlegenden Operationen darauf. Eine verkettete Liste besteht aus
+	einzelnen Knoten (Nodes), wobei jeder Knoten einen Wert (data) und einen Zeiger
+	auf den nächsten Knoten (next) enthält. Der letzte Knoten zeigt auf NULL.
 
+	Implementierte Funktionen:
+	- getNewnode(x): Erzeugt einen neuen Listenknoten mit dem Wert x.
+	- insertFront(head, value): Fügt einen neuen Knoten am Listenanfang ein.
+	  Dies entspricht einer Stack-ähnlichen Operation (push vorne).
+	- InsertBack(head, value): Fügt einen neuen Knoten am Listenende ein.
+	- insert(head, value, target): Fügt ein Element nach einem bestimmten Wert ein.
+	- search(head, value): Sucht nach einem Element in der Liste.
+	- remove(head, value): Entfernt einen Knoten mit bestimmtem Wert.
+	- printlist(head): Gibt die gesamte Liste aus.
+	- deleteList(head): Löscht die gesamte Liste aus dem Speicher.
+
+	Der main()-Teil erstellt eine Liste mit den Werten 1 bis 10 über insertFront()
+	(dadurch erscheint die Reihenfolge in der Ausgabe invertiert),
+	gibt die Liste aus und löscht anschließend alle Knoten.
+
+	Info zur Queue:
+	Eine Queue (Warteschlange) ist eine FIFO-Datenstruktur ("First In – First Out").
+	Typische Operationen sind:
+	  * enqueue(x): Hinten einfügen
+	  * dequeue(): Vorn entfernen
+	Mit einer verketteten Liste lässt sich eine Queue leicht umsetzen, indem man:
+	  - am Ende einfügt (enqueue → InsertBack),
+	  - am Anfang entfernt (dequeue → remove first).
+	Dieses Programm implementiert zwar eine generelle verkettete Liste,
+	kann aber leicht zur Queue erweitert werden.
 */
 
 #include <iostream>

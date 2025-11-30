@@ -1,6 +1,33 @@
 ﻿/*
+    Dieses Programm implementiert eine einfache lineare Queue (Warteschlange)
+    mithilfe eines statischen Arrays der Größe N. Eine Queue arbeitet nach dem
+    FIFO-Prinzip ("First In, First Out"): Das zuerst eingefügte Element wird
+    auch als erstes wieder entfernt.
 
+    Wichtige Elemente der Implementierung:
+    --------------------------------------
+    - Das Array 'queue[N]' dient als Speicher für die Werte.
+    - 'front' zeigt immer auf das nächste Element, das per dequeue() entfernt
+      und ausgegeben wird.
+    - 'rear' zeigt auf das zuletzt eingefügte Element.
+
+    Funktionsweise:
+    ---------------
+    - enque(x): Fügt ein Element hinten in die Queue ein. Wenn 'rear' das Ende
+      des Arrays erreicht hat, wird ein Overflow gemeldet.
+    - dequeue(): Entfernt das Element an der Position 'front'. Wenn Queue leer
+      ist, wird 'Empty' ausgegeben. Wenn nach dem Entfernen kein Element mehr
+      vorhanden ist, werden 'front' und 'rear' wieder auf -1 gesetzt.
+    - display(): Gibt alle Elemente zwischen 'front' und 'rear' aus.
+
+    Hinweise:
+    ---------
+    - Diese Implementierung ist eine einfache lineare Queue, KEINE zirkuläre Queue.
+    - Sie verschwendet Speicher, wenn Elemente vorne entfernt werden, da der
+      freigewordene Platz nicht erneut genutzt wird.
+    - Für produktive Anwendungen wäre eine Circular Queue sinnvoller.
 */
+
 
 #include <iostream>
 

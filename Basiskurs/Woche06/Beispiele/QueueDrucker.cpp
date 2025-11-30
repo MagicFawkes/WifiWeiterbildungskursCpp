@@ -1,7 +1,36 @@
 ﻿/*
-QUEUE → FIFO
-STACK → LIFO
+===========================================================
+EINFACHE DRUCKER-QUEUE (FIFO) MIT LINKED LIST
+===========================================================
+
+In diesem Programm wird eine Druckerwarteschlange (Queue)
+implementiert. Eine Queue arbeitet nach dem FIFO-Prinzip:
+"First In – First Out". Das heißt: Die Aufgabe, die zuerst
+eingereiht wurde (enqueue), wird auch zuerst wieder
+entnommen (dequeue).
+
+Die Datenstruktur besteht aus einem verketteten Liste von
+"Aufgabe"-Objekten. Jede Aufgabe enthält:
+ - einen Text (data)
+ - einen Farbtyp (Farbe: COLOR oder SW)
+ - einen Zeiger auf die nächste Aufgabe (next)
+
+Die Klasse "DruckerQueue" verwaltet die Queue:
+ - head zeigt auf das erste Element (Front der Queue)
+ - tail zeigt auf das letzte Element (Ende der Queue)
+ - enqueue() fügt eine neue Aufgabe hinten an (tail)
+ - dequeue() entfernt die erste Aufgabe vorne (head)
+ - display() gibt alle gespeicherten Aufgaben aus
+
+Queues werden häufig verwendet, wenn Abläufe in einer
+festen Reihenfolge verarbeitet werden müssen, z.B.:
+ - Druckaufträge
+ - Eingabepuffer
+ - Task Scheduling
+ - Netzwerkpakete
+===========================================================
 */
+
 
 #include <iostream>
 

@@ -1,5 +1,35 @@
 ﻿/*
-Verkette Listen CPP Style
+	Dieses Programm implementiert eine einfach verkettete Liste (Singly Linked List)
+	im modernen C++-Stil unter Verwendung von std::shared_ptr.
+
+	Eine verkettete Liste besteht aus einzelnen "Node"-Elementen, von denen jedes
+	ein Datenfeld (data) sowie einen Zeiger (next) auf den nächsten Knoten enthält.
+	Damit lassen sich dynamische Datenstrukturen erstellen, die zur Laufzeit wachsen
+	oder schrumpfen können – ohne vorherige feste Speichergröße wie bei Arrays.
+
+	Hier werden folgende Funktionen bereitgestellt:
+	  - insertFront(): Fügt ein neues Element am Listenanfang ein.
+	  - InsertBack():  Fügt ein neues Element am Listenende ein.
+	  - insert():      Fügt ein neues Element hinter einem bestimmten Zielwert ein.
+	  - search():      Sucht nach einem Wert in der Liste.
+	  - remove():      Entfernt ein bestimmtes Element (mit Fehlerprüfung).
+	  - printlist():   Gibt die gesamte Liste aus.
+	  - deleteList():  Löscht die Liste (shared_ptr macht das automatisch sicher).
+
+	Durch die Verwendung von std::shared_ptr wird der Speicher automatisch verwaltet.
+	Knoten werden automatisch freigegeben, sobald keine Zeiger mehr auf sie verweisen.
+
+	--- Infos zu Queues ---
+	Eine Queue (Warteschlange) ist eine spezielle Form einer verketteten Liste, bei
+	der das FIFO-Prinzip („First In – First Out“) gilt:
+		- Elemente werden hinten eingefügt (enqueue)
+		- vorne entnommen (dequeue)
+	Eine Queue lässt sich sehr effizient mit einer verketteten Liste umsetzen, da
+	sowohl Einfügen am Ende als auch Entfernen am Anfang in O(1)-Zeit erfolgen.
+
+	Dieses Programm bildet zwar keine Queue im engeren Sinn,
+	zeigt aber die grundlegenden zeigerbasierten Operationen, aus denen
+	eine Queue intern bestehen würde.
 */
 
 #include <iostream>

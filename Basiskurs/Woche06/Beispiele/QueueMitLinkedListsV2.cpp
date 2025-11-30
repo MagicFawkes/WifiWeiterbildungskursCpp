@@ -1,6 +1,30 @@
 ﻿/*
 QUEUE → FIFO
 STACK → LIFO
+
+Dieses Programm implementiert eine einfache Queue (Warteschlange) mit Hilfe
+einer einfach verketteten Liste. Eine Queue arbeitet nach dem FIFO-Prinzip
+(First In, First Out): Das zuerst eingefügte Element wird auch als erstes
+entfernt.
+
+Funktionsweise:
+- Einfügen (enqueue): Neues Element wird am Ende der Liste angehängt.
+- Entfernen (dequeue): Das vorderste Element wird gelöscht, und der
+  Zeiger "front" wandert zum nächsten Element.
+- "front" zeigt immer auf das erste Element der Queue,
+  "rear" zeigt immer auf das letzte Element.
+
+Warum eine Queue?
+Queues werden genutzt, wenn eine Reihenfolge wichtig ist – z.B. bei:
+- Druckaufträgen
+- Aufgabenplanung
+- Puffern von Datenströmen
+- Simulation von Warteschlangen oder Ereignisverarbeitung
+
+Dieses Programm demonstriert:
+1. Das Einfügen mehrerer Werte in eine Queue.
+2. Das Entfernen des ersten Elements.
+3. Das Ausgeben aller Elemente.
 */
 
 #include <iostream>

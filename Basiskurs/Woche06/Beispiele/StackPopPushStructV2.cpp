@@ -1,5 +1,35 @@
 ﻿/*
+	Dieses Programm demonstriert zwei unterschiedliche Implementierungen eines Stacks
+	(LIFO-Datenstruktur – Last In, First Out):
 
+	1. Stack mit statischem Array:
+	   - Es gibt ein globales Array 'stack' mit fixer Größe (N = 256).
+	   - 'push(x)' legt ein Element oben auf den Stack.
+	   - 'pop()' entfernt das oberste Element.
+	   - 'peek()' gibt das oberste Element aus, ohne es zu entfernen.
+	   - Diese Variante ist sehr schnell, aber in ihrer Größe begrenzt.
+
+	2. Stack mit einfach verketteter Liste (dynamischer Stack):
+	   - Jeder Eintrag besteht aus einem Node (data + next).
+	   - 'Push(x)' erstellt einen neuen Node und setzt ihn an den Anfang der Liste.
+	   - 'Pop()' entfernt den obersten Node und gibt seinen Wert zurück.
+	   - 'Print()' gibt den kompletten Stack von oben nach unten aus.
+	   - Diese Variante wächst dynamisch und ist nur durch den Hauptspeicher begrenzt.
+
+	Im main()-Bereich:
+	   - Es werden die Zahlen 1 bis 10 in den dynamischen Stack gepusht.
+	   - Danach wird der gesamte Stack ausgegeben.
+	   - Anschließend werden alle Elemente wieder heruntergepoppt.
+	   - Abschließend wird der leere Stack erneut ausgegeben.
+
+	Zusatzinfo zu Queues (Warteschlangen):
+	   - Eine Queue arbeitet nach dem FIFO-Prinzip (First In, First Out).
+	   - Das bedeutet: Das zuerst eingefügte Element wird als erstes wieder entfernt.
+	   - Typische Operationen:
+		 * enqueue(x): fügt ein Element hinten an
+		 * dequeue(): entfernt das Element vorne
+	   - Queues lassen sich ebenfalls per Array oder per verketteter Liste implementieren.
+	   - Verwendung: Puffer, Aufgabenverwaltung, Prozesse im Betriebssystem, Datenströme usw.
 */
 
 #include <iostream>

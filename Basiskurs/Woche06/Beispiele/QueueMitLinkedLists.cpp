@@ -1,6 +1,35 @@
 ﻿/*
 QUEUE → FIFO
 STACK → LIFO
+    Dieses Programm implementiert eine einfache Queue (Warteschlange) als
+    verkettete Liste unter Verwendung von std::shared_ptr für die Speicherverwaltung.
+
+    --- Was ist eine Queue? ---
+    Eine Queue ist eine FIFO-Datenstruktur (First In – First Out).
+    Das bedeutet: Das Element, das zuerst eingefügt wird, wird auch zuerst wieder entfernt.
+    Typische Beispiele: Druckerwarteschlangen, Tasks in Betriebssystemen, Event-Verarbeitung.
+
+    --- Wie funktioniert diese Implementierung? ---
+    • Die Queue besteht aus verketteten Knoten (Node), die jeweils einen Wert
+      (data) sowie einen Zeiger auf den nächsten Knoten enthalten.
+    • Die Queue speichert zwei Zeiger:
+          head → zeigt auf das erste Element (Front)
+          tail → zeigt auf das letzte Element (Rear)
+    • enqueue(x):
+          - erzeugt einen neuen Knoten
+          - hängt ihn hinten (am tail) an
+          - aktualisiert tail auf das neue Element
+    • dequeue():
+          - entfernt das erste Element (head)
+          - gibt dessen Wert zurück
+          - verschiebt head auf das nächste Element
+          - bei leerer Queue wird eine Meldung ausgegeben
+    • display():
+          - iteriert über alle Elemente der Queue
+          - gibt die gespeicherten Werte aus
+
+    Durch die Verwendung von std::shared_ptr übernimmt C++ die Speicherverwaltung
+    automatisch, sodass keine Gefahr von Speicherlecks besteht.
 */
 
 #include <iostream>

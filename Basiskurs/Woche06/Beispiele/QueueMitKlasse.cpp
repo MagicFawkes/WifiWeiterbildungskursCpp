@@ -1,8 +1,27 @@
 ﻿/*
-Die aktuelle Queue wächst nur nach rechts im Array, weil rear immer größer wird und beim Dequeue der Platz links niemals wieder benutzt wird.
-Deshalb ist das Array nach spätestens 10 Enqueues voll, auch wenn du zwischendurch Elemente entfernt hast — der frei gewordene Speicher wird nie wiederverwendet.
-Lösung wäre ein Ringbuffer
+Dieses Beispiel implementiert eine einfache Queue (Warteschlange) mit einem statischen Array
+der Größe N = 10. Eine Queue ist eine FIFO-Datenstruktur (First In – First Out), bei der Elemente
+hinten eingefügt (enqueue) und vorne entnommen (dequeue) werden.
+
+Funktionsweise:
+- 'front' zeigt auf das nächste Element, das entfernt wird.
+- 'rear' zeigt auf das letzte eingefügte Element.
+- Bei enqueue(x) wird das neue Element hinten angehängt.
+- Bei dequeue() wird das Element vorne entfernt und zurückgegeben.
+
+Problem dieser Implementierung:
+Die Queue wächst im Array immer weiter nach rechts, da 'rear' nur erhöht wird.
+Wenn vorne Elemente entfernt werden, entstehen zwar freie Plätze, aber diese werden
+nicht wiederverwendet. Das Array kann daher "voll" werden, obwohl logisch gesehen noch
+Platz wäre.
+
+Die korrekte Lösung wäre ein Ringpuffer (circular queue), bei dem sich front und rear
+zyklisch im Array bewegen.
+
+Dieses Programm zeigt das Einfügen mehrerer Elemente, das Entfernen eines Elements
+und das anschließende weitere Einfügen, wodurch das beschriebene Problem sichtbar wird.
 */
+
 
 #include <iostream>
 

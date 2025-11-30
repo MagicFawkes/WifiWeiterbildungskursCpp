@@ -28,10 +28,37 @@ Code
 };
 */
 
-#define _CRT_SECURE_NO_WARNINGS
-
 #include <stdio.h>
 
+class Stack
+{
+public:
+    void enqueue(int x)
+    {
+	    
+    }
+    void dequeue()
+    {
+
+    }
+    void front()
+    {
+	    
+    }
+    void empty()
+    {
+	    
+    }
+};
+
+class Queue 
+{
+private:
+    Stack stack_in;
+    Stack stack_out;
+public:
+
+};
 int main()
 {
     printf("Test");
