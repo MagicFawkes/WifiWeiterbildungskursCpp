@@ -94,15 +94,22 @@ public:
     {
 		if (stack_out.peek() == -1)
 		{
-			std::cout << "Queue ist leer";
+			std::cout << "Queue ist leer" << std::endl;
 		}
 		else
-			std::cout << "Queue ist nicht leer";
+			std::cout << "Queue ist nicht leer" << std::endl;
     }
 };
 
 int main()
 {
-    printf("Test");
+	Queue queue;
+	queue.enqueue(10);
+	queue.front();
+	queue.empty();
+	queue.dequeue();
+	queue.front();
+	queue.empty();
+
     return 0;
 }
