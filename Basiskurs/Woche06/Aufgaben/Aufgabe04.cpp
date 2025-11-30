@@ -26,6 +26,8 @@ Stack stack_out;
 public:
 Code
 };
+
+Tipp: Nur wenn stack_out leer ist, kippst du alle Elemente aus stack_in in stack_out, dadurch bleibt die Reihenfolge immer die richtige
 */
 
 #include <iostream>
