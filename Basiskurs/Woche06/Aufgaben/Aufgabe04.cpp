@@ -147,3 +147,140 @@ int main()
 
     return 0;
 }
+
+
+/*
+#include <iostream>
+using namespace std;
+
+class dll
+{
+private:
+    struct Node {
+        int value;
+        Node* prev;
+        Node* next;
+        Node(int x) :value(x), prev(NULL), next(NULL) {}
+    };
+
+    Node* head;
+
+public:
+    dll() :head(NULL) {}
+
+    //void insert();
+
+    void remove()
+    {
+        Node* current = head;
+        Node* temp;
+
+        while (current != NULL)
+        {
+            temp = current->next;
+
+            while (temp != NULL)
+            {
+                if (temp->value == current->value)
+                {
+                    Node* delte = temp;
+                    temp = temp->next;
+                    if (delte->prev)
+                    {
+                        delte->prev->next = delte->next;
+                    }
+                    if (delte->next)
+                    {
+                        delte->next->prev = delte->prev;
+                    }
+
+                    delete delte;
+                }
+                else
+                {
+                    temp = temp->next;
+                }
+
+            }
+
+            current = current->next;
+        }
+
+    }
+
+
+};
+
+
+class Stack {
+private:
+    static const int MAX = 100;
+    int a[MAX] = { 0 };
+    int top;
+public:
+    Stack() :top(-1) {}
+
+    void pop() {
+        return;
+    }
+
+    void push(int x) {
+        return;
+    }
+
+    int top() const {
+        return 0;
+    }
+
+    bool empty() const
+    {
+        return (top < 0);
+    }
+    //push, pop, top, empty
+};
+
+class Queue
+{
+private:
+    Stack stack_in;
+    Stack stack_out;
+
+    void function()
+    {
+        if (stack_out.empty())
+        {
+            int value = 0;
+            while (!stack_in.empty()) {
+                value = stack_in.top();
+                stack_in.pop();
+                stack_out.push(value);
+            }
+
+        }
+
+    }
+
+public:
+    void enqueue(int x)
+    {
+        stack_in.push(x);
+    }
+
+    void deque()
+    {
+        function();
+        if (!stack_out.empty()) {
+            stack_out.pop();
+        }
+    }
+
+};
+
+
+int main()
+{
+
+    std::cout << "Hello World!\n";
+}
+
+*/
