@@ -1,15 +1,17 @@
 ﻿#include <iostream>
 #include <cmath>
+
 using namespace std;
 
+template<typename T, typename U>
 class Complex
 {
 private:
-    float re;
-    float im;
+    T re;
+    U im;
 
 public:
-    Complex(float re = 0.0f, float im = 0.0f) : re(re), im(im)
+    Complex(T re, U im) : re(re), im(im)
     {
     }
 
@@ -18,9 +20,6 @@ public:
         return sqrt(re * re + im * im);
     }
 
-    // --- Operatoren innerhalb der Klasse überladen ---
-
-    // Addition
     Complex operator+(const Complex& other) const
     {
         return Complex(this->re + other.re, this->im + other.im);
@@ -46,10 +45,10 @@ public:
 
 int main()
 {
-    Complex complex1(10, 20);
-    Complex complex2(30, 50);
+    Complex<float, float> complex1(10, 20);
+    Complex<float, float> complex2(30, 50);
 
-    Complex complex3 = complex1 + complex2;
+    Complex<float,float> complex3 = complex1 + complex2;
     complex3.printValues();
 
     complex3 = complex1 * complex2;
