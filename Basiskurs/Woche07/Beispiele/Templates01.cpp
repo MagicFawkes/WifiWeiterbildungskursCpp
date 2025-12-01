@@ -6,8 +6,6 @@ Postfix und präfix zu überladen
 
 using namespace std;
 
-
-
 int main()
 {
 
