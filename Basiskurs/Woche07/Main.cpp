@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 4
+#define AKTIVE_BEISPIEL 5
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -10,6 +10,8 @@
 #include "Beispiele/PostfixPr‰fix‹berladung03.cpp"
 #elif AKTIVE_BEISPIEL == 4
 #include "Beispiele/PostfixPr‰fix‹berladung04.cpp"
+#elif AKTIVE_BEISPIEL == 5
+#include "Beispiele/PostfixPr‰fix‹berladung05.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
