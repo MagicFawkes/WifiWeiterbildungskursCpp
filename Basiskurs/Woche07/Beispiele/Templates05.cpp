@@ -6,13 +6,14 @@ using namespace std;
 template<typename T>
 class ComplexNumber
 {
-    friend ComplexNumber<T> operator+<>(const ComplexNumber<T> z1, const ComplexNumber<T> z2);
+    //friend ComplexNumber<T> operator+<>(const ComplexNumber<T> z1, const ComplexNumber<T> z2);
 
-private:
+public:
     T real;
     T img;
 
-// Ohne Private ist friend nicht notwendig:
+// Ohne Private also mit Public ist friend nicht notwendig: 
+// friend hat hier die Funktion, dem freien Operator operator+ Zugriff auf die privaten Member (real und img) der Klasse ComplexNumber zu geben.
 //public:
 //    T real;
 //    T img;
