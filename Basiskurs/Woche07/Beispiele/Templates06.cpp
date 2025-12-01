@@ -37,7 +37,7 @@ class TemplateNumber
     // WICHTIG:
     // - Hier ist operator+<> korrekt.
     // - operator+<T> wäre hier FALSCH.
-    friend TemplateNumber<T> operator+<>(TemplateNumber<T> obj1, TemplateNumber<T> obj2);
+    friend TemplateNumber<T> operator+<>(TemplateNumber<T> obj1, TemplateNumber<T> obj2);       //Weil <> in der Friend-Deklaration dem Compiler sagt, dass es sich um genau die bereits deklarierte Funktions-Template handelt, ohne die Template-Argumente explizit anzugeben – deshalb muss man <> hinschreiben, aber leer lassen.
     //                      ^^           ^^^^^^^^^^^^^^^^           ^^^^^^^^^^^^^^^^
     //                      |            alle mit <T>
     //                      |
