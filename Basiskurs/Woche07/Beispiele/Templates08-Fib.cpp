@@ -1,34 +1,45 @@
-﻿/*
-Erstellen Sie ein Programm zur Berechnung der Fibonacci Folge mti template
-*/
+﻿#include <iostream>
 
-#define _CRT_SECURE_NO_WARNINGS
+template<int N>
+class Fibonacci
+{
+public:
+    static float value;
 
-#include <stdio.h>
+    void print()
+    {
+        std::cout << value << std::endl;
+    }
+};
 
-int berechungFibonacci(int n);
+// Definition der statischen Member
+template<int N>
+float Fibonacci<N>::value = Fibonacci<N - 1>::value + Fibonacci<N - 2>::value;
+
+// Spezialisierung für 0
+template<>
+class Fibonacci<0>
+{
+public:
+    static float value;
+};
+
+float Fibonacci<0>::value = 1.0f;
+
+// Spezialisierung für 1
+template<>
+class Fibonacci<1>
+{
+public:
+    static float value;
+};
+
+float Fibonacci<1>::value = 1.0f;
+
 
 int main()
 {
-    for (int i = 0; i < 20; i++)
-    {
-        printf("Die Zahlen %d \n", berechungFibonacci(i));
-    }
-
+    Fibonacci<10> a;
+    a.print();   // Gibt 2 aus
     return 0;
-}
-
-int berechungFibonacci(int n)
-{
-    if (n == 0)
-    {
-        return 0;
-    }
-
-    if (n == 1)
-    {
-        return 1;
-    }
-
-    return berechungFibonacci(n - 1) + berechungFibonacci(n - 2);
 }
