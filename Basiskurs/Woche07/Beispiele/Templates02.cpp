@@ -19,6 +19,11 @@ public:
 	{
 		
 	}
+
+	float berechneBetrag()
+	{
+		return sqrt(re * re + im * im);
+	}
 };
 
 Complex operator+(const Complex& obj1, const Complex& obj2)
