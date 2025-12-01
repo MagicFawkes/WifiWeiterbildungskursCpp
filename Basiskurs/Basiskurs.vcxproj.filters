@@ -375,7 +375,7 @@
     <ClCompile Include="Woche07\Beispiele\PostfixPräfixÜberladung01.cpp">
       <Filter>Source Files\Woche07\Beispiele</Filter>
     </ClCompile>
-    <ClCompile Include="Woche07\Beispiele\VerketteteListenCStyle.cpp">
+    <ClCompile Include="Woche07\Beispiele\PostfixPräfixÜberladung04.cpp">
       <Filter>Source Files\Woche07\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche07\Main.cpp">
@@ -436,6 +436,9 @@
       <Filter>Source Files\Woche08\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche07\Beispiele\PostfixPräfixÜberladung02.cpp">
+      <Filter>Source Files\Woche07\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche07\Beispiele\PostfixPräfixÜberladung03.cpp">
       <Filter>Source Files\Woche07\Beispiele</Filter>
     </ClCompile>
   </ItemGroup>
