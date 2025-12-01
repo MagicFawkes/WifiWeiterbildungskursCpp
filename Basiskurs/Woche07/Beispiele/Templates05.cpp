@@ -39,6 +39,7 @@ public:
     }
 };
 
+//Überladung als Template machen
 template<typename T>
 ComplexNumber<T> operator+(const ComplexNumber<T> z1, const ComplexNumber<T> z2)
 {
