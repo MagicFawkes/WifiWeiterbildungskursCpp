@@ -162,3 +162,174 @@ int main()
 
     return 0;
 }
+
+/*
+
+#include <iostream>
+using namespace std;
+
+class dll
+{
+private:
+    struct Node {
+        int value;
+        Node* prev;
+        Node* next;
+        Node(int x) :value(x), prev(NULL), next(NULL) {}
+    };
+
+    Node* head;
+    bool duplikate;
+
+public:
+    dll(bool duplikate)
+    {
+        this->duplikate = duplikate;
+        head = NULL;
+    }
+
+    void insert(int x)
+    {
+
+        Node* newNode = new Node(x);
+        if (head == NULL) {
+            head = newNode;
+            return;
+        }
+
+        if (isInList(x) && !duplikate)
+        {
+            delete newNode;
+        }
+
+        Node* temp = head;
+
+        if (x < temp->value)
+        {
+            newNode->next = head;
+            temp->prev = newNode;
+            head = newNode;
+            return;
+        }
+
+        temp = temp->next;
+
+        while (temp != NULL)
+        {
+            if (x < temp->value)
+            {
+                newNode->next = temp;
+                newNode->prev = temp->prev;
+                temp->prev->next = newNode;
+                temp->prev = newNode;
+            }
+
+            else
+            {
+                newNode->prev = temp;
+                temp->next = newNode;
+
+            }
+
+            temp = temp->next;
+        }
+
+
+    }
+
+    bool isInList(int value)
+    {
+        Node* temp = head;
+
+        //if (temp->value == value) {
+        //    return true;
+        //}
+
+        while (temp != NULL) //temp->next != NULL
+        {
+            if (temp->value == value) //temp->next->value
+            {
+                return true;
+            }
+            temp = temp->next;
+        }
+        return false;
+    }
+
+
+    //void freeList();
+
+    void merge(dll& otherdll, bool duplikate)
+    {
+        Node* temp1 = head;
+        Node* temp2 = otherdll.head;
+
+        dll mergedlists(duplikate);
+
+        while (temp1 != NULL && temp2 != NULL)
+        {
+            if (temp1->value < temp2->value)
+            {
+                mergedlists.insert(temp1->value);
+                temp1 = temp1->next;
+            }
+            else if (temp1->value > temp2->value) {
+                mergedlists.insert(temp2->value);
+                temp2 = temp2->next;
+            }
+            else
+            {
+                if (duplikate)
+                {
+                    mergedlists.insert(temp1->value);
+                    mergedlists.insert(temp2->value);
+                }
+                else {
+                    mergedlists.insert(temp1->value);
+                }
+                temp1 = temp1->next;
+                temp2 = temp2->next;
+            }
+
+
+        }
+
+        while (temp2 != NULL)
+        {
+            mergedlists.insert(temp2->value);
+            temp2 = temp2->next;
+        }
+
+        while (temp1 != NULL)
+        {
+            mergedlists.insert(temp1->value);
+            temp1 = temp1->next;
+        }
+
+        *this = mergedlists;
+
+        //zweite Liste befreien
+    }
+
+};
+
+
+
+int main()
+{
+    dll a(false);
+    a.insert(10);
+    a.insert(20);
+
+    dll b(false);
+    a.insert(9);
+    a.insert(21);
+
+    a.merge(b, false);
+
+    //a.print() // 9 10 20 21
+
+    std::cout << "Hello World!\n";
+}
+
+*/
