@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include <cmath>
-
 using namespace std;
 
 class Complex
@@ -19,6 +18,9 @@ public:
         return sqrt(re * re + im * im);
     }
 
+    // --- Operatoren innerhalb der Klasse überladen ---
+
+    // Addition
     Complex operator+(const Complex& other) const
     {
         return Complex(this->re + other.re, this->im + other.im);
