@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 12
+#define AKTIVE_BEISPIEL 14
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -26,6 +26,10 @@
 #include "Beispiele/Templates05.cpp"
 #elif AKTIVE_BEISPIEL == 12
 #include "Beispiele/Templates06.cpp"
+#elif AKTIVE_BEISPIEL == 13
+#include "Beispiele/Templates07.cpp"
+#elif AKTIVE_BEISPIEL == 14
+#include "Beispiele/Templates08-Fib.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
