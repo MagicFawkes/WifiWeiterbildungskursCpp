@@ -241,3 +241,35 @@ int main()
 
 	return 0;
 }
+
+/*
+ *void rotate(int k) {
+    if (head == NULL || k == 0) {
+        return;
+    }
+ 
+    int n = 0;
+    Node* temp1 = head;
+    while (temp->next != NULL) {
+        n++;
+        temp = temp->next;
+    }
+    n++;
+ 
+    k = k % n;
+    if (k == 0)
+        return;
+    int temp = temp1-> value;
+    Node* temp2;
+ 
+    for (int i = 0; i < k; i++) 
+    {
+        temp2 = temp1;
+        while (temp2->prev != NULL) {
+            tem2->value = temp2->prev->value;
+            temp2 = temp2->prev
+        }
+        head->value = temp;
+    }
+}
+*/
