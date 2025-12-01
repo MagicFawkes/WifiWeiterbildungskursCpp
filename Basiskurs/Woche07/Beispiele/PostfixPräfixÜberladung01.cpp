@@ -8,11 +8,11 @@ using namespace std;
 
 class TestClass
 {
-	friend TestClass operator++(TestClass& obj, int);
-	friend TestClass operator--(TestClass & obj, int);
+	//friend TestClass operator++(TestClass& obj, int);
+	//friend TestClass operator--(TestClass & obj, int);
 	//Merksatz --> friend ist nur notwendig, wenn eine freie Funktion auf private / protected Member zugreifen muss.
 
-private:
+public:
 	int i = 0;
 };
 
