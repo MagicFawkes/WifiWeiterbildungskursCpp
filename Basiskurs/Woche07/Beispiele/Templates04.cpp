@@ -57,5 +57,17 @@ int main()
     complex3 = complex1 - complex2;
     complex3.printValues();
 
+    Complex<int, int> complex4(10, 20);
+    Complex<int, int> complex5(30, 50);
+
+    Complex<int, int> complex6 = complex4 + complex5;
+    complex6.printValues();
+
+    complex6 = complex4 * complex5;
+    complex6.printValues();
+
+    complex6 = complex4 - complex5;
+    complex6.printValues();
+
     return 0;
 }
