@@ -12,6 +12,11 @@ private:
     T real;
     T img;
 
+// Ohne Private ist friend nicht notwendig:
+//public:
+//    T real;
+//    T img;
+
 public:
     ComplexNumber(T real, T img) : real(real), img(img)
     {
