@@ -165,6 +165,8 @@ int main()
 
 /*
 
+//Lösung von Trainer
+
 #include <iostream>
 using namespace std;
 
