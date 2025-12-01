@@ -3,13 +3,39 @@ Postfix und präfix zu überladen
 */
 
 #include <iostream>
-
 using namespace std;
+
+// 1. Die generische Template-Klasse
+template<typename T>
+class myclass
+{
+public:
+    void info() const {
+        cout << "Generische Version\n";
+    }
+};
+
+// 2. Volle Spezialisierung für den Typ int
+template<>
+class myclass<int>
+{
+public:
+    void info() const {
+        cout << "Spezialisierung für int\n";
+    }
+};
 
 int main()
 {
+    myclass<double> a;   // nutzt die generische Version
+    myclass<int> b;      // nutzt die Spezialisierung
 
+    a.info();
+    b.info();
+
+    return 0;
 }
+
 
 
 //#include <iostream>
