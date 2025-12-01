@@ -435,6 +435,9 @@
     <ClCompile Include="Woche08\Beispiele\Beispiel01.cpp">
       <Filter>Source Files\Woche08\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche07\Beispiele\PostfixPräfixÜberladung02.cpp">
+      <Filter>Source Files\Woche07\Beispiele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">

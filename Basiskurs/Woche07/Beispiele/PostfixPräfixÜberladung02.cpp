@@ -8,11 +8,10 @@ using namespace std;
 
 class TestClass
 {
-	friend TestClass operator++(TestClass& obj, int);
-	friend TestClass operator--(TestClass & obj, int);
+	//friend TestClass operator++(TestClass& obj, int);
 	//Merksatz --> friend ist nur notwendig, wenn eine freie Funktion auf private / protected Member zugreifen muss.
 
-private:
+public:
 	int i = 0;
 };
 
@@ -34,8 +33,8 @@ int main()
 	t++;
 	t++;
 	t++;
-	//std::cout << t.i << std::endl; funktioniert nicht, da von außen private blockiert
+	std::cout << t.i << std::endl;
 	t--;
 	t--;
-	//std::cout << t.i << std::endl; funktioniert nicht, da von außen private blockiert
+	std::cout << t.i << std::endl;
 }
