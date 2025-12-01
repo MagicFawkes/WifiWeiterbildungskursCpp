@@ -18,6 +18,8 @@
 #include "Beispiele/Templates01.cpp"
 #elif AKTIVE_BEISPIEL == 8
 #include "Beispiele/Templates02.cpp"
+#elif AKTIVE_BEISPIEL == 9
+#include "Beispiele/Templates03.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
