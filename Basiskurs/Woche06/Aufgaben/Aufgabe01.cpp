@@ -60,7 +60,7 @@ public:
 		if (temp->data == value)
 		{
 			std::string eingabe;
-			std::cout << "Duplikat gefunden einfuegen: ";
+			std::cout << "Duplikat gefunden: " << value << " einfuegen? ";
 			std::cin >> eingabe;
 
 			if (eingabe == "nein")
