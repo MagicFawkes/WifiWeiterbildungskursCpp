@@ -1,6 +1,15 @@
 ﻿#include <iostream>
 
-//
+/*
+friend erlaubt einer externen Funktion, Methode oder Klasse den Zugriff auf die 
+privaten und geschützten Member einer Klasse.Der häufigste Einsatz ist, Operatoren 
+oder spezielle Funktionen Zugriff zu geben, ohne sie zu Mitgliedern der Klasse zu machen.
+Man kann aber auch ganze Klassen oder einzelne Methoden befreunden, z.B.für enge 
+Zusammenarbeit oder Fabrikfunktionen.Insgesamt dient friend dazu, Encapsulation 
+gezielt und kontrolliert aufzubrechen – nicht nur bei Templates, sondern in allen C++ - Klassen.
+Der einzige Zweck von friend ist es, privaten/protected Zugriff für bestimmte externe Funktionen oder Klassen zu ermöglichen.
+*/
+
 using namespace std;
 
 template<typename T>
