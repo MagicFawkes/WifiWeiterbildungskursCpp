@@ -12,7 +12,7 @@ template<typename T>
 class TemplateNumber 
 {
 	friend TemplateNumber operator+ <T>(TemplateNumber<T>obj1, TemplateNumber<T>obj2);
-private:
+public:
 	T real;
 	T img;
 public:
@@ -30,7 +30,6 @@ public:
 	{
 		return img;
 	}
-
 };
 
 template<typename T>
