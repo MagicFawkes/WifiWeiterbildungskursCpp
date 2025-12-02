@@ -1,12 +1,13 @@
 ﻿
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-    ifstream file("Aufgabe01.txt"); // lesen
+    ofstream file("Testfile.txt"); // lesen
 
     if (!file.is_open()) // file.fail()
     {
@@ -14,14 +15,12 @@ int main()
         return 1;
     }
 
-    char c;
-
-    while (file.get(c))
-    {
-        cout << c;
-    }
-
-
+    char c = 'a';
+    // Char schreiben in file
+    file.put(c);
+    
+	//in File SChreiben
+    file << "Hello World";
     file.close();
 
     return 0;
