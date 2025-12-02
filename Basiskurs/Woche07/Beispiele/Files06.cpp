@@ -47,6 +47,8 @@ void deque1() //Die Funktion existiert, aber der Fehler "deque is ambiguous" kom
         return;
     }
 
+    cout << "Wert aus Liste entfernen: " << temp->data << endl;
+
     front = front->next;
     delete temp;
 }
@@ -85,6 +87,9 @@ int main()
         enque(wert);
     }
 
+    printqueue();
+    deque1();
+    deque1();
     printqueue();
 
     return 0;
