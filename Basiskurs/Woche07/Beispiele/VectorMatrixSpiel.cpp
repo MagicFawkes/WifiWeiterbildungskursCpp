@@ -101,8 +101,8 @@ int main()
             break;
         }
 
-    	std::cout << "Erfolgreichr Zug - " << "Zeile: " << posEingabe.y << " Spalte: " << posEingabe.x << std::endl;
         spielfeldAnzeigen(spielematrix, posEingabe);
+        std::cout << "Erfolgreichr Zug - " << "Zeile: " << posEingabe.y << " Spalte: " << posEingabe.x << std::endl;
         positionAkt = posEingabe;
     }
 
