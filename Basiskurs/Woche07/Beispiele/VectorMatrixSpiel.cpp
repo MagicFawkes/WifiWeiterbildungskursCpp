@@ -56,26 +56,27 @@ int main()
         std::cout << "Bitte nächsten Schritt eingeben (W->up, A->left, S->down, D->right): ";
         std::cin >> eingabe;
 
-        if (eingabe == 'w')
+        switch (eingabe)
         {
+        case 'w':
             posEingabe.y -= 1;
-        }
-        else if (eingabe == 's')
-        {
+            break;
+
+        case 's':
             posEingabe.y += 1;
-        }
-        else if (eingabe == 'a')
-        {
+            break;
+
+        case 'a':
             posEingabe.x -= 1;
-        }
-        else if (eingabe == 'd')
-        {
+            break;
+
+        case 'd':
             posEingabe.x += 1;
-        }
-    	else
-        {
+            break;
+
+        default:
             std::cout << "Falsche Eingabe, bitte korrekt eingeben!" << std::endl;
-            continue;;
+            continue;
         }
 
     	if (posEingabe.x >= spalten || posEingabe.x < 0 || posEingabe.y >= zeilen || posEingabe.y < 0)
