@@ -26,15 +26,18 @@ int main()
 
     string wert;
 
-    while (file >> wert) 
+    while (file >> wert)
     {
         test.arr.push_back(wert);
     }
 
+    file.clear();               // Flags zurücksetzen
+    file.seekp(0, ios::end);    // Schreibpointer ans Ende
+
     for (string variable : test.arr)
     {
         std::cout << variable << std::endl;
-        file << variable << " ";
+        file << variable << " test";
     }
 
     return 0;
