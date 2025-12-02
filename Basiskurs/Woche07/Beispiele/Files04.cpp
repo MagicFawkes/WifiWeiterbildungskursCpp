@@ -8,7 +8,7 @@ template <typename T, int N>
 class Array
 {
 public:
-    string words[N];
+    T words[N];
     int anzahl = 0;
 };
 
@@ -24,7 +24,7 @@ int main()
 
     constexpr int m = 100;
 
-    Array<int, m> test;
+    Array<string, m> test;
 
     while (file >> test.words[test.anzahl])
     {
