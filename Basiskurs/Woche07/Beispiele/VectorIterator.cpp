@@ -29,5 +29,20 @@ int main()
     cout << *it << endl;   // Ausgabe: 10
     cout << *(++it) << endl;   // Ausgabe: 20
 
+    cout << "Ausgabe: " << endl;
+
+    for (auto it1 = vect.begin(); it != vect.end(); it++)
+    {
+        cout << *it << endl;
+    }
+
+    vector<int> v = { 80, 90, 100 };
+
+    // Range based for Schleife
+    for (int x : v) 
+    {
+        cout << x << endl;
+    }
+
     return 0;
 }
