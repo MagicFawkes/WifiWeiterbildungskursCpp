@@ -76,13 +76,13 @@ int main()
             break;
 
         default:
-            std::cout << "Falsche Eingabe, bitte korrekt eingeben!" << std::endl;
+            std::cout << "\nFalsche Eingabe, bitte korrekt eingeben!" << std::endl;
             continue;
         }
 
     	if (posEingabe.x >= spalten || posEingabe.x < 0 || posEingabe.y >= zeilen || posEingabe.y < 0)
     	{
-			std::cout << "Ausserhalb Spielfeld" << std::endl;
+			std::cout << "\nAusserhalb Spielfeld" << std::endl;
 			posEingabe = positionAkt;
 
 			continue;
@@ -90,14 +90,14 @@ int main()
 
         if (spielematrix[posEingabe.y][posEingabe.x] == 'x')
         {
-            std::cout << "Hindernis Entdeckt, Nochmal versuchen" << std::endl;
+            std::cout << "\nHindernis Entdeckt, Nochmal versuchen" << std::endl;
             posEingabe = positionAkt;
 
             continue;
         }
         if (spielematrix[posEingabe.y][posEingabe.x] == 'z')
         {
-            std::cout << "Ziel erreicht" << std::endl;
+            std::cout << "\nZiel erreicht" << std::endl;
             break;
         }
 
