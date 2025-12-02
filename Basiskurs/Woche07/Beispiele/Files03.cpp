@@ -17,9 +17,26 @@ int main()
 
     string words[] = { "Hello", "World", "Cpp", "Test" };
 
+    // 1. Variante
     for (string variable : words)
     {
         file << variable << " ";
+    }
+
+    int size = sizeof(words) / sizeof(words[0]);
+    // 2. Variante
+    for (int i = 0; i < size; ++i)
+    {
+        file << words[i] << " ";
+    }
+
+    // 3. Variante
+    for (int i = 0; i < size; ++i)
+    {
+	    for (char ch : words[i])
+	    {
+            file.put(ch);
+	    }
     }
 
     file.close();
