@@ -1,6 +1,7 @@
 ﻿
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -19,6 +20,24 @@ int main()
     while (file.get(c))
     {
         cout << c;
+    }
+
+    file.clear();              // EOF-Flag löschen
+    file.seekg(0, ios::beg);   // Dateizeiger auf Anfang setzen
+
+    string word;
+    
+    while (file >> word)
+        cout << word << std::endl;;
+
+    file.clear();              // EOF-Flag löschen
+    file.seekg(0, ios::beg);   // Dateizeiger auf Anfang setzen
+
+    string line;
+
+    while (getline(file, line))
+    {
+        cout << line << std::endl;;
     }
 
     file.close();
