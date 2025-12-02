@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 22
+#define AKTIVE_BEISPIEL 23
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -46,6 +46,8 @@
 #include "Beispiele/VectorIterator.cpp"
 #elif AKTIVE_BEISPIEL == 22
 #include "Beispiele/VectorAufgabe01.cpp"
+#elif AKTIVE_BEISPIEL == 23
+#include "Beispiele/VectorMatrixSpiel.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
