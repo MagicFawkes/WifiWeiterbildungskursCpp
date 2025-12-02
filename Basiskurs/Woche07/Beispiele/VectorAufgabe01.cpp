@@ -39,7 +39,7 @@ int main()
     {
         for (int spalte = 0; spalte < vect[zeile].size(); ++spalte)
         {
-            std::cout << "Zahl: " << vect[zeile][spalte] << std::endl;
+            std::cout << "Zahl: " << vect[zeile][spalte] << " und ";
 
             int summe = 0;
 
@@ -63,21 +63,34 @@ int main()
                 summe += vect[zeile][spalte + 1];
             }
             
-        	summenmatrix[zeile][spalte];
+        	summenmatrix[zeile][spalte] = summe;
 
             std::cout << "Summe: " << summe << std::endl;
         }
     }
 
-    // Mit range - based for
-    //for (std::vector<int> row: vect)
-    //{
-    //    for (int value : row) 
-    //    {
-	   //     std::cout << value << " ";
-    //    }
-    //    std::cout << std::endl;
-    //}
+
+    //Mit range - based for
+    for (std::vector<int> row : vect)
+    {
+        for (int value : row)
+        {
+            std::cout << value << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    std::cout << "Summenmatrix: " << std::endl;
+
+     //Mit range - based for
+    for (std::vector<int> row: summenmatrix)
+    {
+        for (int value : row) 
+        {
+	        std::cout << value << " ";
+        }
+        std::cout << std::endl;
+    }
 
     //// oder ohe Kopie mit Referenz
     //for (const auto& row : vect)
