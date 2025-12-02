@@ -69,13 +69,12 @@ int main()
         }
     }
 
-
     //Mit range - based for
     for (std::vector<int> row : vect)
     {
         for (int value : row)
         {
-            std::cout << value << " ";
+            std::cout << value << '\t';
         }
         std::cout << std::endl;
     }
@@ -87,7 +86,7 @@ int main()
     {
         for (int value : row) 
         {
-	        std::cout << value << " ";
+	        std::cout << value << '\t';
         }
         std::cout << std::endl;
     }
