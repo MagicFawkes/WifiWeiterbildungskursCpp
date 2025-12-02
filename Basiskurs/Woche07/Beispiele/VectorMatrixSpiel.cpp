@@ -32,8 +32,6 @@ void spielfeldAnzeigen(std::vector<std::vector<char>> summenmatrix, Position pos
 
 int main()
 {
-   
-
     std::vector<std::vector<char>> spielematrix = 
     {
     {'x', ' ', 'x', 'x'},
