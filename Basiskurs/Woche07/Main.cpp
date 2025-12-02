@@ -38,6 +38,8 @@
 #include "Beispiele/Files03.cpp"
 #elif AKTIVE_BEISPIEL == 18
 #include "Beispiele/Files04.cpp"
+#elif AKTIVE_BEISPIEL == 19
+#include "Beispiele/Files05.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
