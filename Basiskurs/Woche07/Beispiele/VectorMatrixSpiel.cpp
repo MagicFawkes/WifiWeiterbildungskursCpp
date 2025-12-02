@@ -12,15 +12,17 @@ int main()
     class Position
     {
     public:
-        int x = 0;
+        int x = 1;
         int y = 0;
     };
 
     std::vector<std::vector<char>> spielematrix = 
     {
-    {'x', 'x', 'x'},
-    {'x', 'x', 'x'},
-    {'x', 'x', 'x'}
+    {'x', ' ', 'x', 'x'},
+    {'x', ' ', ' ', ' '},
+    {'x', 'x', 'x', ' '},
+	{'x', ' ', ' ', ' '},
+    {'x', ' ', 'x', 'x'}
     };
 
     size_t zeilen = spielematrix.size();
@@ -32,16 +34,16 @@ int main()
     while (true)
     {
         char eingabe;
-        std::cout << "Bitte nächsten Schritt eingeben (W->Up, A->left, S->down, D->reicht): ";
+        std::cout << "Bitte nächsten Schritt eingeben (W->up, A->left, S->down, D->right): ";
         std::cin >> eingabe;
 
         if (eingabe == 'w')
         {
-            posEingabe.y += 1;
+            posEingabe.y -= 1;
         }
         else if (eingabe == 's')
         {
-            posEingabe.y -= 1;
+            posEingabe.y += 1;
         }
         else if (eingabe == 'a')
         {
@@ -51,10 +53,29 @@ int main()
         {
             posEingabe.x += 1;
         }
-        else
+    	else
         {
             std::cout << "Falsche Eingabe, bitte korrekt eingeben!" << std::endl;
+            continue;;
         }
+
+    	if (posEingabe.x >= spalten || posEingabe.x < 0 || posEingabe.y >= zeilen || posEingabe.y < 0)
+    	{
+			std::cout << "Ausserhalb Spielfeld" << std::endl;
+			posEingabe = positionAkt;
+
+			continue;
+        }
+
+        if (spielematrix[posEingabe.y][posEingabe.x] == 'x')
+        {
+            std::cout << "Hindernis Entdeckt, Nochmal versuchen" << std::endl;
+            posEingabe = positionAkt;
+
+            continue;
+        }
+    	std::cout << "Erfolgreichr Zug - " << "Zeile: " << posEingabe.y << " Spalte: " << posEingabe.x << std::endl;
+        positionAkt = posEingabe;
     }
 
 
