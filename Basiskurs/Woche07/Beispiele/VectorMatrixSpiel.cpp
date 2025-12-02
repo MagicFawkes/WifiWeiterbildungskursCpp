@@ -98,12 +98,13 @@ int main()
         if (spielematrix[posEingabe.y][posEingabe.x] == 'z')
         {
             std::cout << "\nZiel erreicht" << std::endl;
+            spielfeldAnzeigen(spielematrix, posEingabe);
             break;
         }
 
+        positionAkt = posEingabe;
         spielfeldAnzeigen(spielematrix, posEingabe);
         std::cout << "Erfolgreichr Zug - " << "Zeile: " << posEingabe.y << " Spalte: " << posEingabe.x << std::endl;
-        positionAkt = posEingabe;
     }
 
     return 0;
