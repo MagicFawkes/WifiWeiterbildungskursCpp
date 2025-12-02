@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    ofstream file("Testfile01.txt"); // lesen
+    ofstream file("Testfile01.txt"); // Ausgabestream (output file stream, of) in C++.
 
     if (!file.is_open()) // file.fail()
     {
