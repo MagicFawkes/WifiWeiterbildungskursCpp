@@ -16,6 +16,7 @@ public:
 
 void spielfeldAnzeigen(std::vector<std::vector<char>> summenmatrix, Position pos)
 {
+    system("cls");
     std::cout << '\n';
     summenmatrix[pos.y][pos.x] = 'O';
 
@@ -23,7 +24,7 @@ void spielfeldAnzeigen(std::vector<std::vector<char>> summenmatrix, Position pos
     {
         for (auto value : row)
         {
-            std::cout << value << '\t';
+            std::cout << value << "    ";
         }
         std::cout << std::endl;
     }
