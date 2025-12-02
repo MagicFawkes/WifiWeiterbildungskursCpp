@@ -474,6 +474,9 @@
     <ClCompile Include="Woche07\Beispiele\Files01.cpp">
       <Filter>Source Files\Woche07\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche07\Beispiele\Files02.cpp">
+      <Filter>Source Files\Woche07\Beispiele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">
