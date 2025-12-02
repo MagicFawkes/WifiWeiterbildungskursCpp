@@ -7,14 +7,32 @@
 #include <string>
 #include <vector>
 
+class Position
+{
+public:
+    int x = 1;
+    int y = 0;
+};
+
+void spielfeldAnzeigen(std::vector<std::vector<char>> summenmatrix, Position pos)
+{
+    std::cout << '\n';
+    summenmatrix[pos.y][pos.x] = 'O';
+
+    for (auto row : summenmatrix)
+    {
+        for (auto value : row)
+        {
+            std::cout << value << '\t';
+        }
+        std::cout << std::endl;
+    }
+    std::cout << '\n';
+}
+
 int main()
 {
-    class Position
-    {
-    public:
-        int x = 1;
-        int y = 0;
-    };
+   
 
     std::vector<std::vector<char>> spielematrix = 
     {
@@ -30,6 +48,8 @@ int main()
 
     Position positionAkt, posEingabe;
     posEingabe = positionAkt;
+
+    spielfeldAnzeigen(spielematrix, posEingabe);
 
     while (true)
     {
@@ -81,6 +101,7 @@ int main()
         }
 
     	std::cout << "Erfolgreichr Zug - " << "Zeile: " << posEingabe.y << " Spalte: " << posEingabe.x << std::endl;
+        spielfeldAnzeigen(spielematrix, posEingabe);
         positionAkt = posEingabe;
     }
 
