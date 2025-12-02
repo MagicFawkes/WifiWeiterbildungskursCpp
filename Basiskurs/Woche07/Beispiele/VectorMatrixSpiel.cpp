@@ -36,11 +36,11 @@ int main()
 {
     std::vector<std::vector<char>> spielematrix = 
     {
-    {'x', ' ', 'x', 'x'},
-    {'x', ' ', ' ', ' '},
-    {'x', 'x', 'x', ' '},
-	{'x', ' ', ' ', ' '},
-    {'x', 'z', 'x', 'x'}
+    {'x', ' ', 'x', 'x', 'x'},
+    {'x', ' ', ' ', ' ', 'x'},
+    {'x', 'x', 'x', ' ', 'x'},
+	{'x', ' ', ' ', ' ', 'x'},
+    {'x', 'z', 'x', 'x', 'x'}
     };
 
     size_t zeilen = spielematrix.size();
