@@ -35,5 +35,15 @@ int main()
         }
     }
 
+    // Kurz & modern mit range - based for
+    for (const auto& row: vect) 
+    {
+        for (int value : row) 
+        {
+	        std::cout << value << " ";
+        }
+        std::cout << std::endl;
+    }
+
     return 0;
 }
