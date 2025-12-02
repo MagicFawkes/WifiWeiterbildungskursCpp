@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
 
 
  */
@@ -7,8 +6,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
-
 
 int main()
 {
@@ -22,10 +19,20 @@ int main()
     vect.push_back(vect2);
     vect.push_back(vect3);
 
+    //oder:
+    /*std::vector<std::vector<int>> vect = 
+    {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+    };*/
 
     for (auto it1 = vect.begin(); it1 != vect.end(); it1++)
     {
-        cout << *it << endl;
+        for (auto it2 = it1->begin(); it2 != it1->end(); it2++)
+        {
+            std::cout << *it2 << std::endl;
+        }
     }
 
     return 0;
