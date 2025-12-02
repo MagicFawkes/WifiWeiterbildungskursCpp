@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <conio.h>
 
 class Position
 {
@@ -54,7 +55,7 @@ int main()
     {
         char eingabe;
         std::cout << "Bitte nächsten Schritt eingeben (W->up, A->left, S->down, D->right): ";
-        std::cin >> eingabe;
+        eingabe = _getch();
 
         switch (eingabe)
         {
