@@ -22,7 +22,7 @@ int main()
     {'x', ' ', ' ', ' '},
     {'x', 'x', 'x', ' '},
 	{'x', ' ', ' ', ' '},
-    {'x', ' ', 'x', 'x'}
+    {'x', 'z', 'x', 'x'}
     };
 
     size_t zeilen = spielematrix.size();
@@ -74,10 +74,15 @@ int main()
 
             continue;
         }
+        if (spielematrix[posEingabe.y][posEingabe.x] == 'z')
+        {
+            std::cout << "Ziel erreicht" << std::endl;
+            break;
+        }
+
     	std::cout << "Erfolgreichr Zug - " << "Zeile: " << posEingabe.y << " Spalte: " << posEingabe.x << std::endl;
         positionAkt = posEingabe;
     }
-
 
     return 0;
 }
