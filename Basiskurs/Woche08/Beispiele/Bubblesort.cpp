@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    vector<int> a = { -5, -2, 0, 1, 2, 4, 5, 6, 7, 10 };
+    vector<int> a = { 4, -2, 7, 0, 10, 1, -5, 6, 2, 5 };
 
     // -----------------------------
     // Beispiel: Suche nach einem Wert
