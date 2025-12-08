@@ -42,6 +42,7 @@ int main()
                 temp = a[k + 1];
                 a[k + 1] = a[k];
                 a[k] = temp;
+                //swap(a[k], a[k +1]);
             }
         }
     }
