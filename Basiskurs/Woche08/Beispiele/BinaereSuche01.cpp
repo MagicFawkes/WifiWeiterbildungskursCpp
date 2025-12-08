@@ -19,15 +19,12 @@ int main()
 	do
 	{
 		mid = low + (high - low) / 2;
-		// Check if x is present at mid
+
 		if (zahlen[mid] == suchWert)
 			break;
 
-		// If x greater, ignore left half
 		if (zahlen[mid] < suchWert)
 			low = mid + 1;
-
-		// If x is smaller, ignore right half
 		else
 			high = mid - 1;
 
