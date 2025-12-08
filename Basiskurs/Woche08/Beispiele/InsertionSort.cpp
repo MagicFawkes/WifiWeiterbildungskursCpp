@@ -22,10 +22,13 @@ int main()
         {
             if (a[i] > a[k])
             {
-	            for (int x = k; x > i; --x)
-	            {
-                    swap(a[x], a[x-1]);
-	            }
+                int x = k;
+
+                while (a[x] < a[x - 1])
+                {
+                    swap(a[x], a[x - 1]);
+                }
+
                 break;
             }
         }
