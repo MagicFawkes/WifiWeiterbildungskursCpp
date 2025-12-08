@@ -1,4 +1,11 @@
-﻿#include <iostream>
+﻿/*
+ *Lineare Suche (Linear Search) ist die einfachste Suchmethode. Dabei wird jedes Element einer Liste 
+ *der Reihe nach von vorne bis hinten mit dem gesuchten Wert verglichen. Sobald der Wert gefunden wird, 
+ *bricht die Suche ab und der Index wird zurückgegeben. Wird der Wert nicht gefunden, liefert die Funktion meist -1 zurück.
+Die lineare Suche funktioniert auch bei unsortierten Daten, ist aber bei großen Datenmengen relativ langsam (Zeitkomplexität: O(n)).
+ */
+
+#include <iostream>
 #include <vector>
 
 using namespace std;

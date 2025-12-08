@@ -1,4 +1,12 @@
-﻿#include <iostream>
+﻿
+/*
+Bubble Sort ist ein einfacher Sortieralgorithmus, bei dem benachbarte Elemente ständig miteinander verglichen werden.
+Wenn zwei nebeneinanderliegende Zahlen in der falschen Reihenfolge sind, werden sie vertauscht.
+Dieser Vorgang wird so oft wiederholt, bis keine Vertauschung mehr nötig ist – die größten Werte „wandern“ dabei schrittweise nach rechts wie Luftblasen nach oben.
+Bubble Sort ist leicht zu verstehen, aber sehr langsam bei großen Datenmengen(Zeitkomplexität: O(n²)).
+*/
+
+#include <iostream>
 #include <vector>
 
 using namespace std;
