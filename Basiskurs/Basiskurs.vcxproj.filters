@@ -507,6 +507,9 @@
     <ClCompile Include="Woche08\Beispiele\Linearesearch.cpp">
       <Filter>Source Files\Woche08\Beispiele</Filter>
     </ClCompile>
+    <ClCompile Include="Woche08\Beispiele\Bubblesort.cpp">
+      <Filter>Source Files\Woche08\Beispiele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h">
