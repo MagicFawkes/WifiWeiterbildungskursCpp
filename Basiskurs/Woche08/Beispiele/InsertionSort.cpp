@@ -6,7 +6,6 @@ vorherigen verglichen und so lange nach links verschoben, bis es korrekt einsort
 Der Algorithmus ist sehr effizient für kleine oder fast sortierte Datenmengen, 
 hat aber im schlimmsten Fall eine Laufzeit von
 O(n2)
-O(n2).
 */
 
 #include <iostream>
