@@ -1,18 +1,13 @@
 ﻿/*
-Eigene Exeption erstellen mit Division durch NUll
 
-Division durch 0 in C++
-In C++ wirft eine Ganzzahl-Division durch 0 keine Exception.
-Stattdessen entsteht Undefined Behavior – das Programm kann abstürzen, hängen oder falsche Werte liefern.
-try/catch greift nur bei throw, nicht bei CPU-Fehlern.
-Deshalb muss man selbst prüfen (if (u == 0)) und eine eigene Exception werfen.
 */
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-class custom_exception : public exception
+class divnull_exception : public exception
 {
 public:
 	const char* what() const noexcept
@@ -21,26 +16,99 @@ public:
 	}	
 };
 
+class zahlzugross_exception : public exception
+{
+public:
+	const char* what() const noexcept
+	{
+		return "Zahl groesser 100";
+	}
+};
+
+class istkeinezahl_exception: public exception
+{
+private:
+	string i;
+public:
+	istkeinezahl_exception(const std::string& i)
+		: i("Eingabewert ist keine Zahl: " + i)
+	{
+	}
+
+	const char* what() const noexcept override
+	{
+		return i.c_str();
+	}
+};
+
+bool istZahl(const string& s);
+
 int main()
 {
-	int i = 2;
-	int u = 0;
+	string i;
+	string u;
 
+	cout << "Bitte Zahl 1 eingebebn: ";
+	cin >> i;
+
+	cout << "Bitte Zahl 2 eingebebn: ";
+	cin >> u;
+	
 	try
 	{
-		if (u ==0)
+		if (!istZahl(i))
 		{
-			throw custom_exception();
+			throw istkeinezahl_exception(i);
 		}
 
-		int ergebnis = i / u;
+		if (!istZahl(u))
+		{
+			throw istkeinezahl_exception(u);
+		}
+
+		int zahl1 = std::stoi(i);
+		std::cout << "Zahl1 = " << zahl1 << std::endl;
+
+		int zahl2 = std::stoi(u);
+		std::cout << "Zahl2 = " << zahl2 << std::endl;
+
+		if (zahl1 > 100 || zahl2 > 100)
+		{
+			throw zahlzugross_exception();
+		}
 	}
-	catch (custom_exception& e)	//fängt alles ab sowohl eigene Fehlerexception oder auch throw 23;
+	catch (istkeinezahl_exception& e)
 	{
 		cout << "Exception aufgetreten: " << e.what();
 	}
-	catch (...)	//fängt alles ab sowohl eigene Fehlerexception oder auch throw 23;
+	catch (zahlzugross_exception& e)
 	{
-		cout << "allgemeiner Exception";
+		cout << "Exception aufgetreten: " << e.what();
 	}
+	catch (divnull_exception& e)	
+	{
+		cout << "Exception aufgetreten: " << e.what();
+	}
+	catch (exception& e)
+	{
+		cout << "Exception aufgetreten: " << e.what();
+	}
+	catch (...)
+	{
+		cout << "allgemeiner Fehler";
+	}
+}
+
+bool istZahl(const string& s)
+{
+	if (s.empty()) 
+		return false;
+
+	size_t i = 0;
+
+	for (; i < s.length(); i++)
+		if (!std::isdigit(s[i]))
+			return false;
+
+	return true;
 }
