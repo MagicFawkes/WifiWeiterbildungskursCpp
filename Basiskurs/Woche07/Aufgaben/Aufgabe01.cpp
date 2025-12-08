@@ -88,6 +88,11 @@ public:
     virtual char getColor() const = 0;
     virtual void mark() = 0;
 
+	bool isMarked() const
+	{
+		return marked;
+	}
+
     void display() const
     {
         cout << getColor();
@@ -96,6 +101,7 @@ public:
 
 class RedTile : public Tile
 {
+public:
 	RedTile()
 	{
 		marked = false;
@@ -103,10 +109,10 @@ class RedTile : public Tile
 
     void mark()
 	{
-		
+		marked = false;
 	}
 
-    char getColor()
+    char getColor() const
 	{
 		return 'R';
 	}
@@ -196,6 +202,55 @@ public:
 			for (int j = 0; j < 3; ++j)
 			{
 				field[i][j]->display();
+			}
+		}
+	}
+
+	void mark(int x, int y)
+	{
+		if (x < 0 || x > 2 || y < 0 || y > 2)
+		{
+			throw out_of_range("out of range");
+		}
+
+		field[x][y]->mark();
+	}
+
+	void replace(int x , int y)
+	{
+		if (x < 0 || x > 2 || y < 0 || y > 2)
+		{
+			throw out_of_range("out of range");
+		}
+
+		Tile* temp = field[x][y];
+
+		if (temp->getColor() == 'G')
+		{
+			delete temp;
+			field[x][y] = new BlueTile();
+		}
+		else if (temp->getColor() == 'B' && temp->isMarked())
+		{
+			delete temp;
+			field[x][y] = new RedTile();
+		}
+	}
+
+	bool isRed() const
+	{
+		for (int i = 0; i < 3; ++i)
+		{
+			for (int j = 0; j < 3; ++i)
+			{
+				if (field[i][j]->getColor() != 'R')
+				{
+					return false;
+				}
+				else
+				{
+					return true;
+				}
 			}
 		}
 	}
