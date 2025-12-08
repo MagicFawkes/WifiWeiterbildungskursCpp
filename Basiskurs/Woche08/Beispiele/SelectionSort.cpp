@@ -1,6 +1,13 @@
 ﻿
 /*
-
+Selection Sort ist ein einfacher Sortieralgorithmus in C++, der das Array Schritt für Schritt sortiert. 
+Dabei wird immer das kleinste Element im unsortierten Teil gesucht und mit dem aktuellen Anfangselement 
+vertauscht. Dieser Vorgang wird wiederholt, bis das gesamte Array sortiert ist. Der Algorithmus ist leicht 
+zu verstehen, aber relativ langsam bei großen Datenmengen (Laufzeit:
+O(n2)
+O(n
+2
+)).
 */
 
 #include <iostream>
