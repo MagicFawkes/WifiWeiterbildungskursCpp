@@ -14,38 +14,22 @@ int main()
 
     int n = a.size();
 
-    int temp = 0;
-
     for (int i = 0; i < n; i++)
     {
-        for (int k = i; k < n-1; k++) 
+        int tempIndex = i;
+
+        for (int k = i+1; k < n; k++) 
         {
-            if (a[i] > a[k + 1])
+            if (a[k] < a[tempIndex])
             {
-                swap(a[i], a[k +1]);
+                tempIndex = k;
             }
         }
+
+        swap(a[i], a[tempIndex]);
     }
 
     cout << "\nSortiertes Array:\n";
-    for (int i = 0; i < n; i++)
-    {
-        cout << a[i] << " ";
-    }
-
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int k = i; k < n - 1; k++)
-        {
-            if (a[i] < a[k + 1])
-            {
-                swap(a[i], a[k + 1]);
-            }
-        }
-    }
-
-    cout << "\nSortiertes Array Rückwaerts:\n";
     for (int i = 0; i < n; i++)
     {
         cout << a[i] << " ";
