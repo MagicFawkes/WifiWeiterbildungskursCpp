@@ -104,9 +104,7 @@ bool istZahl(const string& s)
 	if (s.empty()) 
 		return false;
 
-	size_t i = 0;
-
-	for (; i < s.length(); i++)
+	for (size_t i = 0; i < s.length(); i++)
 		if (!std::isdigit(s[i]))
 			return false;
 
