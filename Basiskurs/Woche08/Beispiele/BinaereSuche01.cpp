@@ -36,7 +36,6 @@ int main()
 	}
 	while (true);
 
-
 	cout << mid;
 
 }
