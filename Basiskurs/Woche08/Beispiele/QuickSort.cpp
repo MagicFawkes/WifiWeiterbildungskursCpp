@@ -120,7 +120,6 @@ int partition(vector<int>& a, int start, int n) {
 	return counter + 1;
 }
 
-
 void quicksort(vector<int>& a, int start, int n)
 {
 	if (start < n)
@@ -130,7 +129,6 @@ void quicksort(vector<int>& a, int start, int n)
 		quicksort(a, pivot + 1, n);
 	}
 }
-
 
 int main()
 {
