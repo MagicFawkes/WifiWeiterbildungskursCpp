@@ -510,13 +510,16 @@
     <ClCompile Include="Woche08\Beispiele\Bubblesort.cpp">
       <Filter>Source Files\Woche08\Beispiele</Filter>
     </ClCompile>
-    <ClCompile Include="Woche08\Beispiele\SelectionSort.cpp">
+    <ClCompile Include="Woche08\Beispiele\SummArray.cpp">
       <Filter>Source Files\Woche08\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche08\Beispiele\InsertionSort.cpp">
       <Filter>Source Files\Woche08\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche08\Beispiele\RekursivFakul.cpp">
+      <Filter>Source Files\Woche08\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche08\Beispiele\QuickSort.cpp">
       <Filter>Source Files\Woche08\Beispiele</Filter>
     </ClCompile>
   </ItemGroup>
