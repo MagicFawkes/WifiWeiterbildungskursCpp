@@ -12,7 +12,6 @@ O(n2)
 #include <vector>
 using namespace std;
 
-
 int main()
 {
 	vector<int> a = { 4,2,8,4,2,86,3,7,45,9,5,43,87,4,76,43,76,32,4,7,3,87,89,4,23,21,2,5464,78,9,0,0 };
