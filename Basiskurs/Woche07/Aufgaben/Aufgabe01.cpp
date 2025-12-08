@@ -74,12 +74,135 @@ der von Tile vererbten Klassen.
 und dementsprechend true retournieren, wenn das der Fall ist, ansonsten false.
 */
 
-#define _CRT_SECURE_NO_WARNINGS
 
-#include <stdio.h>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Tile
+{
+protected:
+	bool marked;
+public:
+    virtual char getColor() const = 0;
+    virtual void mark() = 0;
+
+    void display() const
+    {
+        cout << getColor();
+    }
+};
+
+class RedTile : public Tile
+{
+	RedTile()
+	{
+		marked = false;
+	}
+
+    void mark()
+	{
+		
+	}
+
+    char getColor()
+	{
+		return 'R';
+	}
+};
+
+class BlueTile : public Tile
+{
+public:
+	BlueTile()
+	{
+		marked = rand() % 2;
+	}
+
+	void mark()
+	{
+		marked = true;
+	}
+
+	char getColor() const
+	{
+		return 'B';
+	}
+};
+
+class GreenTile : public Tile
+{
+public:
+	GreenTile()
+	{
+		marked = true;
+	}
+
+	void mark()
+	{
+		marked = true;
+	}
+
+	char getColor() const
+	{
+		return 'G';
+	}
+};
+
+class Floor
+{
+private:
+	Tile*** field = new Tile**[3];
+public:
+	Floor()
+	{
+		for (int i = 0; i < 3; ++i)
+		{
+			field[i] = new Tile * [3];
+
+			for (int j = 0; j < 3; ++j)
+			{
+				if (rand() %2 == 0)
+				{
+					field[i][j] = new BlueTile();
+				}
+				else
+				{
+					field[i][j] = new GreenTile();
+				}
+			}
+
+		}
+	}
+
+	~Floor ()
+	{
+		for (int i = 0; i < 3; ++i)
+		{
+			for (int j = 0; j < 3; ++j)
+			{
+				delete field[i][j];
+			}
+			delete[] field[i];
+		}
+		delete[] field;
+	}
+
+	void print() const
+	{
+		for (int i = 0; i < 3; ++i)
+		{
+			for (int j = 0; j < 3; ++j)
+			{
+				field[i][j]->display();
+			}
+		}
+	}
+};
 
 int main()
 {
-    printf("Test");
+
     return 0;
 }
