@@ -3,6 +3,11 @@
  *der Reihe nach von vorne bis hinten mit dem gesuchten Wert verglichen. Sobald der Wert gefunden wird, 
  *bricht die Suche ab und der Index wird zurückgegeben. Wird der Wert nicht gefunden, liefert die Funktion meist -1 zurück.
 Die lineare Suche funktioniert auch bei unsortierten Daten, ist aber bei großen Datenmengen relativ langsam (Zeitkomplexität: O(n)).
+
+Binäre Suche (Binary Search) funktioniert nur bei sortierten Daten. Dabei wird immer das mittlere Element betrachtet:
+Ist der gesuchte Wert kleiner, wird nur die linke Hälfte weiter durchsucht, ist er größer, nur die rechte Hälfte. 
+Dieser Vorgang wiederholt sich, bis der Wert gefunden wird oder kein Bereich mehr übrig ist.
+Die binäre Suche ist sehr schnell, da sie den Suchbereich jedes Mal halbiert (Zeitkomplexität: O(log n)), funktioniert aber nicht bei unsortierten Listen.
  */
 
 #include <iostream>

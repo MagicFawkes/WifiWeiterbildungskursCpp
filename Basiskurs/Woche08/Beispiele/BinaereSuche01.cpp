@@ -1,5 +1,8 @@
 ﻿/*
+Binäre Suche (Binary Search) funktioniert nur bei sortierten Daten. Dabei wird immer das mittlere Element betrachtet:
+Ist der gesuchte Wert kleiner, wird nur die linke Hälfte weiter durchsucht, ist er größer, nur die rechte Hälfte. Dieser Vorgang wiederholt sich, bis der Wert gefunden wird oder kein Bereich mehr übrig ist.
 
+Die binäre Suche ist sehr schnell, da sie den Suchbereich jedes Mal halbiert (Zeitkomplexität: O(log n)), funktioniert aber nicht bei unsortierten Listen.
 */
 
 #include <iostream>
