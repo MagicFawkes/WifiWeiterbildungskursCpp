@@ -14,22 +14,24 @@ int main()
 
     int n = a.size();
 
+    int temp = 0;
+
     for (int i = 0; i < n; i++)
     {
-        int tempIndex = i;
-
         for (int k = i+1; k < n; k++) 
         {
-            if (a[k] < a[tempIndex])
+            if (a[i] > a[k])
             {
-                tempIndex = k;
+	            for (int x = k; x > i; --x)
+	            {
+                    swap(a[x], a[x-1]);
+	            }
+                break;
             }
         }
-
-        swap(a[i], a[tempIndex]);
     }
 
-    cout << "\nSortiertes Array:\n";
+    cout << "\nInsertion Sort: Sortiertes Array:\n";
     for (int i = 0; i < n; i++)
     {
         cout << a[i] << " ";
