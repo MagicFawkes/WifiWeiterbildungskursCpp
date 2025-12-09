@@ -129,7 +129,7 @@ public:
 
 				if (parsed.size() != 3 )
 				{
-					throw FileException("fehlerhafte Daten");
+					throw FileException("fehlerhafte Datenanzahl");
 				}
 				
 				User user(parsed.at(0), stoi(parsed.at(1)), parsed.at(2));
