@@ -131,7 +131,7 @@ public:
 					throw FileException("fehlerhafte Datenanzahl");
 				}
 
-				this->users.push_back(User(
+				this->users.emplace_back(User(
 					parsed.at(0), 
 					stoi(parsed.at(1)), 
 					parsed.at(2)));
