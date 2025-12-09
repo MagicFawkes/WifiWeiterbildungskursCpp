@@ -137,11 +137,11 @@ public:
 			}
 			catch (FileException& e)
 			{
-				cout << "Exception aufgetreten1: " << e.what();
+				cout << "Exception aufgetreten: " << e.what();
 			}
 			catch (exception& e)
 			{
-				cout << "Exception aufgetreten2: " << e.what();
+				cout << "Exception aufgetreten: " << e.what();
 			}
 			catch (...)
 			{
