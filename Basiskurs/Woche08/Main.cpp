@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 9
+#define AKTIVE_BEISPIEL 11
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -22,6 +22,8 @@
 #include "Beispiele/SummArray.cpp"
 #elif AKTIVE_BEISPIEL == 10
 #include "Beispiele/QuickSort.cpp"
+#elif AKTIVE_BEISPIEL == 11
+#include "Beispiele/ZahlenEinlesenAuswerten.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
