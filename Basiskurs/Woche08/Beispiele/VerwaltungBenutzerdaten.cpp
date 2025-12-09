@@ -175,6 +175,21 @@ public:
 	{
 		this->users.push_back(user);
 	}
+
+	string find(const std::string& name)
+	{
+		int n = (int)users.size();
+
+		for (int i = 0; i < n; ++i)
+		{
+			if (users[i].name == name)
+			{
+				return name;
+			}
+	
+			throw FileException("name nicht in der Datenbank");
+		}
+	}
 };
 
 int main()
