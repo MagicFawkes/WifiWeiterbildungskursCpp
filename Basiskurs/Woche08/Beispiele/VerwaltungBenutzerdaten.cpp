@@ -69,9 +69,51 @@ o	[0] Programm beenden
 
 using namespace std;
 
+
+class file_not_found_exception : public exception
+{
+public:
+	const char* what() const noexcept
+	{
+		return "File not found";
+	}
+};
+
+
 int main()
 {
-    
+	ifstream file("Benutzerdaten.txt"); // lesen
+
+	if (!file.is_open()) // file.fail()
+	{
+		cout << "Could not open the file" << endl;
+		throw file_not_found_exception();
+	}
+
+	vector<int> zahlen;
+
+	string word;
+
+	while (file >> word)
+	{
+		cout << word << std::endl;
+
+		try
+		{
+		
+		}
+		catch (exception& e)
+		{
+			cout << "Exception aufgetreten: " << e.what();
+		}
+		catch (...)
+		{
+			cout << "allgemeiner Fehler";
+		}
+	}
+
+	file.close();
+
 
     return 0;
 }
