@@ -96,7 +96,6 @@ public:
 		this->age = age;
 		this->email = email;
 	}
-private:
 	std::string name;
 	int age;
 	std::string email;
@@ -153,12 +152,31 @@ public:
 
 		file.close();
 	}
+
+	void save(const std::string& filename)
+	{
+		ofstream file(filename); // schreiben
+
+		if (!file.is_open()) // file.fail()
+		{
+			cout << "Could not open the file" << endl;
+			throw FileException("Datei kann nicht geoeffnet werden");
+		}
+
+		for (User user : users)
+		{
+			file << user.name << ';' << user.age << ';' << user.email << '\n';
+		}
+
+		file.close();
+	}
 };
 
 int main()
 {
 	Userbase userbase;
 	userbase.load("Benutzerdaten.txt");
+	userbase.save("BenutzerdatenSchreiben.txt");
     return 0;
 }
 
