@@ -170,6 +170,11 @@ int main()
 	garage.fahrzeuge.push_back(lkw5);*/
 
 	garage.hinzufuegen(pkw3);
+	garage.hinzufuegen(pkw4);
+	garage.hinzufuegen(pkw5);
+	garage.hinzufuegen(lkw3);
+	garage.hinzufuegen(lkw4);
+	garage.hinzufuegen(lkw5);
 
 	//garage.alleAnzeigen();
 
