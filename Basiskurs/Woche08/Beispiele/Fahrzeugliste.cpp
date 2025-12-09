@@ -143,7 +143,7 @@ public:
 	{
 		size_t n = fahrzeuge.size();
 		for (int i = 0; i < n; i++) {
-			if (fahrzeuge[i]->getBaujahr() < baujahr) {
+			if (fahrzeuge[i]->getbaujahr() < baujahr) {
 				fahrzeuge.pop_back();
 			}
 		}
@@ -196,6 +196,16 @@ int main()
 	{
 		fahrzeug->anzeigen();
 	}
+
+	/*garage.entferne(96);
+
+	garage.alleAnzeigen();
+
+	for (const std::shared_ptr<Fahrzeug>& fahrzeug : garage.fahrzeuge)
+	{
+		fahrzeug->anzeigen();
+	}*/
+
 
     return 0;
 }
