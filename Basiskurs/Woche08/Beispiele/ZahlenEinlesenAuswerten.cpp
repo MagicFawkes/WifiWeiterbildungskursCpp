@@ -70,22 +70,23 @@ int main()
 		try
 		{
 			// 2te Lösung: kann man auch als Rückgabewert von stoi auswerten
-			/*size_t zeichen = 0;
+			size_t zeichen = 0;
 			int value = std::stoi(word, &zeichen);
 
 			if (zeichen != word.size())
 				throw istkeinezahl_exception(word);
 	
-			zahlen.push_back(value);*/
+			zahlen.push_back(value);
 
-			if (istZahl(word))
+			// 1te Lösung:
+			/*if (istZahl(word))
 			{
 				zahlen.push_back(std::stoi(word));
 			}
 			else
 			{
 				throw istkeinezahl_exception(word);
-			}
+			}*/
 		}
 		catch (istkeinezahl_exception& e)
 		{
