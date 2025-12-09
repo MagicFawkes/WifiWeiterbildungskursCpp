@@ -1,0 +1,3 @@
+Summe: 637
+Anzahl der Werte: 7
+Durchschnitt: 91

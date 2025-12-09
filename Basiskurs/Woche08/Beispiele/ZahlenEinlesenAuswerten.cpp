@@ -51,7 +51,6 @@ bool istZahl(const string& s);
 
 int main()
 {
-
     ifstream file("Zahlenwerte04.txt"); // lesen
 
     if (!file.is_open()) // file.fail()
@@ -106,6 +105,19 @@ int main()
 	}
 
 	float average = (float)summe / (float)zahlen.size();
+
+	ofstream fileOutput("auswertung.txt"); // Ausgabestream (output file stream, of) in C++.
+
+	if (!fileOutput.is_open()) // file.fail()
+	{
+		cout << "Could not open the file" << endl;
+		return 1;
+	}
+
+	fileOutput << "Summe: " << summe;
+	fileOutput << "\nAnzahl der Werte: " << zahlen.size();
+	fileOutput << "\nDurchschnitt: " << average;
+	fileOutput.close();
 
     return 0;
 }
