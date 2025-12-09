@@ -120,6 +120,8 @@ public:
 
 	void hinzufuegen(std::shared_ptr<T> f)
 	{
+		// getMarke() ist hier aufrufbar, weil T zur Compile-Zeit diesen Member besitzen muss.
+		// Die IDE kann dies ohne Concepts oder konkrete Typbindung nicht zuverlässig per Autovervollständigung erkennen.
 		if (f->getMarke() == "")		// getMarke() ist hier aufrufbar, weil T zur Compile-Zeit diesen Member besitzen muss, daher wird mit autocompletion es nicht erkannt
 		{
 			throw std::invalid_argument("tesdt");
@@ -131,6 +133,8 @@ public:
 	{
 		for (const std::shared_ptr<T>& fahrzeug : fahrzeuge)
 		{
+			// getMarke() ist hier aufrufbar, weil T zur Compile-Zeit diesen Member besitzen muss.
+			// Die IDE kann dies ohne Concepts oder konkrete Typbindung nicht zuverlässig per Autovervollständigung erkennen.
 			cout << "Marke: " << fahrzeug->getMarke() << '\n'; // getMarke() ist hier aufrufbar, weil T zur Compile-Zeit diesen Member besitzen muss, daher wird mit autocompletion es nicht erkannt 
 		}
 	}
