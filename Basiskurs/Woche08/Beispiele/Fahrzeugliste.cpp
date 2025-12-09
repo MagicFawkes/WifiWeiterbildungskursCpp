@@ -138,6 +138,16 @@ public:
 			cout << "Marke: " << fahrzeug->getMarke() << '\n'; // getMarke() ist hier aufrufbar, weil T zur Compile-Zeit diesen Member besitzen muss, daher wird mit autocompletion es nicht erkannt 
 		}
 	}
+
+	void entferne(int baujahr)
+	{
+		size_t n = fahrzeuge.size();
+		for (int i = 0; i < n; i++) {
+			if (fahrzeuge[i]->getBaujahr() < baujahr) {
+				fahrzeuge.pop_back();
+			}
+		}
+	}
 };
 
 int main()
