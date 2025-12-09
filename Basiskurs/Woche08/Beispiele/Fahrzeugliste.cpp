@@ -124,7 +124,7 @@ public:
 
 	void alleAnzeigen() const
 	{
-		for (T fahrzeug : this->fahrzeuge)
+		for (T fahrzeug : fahrzeuge)
 		{
 			cout << "Marke: " << fahrzeug->marke << '\n';
 		}
@@ -145,6 +145,14 @@ int main()
 	lkw1.anzeigen();
 	lkw2.anzeigen();
 
+
+
+	shared_ptr<PKW> pkw3 = make_shared<PKW>("PKW1", 95, 2);
+	
+	Garage<PKW> garage;
+	garage.fahrzeuge.push_back(pkw3);
+
+	//garage.alleAnzeigen();
 
     return 0;
 }
