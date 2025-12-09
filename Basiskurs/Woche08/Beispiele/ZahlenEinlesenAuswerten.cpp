@@ -69,6 +69,15 @@ int main()
 
 		try
 		{
+			// 2te Lösung: kann man auch als Rückgabewert von stoi auswerten
+			/*size_t zeichen = 0;
+			int value = std::stoi(word, &zeichen);
+
+			if (zeichen != word.size())
+				throw istkeinezahl_exception(word);
+	
+			zahlen.push_back(value);*/
+
 			if (istZahl(word))
 			{
 				zahlen.push_back(std::stoi(word));
@@ -92,6 +101,7 @@ int main()
 		}
     }
 
+	//stoi
     file.close();
 
 	int summe = 0, min = 0, max = 0;
