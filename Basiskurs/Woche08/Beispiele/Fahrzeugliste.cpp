@@ -40,7 +40,60 @@ Behandeln Sie dabei alle Ausnahmen sinnvoll
 
 using namespace std;
 
+class Fahrzeug
+{
+protected:
+	std::string marke;
+	int baujahr;
+public:
 
+	Fahrzeug(std::string marke, int baujahr)
+	{
+		this->marke = marke;
+		this->baujahr = baujahr;
+	}
+
+	virtual ~Fahrzeug()
+	{
+		
+	}
+
+	virtual void anzeigen() const = 0;
+
+	std::string getMarke() const
+	{
+		return this->marke;
+	}
+
+	int getbaujahr() const
+	{
+		return this->baujahr;
+	}
+};
+
+class PKW : public Fahrzeug
+{
+	int sitzplaetze;
+
+	void anzeigen() const override
+	{
+		cout << "Marke: " << this->marke << '\n';
+		cout << "Baujahr: " << this->baujahr << '\n';
+		cout << "Sitzplaetze: " << this->sitzplaetze << '\n';
+	}
+};
+
+class LKW : public Fahrzeug
+{
+	int ladegewicht;
+
+	void anzeigen() const override
+	{
+		cout << "Marke: " << this->marke << '\n';
+		cout << "Baujahr: " << this->baujahr << '\n';
+		cout << "Sitzplaetze: " << this->ladegewicht << '\n';
+	}
+};
 
 int main()
 {
