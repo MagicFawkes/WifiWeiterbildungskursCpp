@@ -141,10 +141,12 @@ public:
 
 	void entferne(int baujahr)
 	{
-		size_t n = fahrzeuge.size();
-		for (int i = 0; i < n; i++) {
+		for (std::size_t i = fahrzeuge.size(); i-- > 0; ) {
 			if (fahrzeuge[i]->getbaujahr() < baujahr) {
-				fahrzeuge.pop_back();
+				// falls der Vektor die Objekte besitzt:
+				// delete fahrzeuge[i];
+
+				fahrzeuge.erase(fahrzeuge.begin() + i);
 			}
 		}
 	}
@@ -197,14 +199,14 @@ int main()
 		fahrzeug->anzeigen();
 	}
 
-	/*garage.entferne(96);
-
+	garage.entferne(96);
+	
 	garage.alleAnzeigen();
 
 	for (const std::shared_ptr<Fahrzeug>& fahrzeug : garage.fahrzeuge)
 	{
 		fahrzeug->anzeigen();
-	}*/
+	}
 
 
     return 0;
