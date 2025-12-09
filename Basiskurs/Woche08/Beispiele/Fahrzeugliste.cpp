@@ -41,7 +41,7 @@ using namespace std;
 
 class Fahrzeug
 {
-protected:
+public:
 	std::string marke;
 	int baujahr;
 public:
@@ -106,7 +106,7 @@ public:
 	{
 		cout << "Marke: " << this->marke << '\n';
 		cout << "Baujahr: " << this->baujahr << '\n';
-		cout << "Sitzplaetze: " << this->ladegewicht << '\n';
+		cout << "Ladegewicht: " << this->ladegewicht << '\n';
 	}
 };
 
@@ -124,7 +124,7 @@ public:
 
 	void alleAnzeigen() const
 	{
-		for (T fahrzeug : fahrzeuge)
+		for (const std::shared_ptr<T>& fahrzeug : fahrzeuge)
 		{
 			cout << "Marke: " << fahrzeug->marke << '\n';
 		}
@@ -133,7 +133,7 @@ public:
 
 int main()
 {
-	PKW pkw1("PKW1", 95, 2);
+	/*PKW pkw1("PKW1", 95, 2);
 	PKW pkw2("PKW2", 98, 4);
 
 	pkw1.anzeigen();
@@ -144,15 +144,32 @@ int main()
 
 	lkw1.anzeigen();
 	lkw2.anzeigen();
-
-
+*/
 
 	shared_ptr<PKW> pkw3 = make_shared<PKW>("PKW1", 95, 2);
+	shared_ptr<PKW> pkw4 = make_shared<PKW>("PKW2", 96, 3);
+	shared_ptr<PKW> pkw5 = make_shared<PKW>("PKW3", 97, 4);
 	
-	Garage<PKW> garage;
+	shared_ptr<LKW> lkw3 = make_shared<LKW>("LKW3", 95, 2000);
+	shared_ptr<LKW> lkw4 = make_shared<LKW>("LKW4", 96, 3000);
+	shared_ptr<LKW> lkw5 = make_shared<LKW>("LKW5", 97, 4000);
+
+	Garage<Fahrzeug> garage;
+
 	garage.fahrzeuge.push_back(pkw3);
+	garage.fahrzeuge.push_back(pkw4);
+	garage.fahrzeuge.push_back(pkw5);
+
+	garage.fahrzeuge.push_back(lkw3);
+	garage.fahrzeuge.push_back(lkw4);
+	garage.fahrzeuge.push_back(lkw5);
 
 	//garage.alleAnzeigen();
+
+	for (const std::shared_ptr<Fahrzeug>& fahrzeug : garage.fahrzeuge)
+	{
+		fahrzeug->anzeigen();
+	}
 
     return 0;
 }
