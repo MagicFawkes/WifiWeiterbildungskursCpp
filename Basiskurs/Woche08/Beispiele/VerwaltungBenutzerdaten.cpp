@@ -71,23 +71,32 @@ using namespace std;
 
 std::vector<std::string> split(const std::string& s, const std::string& delimiter);
 
-class file_not_found_exception : public std::runtime_error
+class FileException : public std::runtime_error
 {
 public:
-	file_not_found_exception(const string& msg) : runtime_error(msg)
-	{
+	std::string msg;
 
+	explicit FileException(const std::string& msg)
+		: std::runtime_error(msg), msg(msg)
+	{
 	}
 
-	const char* what() const noexcept
+	const char* what() const noexcept override
 	{
-		return "File not found";
+		return msg.c_str();
 	}
 };
 
 class User
 {
 public:
+	User(std::string name, int age, std::string email)
+	{
+		this->name = name;
+		this->age = age;
+		this->email = email;
+	}
+private:
 	std::string name;
 	int age;
 	std::string email;
@@ -105,10 +114,9 @@ public:
 		if (!file.is_open()) // file.fail()
 		{
 			cout << "Could not open the file" << endl;
-			throw file_not_found_exception("test");
+			throw FileException("Datei kann nicht geoeffnet werden");
 		}
 
-		User user;
 		string line;
 
 		while (getline(file, line))
@@ -118,14 +126,22 @@ public:
 			try
 			{
 				std::vector<string> parsed = split(line, ";");
-				user.name = parsed.at(0);
-				user.age = stoi(parsed.at(1));
-				user.email = parsed.at(2);
+
+				if (parsed.size() != 3 )
+				{
+					throw FileException("fehlerhafte Daten");
+				}
+				
+				User user(parsed.at(0), stoi(parsed.at(1)), parsed.at(2));
 				this->users.push_back(user);
+			}
+			catch (FileException& e)
+			{
+				cout << "Exception aufgetreten1: " << e.what();
 			}
 			catch (exception& e)
 			{
-				cout << "Exception aufgetreten: " << e.what();
+				cout << "Exception aufgetreten2: " << e.what();
 			}
 			catch (...)
 			{
@@ -151,7 +167,8 @@ std::vector<std::string> split(const std::string& s, const std::string& delimite
 	size_t start = 0;
 	size_t pos;
 
-	while ((pos = s.find(delimiter, start)) != std::string::npos) {
+	while ((pos = s.find(delimiter, start)) != std::string::npos) 
+	{
 		tokens.emplace_back(s.substr(start, pos - start));
 		start = pos + delimiter.length();
 	}

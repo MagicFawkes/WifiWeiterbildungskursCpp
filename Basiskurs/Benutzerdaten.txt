@@ -1,2 +1,2 @@
-Alice;30;alice@example.com#
+Alice;30;alice@example.com
 Paul;21;paul@example.com
