@@ -101,7 +101,6 @@ int main()
 		}
     }
 
-	//stoi
     file.close();
 
 	int summe = 0, min = 0, max = 0;
