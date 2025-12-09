@@ -33,7 +33,6 @@ Zeigen Sie die aktualisierte Fahrzeugliste an
 Behandeln Sie dabei alle Ausnahmen sinnvoll
 */
 
-#include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -92,6 +91,27 @@ class LKW : public Fahrzeug
 		cout << "Marke: " << this->marke << '\n';
 		cout << "Baujahr: " << this->baujahr << '\n';
 		cout << "Sitzplaetze: " << this->ladegewicht << '\n';
+	}
+};
+
+template<typename T>
+class Garage
+{
+public:
+	std::vector<std::shared_ptr<T>> fahrzeuge;
+
+	void hinzufuegen(std::shared_ptr<T> f)
+	{
+		this->fahrzeuge.push_back(f);
+		throw std::invalid_argument("tesdt");
+	}
+
+	void alleAnzeigen() const
+	{
+		for (T fahrzeug : this->fahrzeuge)
+		{
+			cout << "Marke: " << fahrzeug->marke << '\n';
+		}
 	}
 };
 
