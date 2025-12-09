@@ -170,6 +170,11 @@ public:
 
 		file.close();
 	}
+
+	void addUser(const User user)
+	{
+		this->users.push_back(user);
+	}
 };
 
 int main()
