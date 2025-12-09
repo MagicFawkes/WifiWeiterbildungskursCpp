@@ -18,9 +18,9 @@ Ergebnis in Datei auswertung.txt speichern
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
-
 
 class file_not_found_exception : public exception
 {
@@ -31,6 +31,23 @@ public:
     }
 };
 
+class istkeinezahl_exception : public exception
+{
+private:
+	string i;
+public:
+	istkeinezahl_exception(const std::string& i)
+		: i("Eingabewert ist keine Ganzzahl: " + i)
+	{
+	}
+
+	const char* what() const noexcept override
+	{
+		return i.c_str();
+	}
+};
+
+bool istZahl(const string& s);
 
 int main()
 {
@@ -43,15 +60,58 @@ int main()
         throw file_not_found_exception();
     }
 
+    vector<int> zahlen;
+
     string word;
 
     while (file >> word)
     {
         cout << word << std::endl;
+
+		try
+		{
+			if (istZahl(word))
+			{
+				zahlen.push_back(std::stoi(word));
+			}
+			else
+			{
+				throw istkeinezahl_exception(word);
+			}
+		}
+		catch (istkeinezahl_exception& e)
+		{
+			cout << "Exception aufgetreten: " << e.what();
+		}
+		catch (exception& e)
+		{
+			cout << "Exception aufgetreten: " << e.what();
+		}
+		catch (...)
+		{
+			cout << "allgemeiner Fehler";
+		}
     }
-        
 
     file.close();
 
+	cout << "\n\nZahlenwerte:\n";
+	for (int values : zahlen)
+	{
+		cout << values << "\n";
+	}
+
     return 0;
+}
+
+bool istZahl(const string& s)
+{
+    if (s.empty())
+        return false;
+
+    for (size_t i = 0; i < s.length(); i++)
+        if (!std::isdigit(s[i]))
+            return false;
+
+    return true;
 }
