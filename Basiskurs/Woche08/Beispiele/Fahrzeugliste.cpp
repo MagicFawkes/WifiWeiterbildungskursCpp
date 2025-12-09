@@ -41,7 +41,7 @@ using namespace std;
 
 class Fahrzeug
 {
-public:
+private:
 	std::string marke;
 	int baujahr;
 public:
@@ -72,6 +72,7 @@ public:
 
 class PKW : public Fahrzeug
 {
+private:
 	int sitzplaetze;
 
 public:
@@ -85,14 +86,15 @@ public:
 
 	void anzeigen() const override
 	{
-		cout << "Marke: " << this->marke << '\n';
-		cout << "Baujahr: " << this->baujahr << '\n';
+		cout << "Marke: " << this->getMarke() << '\n';
+		cout << "Baujahr: " << this->getbaujahr() << '\n';
 		cout << "Sitzplaetze: " << this->sitzplaetze << '\n';
 	}
 };
 
 class LKW : public Fahrzeug
 {
+private:
 	int ladegewicht;
 public:
 	LKW(std::string marke, int baujahr, int ladegewicht)
@@ -104,8 +106,8 @@ public:
 
 	void anzeigen() const override
 	{
-		cout << "Marke: " << this->marke << '\n';
-		cout << "Baujahr: " << this->baujahr << '\n';
+		cout << "Marke: " << this->getMarke() << '\n';
+		cout << "Baujahr: " << this->getbaujahr() << '\n';
 		cout << "Ladegewicht: " << this->ladegewicht << '\n';
 	}
 };
@@ -118,7 +120,7 @@ public:
 
 	void hinzufuegen(std::shared_ptr<T> f)
 	{
-		if (f->fahrzeug == "")
+		if (f->getMarke() == "")
 		{
 			throw std::invalid_argument("tesdt");
 		}
@@ -129,7 +131,7 @@ public:
 	{
 		for (const std::shared_ptr<T>& fahrzeug : fahrzeuge)
 		{
-			cout << "Marke: " << fahrzeug->marke << '\n';
+			cout << "Marke: " << fahrzeug->getMarke() << '\n';
 		}
 	}
 };
@@ -159,13 +161,15 @@ int main()
 
 	Garage<Fahrzeug> garage;
 
-	garage.fahrzeuge.push_back(pkw3);
+	/*garage.fahrzeuge.push_back(pkw3);
 	garage.fahrzeuge.push_back(pkw4);
 	garage.fahrzeuge.push_back(pkw5);
 
 	garage.fahrzeuge.push_back(lkw3);
 	garage.fahrzeuge.push_back(lkw4);
-	garage.fahrzeuge.push_back(lkw5);
+	garage.fahrzeuge.push_back(lkw5);*/
+
+	garage.hinzufuegen(pkw3);
 
 	//garage.alleAnzeigen();
 
