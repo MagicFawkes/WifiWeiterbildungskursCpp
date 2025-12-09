@@ -74,6 +74,15 @@ class PKW : public Fahrzeug
 {
 	int sitzplaetze;
 
+public:
+
+	PKW(std::string marke, int baujahr, int sitzplaetze)
+		: Fahrzeug(marke, baujahr),   // Basisklasse
+		sitzplaetze(sitzplaetze)    // eigenes Member
+	{
+
+	}
+
 	void anzeigen() const override
 	{
 		cout << "Marke: " << this->marke << '\n';
@@ -85,6 +94,13 @@ class PKW : public Fahrzeug
 class LKW : public Fahrzeug
 {
 	int ladegewicht;
+public:
+	LKW(std::string marke, int baujahr, int ladegewicht)
+		: Fahrzeug(marke, baujahr),   // Basisklasse
+		ladegewicht(ladegewicht)    // eigenes Member
+	{
+
+	}
 
 	void anzeigen() const override
 	{
@@ -117,6 +133,11 @@ public:
 
 int main()
 {
+	PKW pkw("Test", 95, 2);
+	PKW pkw1("Test1", 98, 4);
+
+	pkw.anzeigen();
+	pkw1.anzeigen();
 
     return 0;
 }
