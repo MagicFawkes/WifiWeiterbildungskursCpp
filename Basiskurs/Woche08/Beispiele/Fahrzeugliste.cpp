@@ -118,8 +118,11 @@ public:
 
 	void hinzufuegen(std::shared_ptr<T> f)
 	{
+		if (f->fahrzeug == "")
+		{
+			throw std::invalid_argument("tesdt");
+		}
 		this->fahrzeuge.push_back(f);
-		throw std::invalid_argument("tesdt");
 	}
 
 	void alleAnzeigen() const
