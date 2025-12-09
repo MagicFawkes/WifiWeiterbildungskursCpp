@@ -209,3 +209,148 @@ int main()
 
     return 0;
 }
+
+
+//Umsetzung von Trainer:
+//#include <iostream>
+//#include <fstream>
+//#include <vector>
+//#include <sstream>
+//#include <string>
+//
+//using namespace std;
+//
+//class Fahrzeug
+//{
+//protected:
+//	int baujahr;
+//	string marke;
+//public:
+//	Fahrzeug(int baujahr, string marke) {
+//		this->baujahr = baujahr;
+//		this->marke = marke;
+//	}
+//
+//	int getBaujahr() const {
+//		return baujahr;
+//	}
+//
+//	string getMarke() const {
+//		return marke;
+//	}
+//
+//	virtual void anzeigen() const = 0;
+//
+//	virtual ~Fahrzeug() {
+//
+//	}
+//
+//};
+//
+//class PKW : public Fahrzeug
+//{
+//private:
+//	int sitzplaetze;
+//public:
+//
+//	PKW(int baujahr, string marke, int sitzplatze) :Fahrzeug(baujahr, marke) {
+//		this->sitzplaetze = sitzplatze;
+//	}
+//
+//
+//	void anzeigen() const
+//	{
+//		cout << marke << endl;
+//		cout << sitzplaetze << endl;
+//		cout << baujahr << endl;
+//
+//	}
+//};
+//
+//
+//class LKW : public Fahrzeug
+//{
+//private:
+//	double ladegewicht;
+//
+//public:
+//
+//	LKW(int baujahr, string marke, double ladegewicht) :Fahrzeug(baujahr, marke) {
+//		this->ladegewicht = ladegewicht;
+//	}
+//
+//
+//	void anzeigen() const
+//	{
+//		cout << marke << endl;
+//		cout << ladegewicht << endl;
+//		cout << baujahr << endl;
+//
+//	}
+//};
+//
+//
+//template <typename T>
+//class Garage {
+//private:
+//	vector<std::shared_ptr<T>> fahrzeuge;
+//public:
+//	void hinzufuegen(std::shared_ptr<T> fahrzeug)
+//	{
+//		if (fahrzeug->getMarke() == "") {
+//			throw invalid_argument("keine Marke");
+//		}
+//		fahrzeuge.push_back(fahrzeug);
+//	}
+//
+//	void anzeige() {
+//		int n = fahrzeuge.size();
+//		for (int i = 0; i < n; i++) {
+//			fahrzeuge[i]->anzeigen();
+//		}
+//	}
+//
+//	void entferne(int baujahr)
+//	{
+//		size_t n = fahrzeuge.size();
+//		for (int i = 0; i < n; i++) {
+//			if (fahrzeuge[i]->getBaujahr() < baujahr) {
+//				fahrzeuge.pop_back();
+//			}
+//		}
+//
+//	}
+//
+//
+//};
+//
+//
+//int main()
+//{
+//	try
+//	{
+//		auto pkw1 = make_shared<PKW>(2020, "BMW", 4);
+//		auto pkw2 = make_shared<PKW>(2024, "Mercedes", 4);
+//		auto lkw = make_shared<LKW>(2008, "Mercedes", 2);
+//
+//		Garage<Fahrzeug> garage;
+//
+//		garage.hinzufuegen(pkw1);
+//		garage.hinzufuegen(pkw2);
+//		garage.hinzufuegen(lkw);
+//
+//		garage.anzeige();
+//
+//		garage.entferne(2020);
+//
+//		cout << "----------" << endl;
+//
+//		garage.anzeige();
+//	}
+//	catch (invalid_argument& e)
+//	{
+//		cout << e.what() << endl;
+//
+//	}
+//
+//}
