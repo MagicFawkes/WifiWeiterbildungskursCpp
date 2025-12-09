@@ -69,51 +69,94 @@ o	[0] Programm beenden
 
 using namespace std;
 
+std::vector<std::string> split(const std::string& s, const std::string& delimiter);
 
-class file_not_found_exception : public exception
+class file_not_found_exception : public std::runtime_error
 {
 public:
+	file_not_found_exception(const string& msg) : runtime_error(msg)
+	{
+
+	}
+
 	const char* what() const noexcept
 	{
 		return "File not found";
 	}
 };
 
+class User
+{
+public:
+	std::string name;
+	int age;
+	std::string email;
+};
+
+class Userbase
+{
+public:
+	std::vector<User> users;
+
+	void load(const std::string& filename)
+	{
+		ifstream file(filename); // lesen
+
+		if (!file.is_open()) // file.fail()
+		{
+			cout << "Could not open the file" << endl;
+			throw file_not_found_exception("test");
+		}
+
+		User user;
+		string line;
+
+		while (getline(file, line))
+		{
+			cout << line << std::endl;;
+
+			try
+			{
+				std::vector<string> parsed = split(line, ";");
+				user.name = parsed.at(0);
+				user.age = stoi(parsed.at(1));
+				user.email = parsed.at(2);
+				this->users.push_back(user);
+			}
+			catch (exception& e)
+			{
+				cout << "Exception aufgetreten: " << e.what();
+			}
+			catch (...)
+			{
+				cout << "allgemeiner Fehler";
+			}
+		}
+
+		file.close();
+	}
+};
 
 int main()
 {
-	ifstream file("Benutzerdaten.txt"); // lesen
-
-	if (!file.is_open()) // file.fail()
-	{
-		cout << "Could not open the file" << endl;
-		throw file_not_found_exception();
-	}
-
-	vector<int> zahlen;
-
-	string word;
-
-	while (file >> word)
-	{
-		cout << word << std::endl;
-
-		try
-		{
-		
-		}
-		catch (exception& e)
-		{
-			cout << "Exception aufgetreten: " << e.what();
-		}
-		catch (...)
-		{
-			cout << "allgemeiner Fehler";
-		}
-	}
-
-	file.close();
-
-
+	Userbase userbase;
+	userbase.load("Benutzerdaten.txt");
     return 0;
+}
+
+std::vector<std::string> split(const std::string& s, const std::string& delimiter)
+{
+	std::vector<std::string> tokens;
+
+	size_t start = 0;
+	size_t pos;
+
+	while ((pos = s.find(delimiter, start)) != std::string::npos) {
+		tokens.emplace_back(s.substr(start, pos - start));
+		start = pos + delimiter.length();
+	}
+
+	tokens.emplace_back(s.substr(start));
+
+	return tokens;
 }
