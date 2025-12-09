@@ -190,7 +190,7 @@ int main()
 	garage.hinzufuegen(lkw4);
 	garage.hinzufuegen(lkw5);
 
-	//garage.alleAnzeigen();
+	garage.alleAnzeigen();
 
 	for (const std::shared_ptr<Fahrzeug>& fahrzeug : garage.fahrzeuge)
 	{
