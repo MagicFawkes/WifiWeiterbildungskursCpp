@@ -37,7 +37,7 @@ private:
 	string i;
 public:
 	istkeinezahl_exception(const std::string& i)
-		: i("Eingabewert ist keine Ganzzahl: " + i)
+		: i("Eingabewert ist keine Ganzzahl: " + i + "\n")
 	{
 	}
 
@@ -95,11 +95,17 @@ int main()
 
     file.close();
 
+	int summe = 0, min = 0, max = 0;
+
 	cout << "\n\nZahlenwerte:\n";
-	for (int values : zahlen)
-	{
-		cout << values << "\n";
+	
+	for (int value : zahlen)
+	{	
+		summe += value;
+		cout << value << "\n";
 	}
+
+	float average = (float)summe / (float)zahlen.size();
 
     return 0;
 }
