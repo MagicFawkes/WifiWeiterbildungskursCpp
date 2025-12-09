@@ -133,11 +133,18 @@ public:
 
 int main()
 {
-	PKW pkw("Test", 95, 2);
-	PKW pkw1("Test1", 98, 4);
+	PKW pkw1("PKW1", 95, 2);
+	PKW pkw2("PKW2", 98, 4);
 
-	pkw.anzeigen();
 	pkw1.anzeigen();
+	pkw2.anzeigen();
+
+	LKW lkw1("LKW1", 77, 10000);
+	LKW lkw2("LKW2", 89, 11000);
+
+	lkw1.anzeigen();
+	lkw2.anzeigen();
+
 
     return 0;
 }
