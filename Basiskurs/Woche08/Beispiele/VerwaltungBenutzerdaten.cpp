@@ -217,3 +217,142 @@ std::vector<std::string> split(const std::string& s, const std::string& delimite
 
 	return tokens;
 }
+
+//
+//#include <iostream>
+//#include <fstream>
+//#include <vector>
+//#include <sstream>
+//#include <string>
+//
+//using namespace std;
+//
+//class User {
+//private:
+//	string name;
+//	int age;
+//	string email;
+//public:
+//	User(string name, int age, string email)
+//	{
+//		this->name = name;
+//		this->age = age;
+//		this->email = email;
+//	}
+//
+//	string getName() const {
+//		return name;
+//	}
+//
+//	string getemail() const {
+//		return email;
+//	}
+//
+//	int getAge() const {
+//		return age;
+//	}
+//
+//};
+//
+//class UserDatabase {
+//private:
+//	vector<User> users;
+//public:
+//	void load(const string& filename)
+//	{
+//		ifstream file(filename);
+//
+//		if (!file.is_open()) {
+//			//exception
+//		}
+//
+//		string line;
+//		string name, age, email; //name;age;email
+//
+//		size_t pos[2];
+//
+//		int Age = 0;
+//
+//		while (getline(file, line))
+//		{
+//			/*stringstream ss(line);*/
+//
+//
+//			//getline(ss, name, ';');
+//			//getline(ss, age, ';');
+//			//getline(ss, email, ';');
+//
+//			pos[0] = line.find(';');
+//			name = line.substr(0, pos[0]);
+//
+//			pos[1] = line.find(';', pos[0] + 1);
+//			age = line.substr(pos[0] + 1, pos[1] - pos[0] - 1);
+//
+//			email = line.substr(pos[1] + 1);
+//
+//
+//			size_t zeichen = 0,
+//				Age = stoi(age, &zeichen);
+//
+//			if (zeichen != age.size())
+//			{
+//				//exception
+//			}
+//
+//			if (email.find('@') == string::npos)
+//			{
+//				//exception
+//			}
+//
+//
+//		}
+//
+//		users.push_back(User(name, Age, email));
+//
+//	}
+//
+//	void save(const std::string& filename)
+//	{
+//		ofstream file(filename);
+//		if (!file)
+//		{
+//
+//		}
+//
+//		for (User usrs : users) {
+//			file << usrs.getName() << ";" << usrs.getAge() << ";" << usrs.getemail();
+//		}
+//
+//	}
+//
+//
+//	void addUser(User usrs)
+//	{
+//		users.push_back(usrs);
+//	}
+//
+//	string find(const std::string& name)
+//	{
+//		int n = users.size();
+//
+//		for (int k = 0; k < n; k++) {
+//			if (users[k].getName() == name) {
+//				return name;
+//			}
+//
+//			//Exception
+//		}
+//
+//
+//	}
+//
+//};
+//
+//
+//int main()
+//{
+//	UserDatabase u;
+//	string filename = "data.txt";
+//	u.load(filename);
+//
+//}
