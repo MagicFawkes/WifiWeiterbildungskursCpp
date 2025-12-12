@@ -109,6 +109,15 @@
     <Filter Include="Source Files\Woche08\Beispiele">
       <UniqueIdentifier>{58c8813b-9f0f-4f23-b718-4404e429202f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche09">
+      <UniqueIdentifier>{aef59ca5-1d9c-473b-8779-c2c2f12be441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche09\Aufgaben">
+      <UniqueIdentifier>{a6ff90a1-a555-47ae-aaa3-f05778e12a1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche09\Beispiele">
+      <UniqueIdentifier>{e1f32f66-c897-4023-bb0a-7bd8f76ef88f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -530,6 +539,21 @@
     </ClCompile>
     <ClCompile Include="Woche08\Beispiele\Fahrzeugliste.cpp">
       <Filter>Source Files\Woche08\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche08\Aufgaben\Aufgabe02.cpp">
+      <Filter>Source Files\Woche08\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche09\Main.cpp">
+      <Filter>Source Files\Woche09</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche09\Aufgaben\Aufgabe01.cpp">
+      <Filter>Source Files\Woche09\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche09\Aufgaben\Aufgabe02.cpp">
+      <Filter>Source Files\Woche09\Aufgaben</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche09\Beispiele\Beispiel01.cpp">
+      <Filter>Source Files\Woche09\Beispiele</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
