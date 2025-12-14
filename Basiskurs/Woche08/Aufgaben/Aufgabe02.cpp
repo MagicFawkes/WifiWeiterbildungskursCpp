@@ -12,17 +12,95 @@ TYPE=int
 1
 2
 3
-Die Textdatei für Aufgabe 1 ist:
-12 15adsdjn7 18abc
-12ko 3 4 fsrrf12sd3
-Sie sollten die Zahlen 12 15 7 18 12 3 4 12 und 3 einlesen
-Ihr könnt #include <cctype> und die Funktion isdigit verwenden.
-
 */
+
+
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
+
+class istkeinezahl_exception : public std::exception
+{
+private:
+	std::string i;
+public:
+	istkeinezahl_exception(const std::string& i)
+		: i("Eingabewert ist keine Zahl: " + i + "\n")
+	{
+	}
+
+	const char* what() const noexcept override
+	{
+		return i.c_str();
+	}
+};
+
+template <typename T>
+float computeAverage(const std::string& path)
+{
+	std::ifstream file(path); // lesen
+
+	if (!file.is_open()) // file.fail()
+	{
+		throw std::runtime_error("File not found");
+	}
+
+	char c;
+
+	if (!file.get(c))
+	{
+		throw std::logic_error("File empty");
+	}
+
+	file.clear();              // EOF-Flag löschen
+	file.seekg(0, std::ios::beg);   // Dateizeiger auf Anfang setzen
+
+	std::vector<T> zahlen;
+	std::string word;
+
+	while (file >> word)
+	{
+		std::cout << word << std::endl;
+
+		try
+		{
+			size_t zeichen = 0;
+			T value = (T)std::stod(word, &zeichen);
+
+			if (zeichen != word.size())
+				throw istkeinezahl_exception(word);
+
+			zahlen.push_back(value);
+		}
+		catch (std::exception& e)
+		{
+			std::cout << "Exception aufgetreten: " << e.what();
+		}
+		catch (...)
+		{
+			std::cout << "allgemeiner Fehler";
+		}
+	}
+
+	T summe = 0;
+
+	for (size_t i = 0; i < zahlen.size(); ++i)
+	{
+		summe += zahlen[i];
+	}
+
+	file.close();
+
+	return ((float)summe / (float)zahlen.size());
+}
 
 
 int main()
 {
+	float berechneAverage = computeAverage<int>("Zahlenwerte06.txt");
 
-    return 0;
+	std::cout << berechneAverage;
+	return 0;
 }
