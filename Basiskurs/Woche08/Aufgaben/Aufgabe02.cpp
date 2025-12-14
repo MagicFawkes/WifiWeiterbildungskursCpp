@@ -73,57 +73,79 @@ T readFile(const std::string& path)
 	}
 
 	std::string line;
-	getline(file, line);
-
+	std::vector<T> zahlen;
+	std::string word;
 	TYPE type;
 	PLUGIN plugin;
 
-	std::vector<std::string> parsed = split(line, ";");
+	try
+	{
+		getline(file, line);
 
-	if (parsed[0].find("double") != std::string::npos)
-	{
-		type = t_double;
-	}
-	else if (parsed[0].find("float") != std::string::npos)
-	{
-		type = t_float;
-	}
-	else
-	{
-		type = t_int;
-	}
+		std::vector<std::string> parsed = split(line, ";");
 
-	if (parsed[1].find("avg") != std::string::npos)
-	{
-		plugin = average;
-	}
-	else if (parsed[1].find("sub") != std::string::npos)
-	{
-		plugin = sub;
-	}
-	else
-	{
-		plugin = summe;
-	}
+		if (parsed.size() < 2)
+		{
+			throw std::logic_error("zu wenige Argumente");
+		}
 
-	std::cout << "Type: " << type << "\nPlugin: " << plugin << std::endl;
+		if (parsed[0].find("double") != std::string::npos)
+		{
+			type = t_double;
+		}
+		else if (parsed[0].find("float") != std::string::npos)
+		{
+			type = t_float;
+		}
+		else
+		{
+			type = t_int;
+		}
 
-	std::vector<T> zahlen;
-	std::string word;
+		if (parsed[1].find("avg") != std::string::npos)
+		{
+			plugin = average;
+		}
+		else if (parsed[1].find("sub") != std::string::npos)
+		{
+			plugin = sub;
+		}
+		else
+		{
+			plugin = summe;
+		}
 
-	while (file >> word)
+		std::cout << "Type: " << type << "\nPlugin: " << plugin << std::endl;
+
+		while (file >> word)
+		{
+			// std::stringstream behandelt den String wie einen Eingabestream (ähnlich std::cin):
+			// Er liest Zeichen von links nach rechts, überspringt führende Leerzeichen,
+			// konvertiert so viele Zeichen wie möglich in den Zieltyp und stoppt beim
+			// ersten ungültigen Zeichen, ohne sofort einen Fehler auszulösen.
+			std::stringstream ss(word);
+			T value;
+			if (ss >> value)              // nur speichern, wenn Parsing geklappt hat
+				zahlen.push_back(value);
+		}
+	}
+	catch (std::exception& e)
 	{
-		// std::stringstream behandelt den String wie einen Eingabestream (ähnlich std::cin):
-		// Er liest Zeichen von links nach rechts, überspringt führende Leerzeichen,
-		// konvertiert so viele Zeichen wie möglich in den Zieltyp und stoppt beim
-		// ersten ungültigen Zeichen, ohne sofort einen Fehler auszulösen.
-		std::stringstream ss(word);
-		T value;
-		if (ss >> value)              // nur speichern, wenn Parsing geklappt hat
-			zahlen.push_back(value);
+		std::cout << "Exception aufgetreten: " << e.what() << std::endl;
+		return 0;
+	}
+	catch (...)
+	{
+		std::cout << "allgemeiner Fehler" << std::endl;
+		return 0;
 	}
 
 	file.close();
+
+	if (zahlen.empty())
+	{
+		return 0;
+	}
 
 	switch (plugin)
 	{
