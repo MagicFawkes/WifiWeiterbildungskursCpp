@@ -134,6 +134,8 @@ T readFile(const std::string& path)
 	case sub:
 		break;
 	}
+
+	return berechneAvg<T>(zahlen);
 }
 
 int main()
