@@ -15,35 +15,10 @@ Anforderungen:
 #include <vector>
 #include <fstream>
 
-class file_not_found_exception : public std::exception
-{
-public:
-	const char* what() const noexcept
-	{
-		return "File not found";
-	}
-};
-
-class istkeinezahl_exception : public std::exception
-{
-private:
-	std::string i;
-public:
-	istkeinezahl_exception(const std::string& i)
-		: i("Eingabewert ist keine Ganzzahl: " + i + "\n")
-	{
-	}
-
-	const char* what() const noexcept override
-	{
-		return i.c_str();
-	}
-};
-
 template <typename T>
-void computeAverage (T zahl)
+T computeAverage (T zahl)
 {
-
+	return 0;
 }
 
 int main()
@@ -55,8 +30,17 @@ int main()
 		throw std::runtime_error("File not found");
 	}
 
-	std::vector<int> zahlen;
+	char c;
 
+	if (!file.get(c))
+	{
+		throw std::logic_error("File empty");
+	}
+
+	file.clear();              // EOF-Flag löschen
+	file.seekg(0, std::ios::beg);   // Dateizeiger auf Anfang setzen
+
+	std::vector<int> zahlen;
 	std::string word;
 
 	while (file >> word)
@@ -70,13 +54,9 @@ int main()
 			int value = std::stoi(word, &zeichen);
 
 			if (zeichen != word.size())
-				throw istkeinezahl_exception(word);
+				//throw istkeinezahl_exception(word);
 
 			zahlen.push_back(value);
-		}
-		catch (istkeinezahl_exception& e)
-		{
-			std::cout << "Exception aufgetreten: " << e.what();
 		}
 		catch (std::exception& e)
 		{
