@@ -19,25 +19,27 @@ TYPE=int
 #include <vector>
 #include <fstream>
 
-class istkeinezahl_exception : public std::exception
+enum TYPE
 {
-private:
-	std::string i;
-public:
-	istkeinezahl_exception(const std::string& i)
-		: i("Eingabewert ist keine Zahl: " + i + "\n")
-	{
-	}
-
-	const char* what() const noexcept override
-	{
-		return i.c_str();
-	}
+	t_int,
+	t_double,
+	t_float
 };
 
-int main()
+enum PLUGIN
 {
-	std::ifstream file("Zahlenwerte06.txt"); // lesen
+	average,
+	summe,
+	sub
+};
+
+
+std::vector<std::string> split(const std::string& s, const std::string& delimiter);
+
+template <typename T>
+T readFile(const std::string& path)
+{
+	std::ifstream file(path); // lesen
 
 	if (!file.is_open()) // file.fail()
 	{
@@ -45,6 +47,40 @@ int main()
 	}
 
 	std::string line;
+	getline(file, line);
+
+	TYPE type;
+	PLUGIN plugin;
+
+	std::vector<std::string> parsed = split(line, ";");
+
+	if (parsed[0].find("double") != std::string::npos)
+	{
+		type = t_double;
+	}
+	else if (parsed[0].find("float") != std::string::npos)
+	{
+		type = t_float;
+	}
+	else
+	{
+		type = t_int;
+	}
+
+	if (parsed[1].find("avg") != std::string::npos)
+	{
+		plugin = average;
+	}
+	else if (parsed[1].find("sub") != std::string::npos)
+	{
+		plugin = sub;
+	}
+	else
+	{
+		plugin = summe;
+	}
+
+	std::cout << "Type: " << type << "\nPlugin: " << plugin << std::endl;
 
 	while (getline(file, line))
 	{
@@ -54,4 +90,30 @@ int main()
 	file.close();
 
 	return 0;
+}
+
+
+int main()
+{
+	int wert = readFile<int>("Zahlenwerte06.txt");
+
+	return 0;
+}
+
+std::vector<std::string> split(const std::string& s, const std::string& delimiter)
+{
+	std::vector<std::string> tokens;
+
+	size_t start = 0;
+	size_t pos;
+
+	while ((pos = s.find(delimiter, start)) != std::string::npos)
+	{
+		tokens.emplace_back(s.substr(start, pos - start));
+		start = pos + delimiter.length();
+	}
+
+	tokens.emplace_back(s.substr(start));
+
+	return tokens;
 }

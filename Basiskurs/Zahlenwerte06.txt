@@ -1,4 +1,4 @@
-TYPE=int
+TYPE=double;PLUGIN=sum
 1
 2
 3
