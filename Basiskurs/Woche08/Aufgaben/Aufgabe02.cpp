@@ -1,13 +1,13 @@
-/*
+ï»¿/*
 Aufgabe 2
 Entwickeln Sie ein C++-Programm, das anhand einer Datei automatisch das passende Daten-
-Plugin auswählt, Daten einliest, verarbeitet und ein Ergebnis zurückgibt.
-Das System muss vollständig template-basiert, generisch und exception-sicher sein.
+Plugin auswÃ¤hlt, Daten einliest, verarbeitet und ein Ergebnis zurÃ¼ckgibt.
+Das System muss vollstÃ¤ndig template-basiert, generisch und exception-sicher sein.
 Beispiel:
 TYPE=int;PLUGIN=sum
 TYPE=double;PLUGIN=avg
 TYPE=float;PLUGIN=sub
-Beispiel für die Textdatei:
+Beispiel fÃ¼r die Textdatei:
 TYPE=int
 1
 2
@@ -84,11 +84,10 @@ T readFile(const std::string& path)
 
 		std::vector<std::string> parsed = split(line, ";");
 
-		if (parsed.size() < 2)
+		if (parsed.size() < 2)	// Out-of-bounds mit vector::operator[] ist undefiniertes Verhalten (oft Crash/Abort), keine Exception â†’ catch wird nicht erreicht.
 		{
 			throw std::logic_error("zu wenige Argumente");
 		}
-
 		if (parsed[0].find("double") != std::string::npos)
 		{
 			type = t_double;
@@ -119,10 +118,10 @@ T readFile(const std::string& path)
 
 		while (file >> word)
 		{
-			// std::stringstream behandelt den String wie einen Eingabestream (ähnlich std::cin):
-			// Er liest Zeichen von links nach rechts, überspringt führende Leerzeichen,
-			// konvertiert so viele Zeichen wie möglich in den Zieltyp und stoppt beim
-			// ersten ungültigen Zeichen, ohne sofort einen Fehler auszulösen.
+			// std::stringstream behandelt den String wie einen Eingabestream (Ã¤hnlich std::cin):
+			// Er liest Zeichen von links nach rechts, Ã¼berspringt fÃ¼hrende Leerzeichen,
+			// konvertiert so viele Zeichen wie mÃ¶glich in den Zieltyp und stoppt beim
+			// ersten ungÃ¼ltigen Zeichen, ohne sofort einen Fehler auszulÃ¶sen.
 			std::stringstream ss(word);
 			T value;
 			if (ss >> value)              // nur speichern, wenn Parsing geklappt hat
