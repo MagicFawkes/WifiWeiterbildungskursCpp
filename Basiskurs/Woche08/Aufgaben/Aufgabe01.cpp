@@ -7,7 +7,6 @@ Anforderungen:
 • Wenn die Datei nicht existiert → wirf std::runtime_error.
 • Wenn die Datei leer ist → wirf std::logic_error.
 • Template unterstützt int, float, double
-
 */
 
 #include <iostream>
@@ -16,14 +15,9 @@ Anforderungen:
 #include <fstream>
 
 template <typename T>
-T computeAverage (T zahl)
+float computeAverage (std::string path)
 {
-	return 0;
-}
-
-int main()
-{
-	std::ifstream file("Zahlenwerte05.txt"); // lesen
+	std::ifstream file(path); // lesen
 
 	if (!file.is_open()) // file.fail()
 	{
@@ -40,7 +34,7 @@ int main()
 	file.clear();              // EOF-Flag löschen
 	file.seekg(0, std::ios::beg);   // Dateizeiger auf Anfang setzen
 
-	std::vector<int> zahlen;
+	std::vector<T> zahlen;
 	std::string word;
 
 	while (file >> word)
@@ -51,10 +45,7 @@ int main()
 		{
 			// 2te Lösung: kann man auch als Rückgabewert von stoi auswerten
 			size_t zeichen = 0;
-			int value = std::stoi(word, &zeichen);
-
-			if (zeichen != word.size())
-				//throw istkeinezahl_exception(word);
+			T value = (T)std::stod(word, &zeichen);
 
 			zahlen.push_back(value);
 		}
@@ -68,7 +59,21 @@ int main()
 		}
 	}
 
-	file.close();
+	float average = 0;
 
+	for (size_t i = 0; i < zahlen.size(); ++i)
+	{
+		average += zahlen[i];
+	}
+
+	file.close();
+	return average/ zahlen.size();
+}
+
+int main()
+{
+	float berechneAverage = computeAverage<int>("Zahlenwerte05.txt");
+
+	std::cout << berechneAverage;
     return 0;
 }
