@@ -62,10 +62,28 @@ float computeAverage (const std::string& path)
 			size_t zeichen = 0;
 			T value = (T)std::stod(word, &zeichen);
 
-			if (zeichen != word.size())
-				throw istkeinezahl_exception(word);
+			std::string buffer;   
 
-			zahlen.push_back(value);
+			if (zeichen != word.size())
+			{
+				for (char ch : word)
+				{
+					if (std::isdigit(static_cast<unsigned char>(ch)))
+					{
+						buffer += ch;
+					}
+					else
+					{
+						if (!buffer.empty())
+						{
+							zahlen.push_back((T)std::stod(word, &zeichen));
+							buffer.clear();
+						}
+					}
+				}
+			}
+			else
+				zahlen.push_back(value);
 		}
 		catch (std::exception& e)
 		{
@@ -94,6 +112,6 @@ int main()
 {
 	float berechneAverage = computeAverage<int>("Zahlenwerte05.txt");
 
-	std::cout << berechneAverage;
+	std::cout << "\nAverage: " << berechneAverage;
     return 0;
 }
