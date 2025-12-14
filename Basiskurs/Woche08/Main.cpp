@@ -1,6 +1,6 @@
 
-#define AKTIVE_BEISPIEL 13
-#define AKTIVE_AUFGABE 0
+#define AKTIVE_BEISPIEL 0
+#define AKTIVE_AUFGABE 1
 
 #if AKTIVE_BEISPIEL == 1
 #include "Beispiele/Exception01.cpp"
