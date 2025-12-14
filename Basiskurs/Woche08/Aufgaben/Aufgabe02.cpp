@@ -37,6 +37,32 @@ enum PLUGIN
 std::vector<std::string> split(const std::string& s, const std::string& delimiter);
 
 template <typename T>
+T berechneSumme(std::vector<T> zahlen)
+{
+	T summe = 0;
+
+	for (size_t i = 0; i < zahlen.size(); ++i)
+	{
+		summe += zahlen[i];
+	}
+
+	return summe;
+}
+
+template <typename T>
+T berechneAvg(std::vector<T> zahlen)
+{
+	T summe = 0;
+
+	for (size_t i = 0; i < zahlen.size(); ++i)
+	{
+		summe += zahlen[i];
+	}
+
+	return (T)summe / (T)zahlen.size();
+}
+
+template <typename T>
 T readFile(const std::string& path)
 {
 	std::ifstream file(path); // lesen
@@ -99,13 +125,24 @@ T readFile(const std::string& path)
 
 	file.close();
 
-	return 0;
+	switch (plugin)
+	{
+	case average:
+		return berechneAvg<T>(zahlen);
+	case summe:
+		return berechneSumme<T>(zahlen);
+	case sub:
+		break;
+	}
 }
-
 
 int main()
 {
-	int wert = readFile<int>("Zahlenwerte06.txt");
+	float wert = readFile<float>("Zahlenwerte06.txt");
+	std::cout << "Summe: " << wert << std::endl;
+
+	float average = readFile<float>("Zahlenwerte07.txt");
+	std::cout << "Average: " << average << std::endl;
 
 	return 0;
 }

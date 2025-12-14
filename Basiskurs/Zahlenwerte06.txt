@@ -1,4 +1,4 @@
 TYPE=double;PLUGIN=sum
 1.23
-2das
+2
 3
