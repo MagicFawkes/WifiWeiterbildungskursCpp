@@ -59,15 +59,16 @@ float computeAverage (const std::string& path)
 		}
 	}
 
-	float average = 0;
+	T summe = 0;
 
 	for (size_t i = 0; i < zahlen.size(); ++i)
 	{
-		average += zahlen[i];
+		summe += zahlen[i];
 	}
 
 	file.close();
-	return (average / (float)zahlen.size());
+
+	return ((float)summe / (float)zahlen.size());
 }
 
 int main()
