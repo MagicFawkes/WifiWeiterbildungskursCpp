@@ -18,6 +18,7 @@ TYPE=int
 #include <string>
 #include <vector>
 #include <fstream>
+#include <sstream>
 
 enum TYPE
 {
@@ -81,9 +82,19 @@ T readFile(const std::string& path)
 
 	std::cout << "Type: " << type << "\nPlugin: " << plugin << std::endl;
 
-	while (getline(file, line))
+	std::vector<T> zahlen;
+	std::string word;
+
+	while (file >> word)
 	{
-		std::cout << line << std::endl;
+		// std::stringstream behandelt den String wie einen Eingabestream (ähnlich std::cin):
+		// Er liest Zeichen von links nach rechts, überspringt führende Leerzeichen,
+		// konvertiert so viele Zeichen wie möglich in den Zieltyp und stoppt beim
+		// ersten ungültigen Zeichen, ohne sofort einen Fehler auszulösen.
+		std::stringstream ss(word);
+		T value;
+		if (ss >> value)              // nur speichern, wenn Parsing geklappt hat
+			zahlen.push_back(value);
 	}
 
 	file.close();
