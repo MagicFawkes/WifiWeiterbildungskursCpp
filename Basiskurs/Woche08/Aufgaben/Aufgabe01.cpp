@@ -60,9 +60,11 @@ float computeAverage (const std::string& path)
 		try
 		{
 			size_t zeichen = 0;
-			T value = (T)std::stod(word, &zeichen);
+			std::string buffer;
+			T value;
 
-			std::string buffer;   
+			if (isdigit(word[0]))
+				value = (T)std::stod(word, &zeichen);
 
 			if (zeichen != word.size())
 			{
@@ -76,10 +78,15 @@ float computeAverage (const std::string& path)
 					{
 						if (!buffer.empty())
 						{
-							zahlen.push_back((T)std::stod(word, &zeichen));
+							zahlen.push_back((T)std::stod(buffer));
 							buffer.clear();
 						}
 					}
+				}
+				if (!buffer.empty())
+				{
+					zahlen.push_back((T)std::stod(buffer));
+					buffer.clear();
 				}
 			}
 			else
