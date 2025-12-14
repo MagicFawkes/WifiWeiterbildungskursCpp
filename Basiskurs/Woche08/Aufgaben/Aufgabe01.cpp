@@ -68,9 +68,9 @@ float computeAverage (const std::string& path)
 
 			if (zeichen != word.size())
 			{
-				for (char ch : word)
+				for (unsigned char ch : word)
 				{
-					if (std::isdigit(static_cast<unsigned char>(ch)))
+					if (std::isdigit(ch))
 					{
 						buffer += ch;
 					}
