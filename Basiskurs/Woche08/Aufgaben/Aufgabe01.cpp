@@ -15,7 +15,7 @@ Anforderungen:
 #include <fstream>
 
 template <typename T>
-float computeAverage (std::string path)
+float computeAverage (const std::string& path)
 {
 	std::ifstream file(path); // lesen
 
@@ -67,7 +67,7 @@ float computeAverage (std::string path)
 	}
 
 	file.close();
-	return average/ zahlen.size();
+	return (average / (float)zahlen.size());
 }
 
 int main()
