@@ -14,6 +14,22 @@ Anforderungen:
 #include <vector>
 #include <fstream>
 
+class istkeinezahl_exception : public std::exception
+{
+private:
+	std::string i;
+public:
+	istkeinezahl_exception(const std::string& i)
+		: i("Eingabewert ist keine Zahl: " + i + "\n")
+	{
+	}
+
+	const char* what() const noexcept override
+	{
+		return i.c_str();
+	}
+};
+
 template <typename T>
 float computeAverage (const std::string& path)
 {
@@ -43,9 +59,11 @@ float computeAverage (const std::string& path)
 
 		try
 		{
-			// 2te Lösung: kann man auch als Rückgabewert von stoi auswerten
 			size_t zeichen = 0;
 			T value = (T)std::stod(word, &zeichen);
+
+			if (zeichen != word.size())
+				throw istkeinezahl_exception(word);
 
 			zahlen.push_back(value);
 		}
@@ -70,6 +88,7 @@ float computeAverage (const std::string& path)
 
 	return ((float)summe / (float)zahlen.size());
 }
+
 
 int main()
 {
