@@ -14,8 +14,6 @@ TYPE=int
 3
 */
 
-
-
 #include <iostream>
 #include <string>
 #include <vector>
