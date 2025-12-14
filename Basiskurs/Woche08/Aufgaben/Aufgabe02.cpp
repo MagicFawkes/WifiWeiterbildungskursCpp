@@ -33,7 +33,6 @@ enum PLUGIN
 	sub
 };
 
-
 std::vector<std::string> split(const std::string& s, const std::string& delimiter);
 
 template <typename T>
