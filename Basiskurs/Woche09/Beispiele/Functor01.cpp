@@ -120,7 +120,7 @@ int main()
     std::sort(personen.begin(), personen.end(), VergleicheGehalt());
 
 	// Mit Lambda Funktion alles durchlaufen
-    std::for_each(personen.begin(), personen.end(), [](Person p) {
+    std::for_each(personen.begin(), personen.end(), [](Person p)->void {
         cout << p.gehalt << endl;
         });
 }
