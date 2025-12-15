@@ -29,11 +29,11 @@ int main()
 {
     vector<int> a = { 1,2,3,4,5 };
 
+    //Erste Variante - Funktion direkt übergeben
     int wert = Generic_Function(a, quadrieren);
-
     cout << wert << endl;
 
-    //Zweite Variante:
+    //Zweite Variante mit Funktionspointer übergeben:
     int (*function)(int, int) = quadrieren;
     cout << Generic_Function(a, function) << endl;
 }
