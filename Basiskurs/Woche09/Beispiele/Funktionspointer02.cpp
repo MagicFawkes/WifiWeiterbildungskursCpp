@@ -32,6 +32,7 @@ int main()
     {
     case 1:
         ptr_func = add;
+        //ptr_func = &add;      //mit Addressoperator & gleichwertig, kann man weg lassen
         break;
     case 2:
         ptr_func = mult;
