@@ -33,9 +33,9 @@
 */
 
 
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 
 void print(const std::vector<int>& v)
@@ -61,7 +61,7 @@ struct Descending {
 template <typename Op>
 void Apply(std::vector<int>& v, Op op)
 {
-    transform(v.begin(), v.end(), v.begin(), op);
+    std::transform(v.begin(), v.end(), v.begin(), op);
 }
 
 int main()
@@ -76,16 +76,16 @@ int main()
 
     // Remove_if mit Functor statt Lambda: gerade Zahlen entfernen
     Values.erase(
-        remove_if(Values.begin(), Values.end(), IsEven{}),
+	    std::remove_if(Values.begin(), Values.end(), IsEven{}),
         Values.end()
     );
     print(Values);
 
     // Sort Descending mit Functor statt Lambda
-    sort(Values.begin(), Values.end(), Descending{});
+	std::sort(Values.begin(), Values.end(), Descending{});
     print(Values);
 
     // Sort ascending (standard)
-    sort(Values.begin(), Values.end());
+    std::sort(Values.begin(), Values.end());
     print(Values);
 }
