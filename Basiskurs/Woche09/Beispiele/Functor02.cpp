@@ -6,8 +6,6 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
-
 class Number
 {
 private:
@@ -69,7 +67,7 @@ public:
 
 int main()
 {
-    vector<int> a = { 2,1,10,5, 6 };
+	std::vector<int> a = { 2,1,10,5, 6 };
 
     /*std::remove_if(a.begin(), a.end(), stl());*/
 
@@ -79,7 +77,7 @@ int main()
     std::sort(a.begin(), a.end(), stl());
 
     std::for_each(a.begin(), a.end(), [](int x) {
-        cout << x << endl;
+	    std::cout << x << std::endl;
         });
 }
 
