@@ -1,7 +1,37 @@
 ﻿/*
- *
- *
- */
+    Demonstration von Functors (Funktionsobjekten) in C++
+
+    Functors sind Objekte, die sich wie Funktionen verhalten.
+    Das erreichen sie, indem sie den Operator operator() überladen.
+
+    Vorteile von Functors:
+    - Kein Runtime-Overhead wie bei std::function (Compile-Time-Bindung)
+    - Können Zustand besitzen (hier zwar nicht genutzt, aber möglich)
+    - Sehr gut geeignet für STL-Algorithmen (transform, remove_if, sort)
+
+    In diesem Beispiel:
+    - SquareFunctor:
+        Berechnet das Quadrat einer Zahl (x * x)
+        Wird mit std::transform über die Funktion Apply() auf alle Elemente angewendet.
+
+    - IsEven:
+        Prüft, ob eine Zahl gerade ist
+        Wird mit std::remove_if verwendet, um gerade Zahlen aus dem Vektor zu entfernen.
+
+    - Descending:
+        Vergleichs-Functor für std::sort
+        Sortiert Zahlen in absteigender Reihenfolge.
+
+    Die Template-Funktion Apply():
+    - Akzeptiert einen beliebigen Functor (oder Lambda)
+    - Wendet diesen mit std::transform auf jedes Element des Vektors an
+    - Durch Templates entsteht kein zusätzlicher Overhead
+
+    Ziel:
+    - Zeigen, dass Functors eine saubere, performante Alternative zu Lambdas sind
+    - Besonders nützlich bei komplexeren oder wiederverwendbaren Operationen
+*/
+
 
 #include <iostream>
 #include <vector>
