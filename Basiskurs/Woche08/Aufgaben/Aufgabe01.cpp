@@ -125,7 +125,7 @@ int main()
 
 
 
-/*
+/* Usmetzung von Trainer
 #include <iostream>
 
 #include <vector>
