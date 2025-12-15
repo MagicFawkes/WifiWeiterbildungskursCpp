@@ -8,7 +8,8 @@
 
 using namespace std;
 
-// Mit Funktionspointer als Übergabe
+// Mit Funktionspointer als Übergabe,  Funktionspouinter kann beides also auch function<int(int, int)> func) aus #include <functional> 
+// geht auch: int Generic_Function(vector<int>& values, function<int(int, int)> ptr_func) 
 int Generic_Function(vector<int>& values, int(*ptr_func)(int, int))     //bei Funktionspointern kannst du den Rückgabetyp NICHT weglassen. Er muss immer explizit angegeben werden.
 {
     int sum = 1;
