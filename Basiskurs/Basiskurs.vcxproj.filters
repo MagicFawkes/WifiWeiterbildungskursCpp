@@ -561,7 +561,10 @@
     <ClCompile Include="Woche09\Beispiele\Lambda01.cpp">
       <Filter>Source Files\Woche09\Beispiele</Filter>
     </ClCompile>
-    <ClCompile Include="Woche09\Beispiele\Lambda02.cpp">
+    <ClCompile Include="Woche09\Beispiele\LambdaQuadrieren.cpp">
+      <Filter>Source Files\Woche09\Beispiele</Filter>
+    </ClCompile>
+    <ClCompile Include="Woche09\Beispiele\FunktionspointerQuadrieren.cpp">
       <Filter>Source Files\Woche09\Beispiele</Filter>
     </ClCompile>
   </ItemGroup>
