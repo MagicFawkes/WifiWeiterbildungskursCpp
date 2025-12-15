@@ -27,6 +27,8 @@
     - Direkte Lesbarkeit
     - Können Variablen aus dem Kontext erfassen (hier nicht genutzt)
 
+	std::transform wendet eine Funktion (oder einen Functor / Lambda) auf jedes Element eines Bereichs an
+	und schreibt das Ergebnis in einen Zielbereich.
 */
 
 #include <vector>
