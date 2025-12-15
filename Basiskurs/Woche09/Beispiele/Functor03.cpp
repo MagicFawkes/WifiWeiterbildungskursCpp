@@ -2,9 +2,6 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
-
-
 // std::sort hat zwei Modi:
 //
 // 1) Ohne Comparator:
