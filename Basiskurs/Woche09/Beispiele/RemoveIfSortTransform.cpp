@@ -80,9 +80,12 @@ int main()
 
     print(Values);
 
-    //Remove_if
+    // remove_if verschiebt alle zu behaltenden Werte nach vorne und gibt einen
+	// Iterator auf das neue logische Ende zurück (Beginn der zu entfernenden Werte).
+	// end() bleibt unverändert; erase löscht danach diesen Bereich und verkleinert
+	// den Container tatsächlich.
     Values.erase(
-        remove_if(
+        std::remove_if(
             Values.begin(),
             Values.end(),
             [](int x) {return x % 2 == 0; }
