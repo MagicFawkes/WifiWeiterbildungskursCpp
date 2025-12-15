@@ -32,5 +32,9 @@ int main()
     int wert = Generic_Function(a, quadrieren);
 
     cout << wert << endl;
+
+    //Zweite Variante:
+    int (*function)(int, int) = quadrieren;
+    cout << Generic_Function(a, function) << endl;
 }
 
