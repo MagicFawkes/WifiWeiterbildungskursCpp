@@ -55,12 +55,12 @@ public:
 class stl :public funktor
 {
 public:
-    void operator()(int& x) {
-        x = x * x;
-        return;
-    } //remove
-    bool operator()(int x, int y) {
-        return x < y;
+    void operator()(int& x) const {  // für for_each: verändert das Element
+        x *= x;
+    }
+
+    bool operator()(const int& a, const int& b) const {  // für sort: comparator
+        return a < b;
     }
 };
 
@@ -71,11 +71,13 @@ int main()
 
     /*std::remove_if(a.begin(), a.end(), stl());*/
 
+    // Mit Functor:
     std::for_each(a.begin(), a.end(), stl());
 
-
+    // Mit Functor:
     std::sort(a.begin(), a.end(), stl());
 
+    // Mit Lambda:
     std::for_each(a.begin(), a.end(), [](int x) {
 	    std::cout << x << std::endl;
         });
