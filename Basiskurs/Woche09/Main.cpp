@@ -3,7 +3,7 @@
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
-#include "Beispiele/Beispiel01.cpp"
+#include "Beispiele/Funktionspointer01.cpp"
 #elif AKTIVE_BEISPIEL == 2
 #include "Beispiele/Exception02.cpp"
 #endif
