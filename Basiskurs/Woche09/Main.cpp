@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 5
+#define AKTIVE_BEISPIEL 11
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -22,6 +22,8 @@
 #include "Beispiele/RemoveIfSortTransformFunctor.cpp"
 #elif AKTIVE_BEISPIEL == 10
 #include "Beispiele/FunctorMitTemplates.cpp"
+#elif AKTIVE_BEISPIEL == 11
+#include "Beispiele/Functor03.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
