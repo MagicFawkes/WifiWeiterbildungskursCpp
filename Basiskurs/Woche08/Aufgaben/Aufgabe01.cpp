@@ -122,3 +122,121 @@ int main()
 	std::cout << "\nAverage: " << berechneAverage;
     return 0;
 }
+
+
+
+/*
+#include <iostream>
+
+#include <vector>
+
+#include<fstream>
+
+#include <cctype>
+
+using namespace std;
+
+void StringToNumber(string input, vector<int>& nums)
+
+{
+
+	int number = 0;
+
+	bool condition = false;
+
+	for (int i = 0; i < input.length(); i++) {
+
+		if (input[i] >= '0' && input[i] <= '9')
+
+		{
+
+			number = number * 10 + (input[i] - '0'); //123 //1 //10+2 = 12 // 120+ 3= 123
+
+			condition = true;
+
+		}
+
+		else
+
+		{
+
+			if (condition) {
+
+				nums.push_back(number);
+
+				number = 0;
+
+				condition = false;
+
+			}
+
+		}
+
+	}
+
+
+	//for (char c : input) 
+
+	//{
+
+	//    if (isdigit(c)) {
+
+	//        number = number * 10 + (c - '0');
+
+	//        condition = true;
+
+	//    }
+
+	//    else {
+
+	//        if (condition) {
+
+	//            nums.push_back(number);
+
+	//            number = 0;
+
+	//            condition = false;
+
+	//        }
+
+	//    }
+
+	//}
+
+	if (condition) {
+
+		nums.push_back(number);
+
+	}
+
+}
+
+int main()
+
+{
+
+	ifstream file("data.txt");
+
+	if (!file.is_open()) {
+
+		//expection
+
+	}
+
+	string input = "f12d3";
+
+	vector<int> nums;
+
+	StringToNumber(input, nums);
+
+	for (int x : nums) {
+
+		cout << x << endl;
+
+	}
+
+
+
+}
+
+*/
