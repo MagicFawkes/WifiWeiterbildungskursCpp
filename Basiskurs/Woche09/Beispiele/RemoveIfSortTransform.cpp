@@ -49,7 +49,7 @@ void print(std::vector<int> v)
 //Lambda
 void Apply(std::vector<int>& v, const std::function<int(int)>& op) 
 {
-    std::transform(v.begin(), v.end(), v.begin(), op);
+    std::transform(v.begin(), v.end(), v.begin(), op); //Er nimmt Werte aus einem Bereich, wendet eine Funktion darauf an und schreibt das Ergebnis in einen Zielbereich
 }
 
 //Funktions Pointer
