@@ -72,4 +72,14 @@ int main()
     std::for_each(personen.begin(), personen.end(), [](const Person& p)->void {
 	    std::cout << p.gehalt << std::endl;
         });
+
+    // std::for_each iteriert über alle Elemente im Container.
+	// Aus den Iteratoren weiß der Algorithmus, dass die Elemente vom Typ Person sind.
+	// Jedes Element wird dereferenziert (*it) und an den übergebenen Funktor übergeben.
+	// Hier ist der Funktor ein Lambda mit eigenem operator().
+	// std::for_each ruft also lambda(Person&) auf.
+	// Auf Operatoren der Klasse Person (operator(), operator<, etc.) wird dabei nicht zugegriffen.
+    //Die Signatur von std::for_each ist(vereinfacht) :
+	//template<class It, class Func>
+    //Func for_each(It first, It last, Func f); std::for_each ist eine Template-FUNKTION, keine Klasse
 }
