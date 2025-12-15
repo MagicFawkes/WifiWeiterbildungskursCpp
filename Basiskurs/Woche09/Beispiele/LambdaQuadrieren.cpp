@@ -32,6 +32,13 @@ int main()
     };
 
     int wert = Generic_Function(a, lambda);
+    cout << wert << endl;
+
+    // Zweite Variante, direkt einfügen ohne Zwischenvariable
+	wert = Generic_Function(a, [](int x, int y)
+    {
+        return x * y;
+    });
 
     cout << wert << endl;
 }
