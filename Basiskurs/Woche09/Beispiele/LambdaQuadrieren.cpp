@@ -25,7 +25,8 @@ int main()
 
     int summ = 0;
 
-    auto lambda = [](int x, int y)
+    // Erste Variante, mit variable
+    auto lambda = [](int x, int y)      // oder statt auto --> std::function<int(int, int)>
     {
         return x * y;
     };
