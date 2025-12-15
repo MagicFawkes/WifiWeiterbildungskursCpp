@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 8
+#define AKTIVE_BEISPIEL 9
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -18,6 +18,8 @@
 #include "Beispiele/Functor02.cpp"
 #elif AKTIVE_BEISPIEL == 8
 #include "Beispiele/RemoveIfSortTransform.cpp"
+#elif AKTIVE_BEISPIEL == 9
+#include "Beispiele/RemoveIfSortTransformFunctor.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
