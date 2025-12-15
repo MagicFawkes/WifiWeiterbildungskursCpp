@@ -16,6 +16,8 @@
 #include "Beispiele/Functor01.cpp"
 #elif AKTIVE_BEISPIEL == 7 
 #include "Beispiele/Functor02.cpp"
+#elif AKTIVE_BEISPIEL == 8
+#include "Beispiele/RemoveIfSortTransform.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
