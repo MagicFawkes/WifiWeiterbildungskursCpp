@@ -25,8 +25,14 @@ int main()
 
     int summ = 0;
 
-    // Erste Variante, mit variable
+    // Erste Variante, mit variable - der Rückgabetyp wird automatisch abgeleitet:
     auto lambda = [](int x, int y)      // oder statt auto --> std::function<int(int, int)>
+    {
+        return x * y;
+    };
+
+    // Zweite Variante, mit variable und Rückgabetyp explizit angeben
+    auto lambda1 = [](int x, int y) -> int      // oder statt auto --> std::function<int(int, int)>
     {
         return x * y;
     };
@@ -34,8 +40,14 @@ int main()
     int wert = Generic_Function(a, lambda);
     cout << wert << endl;
 
-    // Zweite Variante, direkt einfügen ohne Zwischenvariable
-	wert = Generic_Function(a, [](int x, int y)
+    // Dritte Variante, direkt einfügen ohne Zwischenvariable
+	wert = Generic_Function(a, [](int x, int y)     //Der Rückgabetyp wird automatisch abgeleitet:
+    {
+        return x * y;
+    });
+
+    // Vierte Variante, direkt einfügen ohne Zwischenvariable und Rückgabetyp explizit angeben
+    wert = Generic_Function(a, [](int x, int y) -> int    
     {
         return x * y;
     });
