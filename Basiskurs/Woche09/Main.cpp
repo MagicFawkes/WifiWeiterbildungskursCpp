@@ -14,6 +14,8 @@
 #include "Beispiele/FunktionspointerQuadrieren.cpp"
 #elif AKTIVE_BEISPIEL == 6
 #include "Beispiele/Functor01.cpp"
+#elif AKTIVE_BEISPIEL == 7 
+#include "Beispiele/Functor02.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
