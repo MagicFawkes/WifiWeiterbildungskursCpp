@@ -110,8 +110,16 @@ int main()
         {"Clara",40,2900}
     };
 
+    /*
+	    Funktionsobjekt (Funktor):
+		VergleicheGehalt ist eine Klasse
+		Diese Klasse überlädt den Funktionsaufruf-Operator operator()
+		Durch VergleicheGehalt() wird ein Objekt dieser Klasse erzeugt
+		std::sort ruft dann intern operator() auf
+	*/
     std::sort(personen.begin(), personen.end(), VergleicheGehalt());
 
+	// Mit Lambda Funktion alles durchlaufen
     std::for_each(personen.begin(), personen.end(), [](Person p) {
         cout << p.gehalt << endl;
         });

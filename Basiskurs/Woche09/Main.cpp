@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 9
+#define AKTIVE_BEISPIEL 6
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
