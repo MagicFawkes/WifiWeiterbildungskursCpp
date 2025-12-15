@@ -35,6 +35,7 @@ int main()
 
     //Zweite Variante mit Funktionspointer übergeben:
     int (*function)(int, int) = quadrieren;
+    //int (*function)(int, int) = &quadrieren;      //gleichwertig
     cout << Generic_Function(a, function) << endl;
 }
 
