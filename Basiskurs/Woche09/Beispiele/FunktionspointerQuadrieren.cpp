@@ -94,7 +94,5 @@ int main()
     //Direkt mit Structor Class
     cout << "Mit Structor Class: " << std::endl;
     std::for_each(a.begin(), a.end(), QuadrierenClass());
-
-    
 }
 
