@@ -9,7 +9,7 @@
 using namespace std;
 
 // Mit Funktionspointer als Übergabe
-int Generic_Function(vector<int>& values, int(*ptr_func)(int, int))
+int Generic_Function(vector<int>& values, int(*ptr_func)(int, int))     //bei Funktionspointern kannst du den Rückgabetyp NICHT weglassen. Er muss immer explizit angegeben werden.
 {
     int sum = 1;
 
@@ -34,7 +34,7 @@ int main()
     cout << wert << endl;
 
     //Zweite Variante mit Funktionspointer übergeben:
-    int (*function)(int, int) = quadrieren;
+    int (*function)(int, int) = quadrieren;             //bei Funktionspointern kannst du den Rückgabetyp NICHT weglassen. Er muss immer explizit angegeben werden
     //int (*function)(int, int) = &quadrieren;      //gleichwertig
     cout << Generic_Function(a, function) << endl;
 }
