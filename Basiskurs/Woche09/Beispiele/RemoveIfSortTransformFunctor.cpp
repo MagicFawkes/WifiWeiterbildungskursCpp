@@ -36,12 +36,12 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-using namespace std;
 
-void print(const vector<int>& v)
+
+void print(const std::vector<int>& v)
 {
-    cout << "------------------\n";
-    for (int value : v) cout << value << "\n";
+	std::cout << "------------------\n";
+    for (int value : v) std::cout << value << "\n";
 }
 
 // ---------- Functors ----------
@@ -59,14 +59,14 @@ struct Descending {
 
 // Apply mit Template (besser als std::function, kein Overhead)
 template <typename Op>
-void Apply(vector<int>& v, Op op)
+void Apply(std::vector<int>& v, Op op)
 {
     transform(v.begin(), v.end(), v.begin(), op);
 }
 
 int main()
 {
-    vector<int> Values{ 1,2,3,4,5,6 };
+	std::vector<int> Values{ 1,2,3,4,5,6 };
 
     print(Values);
 
