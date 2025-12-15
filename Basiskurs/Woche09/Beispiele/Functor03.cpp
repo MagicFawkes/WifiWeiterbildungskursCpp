@@ -60,4 +60,16 @@ int main()
 
     for (Person value : personen)
         std::cout << value.name << "\n";
+
+    // Mit Lambda Funktion alles durchlaufen
+    //das geht ohne Überladung, weil Lambdas selbst schon Funktionsobjekte sind.
+    //Ein Lambda ist bereits ein Objekt mit operator() – der Compiler erzeugt ihn automatisch.
+    // std::for_each verwendet hier ein Lambda als Funktor.
+	// Das Lambda besitzt einen automatisch erzeugten operator().
+	// Auf die Operatoren (operator(), operator<, etc.) der Klasse Person
+	// wird dabei NICHT zugegriffen.
+	// Person ist hier nur der Datentyp der Elemente im Container.
+    std::for_each(personen.begin(), personen.end(), [](const Person& p)->void {
+	    std::cout << p.gehalt << std::endl;
+        });
 }
