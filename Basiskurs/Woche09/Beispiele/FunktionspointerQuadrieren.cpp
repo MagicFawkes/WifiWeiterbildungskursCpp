@@ -49,7 +49,7 @@ struct Quadrieren
 
 
 //Mit Functor
-struct QuadrierenClass
+class QuadrierenClass
 {
 public:
     void operator()(int x)
