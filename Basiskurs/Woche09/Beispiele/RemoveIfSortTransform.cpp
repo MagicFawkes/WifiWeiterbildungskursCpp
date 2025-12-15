@@ -36,22 +36,20 @@
 #include <iostream>
 #include <functional>
 
-using namespace std;
-
-void print(vector<int> v) 
+void print(std::vector<int> v) 
 {
-    cout << "------------------\n";
+	std::cout << "------------------\n";
     for (auto value : v)
     {
-        cout << value << "\n";
+	    std::cout << value << "\n";
     }
     //cout << "------------------\n";
 }
 
 //Lambda
-void Apply(vector<int>& v, const function<int(int)>& op) 
+void Apply(std::vector<int>& v, const std::function<int(int)>& op) 
 {
-    transform(v.begin(), v.end(), v.begin(), op);
+    std::transform(v.begin(), v.end(), v.begin(), op);
 }
 
 //Funktions Pointer
@@ -60,14 +58,13 @@ int Square(int x)
     return x * x;
 }
 
-void ApplyWithPointer(vector<int>& v, int (*op)(int)) {
-    transform(v.begin(), v.end(), v.begin(), op);
+void ApplyWithPointer(std::vector<int>& v, int (*op)(int)) {
+    std::transform(v.begin(), v.end(), v.begin(), op);
 }
 
 int main() 
 {
-
-    vector<int> Values{ 1,2,3,4,5,6 };
+	std::vector<int> Values{ 1,2,3,4,5,6 };
 
     print(Values);
 
@@ -96,7 +93,7 @@ int main()
     print(Values);
 
     //Sort Descending
-    sort(
+    std::sort(
         Values.begin(),
         Values.end(),
         [](int a, int b) {
@@ -106,6 +103,6 @@ int main()
     print(Values);
 
     //Sort ascending
-    sort(Values.begin(), Values.end());
+    std::sort(Values.begin(), Values.end());
     print(Values);
 }
