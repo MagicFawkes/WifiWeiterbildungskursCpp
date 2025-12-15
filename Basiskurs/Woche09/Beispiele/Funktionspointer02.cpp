@@ -1,5 +1,18 @@
 ﻿/*
-	Funktionspointer Beispiel
+ Dieses Programm demonstriert die Verwendung von Funktionszeigern in C++.
+
+ Der Benutzer wählt zur Laufzeit eine Rechenoperation (Addieren oder Multiplizieren)
+ und gibt zwei Ganzzahlen ein. Abhängig von der Auswahl wird ein Funktionszeiger
+ entweder auf die Funktion `add` oder `mult` gesetzt.
+
+ Der Funktionszeiger wird anschließend verwendet, um die gewählte Funktion
+ indirekt aufzurufen. Dadurch kann zur Laufzeit entschieden werden,
+ welche Funktion ausgeführt wird, ohne den Funktionsaufruf fest zu kodieren.
+
+ Ziel des Programms ist es zu zeigen:
+ - wie Funktionszeiger deklariert werden
+ - wie ihnen Funktionen zugewiesen werden
+ - wie Funktionen über einen Funktionszeiger aufgerufen werden
 */
 
 #include <iostream>
