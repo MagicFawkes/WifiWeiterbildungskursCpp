@@ -70,6 +70,6 @@ int main()
 
     std::cout << lambda4(a, b) << std::endl;
     std::cout << d << std::endl;
-    // d außen ist unverändert (22)
+    // d außen ist unverändert (22), es wird hier mit KOpie gearbeitete, andere Lösung wäre hier Referenz, wenn man ursprungs d ändern will
 }
 
