@@ -22,11 +22,13 @@ Implementiere einen Funktor Addierer, der:
 zwei int-Werte erhält
 deren Summe zurückgibt
 
+Aufgabe 5
 Implementiere einen thematisierten Funktor Vergleicher<T>, der:
 zwei Werte vom Typ T vergleicht
 true zurückgibt, wenn der erste größer ist
  Verwende ihn mit int, double und std::string.
 
+Aufgabe 6
 Implementiere einen Funktor Counter, der:
 eine externe Variable speichert
 bei jedem Aufruf diese Variable erhöht
@@ -142,4 +144,8 @@ int main()
     Addierer addierer;
 
     std::cout << "Aufgabe 4 Wert: " << addierer(a, b) << std::endl;
+
+    //***************************Aufgabe 5*************************************
+
+	//***************************Aufgabe 6************************************* 
 }
