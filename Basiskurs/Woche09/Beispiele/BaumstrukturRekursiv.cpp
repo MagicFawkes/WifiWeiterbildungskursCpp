@@ -74,6 +74,41 @@ void printlistRight(Node* head)
 	std::cout << "\n";
 }
 
+void insertNormal(Node* head, int value)
+{
+	if (head == NULL)
+	{
+		std::cout << "Liste leer" << std::endl;
+		return;
+	}
+
+	Node* temp[2];
+	temp[0] = head;
+
+	while (temp[0] != nullptr)
+	{
+		temp[1] = temp[0];
+
+		if (temp[0]->data < value)
+		{
+			temp[0] = temp[0]->links;
+		}
+		else
+		{
+			temp[0] = temp[0]->rechts;
+		}
+	}
+
+	if (value <= temp[1]->data)
+	{
+		temp[1]->links = new Node(value);
+	}
+	else
+	{
+		temp[1]->rechts = new Node(value);
+	}
+}
+
 int main()
 {
 	Node* root = nullptr;
