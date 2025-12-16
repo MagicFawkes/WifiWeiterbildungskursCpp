@@ -18,12 +18,6 @@ int main()
             std::cout << "Hello" << std::endl;
         };
 
-    //oder mit Funkjtionspointer auch möglich wenn Capture NICHT verwendet wird
-    int (*lambda3)(int, int) = [](int a, int b)->int
-        {
-            return a + b;
-        };
-
     lambdaHello();
 
     double a = 254;
@@ -34,6 +28,13 @@ int main()
             return a / b;
         };
 
-    std::cout << lambda1(a, b);
+    //auch Möglich, Capture wäre dann hier okay
+    std::function<double(double, double)> lambda2 = [](double a, double b)->double
+        {
+            return a / b;
+        };
+
+    std::cout << lambda1(a, b) << std::endl;
+    std::cout << lambda2(a, b) << std::endl;
 }
 
