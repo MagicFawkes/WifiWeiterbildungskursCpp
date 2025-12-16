@@ -41,6 +41,11 @@ mithilfe von Funktionspointern, Funktoren und Lambda
 #include <algorithm>
 #include <functional>
 
+void verarbeite(const std::vector<int>& daten, const std::function<void(int)> callback)
+{
+	
+}
+
 int main()
 {
     std::vector<int> messwerte = { 2,1,10,5, 6 };
