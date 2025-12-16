@@ -45,6 +45,13 @@ struct Functor
     }
 };
 
+// Für Funktionspointer
+void berechneSumme(const std::vector<int>& v, int& summe)
+{
+    summe = 0;
+    for (int x : v)
+        summe += x;
+}
 
 int main()
 {
@@ -99,18 +106,15 @@ int main()
 
     std::cout << "Summe: " << summe << std::endl;
 
-    //**************************************************************** Mit Funktionspointer und auf Lambda
+    //**************************************************************** Mit Funktionspointer 
 
     int summe1 = 0;
 
-    std::function<void(int)> functo = [&summe1](int x)->void        //-> int ist optional, da Compiler Rückgabewert erkennen kann
-        {
-            summe1 += x;
-        };
-
     std::vector<int> messwerte4 = { 2,1,10,5, 6 };
 
-    std::for_each(messwerte4.begin(), messwerte4.end(), functo);
+    std::function<void(const std::vector<int>& v, int& summe)> functo = berechneSumme;      //function Schreibweise
+
+    berechneSumme(messwerte4, summe1);
 
     std::cout << "Summe1: " << summe1 << std::endl;
 }
