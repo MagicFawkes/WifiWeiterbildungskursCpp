@@ -40,6 +40,20 @@ bei jedem Aufruf diese Variable erhöht
 #include <algorithm>
 #include <functional>
 
+/*
+ *Beispiele wenn mit string verglichen wird - vergleicht Inhalt Byte für Byte.
+"abc" > "abb"   // true  ('c' > 'b')
+"abc" > "abcd" // false (kürzerer String ist kleiner)
+"Zoo" > "apple"// false ('Z' < 'a' im ASCII)
+*/
+template<typename T>
+struct Vergleich
+{
+    bool operator()(const T& a, const T& b) const
+    {
+        return a > b;
+    }
+};
 
 struct Functor 
 {
@@ -146,6 +160,17 @@ int main()
     std::cout << "Aufgabe 4 Wert: " << addierer(a, b) << std::endl;
 
     //***************************Aufgabe 5*************************************
+    
+    Vergleich<int> avergleichInt;
+    std::cout << "Aufgabe 5: " << avergleichInt(4, 6) << std::endl;
+    std::cout << "Aufgabe 5: " << avergleichInt(6, 4) << std::endl;
 
+    Vergleich<double> avergleichDouble;
+    std::cout << "Aufgabe 5: " << avergleichDouble(4.22, 6.12) << std::endl;
+    std::cout << "Aufgabe 5: " << avergleichDouble(6.21, 4.53) << std::endl;
+    
+    Vergleich<std::string> avergleichString;
+    std::cout << "Aufgabe 5: " << avergleichString("Tes", "Test") << std::endl;
+    std::cout << "Aufgabe 5: " << avergleichString("Test", "Tes") << std::endl;
 	//***************************Aufgabe 6************************************* 
 }
