@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 17
+#define AKTIVE_BEISPIEL 18
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -36,6 +36,8 @@
 #include "Beispiele/SummeBeispiele.cpp"
 #elif AKTIVE_BEISPIEL == 17
 #include "Beispiele/AufgabenLambdaExpression.cpp"
+#elif AKTIVE_BEISPIEL == 18
+#include "Beispiele/BaumstrukturRekursiv.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
