@@ -59,5 +59,13 @@ int main()
     {
         std::cout << messwert << std::endl;
     }
+
+    int x = 0;
+
+    std::for_each(messwerte2.begin(), messwerte2.end(), [x]() mutable ->void
+        {
+            x++;
+	        std::cout << "Wert: " << x << std::endl;
+        });
 }
 
