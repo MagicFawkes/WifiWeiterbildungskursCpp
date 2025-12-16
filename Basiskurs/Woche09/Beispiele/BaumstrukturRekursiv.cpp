@@ -286,7 +286,7 @@ Node* Delete(Node* root, int value)
 	}
 }
 
-void freenodes(Node* & root)	//Zeiger auf die Referenz
+void freenodes(Node*& root)	//Referenz auf den Zeiger, damit Refrenz also root auch gelöscht wird, sonst bleibt es auf eine Adresse gesetzt
 {
 	if (root == nullptr)
 	{
@@ -320,4 +320,11 @@ int main()
 
 	Delete(root, 7);
 	std::cout << SearchIterativ(root, 7) << std::endl;
+
+	freenodes(root);
+
+	if (root == nullptr)
+	{
+		std::cout << "Root ist nullpointer";
+	}
 }
