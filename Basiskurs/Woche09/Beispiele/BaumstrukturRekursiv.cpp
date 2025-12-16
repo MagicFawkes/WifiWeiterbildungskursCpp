@@ -21,6 +21,7 @@ struct Node
 	}
 };
 
+//Insert mit Rekursiv
 Node* insert(Node* root, int value) //2000 5
 {
 	if (root == nullptr)
@@ -75,7 +76,7 @@ void printlistRight(Node* head)
 }
 
 
-//Iterative Variante
+//Iterative Variante mit Insert
 void insertNormal(Node* head, int value)
 {
 	if (head == NULL)
