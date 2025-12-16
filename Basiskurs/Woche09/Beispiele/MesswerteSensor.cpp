@@ -48,9 +48,9 @@ void verarbeite(const std::vector<int>& daten, const std::function<void(int)> ca
 
 int main()
 {
-    std::vector<int> messwerte = { 2,1,10,5, 6 };
+    std::vector<int> messwerte = { 2,1,10,5, 6 ,20,40};
     std::for_each(messwerte.begin(), messwerte.end(), [](const int& p)->void {
-	    std::cout << p << std::endl;
+	    std::cout << "Messwert1: " << p << std::endl;
         });
 
     int schwellwert = 10;
@@ -62,15 +62,17 @@ int main()
 
     for (int messwert : messwerte2)
     {
-        std::cout << messwert << std::endl;
+        std::cout << "Messwerte2:" << messwert << std::endl;
     }
 
     int x = 0;
-
-    std::for_each(messwerte2.begin(), messwerte2.end(), [x]() mutable ->void
+    std::vector<int> messwerte4 = { 2,1,10,5, 6 };
+    std::for_each(messwerte4.begin(), messwerte4.end(), [x](const auto&) mutable ->void
         {
             x++;
 	        std::cout << "Wert: " << x << std::endl;
         });
+
+    std::cout << "Wert4: " << x << std::endl;
 }
 
