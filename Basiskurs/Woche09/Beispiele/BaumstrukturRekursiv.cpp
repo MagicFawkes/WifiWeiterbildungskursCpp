@@ -13,7 +13,8 @@ struct Node
 	struct Node* links;
 	struct Node* rechts;
 
-	Node(int value) {
+	Node(int value) 
+	{
 		data = value;
 		links = nullptr;
 		rechts = nullptr;
