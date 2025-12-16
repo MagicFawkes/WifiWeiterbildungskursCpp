@@ -14,7 +14,7 @@ int main()
     int b = 20;
 
 	// mit Function Library Capture ist hier möglich
-    std::function<int(int, int)> lambda1 = [](int a, int b)->int
+    std::function<int(int, int)> lambda1 = [](int a, int b)->int        //-> int ist optional, da Compiler Rückgabewert erkennen kann
         {
             return a + b;
         };
