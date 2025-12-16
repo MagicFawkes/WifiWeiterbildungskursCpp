@@ -50,4 +50,23 @@ int main()
     lambda1();
     lambda1();
     std::cout << "Counter: " << counter << std::endl;
+
+
+    std::vector<int> messwerte = { 2,1,10,5, 6 ,20,40,80 };
+
+    int anzahl = std::count_if(messwerte.begin(), messwerte.end(), [](int x) ->bool
+        {
+            return x > 10;
+        });
+
+    std::cout << "Anzahl: " << anzahl << std::endl;
+
+    std::function<bool(int x)> lambda2 = [](int x)->bool
+        {
+            return x > 10;
+        };
+
+    int anzahl1 = std::count_if(messwerte.begin(), messwerte.end(), lambda2);
+
+    std::cout << "Anzahl1: " << anzahl1 << std::endl;
 }
