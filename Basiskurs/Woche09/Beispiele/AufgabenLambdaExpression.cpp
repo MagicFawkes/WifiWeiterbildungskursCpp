@@ -46,6 +46,17 @@ bei jedem Aufruf diese Variable erhöht
 "abc" > "abcd" // false (kürzerer String ist kleiner)
 "Zoo" > "apple"// false ('Z' < 'a' im ASCII)
 */
+
+struct Counter
+{
+    int counter = 0;
+
+    void operator()()
+    {
+        this->counter++;
+    }
+};
+
 template<typename T>
 struct Vergleich
 {
@@ -173,4 +184,13 @@ int main()
     std::cout << "Aufgabe 5: " << avergleichString("Tes", "Test") << std::endl;
     std::cout << "Aufgabe 5: " << avergleichString("Test", "Tes") << std::endl;
 	//***************************Aufgabe 6************************************* 
+
+    Counter counter1;
+
+    counter1();
+    counter1();
+    counter1();
+    counter1();
+    counter1();
+    std::cout << "Aufgabe 6 Counter: " << counter1.counter << std::endl;
 }
