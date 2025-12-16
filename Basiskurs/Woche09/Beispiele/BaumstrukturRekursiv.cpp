@@ -74,6 +74,8 @@ void printlistRight(Node* head)
 	std::cout << "\n";
 }
 
+
+//Iterative Variante
 void insertNormal(Node* head, int value)
 {
 	if (head == NULL)
