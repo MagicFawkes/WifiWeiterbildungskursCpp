@@ -43,7 +43,7 @@ mithilfe von Funktionspointern, Funktoren und Lambda
 
 void verarbeite(const std::vector<int>& daten, const std::function<void(int)> callback)
 {
-	
+    std::for_each(daten.begin(), daten.end(), callback);
 }
 
 int main()
@@ -74,5 +74,12 @@ int main()
         });
 
     std::cout << "Wert4: " << x << std::endl;
+
+
+    verarbeite(messwerte, [x](const auto&) mutable ->void
+        {
+            x++;
+            std::cout << "Wert: " << x << std::endl;
+        });
 }
 
