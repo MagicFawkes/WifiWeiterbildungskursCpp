@@ -48,7 +48,7 @@ struct Functor
 // Für Funktionspointer
 void berechneSumme(const std::vector<int>& v, int& summe)
 {
-    summe = 0;
+    //summe = 0;
     for (int x : v)
         summe += x;
 }
@@ -113,8 +113,10 @@ int main()
     std::vector<int> messwerte4 = { 2,1,10,5, 6 };
 
     std::function<void(const std::vector<int>& v, int& summe)> functo = berechneSumme;      //function Schreibweise
+    void (*sumFunc)(const std::vector<int>&, int&) = berechneSumme;      //Funktionspointer Schreibweise (alt)
 
     berechneSumme(messwerte4, summe1);
-
+    std::cout << "Summe1: " << summe1 << std::endl;
+    sumFunc(messwerte4, summe1);
     std::cout << "Summe1: " << summe1 << std::endl;
 }
