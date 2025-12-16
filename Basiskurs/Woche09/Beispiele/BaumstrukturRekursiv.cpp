@@ -38,7 +38,8 @@ Node* insert(Node* root, int value) //2000 5
 	return root;
 }
 
-void printlistLeft(Node* head) {
+void printlistLeft(Node* head) 
+{
 	if (head == NULL) 
 	{
 		std::cout << "Liste leer" << std::endl;
@@ -55,7 +56,8 @@ void printlistLeft(Node* head) {
 	std::cout << "\n";
 }
 
-void printlistRight(Node* head) {
+void printlistRight(Node* head) 
+{
 	if (head == NULL)
 	{
 		std::cout << "Liste leer" << std::endl;
