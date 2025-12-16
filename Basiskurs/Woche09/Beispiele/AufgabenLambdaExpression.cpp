@@ -48,6 +48,7 @@ struct Functor
 
 int main()
 {
+    //****************************************************************
     int counter = 0;
 
     std::function<void()> lambda1 = [&counter]()->void       
@@ -61,7 +62,7 @@ int main()
     lambda1();
     std::cout << "Counter: " << counter << std::endl;
 
-
+    //****************************************************************
     std::vector<int> messwerte = { 2,1,10,5, 6 ,20,40,80 };
 
     int anzahl = std::count_if(messwerte.begin(), messwerte.end(), [](int x) ->bool
@@ -71,6 +72,7 @@ int main()
 
     std::cout << "Anzahl: " << anzahl << std::endl;
 
+    //****************************************************************
     std::function<bool(int x)> lambda2 = [](int x)->bool
         {
             return x > 10;
@@ -80,8 +82,13 @@ int main()
 
     std::cout << "Anzahl1: " << anzahl1 << std::endl;
 
-
+    //****************************************************************
     int anzahl2 = std::count_if(messwerte.begin(), messwerte.end(), Functor());
+
+    std::cout << "Anzahl2: " << anzahl2 << std::endl;
+
+    //****************************************************************
+    std::for_each(messwerte.begin(), messwerte.end(), Functor());
 
     std::cout << "Anzahl2: " << anzahl2 << std::endl;
 }
