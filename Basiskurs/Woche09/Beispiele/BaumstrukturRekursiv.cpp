@@ -161,6 +161,77 @@ bool SearchIterativ(Node* root, int value)
 	return false;
 }
 
+/*
+	Rekursives Löschen eines Knotens aus einem Binären Suchbaum (BST).
+
+	Grundidee:
+	- Ein BST hat die Eigenschaft: links < root->data < rechts
+	- Wir suchen den zu löschenden Wert rekursiv, indem wir wie beim Suchen
+	  immer nach links oder rechts absteigen.
+	- Wenn der Knoten gefunden wurde, gibt es 3 Fälle:
+		1) 0 Kinder (Blatt)
+		2) 1 Kind
+		3) 2 Kinder
+
+	Ablauf Schritt für Schritt:
+
+	1) Abbruchbedingung (Base Case):
+	   Wenn root == nullptr:
+	   - Wir sind an einem leeren Teilbaum angekommen -> Wert existiert hier nicht.
+	   - Rückgabe nullptr (bzw. root unverändert).
+
+	2) Rekursives Suchen:
+	   Wenn value < root->data:
+	   - Der gesuchte Wert muss (wenn vorhanden) im linken Teilbaum liegen.
+	   - Also: root->links = Delete(root->links, value);
+		 Wichtig: Das Ergebnis wird zurück in root->links gespeichert,
+		 weil sich die Wurzel des linken Teilbaums durch Löschen ändern kann
+		 (z.B. wenn der gelöschte Knoten die Teilbaum-Wurzel war).
+	   - Danach geben wir root zurück (Wurzel dieses Teilbaums bleibt bestehen).
+
+	   Wenn value > root->data:
+	   - Analog im rechten Teilbaum:
+		 root->rechts = Delete(root->rechts, value);
+	   - Danach root zurückgeben.
+
+	3) Knoten gefunden (value == root->data):
+	   Jetzt wird wirklich gelöscht. Es gibt 3 klassische Fälle:
+
+	   Fall A: Keine Kinder (Blattknoten)
+	   - root->links == nullptr und root->rechts == nullptr
+	   - Speicher des Knotens freigeben: delete root;
+	   - nullptr zurückgeben, damit der Elternzeiger auf "leer" gesetzt wird.
+
+	   Fall B: Genau ein Kind
+	   - Wenn links leer ist, aber rechts existiert:
+		   temp = root->rechts;
+		   delete root;
+		   return temp;
+		 -> Der Elternknoten zeigt danach direkt auf das rechte Kind.
+	   - Wenn rechts leer ist, aber links existiert:
+		   temp = root->links;
+		   delete root;
+		   return temp;
+		 -> Der Elternknoten zeigt danach direkt auf das linke Kind.
+
+	   Fall C: Zwei Kinder
+	   - Man kann den Knoten nicht einfach entfernen, ohne die BST-Eigenschaft zu verletzen.
+	   - Typischer Trick:
+		 * Suche den "Inorder-Nachfolger" im rechten Teilbaum:
+		   Das ist das kleinste Element im rechten Teilbaum,
+		   also: ganz nach links gehen ab root->rechts.
+		 * Kopiere dessen Wert in den aktuellen Knoten (root->data = temp->data).
+		   Dadurch ist der Wert "gelöscht", aber der Knoten bleibt an Ort und Stelle.
+		 * Jetzt existiert der kopierte Wert noch einmal im rechten Teilbaum (bei temp),
+		   daher löschen wir den Nachfolger-Knoten rekursiv:
+		   root->rechts = Delete(root->rechts, temp->data);
+
+	Ergebnis:
+	- Jede Rekursion gibt die (möglicherweise neue) Wurzel ihres Teilbaums zurück.
+	- Dadurch werden Elternzeiger korrekt aktualisiert, selbst wenn Teilbäume
+	  durch Löschen ihre Wurzel wechseln.
+*/
+
 Node* Delete(Node* root, int value)
 {
 	if (root == nullptr)
