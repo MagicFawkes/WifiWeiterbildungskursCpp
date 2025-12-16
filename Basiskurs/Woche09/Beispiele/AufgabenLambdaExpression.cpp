@@ -88,7 +88,14 @@ int main()
     std::cout << "Anzahl2: " << anzahl2 << std::endl;
 
     //****************************************************************
-    std::for_each(messwerte.begin(), messwerte.end(), Functor());
 
-    std::cout << "Anzahl2: " << anzahl2 << std::endl;
+    int summe = 0;
+    std::vector<int> messwerte3 = { 2,1,10,5, 6};
+
+    std::for_each(messwerte3.begin(), messwerte3.end(), [&summe](int)->void         //for_each braucht übergabeparameter, dieser wird hier nicht benötigt, daher reicht es nur int schreiben statt int x
+        {
+            summe++;
+        });
+
+    std::cout << "Summe: " << summe << std::endl;
 }
