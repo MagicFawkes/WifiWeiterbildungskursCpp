@@ -36,5 +36,27 @@ int main()
 
     std::cout << lambda1(a, b) << std::endl;
     std::cout << lambda2(a, b) << std::endl;
+
+    //weitere Varianten mit Capture, Wert verändern darin daher Adressoperator &c (ohne Adressoperator wäre :
+    int c = 22;
+    std::function<double(double, double)> lambda3 = [&c](double a, double b)->double 
+        {
+            c++;
+            return (a / b) + c;
+        };
+
+    std::cout << lambda3(a, b) << std::endl;
+
+    //weitere Varianten mit Capture, Wert verändern ohne Adressoperator dafür Kopie und Mutable, damit er verändert werden kann
+    int d = 22;
+    std::function<double(double, double)> lambda4 = [d](double a, double b) mutable ->double
+        {
+            d++;
+            return (a / b) + d;
+        };
+
+    std::cout << lambda4(a, b) << std::endl;
+    std::cout << d << std::endl;
+    // d außen ist unverändert (22)
 }
 
