@@ -161,6 +161,58 @@ bool SearchIterativ(Node* root, int value)
 	return false;
 }
 
+Node* Delete(Node* root, int value)
+{
+	if (root == nullptr)
+	{
+		return root;
+	}
+
+	if (value < root->data)
+	{
+		root->links = Delete(root->links, value);
+		return root;
+	}
+	else if (value > root->data)
+	{
+		root->rechts = Delete(root->rechts, value);
+		return root;
+	}
+	else
+	{
+		Node* temp;
+		if (root->links == nullptr && root->rechts == nullptr) {
+			delete root;
+			return nullptr;
+		}
+		else if (root->links == nullptr)
+		{
+			temp = root->rechts;
+			delete root;
+			return temp;
+		}
+
+		else if (root->rechts == nullptr)
+		{
+			temp = root->links;
+			delete root;
+			return temp;
+
+		}
+
+		//2 kinder
+
+		temp = root->rechts;
+
+		while (temp && temp->links != nullptr) {
+			temp = temp->links;
+		}
+
+		root->data = temp->data;
+
+		root->rechts = Delete(root->rechts, temp->data);
+	}
+}
 
 int main()
 {
@@ -176,5 +228,11 @@ int main()
 	printlistLeft(root);
 
 	std::cout << SearchRekursiv(root, 5) << std::endl;
+	std::cout << SearchIterativ(root, 7) << std::endl;
+
+	Delete(root, 5);
 	std::cout << SearchIterativ(root, 5) << std::endl;
+
+	Delete(root, 7);
+	std::cout << SearchIterativ(root, 7) << std::endl;
 }
