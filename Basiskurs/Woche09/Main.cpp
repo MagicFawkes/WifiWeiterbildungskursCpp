@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 12
+#define AKTIVE_BEISPIEL 13
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -26,6 +26,8 @@
 #include "Beispiele/Functor03.cpp"
 #elif AKTIVE_BEISPIEL == 12
 #include "Beispiele/FunctorSortGeneric.cpp"
+#elif AKTIVE_BEISPIEL == 13
+#include "Beispiele/LambdaIntAddieren.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
