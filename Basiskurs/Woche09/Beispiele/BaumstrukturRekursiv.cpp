@@ -111,6 +111,56 @@ void insertNormal(Node* head, int value)
 	}
 }
 
+//Rekursiv
+bool SearchRekursiv(Node* root, int value) 
+{
+	if (root == nullptr) {
+
+		return false;
+	}
+	
+	if (root->data > value)
+	{
+		SearchRekursiv(root->links, value);
+	}
+	else if (root->data == value)
+	{
+		return true;
+	}
+	else
+	{
+		SearchRekursiv(root->rechts, value);
+	}
+}
+
+//Iterativ
+bool SearchIterativ(Node* root, int value)
+{
+	if (root == nullptr) 
+	{
+		return false;
+	}
+
+	while (root == nullptr)
+	{
+		if (root->data > value)
+		{
+			root = root->links;
+		}
+		else if (root->data == value)
+		{
+			return true;
+		}
+		else
+		{
+			root = root->rechts;
+		}
+	}
+
+	return false;
+}
+
+
 int main()
 {
 	Node* root = nullptr;
@@ -123,4 +173,7 @@ int main()
 
 	printlistRight(root);
 	printlistLeft(root);
+
+	std::cout << SearchRekursiv(root, 5) << std::endl;
+	std::cout << SearchIterativ(root, 5) << std::endl;
 }
