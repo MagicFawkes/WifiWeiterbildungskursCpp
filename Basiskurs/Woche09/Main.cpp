@@ -1,5 +1,5 @@
 
-#define AKTIVE_BEISPIEL 15
+#define AKTIVE_BEISPIEL 17
 #define AKTIVE_AUFGABE 0
 
 #if AKTIVE_BEISPIEL == 1
@@ -32,6 +32,10 @@
 #include "Beispiele/LambdaDoubleDiv.cpp"
 #elif AKTIVE_BEISPIEL == 15
 #include "Beispiele/MesswerteSensor.cpp"
+#elif AKTIVE_BEISPIEL == 16
+#include "Beispiele/SummeBeispiele.cpp"
+#elif AKTIVE_BEISPIEL == 17
+#include "Beispiele/AufgabenLambdaExpression.cpp"
 #endif
 
 #if AKTIVE_AUFGABE == 1
