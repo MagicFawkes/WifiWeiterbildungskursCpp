@@ -76,14 +76,12 @@ int main()
 {
 	Node* root = nullptr;
 	root = insert(root, 10); // 0 10
-	insert(root, 5); //links
-	insert(root, 4); //links
-	insert(root, 3); //links
-	insert(root, 6); //links
-	insert(root, 7); //links
-	insert(root, 8); //links
-	insert(root, 20); //links
-	insert(root, 30); //links
+
+	int values[] = { 10, 5, 20, 3, 7, 20 };
+
+	for (int v : values)
+		root = insert(root, v);
+
 	printlistRight(root);
 	printlistLeft(root);
 }
