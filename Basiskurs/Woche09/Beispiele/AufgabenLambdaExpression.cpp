@@ -87,7 +87,7 @@ int main()
 
     std::cout << "Anzahl2: " << anzahl2 << std::endl;
 
-    //****************************************************************
+    //**************************************************************** Ohne Funktionspointer, direkt lambda in for_each
 
     int summe = 0;
     std::vector<int> messwerte3 = { 2,1,10,5, 6};
@@ -98,4 +98,19 @@ int main()
         });
 
     std::cout << "Summe: " << summe << std::endl;
+
+    //**************************************************************** Mit Funktionspointer und auf Lambda
+
+    int summe1 = 0;
+
+    std::function<void(int)> functo = [&summe1](int x)->void        //-> int ist optional, da Compiler Rückgabewert erkennen kann
+        {
+            summe1 += x;
+        };
+
+    std::vector<int> messwerte4 = { 2,1,10,5, 6 };
+
+    std::for_each(messwerte4.begin(), messwerte4.end(), functo);
+
+    std::cout << "Summe1: " << summe1 << std::endl;
 }
