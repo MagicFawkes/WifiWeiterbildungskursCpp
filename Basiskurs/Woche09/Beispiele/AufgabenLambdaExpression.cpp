@@ -36,6 +36,16 @@ bei jedem Aufruf diese Variable erhöht
 #include <algorithm>
 #include <functional>
 
+
+struct Functor 
+{
+    bool operator()(const int& a) const 
+	{
+        return a > 10;
+    }
+};
+
+
 int main()
 {
     int counter = 0;
@@ -69,4 +79,9 @@ int main()
     int anzahl1 = std::count_if(messwerte.begin(), messwerte.end(), lambda2);
 
     std::cout << "Anzahl1: " << anzahl1 << std::endl;
+
+
+    int anzahl2 = std::count_if(messwerte.begin(), messwerte.end(), Functor());
+
+    std::cout << "Anzahl2: " << anzahl2 << std::endl;
 }
