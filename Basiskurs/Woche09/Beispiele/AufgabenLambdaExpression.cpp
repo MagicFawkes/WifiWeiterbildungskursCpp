@@ -92,9 +92,9 @@ int main()
     int summe = 0;
     std::vector<int> messwerte3 = { 2,1,10,5, 6};
 
-    std::for_each(messwerte3.begin(), messwerte3.end(), [&summe](int)->void         //for_each braucht übergabeparameter, dieser wird hier nicht benötigt, daher reicht es nur int schreiben statt int x
+    std::for_each(messwerte3.begin(), messwerte3.end(), [&summe](int x)->void         
         {
-            summe++;
+            summe+=x;
         });
 
     std::cout << "Summe: " << summe << std::endl;
