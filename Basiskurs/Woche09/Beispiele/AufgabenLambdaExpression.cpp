@@ -53,7 +53,7 @@ struct Functor
 //Functor Addierer
 struct Addierer
 {
-    int operator()(int& a, int& b) const
+    int operator()(const int& a, const int& b) const
     {
         return a + b;
     }
