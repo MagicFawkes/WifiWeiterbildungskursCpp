@@ -141,7 +141,7 @@ bool SearchIterativ(Node* root, int value)
 		return false;
 	}
 
-	while (root == nullptr)
+	while (root != nullptr)
 	{
 		if (root->data > value)
 		{
