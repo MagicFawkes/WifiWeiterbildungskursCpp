@@ -286,6 +286,19 @@ Node* Delete(Node* root, int value)
 	}
 }
 
+void freenodes(Node* & root)	//Zeiger auf die Referenz
+{
+	if (root == nullptr)
+	{
+		return;
+	}
+
+	freenodes(root->links);
+	freenodes(root->rechts);
+	delete root;
+	root = nullptr;
+}
+
 int main()
 {
 	Node* root = nullptr;
