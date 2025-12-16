@@ -180,18 +180,20 @@ Node* Delete(Node* root, int value)
 	}
 	else
 	{
+		//keine Kinder:
 		Node* temp;
 		if (root->links == nullptr && root->rechts == nullptr) {
 			delete root;
 			return nullptr;
 		}
+		//ein Kind jeweils
 		else if (root->links == nullptr)
 		{
 			temp = root->rechts;
 			delete root;
 			return temp;
 		}
-
+		//ein Kind jeweils
 		else if (root->rechts == nullptr)
 		{
 			temp = root->links;
@@ -201,7 +203,6 @@ Node* Delete(Node* root, int value)
 		}
 
 		//2 kinder
-
 		temp = root->rechts;
 
 		while (temp && temp->links != nullptr) {
