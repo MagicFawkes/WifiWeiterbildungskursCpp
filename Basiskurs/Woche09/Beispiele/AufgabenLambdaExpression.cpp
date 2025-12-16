@@ -38,5 +38,16 @@ bei jedem Aufruf diese Variable erhöht
 
 int main()
 {
+    int counter = 0;
 
+    std::function<void()> lambda1 = [&counter]()->void       
+        {
+            counter++;
+        };
+
+    lambda1();
+    lambda1();
+    lambda1();
+    lambda1();
+    std::cout << "Counter: " << counter << std::endl;
 }
