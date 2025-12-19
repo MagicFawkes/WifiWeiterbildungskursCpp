@@ -25,6 +25,8 @@ Global
 		Woche08|x86 = Woche08|x86
 		Woche09|x64 = Woche09|x64
 		Woche09|x86 = Woche09|x86
+		Woche10|x64 = Woche10|x64
+		Woche10|x86 = Woche10|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche01|x64.ActiveCfg = Woche01|x64
@@ -63,6 +65,10 @@ Global
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche09|x64.Build.0 = Woche09|x64
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche09|x86.ActiveCfg = Woche09|Win32
 		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche09|x86.Build.0 = Woche09|Win32
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche10|x64.ActiveCfg = Woche10|x64
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche10|x64.Build.0 = Woche10|x64
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche10|x86.ActiveCfg = Woche10|Win32
+		{C9608370-20B6-4821-A315-FFE1482E2983}.Woche10|x86.Build.0 = Woche10|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

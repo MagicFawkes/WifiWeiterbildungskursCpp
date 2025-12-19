@@ -73,6 +73,14 @@
       <Configuration>Woche09</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Woche10|Win32">
+      <Configuration>Woche10</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Woche10|x64">
+      <Configuration>Woche10</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -85,6 +93,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe02.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -96,6 +105,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe03.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -107,6 +117,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe04.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -118,6 +129,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe05.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -129,6 +141,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe06.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -140,6 +153,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe07.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -151,6 +165,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">false</ExcludedFromBuild>
@@ -162,6 +177,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\AverageBerechnung.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -173,6 +189,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\Fakultät.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -184,6 +201,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\FakultätFunktion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -195,6 +213,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\FigurFlächeUmfangCalc.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -206,6 +225,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\HalbwertszeitFunktionen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -217,6 +237,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\KleinsterTeiler.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -228,6 +249,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\KostenStromverbrauch.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -239,6 +261,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\ListArraySortieren.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -250,6 +273,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\PotenzwertZahl.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -261,6 +285,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\PrimzahlenBestimmen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -272,6 +297,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\Quersumme.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -283,6 +309,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\QuersummeFunktion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -294,6 +321,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche01\Beispiele\ZiffernVertauscher.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -305,6 +333,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe01-dyn.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -316,6 +345,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe01-static.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -327,6 +357,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe02.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -338,6 +369,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe03.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -349,6 +381,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe04.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -360,6 +393,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe05.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -371,6 +405,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe06.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -382,6 +417,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\Aufgabe07.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -393,6 +429,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Aufgaben\src\binaryIO.c" />
     <ClCompile Include="Woche02\Beispiele\LedUmschaltung.cpp">
@@ -405,6 +442,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Beispiele\Roboterturnier.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -416,6 +454,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Beispiele\src\BinaryFunktionen .c" />
     <ClCompile Include="Woche02\Beispiele\src\TurnierFunktionen.c" />
@@ -429,6 +468,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche02\Main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -440,6 +480,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Aufgaben\Aufgabe01.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -451,6 +492,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Aufgaben\Aufgabe02.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -462,6 +504,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Aufgaben\Aufgabe03.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -473,6 +516,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Aufgaben\Aufgabe04.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -484,6 +528,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\AsciiZeichenErmittelln.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -495,6 +540,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\AsciiZeichenErmittellnOld.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -506,6 +552,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\DynSpeicherallozierung.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -517,6 +564,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\FileEinlesenUndKlonen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -528,6 +576,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\FileStringsEinlesenInArraySpeichern.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -539,6 +588,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\FileZahlenEinlesenArray.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -550,6 +600,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\GrossInKleinbuchstaben.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -561,6 +612,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\Palidrom.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -572,6 +624,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\StringLaengeErmitteln.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -583,6 +636,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\VermutungLieblingsfrucht.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -594,6 +648,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Beispiele\ZufallszahlenInArray.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -605,6 +660,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche03\Main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -616,6 +672,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Aufgaben\Aufgabe01.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -627,6 +684,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Aufgaben\Aufgabe02.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -638,6 +696,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Aufgaben\Aufgabe03.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -649,6 +708,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Aufgaben\Aufgabe04.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -660,6 +720,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\CustomRealloc.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -671,6 +732,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\DatenstrukturVerknüpfung.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -682,6 +744,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\GreaterVektorFunktion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -693,6 +756,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\GrossbuchstabenAuswerten.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -704,6 +768,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\NamspacesExamples.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -715,6 +780,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\RepeatStringFunktion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -726,6 +792,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\StrukturRoboter.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -737,6 +804,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\VektorVerschieben.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -748,6 +816,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Beispiele\WortZensierung.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -759,6 +828,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche04\Main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -770,6 +840,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Aufgaben\AufgabeUno.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
@@ -778,6 +849,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -787,6 +859,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -798,6 +871,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -814,6 +888,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\BibliothekVerwaltung.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -825,6 +900,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\EinfacherKonstruktor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -836,6 +912,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\Kopierkonstruktor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -847,6 +924,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\OperatorOverloading.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -858,6 +936,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\Parameterkonstruktor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -869,6 +948,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\Reiskocher.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -880,6 +960,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\SensorAbstrakteKlassen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -891,6 +972,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\StaticMethoden.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -902,6 +984,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\StudentFunktion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -913,6 +996,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\Textverwaltungssystem.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -924,6 +1008,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Beispiele\UniquePointer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -935,6 +1020,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche05\Main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -946,6 +1032,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche06\Aufgaben\Aufgabe01.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
@@ -957,12 +1044,14 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche06\Aufgaben\Aufgabe02.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -974,6 +1063,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -985,6 +1075,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -996,6 +1087,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1007,6 +1099,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1018,6 +1111,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1029,6 +1123,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1040,6 +1135,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1051,6 +1147,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1062,6 +1159,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1073,6 +1171,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1084,6 +1183,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1095,6 +1195,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1106,6 +1207,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1122,12 +1224,14 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche06\Beispiele\VerketteteListenDoppeltCStyle.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1139,6 +1243,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1155,12 +1260,14 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Woche07\Aufgaben\Aufgabe01.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1172,6 +1279,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1183,6 +1291,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1194,6 +1303,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1205,6 +1315,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1216,6 +1327,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1227,6 +1339,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1238,6 +1351,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1249,6 +1363,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1260,6 +1375,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1271,6 +1387,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1282,6 +1399,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1293,6 +1411,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1304,6 +1423,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1315,6 +1435,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1326,6 +1447,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1337,6 +1459,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1348,6 +1471,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1359,6 +1483,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1370,6 +1495,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1381,6 +1507,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1392,6 +1519,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1403,6 +1531,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1414,6 +1543,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1425,6 +1555,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1436,6 +1567,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1447,6 +1579,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1458,6 +1591,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1469,6 +1603,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1480,6 +1615,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1491,6 +1627,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1502,6 +1639,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1513,6 +1651,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1524,6 +1663,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1535,6 +1675,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1546,6 +1687,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1557,6 +1699,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1568,6 +1711,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1579,6 +1723,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1590,6 +1735,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1601,6 +1747,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1612,6 +1759,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1623,6 +1771,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1634,6 +1783,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1645,6 +1795,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1656,6 +1807,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1667,6 +1819,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1678,6 +1831,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1689,6 +1843,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1700,6 +1855,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1711,6 +1867,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1722,6 +1879,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1733,6 +1891,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1744,6 +1903,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1755,6 +1915,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1766,6 +1927,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1777,6 +1939,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1788,6 +1951,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1799,6 +1963,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1810,6 +1975,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1821,6 +1987,55 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche10\Aufgaben\Aufgabe01.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche10\Aufgaben\Aufgabe02.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche10\Beispiele\Beispiel01.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Woche10\Main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche02|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche03|x64'">true</ExcludedFromBuild>
@@ -1904,6 +2119,12 @@
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Woche10|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -1958,6 +2179,12 @@
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -1990,6 +2217,9 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Woche09|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Woche10|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Woche01|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -2015,6 +2245,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -2115,6 +2348,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche09|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche10|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
@@ -2248,6 +2493,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche09|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Wiesi\Desktop\GitHub\WifiWeiterbildungskursCpp\Basiskurs\Woche02\Aufgaben\staticlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GeometrieLibStatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Woche10|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
