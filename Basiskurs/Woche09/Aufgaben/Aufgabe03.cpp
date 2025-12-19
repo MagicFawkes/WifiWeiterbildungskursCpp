@@ -1,4 +1,7 @@
 /*
+Aufgabe 3
+Aufgabe 2 aber mit Funktoren
+----------------------------------------------
 Aufgabe 2
 Implementiere eine generische Datenanalyse-Funktion in C++, die eine Liste von Werten
 1. filtert
