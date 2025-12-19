@@ -44,4 +44,6 @@
 #include "Aufgaben/Aufgabe01.cpp"
 #elif AKTIVE_AUFGABE == 2
 #include "Aufgaben/Aufgabe02.cpp"
+#elif AKTIVE_AUFGABE == 3
+#include "Aufgaben/Aufgabe03.cpp"
 #endif
