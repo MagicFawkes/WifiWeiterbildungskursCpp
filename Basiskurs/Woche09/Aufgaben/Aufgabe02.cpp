@@ -45,6 +45,12 @@ T analyze_data(const std::vector<T>& data, Filter filter, Transform transform, R
     std::copy_if(data.begin(), data.end(), std::back_inserter(valuesFilteredAndTransformed), filter);
     std::transform(valuesFilteredAndTransformed.begin(), valuesFilteredAndTransformed.end(), valuesFilteredAndTransformed.begin(), transform);
 
+	/* std::accumulate()
+	first: Iterator to the first element of the range.
+    last: Iterator to the element one after the last element of the range.
+    init: Initial value to start the accumulation with.
+    op: An optional function pointer that provides the binary operation to perform. By default, addition is used to get the sum.
+	*/
     return std::accumulate(valuesFilteredAndTransformed.begin(), valuesFilteredAndTransformed.end(), init, reduce);
 }
 
