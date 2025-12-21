@@ -17,6 +17,34 @@ TransformFunc transform
 #include <iostream>
 #include <vector>
 
+/*
+ * Diese Funktion verarbeitet einen Vektor in zwei Schritten:
+ *
+ * 1. Filtern:
+ *    Mit std::copy_if werden nur die Elemente aus dem Eingabe-Vektor übernommen,
+ *    für die die übergebene Filter-Funktion true zurückgibt.
+ *    std::back_inserter sorgt dafür, dass die gefilterten Werte per push_back
+ *    an den Ergebnis-Vektor angehängt werden.
+ *
+ *    Hinweis zu std::back_inserter:
+ *    std::back_inserter erzeugt einen speziellen Ausgabe-Iterator, der bei jeder
+ *    Zuweisung intern push_back(...) auf dem Ziel-Vektor aufruft.
+ *    Algorithmen wie std::copy_if oder std::transform vergrößern Container
+ *    nicht selbst, sondern schreiben nur an die Positionen, auf die der
+ *    übergebene Ausgabe-Iterator zeigt.
+ *    Ist der Ziel-Vektor leer und man übergibt z. B. vector.begin(), existieren
+ *    keine gültigen Schreibpositionen – der Vektor bleibt leer bzw. das Verhalten
+ *    ist undefiniert.
+ *
+ * 2. Transformieren:
+ *    Mit std::transform wird jedes gefilterte Element mithilfe der
+ *    Transform-Funktion verändert. Der Ergebnis-Vektor dient dabei gleichzeitig
+ *    als Quelle und Ziel.
+ *
+ * Rückgabewert:
+ *    Ein Vektor mit gefilterten und anschließend transformierten Werten.
+ */
+
 template<typename T, typename FilterFunc, typename TransformFunc>
 std::vector<T> filter_and_transform(const std::vector<T>& input, FilterFunc filter, TransformFunc transform)
 {
