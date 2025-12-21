@@ -68,6 +68,7 @@ int main()
             return x * x;
         };
 
+    // reduce: fasst mehrere Werte schrittweise zu einem einzigen Ergebnis zusammen (z. B. Summe, Produkt, Maximum)
     std::function<int(int, int)> lambdaReduce = [](int a, int b)->int
         {
             return a + b;
