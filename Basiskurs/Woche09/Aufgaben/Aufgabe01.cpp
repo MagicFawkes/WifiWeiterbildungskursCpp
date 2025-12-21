@@ -12,7 +12,7 @@ TransformFunc transform
 );
 */
 
-
+#include <algorithm>
 #include <functional>
 #include <iostream>
 #include <vector>
@@ -20,21 +20,19 @@ TransformFunc transform
 template<typename T, typename FilterFunc, typename TransformFunc>
 std::vector<T> filter_and_transform(const std::vector<T>& input, FilterFunc filter, TransformFunc transform)
 {
-    for (int x : v) {
-        f(x);
-    }
+    std::vector<int> valuesFiltered;
+	std::copy_if(input.begin(), input.end(), std::back_inserter(valuesFiltered), filter);
 
-    return ;
+    return valuesFiltered;
 }
-
 
 int main()
 {
-    std::vector<int> werteListe = { 2,1,10,5, 6 };
+    std::vector<int> werteListe = {2,1,10,5,6};
 
-    std::function<double(double, double)> lambdaFilter = [](double a, double b)->double
+    std::function<bool(int a)> lambdaFilter = [](int value)->bool
         {
-            return a / b;
+            return value > 10;
         };
 
     std::function<double(double, double)> lambdaTransform = [](double a, double b)->double
