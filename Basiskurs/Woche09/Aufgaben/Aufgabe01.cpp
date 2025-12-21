@@ -31,7 +31,7 @@ int main()
 {
     std::vector<int> werteListe = {2,1,10,5,6,24,1,53};
 
-    std::function<bool(int a)> lambdaFilter = [](int value)->bool
+    std::function<bool(int)> lambdaFilter = [](int value)->bool
         {
             return value > 5;
         };
