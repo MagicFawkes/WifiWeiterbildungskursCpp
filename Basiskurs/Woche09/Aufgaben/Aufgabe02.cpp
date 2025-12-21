@@ -57,12 +57,12 @@ int main()
             return value > 5;
         };
 
-    std::function<int(int)> lambdaTransform = [](int x) ->int
+    std::function<int(int)> lambdaTransform = [](int x)->int
         {
             return x * x;
         };
 
-    std::function<int(int, int)> lambdaReduce = [](int a, int b) ->int
+    std::function<int(int, int)> lambdaReduce = [](int a, int b)->int
         {
             return a + b;
         };
