@@ -81,7 +81,42 @@ int main()
 {
     std::vector<int> werteListe = { 2,1,10,5,6,24,1,53 };
 
-    int filteredValues = analyze_data(werteListe, LambdaFilterFunctor<int>(), LambdaTransformFunctor<int>(), LambdaReduceFunctor<int>(), 0);
+    /*
+    Funktionszeiger der Form bool(*)(int) können nur auf echte Funktionen zeigen
+    (freie Funktionen oder static-Memberfunktionen).
+
+    Funktoren (Objekte mit operator()) besitzen dagegen Zustand und sind keine
+    Funktionen, daher können sie NICHT in einen Funktionszeiger umgewandelt werden.
+
+    std::function ist ein Typeraser-Wrapper für "alles Aufrufbare" und kann
+    Funktoren, Lambdas (mit oder ohne Captures) sowie Funktionszeiger speichern.
+    Deshalb ist std::function hier die richtige Wahl.
+	*/
+
+    // Variante mit std::function-Wrapper für einen Funktor (indirekter Aufruf über operator()
+    // Type-erased Callable: kapselt einen Funktor und erlaubt einen einheitlichen Aufruf
+
+    /*
+    Echter Funktionszeiger (z.B. bool(*)(int)):
+    - enthält nur eine Adresse zu Maschinencode
+    - kein Zustand, kein Besitz
+    - direkter Aufruf über den Zeiger
+
+    std::function:
+    - ist ein Objekt, kein Zeiger
+    - besitzt ein aufrufbares Objekt (Functor/Lambda/Funktion)
+    - ermöglicht einen indirekten Aufruf über operator()
+    - kann Zustand kapseln (z.B. Funktor oder Lambda mit Captures)
+	*/
+
+    std::function<bool(int)> LambdaFilterFunctorPointer = LambdaFilterFunctor<int>();
+    std::function<int(int)> LambdaTransformFunctorPointer = LambdaTransformFunctor<int>();
+    std::function<int(int,int)> LambdaReduceFunctorPointer = LambdaReduceFunctor<int>();
+    
+	int filteredValues = analyze_data(werteListe, LambdaFilterFunctorPointer, LambdaTransformFunctorPointer, LambdaReduceFunctorPointer, 0);
+
+    // Zweite Variante (bevorzugt): Übergabe der Funktoren direkt an analyze_data (kein std::function, kein Funktionszeiger)
+    //int filteredValues = analyze_data(werteListe, LambdaFilterFunctor<int>(), LambdaTransformFunctor<int>(), LambdaReduceFunctor<int>(), 0);
 
     std::cout << filteredValues << std::endl;
 
