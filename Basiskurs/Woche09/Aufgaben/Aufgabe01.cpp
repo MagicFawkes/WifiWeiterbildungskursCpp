@@ -78,3 +78,52 @@ int main()
 
     return 0;
 }
+
+
+/* Umsetzung von Trainer
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
+
+using namespace std;
+
+template<typename T, typename FilterFunc, typename TransformFunc>
+vector<T> filter_and_transform(const std::vector<T>& input,FilterFunc filter,TransformFunc transform)
+{
+    vector<T> filtered;
+    std::copy_if(input.begin(), input.end(), std::back_inserter(filtered), filter);
+
+
+    vector<T> transformed;
+    std::transform(filtered.begin(), filtered.end(), std::back_inserter(transformed), transform);
+
+    return filtered;
+}
+
+struct filter
+{
+    int operator()(int x) const {
+        return x%2 == 0;
+    }
+};
+
+struct Square {
+    int operator()(int x) const {
+        return x * x;
+    }
+};
+
+
+int main()
+{
+    vector<int> values = {1,2,3,4,5,6};
+
+    values = filter_and_transform(values, [](int x) { return x % 2 == 0; },
+        [](int x) {return x * x; });
+
+    std::for_each(values.begin(), values.end(), [](int x) {
+        cout << x << endl;
+        });
+}
+*/
