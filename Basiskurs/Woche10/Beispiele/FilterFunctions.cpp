@@ -2,12 +2,10 @@
 
 */
 
-#include <algorithm>
 #include <functional>
 #include <iostream>
 #include <vector>
 #include "dynlib/include/FilterFunction.h"
-
 
 int main()
 {
