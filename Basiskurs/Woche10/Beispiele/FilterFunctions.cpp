@@ -5,7 +5,7 @@
 #include <functional>
 #include <iostream>
 #include <vector>
-#include "dynlib/include/FilterFunction.h"
+#include "staticlib/include/FilterFunction.h"
 
 int main()
 {

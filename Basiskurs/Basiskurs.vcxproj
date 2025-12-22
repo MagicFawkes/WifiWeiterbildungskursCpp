@@ -2061,12 +2061,12 @@
     <ClInclude Include="Woche02\Aufgaben\staticlib\include\geometrieStatic.h" />
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h" />
     <ClInclude Include="Woche02\Beispiele\src\TurnierFunktionen.h" />
-    <ClInclude Include="Woche10\Beispiele\dynlib\include\FilterFunction.h" />
+    <ClInclude Include="Woche10\Beispiele\staticlib\include\FilterFunction.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="Woche02\Aufgaben\dynlib\lib\GeometrieLib.lib" />
     <Library Include="Woche02\Aufgaben\staticlib\lib\GeometrieLibStatic.lib" />
-    <Library Include="Woche10\Beispiele\dynlib\lib\FilterFunction.lib" />
+    <Library Include="Woche10\Beispiele\staticlib\lib\FilterFunction.lib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Woche02\Aufgaben\dynlib\GeometrieLib.dll" />
@@ -2532,9 +2532,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Wiesi\Desktop\GitHub\WifiWeiterbildungskursCpp\Basiskurs\Woche02\Aufgaben\staticlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>GeometrieLibStatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Wiesi\Desktop\GitHub\WifiWeiterbildungskursCpp\Basiskurs\Woche02\Aufgaben\staticlib\lib;C:\Users\Wiesi\Desktop\GitHub\WifiWeiterbildungskursCpp\Basiskurs\Woche10\Beispiele\staticlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GeometrieLibStatic.lib;FilterFunction.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
