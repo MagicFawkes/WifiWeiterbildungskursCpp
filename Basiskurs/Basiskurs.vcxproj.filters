@@ -127,6 +127,15 @@
     <Filter Include="Source Files\Woche10\Beispiele">
       <UniqueIdentifier>{7d10b1e2-ab4e-49db-9820-08f8250eca2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Woche10\Beispiele\dynlib">
+      <UniqueIdentifier>{ebfc69b6-14f3-4b96-b6f0-397d13724667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche10\Beispiele\dynlib\include">
+      <UniqueIdentifier>{a5c79508-c497-40b2-965e-4e4fe6756633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Woche10\Beispiele\dynlib\lib">
+      <UniqueIdentifier>{2438f824-dad7-4464-9af9-993f5041659d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Woche01\Aufgaben\Aufgabe01.cpp">
@@ -618,7 +627,7 @@
     <ClCompile Include="Woche10\Main.cpp">
       <Filter>Source Files\Woche10</Filter>
     </ClCompile>
-    <ClCompile Include="Woche10\Beispiele\Beispiel01.cpp">
+    <ClCompile Include="Woche10\Beispiele\FilterFunctions.cpp">
       <Filter>Source Files\Woche10\Beispiele</Filter>
     </ClCompile>
     <ClCompile Include="Woche10\Aufgaben\Aufgabe01.cpp">
@@ -647,6 +656,9 @@
     <ClInclude Include="Woche02\Aufgaben\src\binaryIO.h">
       <Filter>Source Files\Woche02\Aufgaben\src</Filter>
     </ClInclude>
+    <ClInclude Include="Woche10\Beispiele\dynlib\include\FilterFunction.h">
+      <Filter>Source Files\Woche10\Beispiele\dynlib\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Woche02\Aufgaben\dynlib\lib\GeometrieLib.lib">
@@ -654,6 +666,9 @@
     </Library>
     <Library Include="Woche02\Aufgaben\staticlib\lib\GeometrieLibStatic.lib">
       <Filter>Source Files\Woche02\Aufgaben\staticlib\lib</Filter>
+    </Library>
+    <Library Include="Woche10\Beispiele\dynlib\lib\FilterFunction.lib">
+      <Filter>Source Files\Woche10\Beispiele\dynlib\lib</Filter>
     </Library>
   </ItemGroup>
   <ItemGroup>

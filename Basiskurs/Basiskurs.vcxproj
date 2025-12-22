@@ -2030,7 +2030,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche04|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche05|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Woche10\Beispiele\Beispiel01.cpp">
+    <ClCompile Include="Woche10\Beispiele\FilterFunctions.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche06|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche07|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Woche08|x64'">true</ExcludedFromBuild>
@@ -2061,10 +2061,12 @@
     <ClInclude Include="Woche02\Aufgaben\staticlib\include\geometrieStatic.h" />
     <ClInclude Include="Woche02\Beispiele\src\BinaryFunktionen.h" />
     <ClInclude Include="Woche02\Beispiele\src\TurnierFunktionen.h" />
+    <ClInclude Include="Woche10\Beispiele\dynlib\include\FilterFunction.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="Woche02\Aufgaben\dynlib\lib\GeometrieLib.lib" />
     <Library Include="Woche02\Aufgaben\staticlib\lib\GeometrieLibStatic.lib" />
+    <Library Include="Woche10\Beispiele\dynlib\lib\FilterFunction.lib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Woche02\Aufgaben\dynlib\GeometrieLib.dll" />
